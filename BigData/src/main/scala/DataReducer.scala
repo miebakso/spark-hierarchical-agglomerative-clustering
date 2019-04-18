@@ -53,7 +53,7 @@ class DataReducer(sc: SparkContext, numPar:Int, maxObj:Int, distanceType:Int, cu
         broadCastDistanceType.destroy()
         broadCastCutOffDist.destroy()
 
-        val result:RDD[Patern] = sc.parallelize(paternAccumulator.value, numPar-)
+        val result:RDD[Patern] = sc.parallelize(paternAccumulator.value, numPar)
         val formatedResult = result.map( x => x.getObjCount()+"\n"
             +x.getMinArr().mkString(",")+"\n"
             +x.getMaxArr().mkString(",")+"\n"
