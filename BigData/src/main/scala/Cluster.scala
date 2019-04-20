@@ -3,7 +3,7 @@ package main.scala
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 
 class Cluster(dendrogram:Node, cutOffDistance:Double) extends Serializable {
-    val clusters:ListBuffer[Node] = new ListBuffer[Node]()
+    private val clusters:ListBuffer[Node] = new ListBuffer[Node]()
 
     private def formClusterFromDendrogram(): Unit = {
         val bfs:ListBuffer[Node] = new ListBuffer[Node]

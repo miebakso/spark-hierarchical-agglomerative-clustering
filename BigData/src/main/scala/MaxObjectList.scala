@@ -3,17 +3,17 @@ package main.scala
 import scala.collection.mutable.ListBuffer
 
 class MaxObjectList(maxObject:Int) extends Serializable {
-    private val singleTree:ListBuffer[Node] = new ListBuffer[Node]()
+    private val maxObjectList:ListBuffer[Node] = new ListBuffer[Node]()
 
     def addNode(node:Node): Unit ={
-        singleTree+=node
+        maxObjectList+=node
     }
 
     def getList(): ListBuffer[Node] = {
-        singleTree
+        maxObjectList
     }
 
     def clearList(): Unit = {
-        singleTree.clear()
+        maxObjectList.clear()
     }
 }
