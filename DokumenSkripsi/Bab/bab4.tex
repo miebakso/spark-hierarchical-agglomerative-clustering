@@ -6,7 +6,32 @@ Pada bab ini, penulis akan menjelaskan apa saja yang dilakukan dalam pengembanga
 
 \section{Analisis Perangkat Lunak}
 
-asdasd
+
+\subsection{Identifikasi Masalah}
+MASALAHNY
+
+
+\subsection{Kebutuhan Perangkat Lunak}
+
+Dalam melakukan perancang perlu diketahui dulu kebutuhan perangkat lunak. Perangkat lunak yang dirancang harus dapat menghasilkan pola yang nantinya dapat dibandingkan dengan hasil pola dari perangkat lunak MapReduce. Pola yang dibutuhkan diantaranya:
+
+\begin{enumerate}
+
+\item Jumlah objek pada centroid.
+
+\item Nilai minimum setiap atribut.
+
+\item Nilai maksimum setiap atribut.
+
+\item Nilai rata-rata setiap atribut.
+
+\item Nilai standar deviasi setiap atribut.
+\end{enumerate}
+ 
+\subsection{Analisis Agglomerative Hierarchical Clustering MapReduce}
+
+\textit{Agglomerative Hierarchical Clustering} MapReduce dibagi menjadi dua bagian. Bagian pertama terkait tahap \textit{map} dan bagian kedua terkait tahap \textit{reduce}. 
+
 
 \section{Perancangan Perangkat Lunak}
 
@@ -127,7 +152,7 @@ Berikut adalah penjelasan dari ketiga kelas pada Gambar ~\ref{fig:maindiagram}:
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.6]{datareducer}  
+    \includegraphics[scale=0.5]{datareducer}  
     \caption[Gambar kelas DataReducer]{Gambar kelas DataReducer} 
     \label{fig:datareducer} 
 \end{figure}
@@ -140,7 +165,7 @@ Kelas DataReducer dirancang untuk memproses data. Proses reduksi secara parallel
 
 \item mapData: \textit{method} untuk memisahkan atribut dan membungkus attribut dalam objek Node agar lebih mudah diproses. \textit{Method} ini akan mengembalikan RDD bertipe Node.  
 
-\item  reduceData: \textit{Method} dimana proses reduksi data secara parallel terjadi. Data akan dipecah menjadi beberapa partisi pada method ini. Partisi ini akan diproses secara parallel. Method ini juga bertangung jawab untuk meyimpan pola hasil reduksi kepada HDFS.\\
+\item  reduceData: \textit{method} dimana proses reduksi data secara parallel terjadi. Data akan dipecah menjadi beberapa partisi pada method ini. Partisi ini akan diproses secara parallel. Method ini juga bertangung jawab untuk meyimpan pola hasil reduksi kepada HDFS.\\
 
 \end{enumerate}
 
