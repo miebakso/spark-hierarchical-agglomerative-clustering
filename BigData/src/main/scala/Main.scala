@@ -24,6 +24,8 @@ object Main {
         val conf = new SparkConf()
         conf.setMaster(master)
         conf.setAppName("Reduce Data Spark")
+        conf.set("spark.executor.instances","3")
+        conf.set("spark.executor.cores", "5")
         val sc = new SparkContext(conf)
 
 

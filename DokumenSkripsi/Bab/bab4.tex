@@ -6,10 +6,32 @@ Pada bab ini, penulis akan menjelaskan apa saja yang dilakukan dalam pengembanga
 
 \section{Analisis Perangkat Lunak}
 
+Pada bagian ini akan dijelaskan analisis algoritma \textit{Agglomerative Hierarchical Clustering} pada MapReduce, kebutuhan perangkat lunak, dan masalah yang ingin diselesaikan. 
 
 \subsection{Identifikasi Masalah}
-MASALAHNY
 
+Dalam bidang \textit{big data}, volume data yang sangat besar harus disimpan dalam tempat penyimpanan yang sangat besar. Volume data \textit{big data} dapat mencapai \textit{peta bytes}. Volume yang terlalu besar akan meningkatkan biaya dan menghabiskan tempat penyimpanan data. Volume data perlu direduksi agar menghemat tempat dan biaya.\\ 
+
+Teknologi Hadoop MapReduce dan algoritma \textit{Agglomerative Hierarchical Clustering} dapat digabungkan sebagai solusi untuk mereduksi data. Algoritma \textit{Agglomerative} dapat mereduksi data dengan mengambil pola-pola dari \textit{clusters} yang dibentuk. Sistem terdistribusi Hadoop membantu dalam proses membagikan dan memecah tugas agar dapat dikerjakan secara parallel.  Dengan begitu, proses reduksi data dengan algoritma \textit{Agglomerative} akan lebih cepat. \\
+
+Tetapi teknologi Hadoop masih terlalu lambat dalam mereduksi data. Hal ini disebabkan karena Hadoop banyak melakukan penulisan dan pembacaan kepada disk. Proses \textit{disk} I/O pada Hadoop sangat tinggi dan meyebabkan algoritma \textit{Agglomerative} berjalan sangat lambat pada Hadoop. Pada setiap tahap Hadoop akan menuliskan hasilnya kepada \textit{disk} dan akan dibaca kembali oleh tahap selanjutnya dari \textit{disk} seperti pada Gambar  ~\ref{fig:mapreducediagram}.\\
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.5]{mapreducediagram}  
+    \caption[Gambar penulisan kepada disk di MapReduce]{Gambar penulisan kepada disk di MapReduce} 
+    \label{fig:mapreducediagram} 
+\end{figure}
+
+
+Solusinya adalah menggabungkan teknologi terdistribusi lainnya dengan  algoritma \textit{Agglomerative} untuk mereduksi data. Spark, sistem terdistribusi yang menyimpan data pada memori dapat menggantikan Hadoop MapReduce. Kecepatan memori lebih cepat dibanding disk merupakan salah satu faktor mengapa Spark akan memproses data dengan kecepatan yang lebih tinggi.  Pembacaan han penulisan akan dilakukan kepada memori. Gambar ~\ref{fig:memorydiagram} adalah contoh ilustrasi tahap proses data di Spark. 
+	
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.5]{memorydiagram}  
+    \caption[Gambar penulisan kepada memori di Spark]{Gambar penulisan kepada memori di Spark} 
+    \label{fig:memorydiagram} 
+\end{figure}
 
 \subsection{Kebutuhan Perangkat Lunak}
 
@@ -17,20 +39,43 @@ Dalam melakukan perancang perlu diketahui dulu kebutuhan perangkat lunak. Perang
 
 \begin{enumerate}
 
-\item Jumlah objek pada centroid.
+\item Jumlah objek pada \textit{cluster}.
 
-\item Nilai minimum setiap atribut.
+\item Nilai minimum setiap atribut pada \textit{cluster}.
 
-\item Nilai maksimum setiap atribut.
+\item Nilai maksimum setiap atribut pada \textit{cluster}.
 
-\item Nilai rata-rata setiap atribut.
+\item Nilai rata-rata setiap atribut pada \textit{cluster}.
 
-\item Nilai standar deviasi setiap atribut.
+\item Nilai standar deviasi setiap atribut pada \textit{cluster}.
 \end{enumerate}
  
 \subsection{Analisis Agglomerative Hierarchical Clustering MapReduce}
 
-\textit{Agglomerative Hierarchical Clustering} MapReduce dibagi menjadi dua bagian. Bagian pertama terkait tahap \textit{map} dan bagian kedua terkait tahap \textit{reduce}. 
+\textit{Agglomerative Hierarchical Clustering} MapReduce dibagi menjadi dua bagian. Bagian pertama terkait tahap \textit{map} dan bagian kedua terkait tahap \textit{reduce}. Tahap \textit{map} akan dijelaskan dengan \textit{pseudocode} berikut ini \ref{alg:mapper}  
+
+\begin{algorithm}[H]
+	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
+	\SetKwInOut{Input}{Masukan}
+	\SetKwInOut{Output}{Keluaran}
+	\SetKwInOut{Desc}{Deskripsi}
+	\Input{Data mentah (\textbf{TO)}); jumlah partisi (\textbf{n}) }
+	\Output{\textit{key} = sebuah bilangan bulat $\epsilon$ \{1 ... $n$\}  \textit{value} = teks dari sekumpulan nilai atribut yang telah diproses sebelumnya}
+	\Desc{memecah \textbf{TO} dengan memberi bilangan acak untuk setiap objek}
+	\BlankLine
+	\SetKwHangingKw{va}{\textbf{value} $\leftarrow$}
+	\SetKwHangingKw{ke}{\textbf{key} $\leftarrow$}
+	\SetKwHangingKw{hasil}{}
+	\Begin{
+		\va{membaca baris  dan memproses atributnya}
+		\ke{sebuah bilangan acak $k$, dimana 1 $\leq$ $k$ $\leq$ $n$ }
+		mengembalikan pasangan <\textit{key}, \textit{value}> sebagi hasil
+	}
+	
+	
+	\caption{Algoritma \textit{Mapper}}
+	\label{alg:mapper}
+\end{algorithm}
 
 
 \section{Perancangan Perangkat Lunak}
