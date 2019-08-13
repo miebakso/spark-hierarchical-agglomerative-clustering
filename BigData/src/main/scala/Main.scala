@@ -8,9 +8,9 @@ object Main {
         var output:String = "file:///home/miebakso/Desktop/output"
         var numPar = 20
         var maxObj = 30
-        var distType = 2
+        var distType = 0
         var cutOffDist = 0.6
-        var master = "local"
+        var master = "local[5]"
         if(args.length > 0){
             master = "yarn-cluster"
             input = args(0)
@@ -24,12 +24,11 @@ object Main {
         val conf = new SparkConf()
         conf.setMaster(master)
         conf.setAppName("Reduce Data Spark")
-        conf.set("spark.executor.instances","3")
-        conf.set("spark.executor.cores", "5")
+        conf.set("spark.executor.memory", "3g")
         val sc = new SparkContext(conf)
 
 
-        val dataReducer = new DataReducer(sc,numPar, maxObj,0, 0.6, input, output)
+        val dataReducer = new DataReducer(sc,numPar, maxObj,distType, cutOffDist, input, output)
         dataReducer.reduceData()
 
     }

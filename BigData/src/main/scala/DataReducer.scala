@@ -1,67 +1,55 @@
 package main.scala
 
-import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark._
+import org.apache.spark.{SparkContext}
 import org.apache.spark.rdd.RDD
-
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.{ListBuffer}
 
 
 class DataReducer(sc: SparkContext, numPar:Int, maxObj:Int, distanceType:Int, cutOffDistance:Double, inputPath: String, outputPath:String) extends Serializable {
 
     def reduceData():Unit = {
         val data = mapData()
-        //sbt pprintln(data.partitions.length)
         val repartitionData = data.repartition(numPar)
-        repartitionData.persist()
         val broadCastMaxObj = sc.broadcast(maxObj)
         val broadCastDistanceType = sc.broadcast(distanceType)
         val broadCastCutOffDist = sc.broadcast(cutOffDistance)
-        val patternsAcc = sc.collectionAccumulator[List[Patern]]("Paterns Accumulator")
-        val paternAccumulator = new PaternAccumulator(List[Patern]())
-        sc.register(paternAccumulator, "Patern Accumulator")
-        repartitionData.foreachPartition(partition => {
-            var i:Int = 0;
+        val results = repartitionData.mapPartitions(partitions => {
+            var paterns:ListBuffer[Patern] = new ListBuffer[Patern]()
+            var i:Int = 0
             var isProcessed:Boolean = false
-            val maxObjList:MaxObjectList = new MaxObjectList(broadCastMaxObj.value)
-            partition.foreach(record => {
+            var objectList:ListBuffer[Node] = new ListBuffer[Node]()
+            partitions.foreach(record => {
                 isProcessed = false
                 i+=1
-                maxObjList.addNode(record)
+                objectList+=record
                 if(i==broadCastMaxObj.value){
-                    val dendrogram:Dendrogram = new Dendrogram(maxObjList.getList(),broadCastDistanceType.value)
+                    val dendrogram:Dendrogram = new Dendrogram(objectList,broadCastDistanceType.value)
                     dendrogram.generateDendrogram()
                     val cluster = new Cluster(dendrogram.getDendrogram(),broadCastCutOffDist.value)
-                    paternAccumulator.add(cluster.computePatern())
+                    paterns = paterns ++ cluster.computePatern()
                     isProcessed = true
                     i=0
-                    maxObjList.clearList()
+                    objectList.clear()
                 }
-
             })
             if(isProcessed==false){
-                val dendrogram:Dendrogram = new Dendrogram(maxObjList.getList(),broadCastDistanceType.value)
+                val dendrogram:Dendrogram = new Dendrogram(objectList,broadCastDistanceType.value)
                 dendrogram.generateDendrogram()
                 val cluster = new Cluster(dendrogram.getDendrogram(),broadCastCutOffDist.value)
-                paternAccumulator.add(cluster.computePatern())
-                maxObjList.clearList()
+                paterns = paterns ++ cluster.computePatern()
             }
+            paterns.toIterator
 
         })
-        repartitionData.unpersist()
-        broadCastMaxObj.destroy()
-        broadCastDistanceType.destroy()
-        broadCastCutOffDist.destroy()
-
-        val result:RDD[Patern] = sc.parallelize(paternAccumulator.value, numPar)
-        val formatedResult = result.map( x => x.getObjCount()+"\n"
+        results.map(x => x.getObjCount()+"\n"
             +x.getMinArr().mkString(",")+"\n"
             +x.getMaxArr().mkString(",")+"\n"
             +x.getAvgArr().mkString(",")+"\n"
             +x.getSDArr().mkString(",")
-        )
-        formatedResult.saveAsTextFile(outputPath)
-
+        ).saveAsTextFile(outputPath)
+        broadCastMaxObj.destroy()
+        broadCastDistanceType.destroy()
+        broadCastCutOffDist.destroy()
         sc.stop()
     }
 

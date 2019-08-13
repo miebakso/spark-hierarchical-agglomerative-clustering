@@ -1,7 +1,6 @@
 package main.scala
 
-import scala.collection.mutable
-import scala.collection.mutable.{ArrayBuffer, ListBuffer, Map}
+import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 
 class Dendrogram(nodeList:ListBuffer[Node], distType:Int) extends Serializable {
     private var dendrogram = new ArrayBuffer[Node]()
@@ -14,7 +13,6 @@ class Dendrogram(nodeList:ListBuffer[Node], distType:Int) extends Serializable {
 
     def generateDendrogram(): Unit ={
         var i = 0
-        //Initialize Dendo, nodelist, distance Matrix
         nodeList.foreach(node => {
             dendrogram += node
             nodeListCluster += new ListBuffer[Node]
@@ -23,17 +21,13 @@ class Dendrogram(nodeList:ListBuffer[Node], distType:Int) extends Serializable {
             i+=1
         })
         i = 1
-
         var x = 0
         for(i <- 1 until distanceMatrix.length){
             for(x <- 0 until i){
                 distanceMatrix(i) += findMinimumDistance(nodeListCluster(i),nodeListCluster(x))
-                //TEST DISTANCE MATRIX
-//                print(distanceMatrix(i)(x))
             }
-//            println()
         }
-//        println("DONE")
+
         while(dendrogram.length !=1){
             var x = 1
             var y = 0
@@ -41,34 +35,25 @@ class Dendrogram(nodeList:ListBuffer[Node], distType:Int) extends Serializable {
             var coordinateX = 0
             var coordinateY = 0
             var temp = 0.0
-            //Cari minimum
-//            println("TEST MINIMUM DISTANCE")
+
             for(x <- 1 until distanceMatrix.length){
                 for(y <- 0 until x){
                     temp = distanceMatrix(x)(y)
-//                    print(temp+"  ")
                     if(temp < result){
                         result = temp
                         coordinateX = x
                         coordinateY = y
                     }
                 }
-//                println()
             }
-//            println("MINIMUM = "+result)
-//            println(coordinateX+","+coordinateY)
-//            println("dendrogram length = "+dendrogram.length)
             formClusterBetweenNearestNeighbour(coordinateX,coordinateY)
             recalculateMatrix(coordinateX,coordinateY)
         }
     }
 
     private def formClusterBetweenNearestNeighbour(x:Int,y:Int): Unit = {
-        var i = 0
-        //Gabungkan list yg memiliki idx lebih besar ke yang idx lebih kecil
         nodeListCluster(y) = nodeListCluster(y) ++ nodeListCluster(x)
         nodeListCluster.remove(x)
-        //Gabungkan node untuk membentuk cluster
         val cluster = new Node()
         cluster.setDistance(distanceMatrix(x)(y))
         cluster.setLeftNode(dendrogram(y))
@@ -79,7 +64,6 @@ class Dendrogram(nodeList:ListBuffer[Node], distType:Int) extends Serializable {
     }
 
     private def recalculateMatrix(x:Int,y:Int): Unit ={
-        var i = 0
         distanceMatrix.remove(x)
         for(i <- x+1 until distanceMatrix.length){
             distanceMatrix(i).remove(x)

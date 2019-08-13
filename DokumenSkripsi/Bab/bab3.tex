@@ -51,7 +51,7 @@ Instalasi dapat dilakukan ketika syarat-syarat diatas telah dipenuhi. Berikut ad
 
 \begin{enumerate}
 
-\item Pertama, donwload versi spark yang diinginkan  dari https://spark.apache.org/downloads.html
+\item Pertama, unduh versi spark yang diinginkan  dari https://spark.apache.org/downloads.html
 
 \item Kemudian, \textit{extract} Spark tar dengan command berikut:
 
@@ -61,7 +61,7 @@ $ tar xvf spark-2.3.1-bin-hadoop2.7.tgz
 $ mv spark-2.3.1-bin-hadoop2.7 /home/user/spark-2.3.1-bin-hadoop2.7 
 \end{verbatim}
 
-\item Selanjutnya, kita harus menkonfigurasi \textit{environment variable} untuk Spark. Ubah file .bashrc dengan menambahkan perintah berikut pada file:
+\item Selanjutnya, kita harus mengkonfigurasi \textit{environment variable} untuk Spark. Ubah file .bashrc dengan menambahkan perintah berikut pada file:
 
 \begin{verbatim}
 export SPARK_HOME=/home/user/spark-2.3.1-bin-hadoop2.7
@@ -83,7 +83,7 @@ $ $SPARK_HOME/bin/spark-shell
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.7]{sparkshell}  
-    \caption[Gambar {\it Spark Shell} ]{Gambar {\it Spark Shell}} 
+    \caption[{\it Spark Shell} ]{{\it Spark Shell}} 
     \label{fig:sparkshell} 
 \end{figure}
 
@@ -92,16 +92,16 @@ $ $SPARK_HOME/bin/spark-shell
 
 \section{Eksplorasi Spark Shell}
 
-Pada bagian ini, penulis akan menjelaskan percobaan untuk menghitung jumlah setiap kata pada file text README.md. Penulis akan menggunakan Spark Shell untuk menjalankan perintah-perintah agar spark bisa menghitung jumlah setiap kata yang ada pada text file tersebut. Setiap kata yang sama akan dijumlahkan. Pada bagian ini akan digunakan \textit{tranformation} dan juga \textit{action}.
+Pada bagian ini, penulis akan menjelaskan percobaan untuk menghitung jumlah setiap kata pada file text README.md. Penulis akan menggunakan Spark Shell untuk menjalankan perintah-perintah agar spark bisa menghitung jumlah setiap kata yang ada pada text file tersebut. Setiap kata yang sama akan dijumlahkan. Pada bagian ini akan digunakan \textit{transformation} dan juga \textit{action}.
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.7]{wordcount}  
-    \caption[Gambar {\it Word Count} ]{Gambar {\it Word Count}} 
+    \caption[{\it Word Count} ]{{\it Word Count}} 
     \label{fig:wordcount} 
 \end{figure}
 
-Bedasarkan gambar diatas (Gambar~\ref{fig:wordcount}), berikut adalah langkah-langkah percobaan:
+Berdasarkan gambar diatas (Gambar~\ref{fig:wordcount}), berikut adalah langkah-langkah percobaan:
 
 \begin{enumerate}
 
@@ -124,7 +124,7 @@ text: org.apache.spark.rdd.RDD[String] = README.md MapPartititonsRDD[1] at textF
 \end{verbatim}
 
 
-\item Kemudian, kita akan memecahkan kalimat menjadi kata menggunakan operasi \textit{transformation} flatMap(). Setelah itu, setiap kata akan dijadikan pasangan textit{key} (kata) dan \textit{value} (kata,1). Berikut adalah perintah yang harus dijalankan:
+\item Kemudian, kita akan memecahkan kalimat menjadi kata menggunakan operasi \textit{transformation} flatMap(). Setelah itu, setiap kata akan dijadikan pasangan \textit{key} (kata) dan \textit{value} (kata,1). Berikut adalah perintah yang harus dijalankan:
 
 \begin{verbatim}
 val counts = text.textflatMap(line => line.split(" ")).map(word => (word, 1))
@@ -154,7 +154,7 @@ Pada bagian ini, penulis akan menjelaskan langkah-langkah yang diperlukan untuk 
 
 \begin{enumerate}
 
-\item Tambahkan entri dalam file host \textit{master} dan \textit{slave}. \textit{Master} merupaka komputer utama dan \textit{slaves} merupakan komputer pekerja. Berikut adalah perintah yang harus dijalankan: 
+\item Tambahkan entri dalam file host \textit{master} dan \textit{slave}. \textit{Master} merupakan komputer utama dan \textit{slaves} merupakan komputer pekerja. Berikut adalah perintah yang harus dijalankan: 
 
 \begin{verbatim}
 $ sudo gedit /etc/hosts
@@ -169,14 +169,14 @@ Tambahkan IP \textit{master} dan juga \textit{slave} pada file.
 <SLAVE3-IP> slave3
 \end{verbatim}
 
-\item Kemudian install Java pada setiap \textit{master} dan \textit{slave}, jangan lupa untuk memastikan versi java yang diinstall. Berikut adalah perintah untuk menginstal Java:
+\item Kemudian install Java pada setiap \textit{master} dan \textit{slave}, jangan lupa untuk memastikan versi java yang di install. Berikut adalah perintah untuk menginstal Java:
 
 \begin{verbatim}
 $ sudo apt-get update
 $ sudo apt-get install default-jdk
 \end{verbatim}
 
-Pastikan versi Java yang diinstal dengan perintah berikut:
+Pastikan versi Java yang di instal dengan perintah berikut:
 
 \begin{verbatim}
 $ java -version
@@ -207,9 +207,9 @@ $ ssh-keygen -t rsa -P
 \item Setelah itu, kita akan mengunduh dan menginstal Spark pada setiap \textit{slave} dan \textit{master}. Berikut adalah langkah-langkah yang diikuti:
 
 \begin{verbatim}
-Dowload versi spark yang diinginkan pada https://spark.apache.org/downloads.html
+Unduh versi spark yang diinginkan pada https://spark.apache.org/downloads.html
 
-Extract spark dengan perintah berikut:
+Ekstrak spark dengan perintah berikut:
 
 $ tar xvf spark-2.3.0-bin-hadoop2.7.tgz
 $ sudo mv spark-2.3.0-bin-hadoop2.7 /home/user/spark
@@ -271,7 +271,7 @@ $ ./sbin/start-all.sh
 
 \section{Percobaan Spark Submit}
 
-Pada percobaan ini, kita akan mecoba mengumpulkan sebuah jar kepada spark-submit. Aplikasi yang dibuat harus memiliki konfigurasi Spark dan diubah menjadi jar untuk dikumpulkan kepada spark-submit. Aplikasi yang dibuat akan membaca file yang disediakan dan menghitung jumlah kata yang ada. Sebelum melakukan percobaan, ada beberapa kebutuhan yang harus dipenuhi. Berikut adalah kebutuhan-kebutuhan yang harus dipenuhi:
+Pada percobaan ini, kita akan mencoba mengumpulkan sebuah jar kepada spark-submit. Aplikasi yang dibuat harus memiliki konfigurasi Spark dan diubah menjadi jar untuk dikumpulkan kepada spark-submit. Aplikasi yang dibuat akan membaca file yang disediakan dan menghitung jumlah kata yang ada. Sebelum melakukan percobaan, ada beberapa kebutuhan yang harus dipenuhi. Berikut adalah kebutuhan-kebutuhan yang harus dipenuhi:
 
 \begin{enumerate}
 
@@ -300,7 +300,7 @@ Setelah kebutuhan telah terpenuhi maka percobaan bisa dimulai. Berikut adalah la
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{intelij}  
-    \caption[Gambar ItelliJ IDEA]{Gambar ItelliJ IDEA} 
+    \caption[ItelliJ IDEA]{ItelliJ IDEA} 
     \label{fig:intelij} 
 \end{figure}
 
@@ -309,16 +309,16 @@ Setelah itu, pilih proyek Scala yang menggunakan sbt. Tekan tombol \textit{next}
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{newproject}  
-    \caption[Gambar proyek sbt]{Gambar proyek sbt} 
+    \caption[Proyek sbt]{Proyek sbt} 
     \label{fig:newproject} 
 \end{figure}
 
-Kemudian, namakan proyek dengan nama WordCount dan pilih versi sbt, java, dan scala yang sesuai seperti pada Gambar ~\ref{fig:projectconfig}. 
+Kemudian, namakan proyek dengan nama WordCount dan pilih versi Sbt, Java, dan Scala yang sesuai seperti pada Gambar ~\ref{fig:projectconfig}. 
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.4]{projectconfig}  
-    \caption[Gambar konfigurasi proyek]{Gambar konfigurasi proyek} 
+    \caption[Konfigurasi proyek]{Konfigurasi proyek} 
     \label{fig:projectconfig} 
 \end{figure}
 
@@ -327,7 +327,7 @@ Hasil dari pembuatan proyek baru pada IntelliJ akan terlihat seperti pada Gambar
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{structure}  
-    \caption[Gambar struktur proyek ]{Gambar struktur proyek} 
+    \caption[Struktur proyek ]{Struktur proyek} 
     \label{fig:structure} 
 \end{figure}
 
@@ -337,7 +337,7 @@ Hasil dari pembuatan proyek baru pada IntelliJ akan terlihat seperti pada Gambar
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{sbt}  
-    \caption[Gambar konfigurasi sbt]{Gambar konfigurasi sbt} 
+    \caption[Konfigurasi sbt]{Konfigurasi sbt} 
     \label{fig:sbt} 
 \end{figure}
 
@@ -346,7 +346,7 @@ Hasil dari pembuatan proyek baru pada IntelliJ akan terlihat seperti pada Gambar
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.7]{object}  
-    \caption[Gambar \textit{object} WordCount]{Gambar \textit{object} WordCount}.
+    \caption[\textit{object} WordCount]{\textit{object} WordCount}.
     \label{fig:object} 
 \end{figure}
 
@@ -356,7 +356,7 @@ Setelah itu, tambahkan kode berikut seperti pada Gambar \ref{fig:kodeword}.
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{kodeword}  
-    \caption[Gambar kode WordCount]{Gambar kode WordCount} 
+    \caption[Kode WordCount]{Kode WordCount} 
     \label{fig:kodeword} 
 \end{figure}
 
@@ -365,14 +365,14 @@ Setelah itu, tambahkan kode berikut seperti pada Gambar \ref{fig:kodeword}.
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{jar}  
-    \caption[Gambar JAR]{Gambar JAR} 
+    \caption[JAR]{JAR} 
     \label{fig:jar} 
 \end{figure}
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{sbtpackage}  
-    \caption[Gambar hasil perintah 'sbt package']{Gambar hasil perintah 'sbt package'} 
+    \caption[Hasil perintah 'sbt package']{Hasil perintah 'sbt package'} 
     \label{fig:sbtpackage} 
 \end{figure}
 
@@ -387,7 +387,7 @@ $ ./bin/spark-submit --class main.scala.WordCount --master local[1] \
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.6]{sparksubmit}  
-    \caption[Gambar penggumpulan JAR kepada \textit{spark-submit}]{Gambar penggumpulan JAR kepada \textit{spark-submit}} 
+    \caption[Penggumpulan JAR kepada \textit{spark-submit}]{Penggumpulan JAR kepada \textit{spark-submit}} 
     \label{fig:sparksubmit} 
 \end{figure}
 
@@ -396,7 +396,7 @@ Hasil tahap-tahap proses dari program dapat dilihat pada Spark UI dengan membuka
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.6]{linkui}  
-    \caption[Gambar alamat Spark UI]{Gambar alamat Spark UI} 
+    \caption[Alamat Spark UI]{Alamat Spark UI} 
     \label{fig:linkui} 
 \end{figure}
 
@@ -404,7 +404,7 @@ Spark UI menggambarkan tahap-tahap proses program. Tampilan dari Spark UI dapat 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.25]{sparkui}  
-    \caption[Gambar Spark UI]{Gambar Spark UI} 
+    \caption[Spark UI]{Spark UI} 
     \label{fig:sparkui} 
 \end{figure}
 

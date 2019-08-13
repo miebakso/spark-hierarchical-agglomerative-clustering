@@ -34,7 +34,7 @@ public class AttributesRandomGenerator {
             for(j=0;j<n2;j++){
                 double[] arr = new double[attributes];
                 for(y=0;y<attributes;y++){
-                    arr[y] = rand.nextDouble()*100;
+                    arr[y] = rand.nextDouble()*450 + 50;
                     if(y==attributes-1) {
                         bw.write("" +arr[y]);
                     } else {
@@ -55,9 +55,9 @@ public class AttributesRandomGenerator {
                             }
                         } else {
                             if(y==attributes-1) {
-                                bw.write("" +(arr[y]-difference));
+                                bw.write("" +(arr[y]+difference));
                             } else {
-                                bw.write("" +(arr[y]-difference)+",");
+                                bw.write("" +(arr[y]+difference)+",");
                             }
                         }
                     }
@@ -86,9 +86,9 @@ public class AttributesRandomGenerator {
             for(j=0;j<n2;j++){
                 for(y=0;y<attributes;y++){
                     if(y==attributes-1) {
-                        bw.write("" + (rand.nextDouble() * 100));
+                        bw.write("" + ((rand.nextDouble() * 100)+10));
                     } else {
-                        bw.write("" + (rand.nextDouble() * 100)+",");
+                        bw.write("" + ((rand.nextDouble() * 100)+10)+",");
                     }
                 }
                 bw.newLine();

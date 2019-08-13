@@ -1,0 +1,32 @@
+\chapter{Kesimpulan dan Saran}
+
+Bab ini berisi kesimpulan dari awal hingga akhir penelitian beserta saran untuk penelitian selanjutnya.
+
+\section{Kesimpulan}
+
+Kesimpulan yang dapat ditarik dari awal penelitian ini sampai selesai adalah sebagai berikut:
+
+\begin{itemize}
+
+\item Pada penelitian ini, telah dipelajari algoritma  {\it Hierarchical Agglomerative Clustering}.
+
+\item Pada penelitian ini, telah diimplementasikan algoritma {\it Hierarchical Agglomerative Clustering} pada lingkungan Spark.
+
+\item Pada penelitian ini, telah dilakukan eksperimen perbandingan performa antara perangkat lunak Spark dan Hadoop. Dari hasil pengujian dapat disimpulkan bahwa pernagkat lunak Spark memiliki performa yang lebih baik. Perangkat lunak Spark memiliki waktu eksekusi yang lebih cepat dan dapat memproses data yang berukuran lebih besar dibanding Hadoop. Waktu eksekusi Spark lebih cepat dibanding Hadoop karena Spark menyimpan data pada memori, Sebaliknya Hadoop banyak melakukan proses I/O kepada disk yang membuat Hadoop lambat.
+
+\item Pada penelitian ini, telah dibangun perangkat lunak untuk melihat hasil reduksi data.
+
+\end{itemize}
+
+\section{Saran}
+
+Saran untuk penelitian selanjutnya adalah sebagai berikut:
+
+\begin{itemize}
+
+\item Pada penelitian ini, Spark dijalankan pada Hadoop \textit{YARN}. Oleh karena itu, penulis berharap agar penelitian selanjutnya dapat menguji performa perangkat lunak pada Spark \textit{cluster}.
+
+\item Pada penelitian ini, jumlah partisi akan berdampak pada waktu eksekusi perangkat lunak Spark. Oleh karena itu, penulis berharap agar penelitian selanjutnya dapat menelti dampak banyaknya partisi terhadap waktu eksekusi.
+
+\item Pada penelitian ini, pengujian yang dilakukan masih terbatas dengan 10 \textit{worker} dan ukuran data sampai 20GB. Untuk penelitian selanjutnya, penulis berharap agar pengujian yang dilakukan dapat menggunakan jumlah \textit{worker} dan data yang lebih besar.
+\end{itemize}

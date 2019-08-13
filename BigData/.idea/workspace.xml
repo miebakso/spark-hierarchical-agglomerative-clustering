@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/scala/Dendrogram.scala" line="14" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="9c1cc672-21c9-4e99-9f57-e683e0808c2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_spark_spark_core_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_spark_spark_core_2_11_2_1_0_jar.xml" afterDir="false" />
@@ -12,12 +9,45 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_spark_spark_tags_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_spark_spark_tags_2_11_2_1_0_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_spark_spark_unsafe_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_apache_spark_spark_unsafe_2_11_2_1_0_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$efa3977bc36b8915d26a$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$efa3977bc36b8915d26a.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$efa3977bc36b8915d26a.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Cluster.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Cluster.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/DataReducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/DataReducer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/Dendrogram.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Dendrogram.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/MaxObjectList.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/PaternAccumulator.scala" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/target/.history" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/bigdata_2.11-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/bigdata_2.11-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster$$anonfun$computePatern$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster$$anonfun$computePatern$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Cluster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$mapData$1$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$mapData$1$$anonfun$apply$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$mapData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$mapData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$reduceData$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$reduceData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$reduceData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/DataReducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCentroidLinkage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCentroidLinkage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCentroidLinkage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCentroidLinkage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCompleteLinkage$1$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCompleteLinkage$1$$anonfun$apply$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCompleteLinkage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCompleteLinkage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateSingleLinkage$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateSingleLinkage$1$$anonfun$apply$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateSingleLinkage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateSingleLinkage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$1$$anonfun$apply$mcVI$sp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$1$$anonfun$apply$mcVI$sp$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$2$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$2$$anonfun$apply$mcVI$sp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$main$scala$Dendrogram$$calculateDistance$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$main$scala$Dendrogram$$calculateDistance$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$recalculateMatrix$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$recalculateMatrix$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$recalculateMatrix$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$recalculateMatrix$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Dendrogram.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/Main$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/MaxObjectList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/main/scala/PaternAccumulator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/default/bigdata$sources/0.1/resolved.xml.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/default/bigdata$sources/0.1/resolved.xml.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/default/bigdata$sources/0.1/resolved.xml.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/default/bigdata$sources/0.1/resolved.xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-compile-internal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-compile-internal.xml" afterDir="false" />
@@ -38,7 +68,46 @@
       <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/output" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/output" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab6.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab6.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/classdiagram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/classdiagram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/clusterdiagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/clusterdiagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/logo-unpar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/maxobjlistdiagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/paternaccumulatordiagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/paterndiagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/paterndiagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Lampiran/lampA.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Lampiran/lampA.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Lampiran/lampB.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Lampiran/lampB.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/data.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/data.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/referensi.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/referensi.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/skripsi.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/skripsi.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/bigdata.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/dendo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/hdfs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/hdfshadoop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/hmodule.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/logo-unpar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/mapreducehadoop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/mpstep.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/sparkcomponent.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/sparkins.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/sparkshell.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/ular-pdf.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/wordcount.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkDataGenerator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataGenerator/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkDataGenerator/out/production/SparkDataGenerator/AttributesRandomGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataGenerator/out/production/SparkDataGenerator/AttributesRandomGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkDataGenerator/out/production/SparkDataGenerator/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataGenerator/out/production/SparkDataGenerator/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkDataGenerator/src/AttributesRandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataGenerator/src/AttributesRandomGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkDataGenerator/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataGenerator/src/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,10 +176,14 @@
     <session id="-2014110827">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.7" value="4" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.7" value="6" />
+          <entry key="project.open.time.8" value="3" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -127,12 +200,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="scala" value="108" />
+          <entry key="scala" value="171" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Scala" value="108" />
+          <entry key="Scala" value="171" />
         </counts>
       </usages-collector>
     </session>
@@ -142,11 +215,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Dendrogram.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="155" column="33" selection-start-line="155" selection-start-column="16" selection-end-line="155" selection-end-column="33" />
-              <folding>
-                <element signature="e#20#51#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -154,17 +224,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Cluster.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="703">
-              <caret line="37" column="30" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/PaternAccumulator.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="20" />
+            <state relative-caret-position="285">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -178,13 +239,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/DataReducer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="536">
+              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
               <folding>
-                <element signature="e#20#69#0" expanded="true" />
+                <element signature="e#20#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -193,7 +254,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Node.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="684">
               <caret line="36" column="19" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="19" />
             </state>
           </provider>
@@ -208,20 +269,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/MaxObjectList.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="17" />
+            <state>
+              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -257,12 +309,12 @@
         <option value="$PROJECT_DIR$/src/test/scala/MethodTest.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/TestMain.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/TestSimulator.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/Dendrogram.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/DataReducer.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/MaxObjectList.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Patern.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/Cluster.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/PaternAccumulator.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/DataReducer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Dendrogram.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Cluster.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Main.scala" />
       </list>
     </option>
@@ -274,10 +326,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="919" />
-    <option name="y" value="27" />
-    <option name="width" value="950" />
-    <option name="height" value="1053" />
+    <option name="x" value="960" />
+    <option name="y" value="25" />
+    <option name="width" value="960" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -332,8 +384,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555904848249" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SparkDataGenerator" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556085092649" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -517,11 +569,19 @@
       <workItem from="1555768814082" duration="7629000" />
       <workItem from="1555904740053" duration="197000" />
       <workItem from="1555960512893" duration="1016000" />
+      <workItem from="1556083704394" duration="847000" />
+      <workItem from="1556105492362" duration="578000" />
+      <workItem from="1556122385565" duration="46000" />
+      <workItem from="1556130293628" duration="349000" />
+      <workItem from="1556778729931" duration="40000" />
+      <workItem from="1556778788683" duration="12000" />
+      <workItem from="1565459801593" duration="1919000" />
+      <workItem from="1565529405751" duration="2723000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202426000" />
+    <option name="totallyTimeSpent" value="208940000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -535,7 +595,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1670224" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22145145" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -544,16 +604,16 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.08737864" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15891892" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399137" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901832" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32901832" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" weight="0.32901832" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.3264865" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3264865" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32864866" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32864866" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
@@ -571,7 +631,7 @@
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15368196" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31619257" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -580,16 +640,16 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.08737864" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15891892" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399137" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901832" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32901832" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" weight="0.32901832" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32756758" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3264865" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32901832" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32864866" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
@@ -699,17 +759,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Cluster.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/PaternAccumulator.scala" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/MaxObjectList.scala" />
+    <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="37" column="30" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="30" />
+        <state relative-caret-position="133">
+          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/PaternAccumulator.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="20" />
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Node.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="36" column="19" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -720,51 +789,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/DataReducer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="e#20#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/MaxObjectList.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Cluster.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Node.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="36" column="19" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="19" />
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Dendrogram.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="155" column="33" selection-start-line="155" selection-start-column="16" selection-end-line="155" selection-end-column="33" />
-          <folding>
-            <element signature="e#20#51#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="76">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/DataReducer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        <state relative-caret-position="536">
+          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <element signature="e#20#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

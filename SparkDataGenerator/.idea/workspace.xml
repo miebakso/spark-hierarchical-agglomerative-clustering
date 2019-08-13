@@ -1,7 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98fbb371-3808-43da-b91b-16e74da818d6" name="Default Changelist" comment="" />
+    <list default="true" id="98fbb371-3808-43da-b91b-16e74da818d6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_core_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_core_2_11_2_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_launcher_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_launcher_2_11_2_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_network_common_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_network_common_2_11_2_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_network_shuffle_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_network_shuffle_2_11_2_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_tags_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_tags_2_11_2_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_unsafe_2_11_2_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/.idea/libraries/sbt__org_apache_spark_spark_unsafe_2_11_2_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/project/target/streams/compile/copyResources/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/project/target/streams/compile/copyResources/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/src/main/scala/Cluster.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/src/main/scala/Cluster.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/src/main/scala/DataReducer.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/src/main/scala/DataReducer.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/src/main/scala/Dendrogram.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/src/main/scala/Dendrogram.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/src/main/scala/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/src/main/scala/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/src/main/scala/MaxObjectList.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/src/main/scala/PaternAccumulator.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/.history" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/.history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/bigdata_2.11-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/bigdata_2.11-0.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster$$anonfun$computePatern$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster$$anonfun$computePatern$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster$$anonfun$main$scala$Cluster$$processCluster$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Cluster.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$mapData$1$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$mapData$1$$anonfun$apply$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$mapData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$mapData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$reduceData$1$$anonfun$apply$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$reduceData$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer$$anonfun$reduceData$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/DataReducer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCentroidLinkage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCentroidLinkage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCentroidLinkage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCentroidLinkage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCompleteLinkage$1$$anonfun$apply$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCompleteLinkage$1$$anonfun$apply$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCompleteLinkage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateCompleteLinkage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateSingleLinkage$1$$anonfun$apply$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateSingleLinkage$1$$anonfun$apply$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateSingleLinkage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$calculateSingleLinkage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$1$$anonfun$apply$mcVI$sp$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$1$$anonfun$apply$mcVI$sp$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$2$$anonfun$apply$mcVI$sp$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$2$$anonfun$apply$mcVI$sp$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$generateDendrogram$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$main$scala$Dendrogram$$calculateDistance$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$main$scala$Dendrogram$$calculateDistance$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$recalculateMatrix$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$recalculateMatrix$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$recalculateMatrix$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram$$anonfun$recalculateMatrix$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Dendrogram.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/Main$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/MaxObjectList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/classes/main/scala/PaternAccumulator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/default/bigdata$sources/0.1/resolved.xml.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/default/bigdata$sources/0.1/resolved.xml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-compile-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-compile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-optional.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-plugin.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-provided.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-runtime-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-runtime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-scala-tool.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-test-internal.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/scala-2.11/resolution-cache/reports/default-bigdata$sources-test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/streams/$global/$global/dumpStructure/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/streams/$global/$global/dumpStructure/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/streams/$global/updateClassifiers/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/streams/$global/updateClassifiers/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.11.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.11.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/streams/compile/compileIncremental/$global/streams/export" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/streams/compile/compileIncremental/$global/streams/export" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/streams/compile/packageBin/$global/streams/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/streams/compile/packageBin/$global/streams/inputs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BigData/target/streams/compile/packageBin/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/../BigData/target/streams/compile/packageBin/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab1.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab1.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab2.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab2.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab3.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab3.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab4.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab4.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab5.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Bab/bab5.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/classdiagram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/classdiagram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/logo-unpar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/maxobjlistdiagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Gambar/paternaccumulatordiagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/Lampiran/lampA.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/Lampiran/lampA.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/data.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/data.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/referensi.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/referensi.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DokumenSkripsi/skripsi.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../DokumenSkripsi/skripsi.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/Progress report v44 (1).tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/bigdata.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/dendo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/hdfs.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/hdfshadoop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/hmodule.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/logo-unpar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/mapreducehadoop.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/mpstep.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/sparkcomponent.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/sparkins.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/sparkshell.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/ular-pdf.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../REVIEW/wordcount.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkDataGenerator/AttributesRandomGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkDataGenerator/AttributesRandomGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SparkDataGenerator/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SparkDataGenerator/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AttributesRandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AttributesRandomGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,29 +149,43 @@
     <session id="-412238886">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.opened" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="255" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="255" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="190">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AttributesRandomGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1216">
-              <caret line="67" column="5" selection-start-line="17" selection-end-line="67" selection-end-column="5" />
+            <state relative-caret-position="-1084">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,11 +219,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
-    <option name="y" value="27" />
-    <option name="width" value="950" />
-    <option name="height" value="1053" />
+    <option name="y" value="25" />
+    <option name="width" value="960" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -114,7 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -132,13 +248,14 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554829352574" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557071224454" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/BigData" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -193,11 +310,22 @@
       <workItem from="1554829389536" duration="73000" />
       <workItem from="1555271340412" duration="212000" />
       <workItem from="1555616568281" duration="2000" />
+      <workItem from="1556778802551" duration="906000" />
+      <workItem from="1556820079168" duration="49000" />
+      <workItem from="1556880029449" duration="671000" />
+      <workItem from="1556897167908" duration="1293000" />
+      <workItem from="1556898485775" duration="110000" />
+      <workItem from="1556898673156" duration="1715000" />
+      <workItem from="1557048285361" duration="34000" />
+      <workItem from="1557060755624" duration="40000" />
+      <workItem from="1557067550543" duration="3703000" />
+      <workItem from="1557071561857" duration="27000" />
+      <workItem from="1557148219277" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12202000" />
+    <option name="totallyTimeSpent" value="20794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -209,10 +337,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="27" width="950" height="1053" extended-state="4" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3119469" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1339381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -221,7 +348,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5652643" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29297298" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.399137" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -251,15 +378,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="190">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AttributesRandomGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="67" column="5" selection-start-line="17" selection-end-line="67" selection-end-column="5" />
+        <state relative-caret-position="-1084">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

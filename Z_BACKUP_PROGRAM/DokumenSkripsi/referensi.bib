@@ -1,0 +1,156 @@
+%_____________________________________________________________________________
+%=============================================================================
+% referensi.bib v2 (03-10-2016) dibuat oleh Lionov - T. Informatika FTIS UNPAR
+% 
+% Ini adalah file referensi (referensi.bib), berisi petunjuk singkat membuat
+% referensi dan dipergunakan untuk menyimpan data referensi yang digunakan di
+% buku skripsi
+%
+% Sejak template skripsi versi 11, style bibliography yang digunakan adalah 
+% "computer journal" (cj). Perubahan ini disebabkan karena penulisan 
+% nama penulis pada style sebelumnya (ieeetr) tidak sesuai dengan kaidah 
+% penulisan Bahasa Indonesia, tetapi sekaligus ingin mempertahankan penggunaan
+% angka untuk merujuk dan urutan item di referensi sesuai dengan kemunculan
+% di teks skripsi.
+% Untuk menggunakan style "cj", anda membutuhkan file "compj.bst" yang sudah
+% disertakan di dalam Template Skripsi FTIS
+%
+% File compj.bst tersebut merupakan file resmi yang digunakan oleh Computer 
+% Journal yang diterbitkan Oxford University di Inggris, kemudian dilakukan 
+% cukup banyak penyesuaian untuk digunakan di FTIS UNPAR, oleh sebab itu
+% ada kemungkinan terjadi warning/error jika isi file ini digunakan untuk
+% mencetak daftar referensi dengan menggunakan style yang lain
+%
+% Jika anda menemui kesulitan dalam menuliskan referensi (karena tidak 
+% terdapat pada contoh yang diberikan), anda dapat bertanya via email ke 
+% lionov(at)gmail.com atau lionov(at)unpar.ac.id
+%
+% Versi 2 (03-10-2016):
+%	- Penjelasan umum dan 12 jenis penulisan referensi
+%_____________________________________________________________________________
+%=============================================================================
+
+%_____________________________________________________________________________
+%=============================================================================
+% Panduan singkat penulisan isi referensi.bib untuk Template Skripsi FTIS
+%
+% Dalam file ini akan diberikan contoh cara penulisan dari 10 jenis sumber 
+% yang umum digunakan. 
+% Untuk keseluruhan penulisan nama penulis, gunakan format nama lengkap yang 
+% dipisahkan dengan kata "and" (jika terdapat beberapa orang penulis)
+% 	Contoh : John Doe and Jack Doe and Jane Doe
+% jika perlu, gunakan tanda kurung untuk nama-nama tertentu untuk memisahkan 
+% nama depan dengan nama keluarga agar lebih tepat
+% 	Contoh : John {van Doe} and Jack {von Doe}
+% atau, gunakan tanda koma yang memisahkan nama dan nama keluarga (ditulis 
+% terbalik)
+% 	Contoh : Doe, John and von Doe, Jack and Doe, Jane
+%
+% Secara umum, data untuk bibtex dapat ditemukan secara otomatis di internet
+% Misalkan untuk buku, carilah dengam mesin pencari, nama buku dengan tambahan 
+% "bibtex". Hal serupa dapat digunakan untuk mencari paper/artikel.
+%
+% Bahan kuliah (dalam bentuk slide/lecture notes) tidak dianjurkan digunakan 
+% sebagai referensi, karena biasanya isinya mengacu ke suatu buku wajib di 
+% kuliah tersebut. Jadi lebih baik mencantumkan buku wajib tersebut sebagai 
+% referensi.
+%
+% Khusus untuk mahasiswa/i prodi informatika, banyak paper/buku dapat diunduh 
+% bibtexnya dari dblp atau acm.org. Jika anda mendapatkan bib dari hasil unduh 
+% tersebut, mohon informasi yang diisi disesuaikan dengan petunjuk yang ada 
+% sehingga hasil referensi anda tetap rapi.
+%
+% Mohon tidak menuliskan "et al.", karena akan diduga dihasilkan oleh 
+% template ini, padahal tidak demikian. Gunakan "dkk" bila sangat terpaksa. 
+% Lebih baik tuliskan semua nama penulis untuk menghargai mereka. 
+% Tentu jika jumlahnya masuk akal, maksimal sekitar 10 orang. 
+%_____________________________________________________________________________
+%=============================================================================
+%
+%_____________________________________________________________________________
+%=============================================================================
+% Contoh penulisan referensi:
+% 	1. Buku
+%	Field yang wajib ada:
+%		1. author		: penulis
+%		2. title 		: judul
+%		3. edition		: edisi (OPSIONAL, kosongkan entri ini jika buku tersebut merupakan edisi pertama)
+%		4. year			: tahun terbit buku
+%		5. publisher	: penerbit
+%		6. address		: kota lokasi penerbit
+%
+%	Contoh hasil di Daftar Referensi: 
+%	de Berg, M., Cheong, O., van Kreveld, M. J., dan Overmars, M. (2008) Computational Geometry: Algorithms and Applications, 3rd edition. Springer-Verlag, Berlin.
+%
+%	Contoh penulisan di file bib:
+
+@article{ishwarappa:01:bgintro,
+	author		= {Ishwarappa and Anuradha J},
+	title     	= {A Brief Introduction on Big Data 5Vs Characteristics and Hadoop Technology},
+	journal   	= {Procedia Computer Science},
+	volume    	= {48},
+	pages     	= {319 – 324},
+	year      	= {2015},
+}
+
+@article{veronica:02:bdhca,
+	author		= {Veronica Sri Moertini and Gde W. Suarjana and Liptia Venica and  Gede Karya},
+	title     	= {Big Data Reduction Technique using Parallel Hierarchical Agglomerative Clustering},
+	journal   	= {IAENG International Journal of Computer Science},
+	volume    	= {45},
+	pages     	= {188 – 205},
+	year      	= {2018},
+}
+
+@book{anil:03:afcd,
+      author	= {Anil K. Jain and Richard C. Dubes},
+      title   	= {Algorithms for Clustering Data},
+      edition	= {},
+      year   	= {1988},
+      publisher	= {Pearson College Div},
+      address	= {New Jersey},
+}
+
+@book{alexholmes:04:hip,
+      author	= {Alex {Holmes}},
+      title   	= {Hadoop in Practice},
+      edition	= {},
+      year   	= {2012},
+      publisher	= {Manning},
+      address	= {New York},
+}
+
+@book{tomwhite:05:htdg,
+      author	= {Tom White},
+      title   	= {Hadoop The Definitive Guide},
+      edition	= {4th},
+      year   	= {2015},
+      publisher	= {O'Reilly Media},
+      address	= {Sebastopol},
+}
+
+@book{chucklam:06:hia,
+      author	= {Chuck Lam},
+      title   	= {Hadoop in Action},
+      edition	= {},
+      year   	= {2010},
+      publisher	= {Manning Publications},
+      address	= {New York},
+}
+
+@book{holdenkarau:07:ls,
+      author	= {Holden Karau and Andy Konwinski and Patrick Wndell and Matel Zaharia},
+      title   	= {Learning Spark},
+      edition	= {1th},
+      year   	= {2015},
+      publisher	= {O'Reilly Media},
+      address	= {Sebastopol},
+}
+
+
+
+
+
+
+%_____________________________________________________________________________
+%=============================================================================

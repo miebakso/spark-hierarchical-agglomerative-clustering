@@ -5,15 +5,15 @@
 \section{Latar Belakang}
 \label{sec:label}
 
-{\it Big data} adalah sebuah istilah yang menggabarkan volume data yang besar, baik data yang terstruktur maupun data yang tidak terstruktur. Data-data tersebut memiliki potensi untuk digali menjadi informasi yang penting. Dalam bidang {\it big data} ada  beberapa tantangan seperti volume data yang besar, kecepatan aliran data yang masuk, dan variasi data dengan format yang berbeda. Tantangan tersebut membuat aplikasi pemrosesan data traditional  tidak bisa memproses dan menganalisis {\it big data}. Munculah teknologi-teknologi seperti Hadoop dan Spark yang dirancang khusus untuk menangani {\it big data}. 
+{\it Big data} adalah sebuah istilah yang menggambarkan volume data yang besar, baik data yang terstruktur maupun data yang tidak terstruktur. Data-data tersebut memiliki potensi untuk digali menjadi informasi yang penting. Dalam bidang {\it big data} ada  beberapa tantangan seperti volume data yang besar, kecepatan aliran data yang masuk, dan variasi data dengan format yang berbeda. Tantangan tersebut membuat aplikasi pemrosesan data tradisional  tidak bisa memproses dan menganalisis {\it big data}. Munculah teknologi-teknologi seperti Hadoop dan Spark yang dirancang khusus untuk menangani {\it big data}. 
 
 {\it Big data} akan lebih mudah dianalisis dan diterapkan teknik-teknik {\it data-mining} ketika volume {\it big data} tersebut telah direduksi. Dengan mereduksi data, kita bisa menghemat biaya pengiriman data, {\it disk space}, dan jumlah data yang diproses. Hasil dari reduksi {\it big data} harus bisa mewakili data mentahnya secara akurat. 
 
-Salah satu cara mereduksi data adalah dengan menggunakan algoritma {\it Hierarchical Agglomerative Clustering }. Algoritma tersebut cocok untuk data yang tidak memiliki atribut yang terlalu banyak. Journal ilmiah berjudul {\it Big Data Reduction Technique using Parallel Hierarchical Agglomerative Clustering} menjabarkan algoritma {\it Hierarchical Agglomerative Clustering} berbasis MapReduce pada Hadoop. Penelitian tersebut membuktikan bahwa data yang direduksi dengan algoritma tersebut bisa mewakili data mentah secara keseluruhan. Algoritma {\it Hierarchical Agglomerative Clustering} bekerja dengan mengubah setiap objek menjadi {\it sub-cluster}. Kemudian, {\it sub-cluster} akan di gabung dengan {\it sub-cluster} lainya secara bertahap bedasarkan jarak antara {\it sub-cluster} sampai terbentuknya sebuah \textit{cluster}. {\it Cluster} tersebut akan menjadi akar dari hierarki.
+Salah satu cara mereduksi data adalah dengan menggunakan algoritma {\it Hierarchical Agglomerative Clustering }. Algoritma tersebut cocok untuk data yang tidak memiliki atribut yang terlalu banyak. Journal ilmiah berjudul {\it Big Data Reduction Technique using Parallel Hierarchical Agglomerative Clustering} menjabarkan algoritma {\it Hierarchical Agglomerative Clustering} berbasis MapReduce pada Hadoop. Penelitian tersebut membuktikan bahwa data yang direduksi dengan algoritma tersebut bisa mewakili data mentah secara keseluruhan. Algoritma {\it Hierarchical Agglomerative Clustering} bekerja dengan mengubah setiap objek menjadi {\it sub-cluster}. Kemudian, {\it sub-cluster} akan di gabung dengan {\it sub-cluster} lainya secara bertahap berdasarkan jarak antara {\it sub-cluster} sampai terbentuknya sebuah \textit{cluster}. {\it Cluster} tersebut akan menjadi akar dari hierarki.
 
-Meskipun hasil reduksi data dengan algoritma {\it Hierarchical Agglomerative Clustering} berbasis MapReduce pada Hadoop dapat mewakili data mentahnya secara akurat, MapReduce pada Hadoop memiliki kekurangan. Kekurangan MapReduce adalah dalam melakukan proses-proses iterasi, MapReduce akan menuliskan hasil sementara dari iterasi kepada disk. Hal ini membuat MapReduce lambat dalam mengerjakan proses iterasi. {\it Hierarchical Agglomerative Clustering} adalah algoritma yang mengandung banyak iterasi, sehingga hasil sementara akan dituliskan kepada disk berulang kali dan membuat implementasi pada Hadoop MapReduce kurang baik.
+Meskipun hasil reduksi data dengan algoritma {\it Hierarchical Agglomerative Clustering} berbasis MapReduce pada Hadoop dapat mewakili data mentahnya secara akurat, MapReduce pada Hadoop memiliki kekurangan. Hadoop tidak efisien dalam melakukan proses iterative, {\it intermediate data} tidak dapat disimpan pada memori. Hadoop perlu melakukan penulisan dan pembacaan kepada disk diantara setiap tahap Map dan Reduce.
 
-Spark adalah {\it distributed cluster-computing framework} yang bisa menggantikan MapReduce beserta kekurangannya. {\it In-memory processing} pada Spark dapat mengalahkan kecepatan pemrosesan pada Hadoop MapReduce. Karena proses dilakukan pada RAM, kecepatan pemrosesan akan jauh lebih cepat. Tidak hanya itu, kecepatan proses-proses iterasi meningkat karena  hasil sementara tidak harus ditulis kepada disk. Spark {\it Resilient Distributed Datasets} (RDDs) memungkinkan {\it multi map operation} pada memori.
+Spark adalah {\it distributed cluster-computing framework} yang bisa menggantikan MapReduce beserta kekurangannya. {\it In-memory processing} pada Spark dapat mengalahkan kecepatan pemrosesan pada Hadoop MapReduce. Karena data disimpan pada RAM, kecepatan pemrosesan akan jauh lebih cepat. Spark membaca data yang akan direduksi dari RAM. Pembacaan data dari RAM akan lebih cepat dibanding disk.
 
 Pada skripsi ini, akan dibangun sebuah perangkat lunak yang dapat mereduksi {\it big data}. Perangkat lunak tersebut akan dibangun menggunakan framework terdistribusi Spark dan mengimplementasikan algoritma {\it Hierarchical Agglomerative Clustering} yang khusus dirancang untuk lingkungan Spark. Perangkat lunak akan menampilkan hasil reduksi dalam format visual dan tabel. Dengan menggunakan Spark, waktu proses reduksi data akan lebih cepat dibanding MapReduce.
 
@@ -27,11 +27,11 @@ Dari latar belakang di atas maka dapat dibentuk rumusan masalah sebagai berikut:
 
 \item Bagaimana cara kerja algoritma {\it Hierarchical Agglomerative Clustering} berbasis MapReduce untuk mereduksi {\it big data}?
 
-\item Bagaimana cara mengkustomisasi dan mengimplementasikan aggloritma {\it Agglomerative Clustering} pada sistem tersebar Spark?
+\item Bagaimana cara mengkustomisasi dan mengimplementasikan algoritma {\it Agglomerative Clustering} pada sistem tersebar Spark?
 
 \item Bagaimana mengukur kinerja hasil dari implementasi dari algoritma {\it Agglomerative Clustering} pada sistem tersebar Spark?
 
-\item Bagaimana cara mempresentasikan data yang telah direduksi agar dapat diinterpretasikan pengguna dengan mudah?
+\item Bagaimana cara mempresentasikan data yang telah direduksi?
 
 \end{enumerate}
 
@@ -42,13 +42,13 @@ Dari latar belakang di atas maka dapat dibentuk rumusan masalah sebagai berikut:
 Dari rumusan masalah di atas maka tujuan dari penelitian adalah sebagai berikut:
 \begin{enumerate}
 
-\item Mempelajari cara kerja algoritma  {{\it Hierarchical Agglomerative Clustering} berbasis MapReduce untuk mereduksi {\it big data}.
+\item Mempelajari cara kerja algoritma  {\it Hierarchical Agglomerative Clustering} berbasis MapReduce untuk mereduksi {\it big data}.
 
 \item Mengkustomisasi dan mengimplementasikan algoritma {\it Hierarchical Agglomerative Clustering} pada lingkungan Spark.
 
 \item Melakukan eksperimen pada lingkungan sistem tersebar Spark untuk mengukur kinerja algoritma lingkungan Spark.
 
-\item Membuat modul program yang dapat memudahkan pengguna menginterpretasikan data yang telah direduksi.
+\item Membuat modul program untuk menginterpretasikan data yang telah direduksi.
 
 \end{enumerate}
 
@@ -72,18 +72,18 @@ Batasan masalah pada Skripsi ini adalah sebagai berikut:
 
 \section{Metodologi}
 \label{sec:metlit}
-Metodologi yang digunakan dalam pembuatan Skripsi ini adalah:
+Metodologi yang digunakan dalam pembuatan skripsi ini adalah:
 \begin{enumerate}
 
-\item Melakukan Studi literatur tentang konsep dasar Hadoop dan sistem file Hadoop yaitu HDFS.
+\item Melakukan studi literatur tentang konsep dasar Hadoop dan sistem file Hadoop yaitu HDFS.
 
-\item Melakukan Studi literatur tentang konsep Apache Spark.
+\item Melakukan studi literatur tentang konsep Apache Spark.
 
-\item Melakukan Studi literatur bahasa pemrograman Scala.
+\item Melakukan studi literatur bahasa pemrograman Scala.
 
-\item Melakukan Studi literatur tentang algoritma {\it Hierarchical Agglomerative Clustering}.
+\item Melakukan studi literatur tentang algoritma {\it Hierarchical Agglomerative Clustering}.
 
-\item Melakukan instalasi dan configurasi Apache Spark.
+\item Melakukan instalasi dan konfigurasi Apache Spark.
 
 \item Melakukan eksperimen dengan bahasa pemrograman Scala.
 
@@ -93,7 +93,7 @@ Metodologi yang digunakan dalam pembuatan Skripsi ini adalah:
 
 \item Mencari dan mengumpulkan data uji coba yang bervolume besar.
 
-\item Merancang dan mengimplementasikan perangkat lunak demo.
+\item Merancang dan mengimplementasikan perangkat lunak
 
 \item Melakukan eksperimen terhadap perangkat lunak dan menganalisis hasil eksperimen.
 
@@ -106,7 +106,31 @@ Metodologi yang digunakan dalam pembuatan Skripsi ini adalah:
 
 \section{Sistematika Pembahasan}
 \label{sec:sispem}
-Rencananya Bab 2 akan berisi petunjuk penggunaan template dan dasar-dasar \LaTeX.
-Mungkin bab 3,4,5 dapt diisi oleh ketiga jurusan, misalnya peraturan dasar skripsi atau pedoman penulisan, tentu jika berkenan.
-Bab 6 akan diisi dengan kesimpulan, bahwa membuat template ini ternyata sungguh menghabiskan banyak waktu.
+
+Laporan penelitian tersusun ke dalam enam bab secara sistematis sebagai berikut:
+
+\begin{itemize}
+
+\item Bab 1 Pendahuluan\\
+Berisi latar belakang, rumusan masalah, tujuan, batasan masalah, metodologi penelitian, dan
+sistematika pembahasan
+
+\item Bab 2 Dasar Teori\\
+Berisi dasar teori tentang \textit{big data}, \textit{Hierarchical Agglomerative Clustering}, Hadoop, Spark, dan Scala.
+
+\item Bab 3 Studi dan Eksplorasi Apache Spark\\
+Berisi percobaan-percobaan Spark.
+
+\item Bab 4 Analisis dan Perancangan\\
+Berisi analisis masalah, diagram alur, \textit{use case} dan skenario, diagram kelas, dan perancangan antarmuka.
+
+\item Bab 5 Implementasi dan Pengujian\\
+Berisi implementasi antarmuka perangkat lunak, pengujian eksperimen, dan kesimpulan dari pengujian.
+
+\item Bab 5 Implementasi dan Pengujian\\
+Berisi kesimpulan awal sampai akhir penelitian dan saran untuk penelitian selanjutnya.
+
+
+\end{itemize}
+
 

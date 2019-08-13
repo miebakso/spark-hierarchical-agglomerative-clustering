@@ -79,9 +79,9 @@
 % Mode default adalah 'template' yang menghasilkan isian berwarna merah, 
 % aktifkan salah satu mode di bawah ini :
 %=============================================================================
-\mode{bimbingan} 		% untuk keperluan bimbingan
+%\mode{bimbingan} 		% untuk keperluan bimbingan
 %\mode{sidang} 			% untuk sidang 1
-%\mode{sidangakhir} 	% untuk sidang 2 / sidang pada Skripsi 2(IF)
+\mode{sidangakhir} 	% untuk sidang 2 / sidang pada Skripsi 2(IF)
 %\mode{final} 			% untuk mencetak buku skripsi 
 %=============================================================================
 
@@ -156,7 +156,7 @@
 % seterusnya, harus dilakukan secara manual dengan mengubah file skripsi.tex
 % Catatan: bagian ini hanya bisa diatur di mode bimbingan
 %=============================================================================
-\bab{4}
+\bab{4,5}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -176,7 +176,7 @@
 % seterusnya, harus dilakukan secara manual dengan mengubah file skripsi.tex
 % Catatan: bagian ini hanya bisa diatur di mode bimbingan
 %=============================================================================
-\lampiran{all}
+\lampiran{4,5}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -233,8 +233,25 @@
 % - hilangkan tanda << & >>, dan isi sesuai dengan data anda
 % - langsung mulai setelah '{' awal, jangan mulai menulis di baris bawahnya
 %=============================================================================
-\abstrakINA{<<Tuliskan abstrak anda di sini, dalam bahasa Indonesia>>}
-\abstrakENG{<<Tuliskan abstrak anda di sini, dalam bahasa Inggris>>} 
+\abstrakINA{
+\textit{Big data} perlu direduksi untuk menghemat tempat penyimpanan. Algoritma \textit{Hierarchical Agglomerative Clustering} dapat digunakan untuk mereduksi data. Dengan bantuan sistem terdistribusi seperti Hadoop, proses reduksi data dapat dilakukan secara paralel dan lebih cepat. Sayangnya, teknologi Hadoop masih dapat dikatakan 'terlalu lambat' dalam melakukan proses reduksi data karena hasil sementara dari setiap tahap akan disimpan di disk sampai dibutuhkan kembali di tahap selanjutnya.\\
+
+Untuk mempercepat proses reduksi data, Hadoop dapat digantikan dengan Spark. Spark adalah sistem terdistribusi, mirip seperti Hadoop. Tetapi, yang membedakan antara Hadoop dengan Spark adalah pada cara penyimpanan sementara saat melakukan proses reduksi data. Hadoop menggunakan disk sebagai tempat penyimpanan sementaranya, sedangkan Spark menggunakan memori sebagai tempat penyimpanan sementaranya. Pembacaan dan penulisan akan lebih cepat saat menggunakan memori dibandingkan dengan menggunakan disk, sehingga Spark akan lebih cepat dibandingkan dengan Hadoop.\\
+
+Perangkat lunak dibuat untuk mengimplementasi algoritma \textit{Hierarchical Agglomerative Clustering} dalam Spark. Pengujian juga dilakukan dengan membandingkan waktu eksekusi algoritma \textit{Hierarchical Agglomerative Clustering} saat diimplementasikan pada Hadoop dan saat diimplementasikan pada Spark. Waktu eksekusi dicatat untuk ukuran data yang berbeda-beda.\\
+
+Berdasarkan hasil pengujian, Spark memiliki waktu eksekusi yang lebih cepat dibandingkan dengan Hadoop. Spark memiliki waktu eksekusi yang lebih cepat dibandingkan dengan Hadoop karena data disimpan dan dibaca pada memori.
+}
+
+\abstrakENG{
+Big data need to be reduce to save storage space. The Hierarchical Agglomerative Clustering algorithm can be used to reduce data. With the help of distributed systems such as Hadoop, reduction process can be done in parallel with less execution time. Unfortunately, Hadoop technology can still be said to be 'too slow' in the process of data reduction because temporary results from each stage will be stored on the disk until it is needed again at a later stage.\\
+
+To speed up the data reduction process, Hadoop can be replaced with Spark. Spark is a distributed system, similar to Hadoop. However, what distinguishes Hadoop from Spark is the way to temporarily store data in reduction processes. Hadoop uses the disk as its temporary storage, while Spark uses memory as its temporary storage. Reading and writing process will be faster when using memory than using disks, Spark will be faster than Hadoop.\\
+
+The Hierarchical Agglomerative Clustering algorithm is implemented in the software. Experiment were done by comparing the execution time of the  Hierarchical Agglomerative Clustering algorithm when implemented on Hadoop and on Spark. The execution time is recorded for different data sizes.\\
+
+Based on the experiment, Spark has a faster execution time compared to Hadoop. Spark has a faster execution time compared to Hadoop because data is stored and read from memory.\\
+} 
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -246,8 +263,10 @@
 % - kunciENG: keywords in english
 % Petunjuk: hilangkan tanda << & >>, dan isi sesuai dengan data anda.
 %=============================================================================
-\kunciINA{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Indonesia>>}
-\kunciENG{<<Tuliskan di sini kata-kata kunci yang anda gunakan, dalam bahasa Inggris>>}
+\kunciINA{
+Reduksi Data, \textit{Hierarchical Agglomerative Clustering}, 
+Spark}
+\kunciENG{Data Reduction, \textit{Hierarchical Agglomerative Clustering}, Spark}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -257,7 +276,8 @@
 % Persembahan : kepada siapa anda mempersembahkan skripsi ini ...
 % Petunjuk: hilangkan tanda << & >>, dan isi sesuai dengan data anda.
 %=============================================================================
-\untuk{<<kepada siapa anda mempersembahkan skripsi ini\ldots?>>}
+\untuk{Dipersembahkan untuk keluarga, teman, Ibu
+Veronica, dan diri sendiri}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -268,7 +288,28 @@
 % kasih kepada yang telah membantu anda bla bla bla ....  
 % Petunjuk: hilangkan tanda << & >>, dan isi sesuai dengan data anda.
 %=============================================================================
-\prakata{<<Tuliskan kata pengantar dari anda di sini \ldots>>} 
+\prakata{
+Puji dan syukur kehadirat Tuhan Yang Maha Esa atas berkat rahmat serta kasih-Nya sehingga penulis dapat menyelesaikan skripsi ini yang mengambil judul “Reduksi Big Data dengan Algoritma Agglomerative Clustering untuk Spark”. Penulisan skripsi ini diajukan untuk memenuhi salah satu syarat untuk memperoleh gelar Sarjana
+pada Program Studi Teknik Informatika Universitas Katolik Parahyangan. Pada penyusunan dan
+penulisan skripsi ini, penulis menyadari bahwa penyusunan dan penulisan skripsi ini juga tidak
+terlepas dari bantuan berbagai pihak, baik langsung maupun tidak langsung. Secara khusus, penulis
+ingin berterima kasih kepada:
+
+\begin{enumerate}
+\item Keluarga yang selalu memberi dukungan dan mengurus penulis selama mengerjakan skripsi.
+
+\item Ibu \VSM selaku dosen pembimbing yang telah membimbing penulis dan memberikan dukungan dan bantuan kepada penulis dalam proses penyusunan
+skripsi ini.
+
+\item Teman dan kerabat lainya yang tidak bisa saya sebutkan satu-persatu.
+
+\end{enumerate}
+
+Penulis menyadari bahwa skripsi ini masih jauh dari kata sempurna. Oleh karena itu, penu-
+lis memohon maaf jika terdapat kesalahan. Penulis juga mengharapkan kritik dan saran yang
+membangun untuk menyempurnakan skripsi ini. Semoga skripsi ini dapat memberi informasi yang
+bermanfaat dan menjadi inspirasi untuk penelitian-penelitian berikutnya.
+} 
 %=============================================================================
 
 %_____________________________________________________________________________

@@ -26,13 +26,13 @@ class Cluster(dendrogram:Node, cutOffDistance:Double) extends Serializable {
         }
     }
 
-    def computePatern(): List[Patern] = {
+    def computePatern(): ListBuffer[Patern] = {
         formClusterFromDendrogram()
         val paterns:ListBuffer[Patern] = new ListBuffer[Patern]()
         clusters.foreach( cluster => {
             paterns += processCluster(cluster)
         })
-        paterns.toList
+        paterns
     }
 
     private def processCluster(cluster: Node): Patern ={
@@ -89,10 +89,7 @@ class Cluster(dendrogram:Node, cutOffDistance:Double) extends Serializable {
                 if(SD.length==0){
                     i=0
                     data.foreach(value => {
-                        //println("TEST SD")
-                        //println(value+" "+avg(i))
                         SD += Math.pow((value - avg(i)),2)
-                        //println(SD(0))
                         i+=1
                     })
                 } else {
