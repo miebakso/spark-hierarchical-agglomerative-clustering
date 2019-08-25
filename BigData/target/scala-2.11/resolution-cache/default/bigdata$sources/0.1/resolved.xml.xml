@@ -4,7 +4,7 @@
 		module="bigdata$sources"
 		revision="0.1"
 		status="integration"
-		publication="20190811201656"
+		publication="20190820185545"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
