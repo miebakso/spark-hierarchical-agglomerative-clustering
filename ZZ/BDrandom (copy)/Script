@@ -1,0 +1,18 @@
+Jalankan command berikut pada spark submit
+
+./bin/spark-submit --class main.scala.Main --num-executors X --executor-cores Y --executor-memory Z --master yarn --deploy-mode cluster --driver-memory 1G S1 S2 S3 N A B C
+
+X = Jumlah executor
+Y = Jumlah core untuk setiap Executor
+Z = Jumlah memory untuk setiap Executor
+S1 = File path kepada JAR
+S2 = Input path HDFS
+S3 = Output path HDFS
+N = jumlah partisi
+A = Jumlah objek maksimum pada dendrogram
+B = Distance type (0 = single linkage, 1 = complete linkage, 2 = average linkage)
+C = cut-off distance
+
+Contoh Command
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 1 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/bigdata_2.11-0.1.jar /spark-input/1GB/input.txt /spark-output/spark/1GB/test1 100 30 0 0.8

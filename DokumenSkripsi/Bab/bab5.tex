@@ -208,29 +208,23 @@ Pada bagian ini akan diuji performa perangkat lunak Spark dan Hadoop. Kedua pera
 	\centering 
 	\caption{Tabel data yang digunakan pada eksperimen}
 	\label{tab:exdata}
-	\begin{tabular}{|p{2cm}|p{4cm}|}
+	\begin{tabular}{|p{2cm}|p{2cm}|p{4cm}|}
 \hline
-Ukuran Data & Jumlah Objek  \\
+Ukuran Data & Jumlah Objek  & Jumlah Block\\
 \hline
-20 MB & 640000 \\
+1 GB & 36000000 & 40 \\
 \hline
-30 MB & 810000 \\
+2 GB & 64000000 & 70 \\
 \hline
-40 MB & 1000000 \\
+3 GB & 81000000 & 89 \\
 \hline
-1 GB & 36000000 \\
+5 GB & 144000000 & 157 \\
 \hline
-2 GB & 64000000 \\
+10 GB & 256000000 & 279 \\
 \hline
-3 GB & 81000000 \\
+15 GB & 400000000 & 435 \\
 \hline
-5 GB & 144000000 \\
-\hline
-10 GB & 256000000 \\
-\hline
-15 GB & 400000000 \\
-\hline
-20 GB & 529000000 \\
+20 GB & 529000000 & 576 \\
 \hline
 	\end{tabular} 
 \end{table}
@@ -372,11 +366,6 @@ Ukuran Data & Jumlah Partisi & Waktu Ekseuksi Spark (tanpa standard deviasi) & W
 \end{minipage}\\
 
 
-
-
-
-
-
 Pada percobaan ketiga akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 5 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dengan jumlah objek maksimum adalah 30, dan jumlah partisi adalah 30. UKuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
@@ -441,3 +430,436 @@ Ukuran Data & Jumlah Partisi & Waktu Ekseuksi Spark (tanpa standard deviasi) & W
 
 
 
+
+
+
+Pada percobaan pertama akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 1 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dan jumlah objek maksimum adalah 30. Ukuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark11}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+\centering 
+\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
+\label{tab:spark11}
+\begin{tabular}{|p{1.5cm}|p{1cm}|p{1cm}|p{4cm}|p{3cm}|p{3cm}|}
+\hline
+Ukuran Data & Jumlah Partisi Spark & Jumlah Partisi Hadoop & Waktu Eksekusi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
+\hline
+1 GB & 100 & 10 & 63 detik & 74 detik & 183 detik \\
+\hline
+2 GB & 200 & 10 & 92 detik & 97 detik & 252 detik \\
+\hline
+3 GB & 300 & 10 & 204 detik & 176 detik & 318 detik \\
+\hline
+5 GB & 700 & 10 & 277 detik & 310 detik & 505 detik \\
+\hline
+10 GB & 1400 & 10 & 484 detik & 494 detik & 953 detik \\
+\hline
+15 GB & 2100 & 10 & 746 detik & 747 detik & 1434 detik\\
+\hline
+20 GB & 2800 & 10 & 976 detik & 980 detik & 1830 detik\\
+\hline
+
+	\end{tabular} 
+\end{table}
+
+\def\scl{1}
+% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa SD}
+		\addplot+[smooth][color=green] coordinates {(1,63) (2,92) (3,204) (5,277) (10,484) (15,746) (20,976)};
+		\addlegendentry{Spark SD}
+		\addplot+[smooth][color=red] coordinates {(1,74) (2,97) (3,176) (5,310) (10,494) (15,747) (20,980) };
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(1,183) (2,252) (3,318) (5,505) (10,953) (15,1434) (20,1830)};
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan pertama]{Hasil percobaan pertama}
+		\label{fig:percobaan1}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+Pada percobaan kedua akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 3 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dengan jumlah objek maksimum adalah 30, dan jumlah partisi adalah 30. UKuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
+	\label{tab:spark10}
+	\begin{tabular}{|p{1.5cm}|p{1cm}|p{1cm}|p{4cm}|p{3cm}|p{3cm}|}
+\hline
+Ukuran Data & Jumlah Partisi Spark & Jumlah Partisi Hadoop & Waktu Eksekusi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
+\hline
+1 GB & 100 & 10 & 47 detik & 45 detik & 85 detik\\
+\hline
+2 GB & 200 & 10 & 62 detik & 61 detik & 135 detik\\
+\hline
+3 GB & 300 & 10 & 113 detik & 114 detik & 162 detik\\
+\hline
+5 GB & 700 & 10 & 149 detik & 161 detik & 257 detik\\
+\hline
+10 GB & 1400 & 10 & 238 detik & 243 detik & 459 detik\\
+\hline
+15 GB & 2100 & 10 & 361 detik & 369 detik & 671 detik\\
+\hline
+20 GB & 2800 & 10 & 466 detik & 478 detik & 867 detik\\
+\hline
+
+\hline
+	\end{tabular} 
+\end{table}
+
+\def\scl{1}
+% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa SD}
+		\addplot+[smooth][color=green] coordinates {(1,47) (2,62) (3,113) (5,149) (10,238) (15,361) (20,466)};
+		\addlegendentry{Spark SD}
+		\addplot+[smooth][color=red] coordinates {(1,45) (2,61) (3,114) (5,161) (10,243) (15,369) (20,478) };
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(1,85) (2,135) (3,162) (5,257) (10,459) (15,571) (20,867)};
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan kedua]{Hasil percobaan kedua}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+
+
+
+
+Pada percobaan ketiga akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 5 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dengan jumlah objek maksimum adalah 30, dan jumlah partisi adalah 30. UKuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
+	\label{tab:spark10}
+	\begin{tabular}{|p{1.5cm}|p{1cm}|p{1cm}|p{4cm}|p{3cm}|p{3cm}|}
+\hline
+Ukuran Data & Jumlah Partisi Spark & Jumlah Partisi Hadoop & Waktu Ekseuksi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
+\hline
+1 GB & 100 & 50 & 50 detik & 50 detik & 96 detik\\
+\hline
+2 GB & 200 & 50 & 67 detik & 68 detik & 156 detik\\
+\hline
+3 GB & 300 & 50 & 99 detik & 95 detik & 177 detik\\
+\hline
+5 GB & 500 & 50 & 119 detik & 129 detik & 294 detik\\
+\hline
+10 GB & 700 & 50 & 190 detik & 195 detik & 490 detik\\
+\hline
+15 GB & 1400 & 50 & 285 detik & 278 detik & 732 detik\\
+\hline
+20 GB & 2100 & 50 & 374 detik & 369 detik & 976 detik\\
+\hline
+
+\hline
+	\end{tabular} 
+\end{table}
+
+\def\scl{1}
+% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa SD}
+		\addplot+[smooth][color=green] coordinates {(1,50) (2,67) (3,99) (5,119) (10,190) (15,285) (20,374)};
+		\addlegendentry{Spark SD}
+		\addplot+[smooth][color=red] coordinates {(1,50) (2,68) (3,95) (5,129) (10,195) (15,278) (20,369) };
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(1,96) (2,156) (3,177) (5,294) (10,490) (15,732) (20,976)};
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan kedua]{Hasil percobaan kedua}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+%1111111111GBBBBBBBBBBBBBBBBB
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates {(10,319) (30,131) (50,101) (100,62) (150,56) };
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates {(10,304) (30,124) (50,89) (100,63) (150,56)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,214) (30,216) (50,230) (100,303) (150,313)};
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 1GB]{Hasil percobaan partisi Spark dan Hadoop 1GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+%222222222222222222222GBBBBBBBBBBBBBBBBB
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates {(10,929) (30,350) (50,205) (100,126) (150,110) (200,98) (250,83)};
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates {
+		(10,958) (30,317) (50,217) (100,134) (150,109) (200,99) (250,86)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,365) (30,355) (50,428) (100,446) (150,489) (200,545) (250,589)};
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 2GB]{Hasil percobaan partisi Spark dan Hadoop 2GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+%333333333333333333GBBBBBBBBBBBBBBBBB
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates {(10,1446) (30,516) (50,315) (100,188) (150,144) (200,135) (250,211) (300,182) (350,163) (400,137)};
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates {
+		(10,1376) (30,491) (50,298) (100,183) (150,146) (200,144) (250,191) (300,176) (350,169) (400,158)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,455) (30,445) (50,501) (100,532) (150,639) (200,720) (250,761) (300,822) (350,903) (400,1012)};
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 3GB]{Hasil percobaan partisi Spark dan Hadoop 3GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+%555555555555GBBBBBBBBBBBBBBBBB
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates {(10,4457) (30,2002) (50,891) (100,590) (150,431) (200,288) (300,526) (400,399) (500,370) (600,326) (700,306) (800,256)};
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates {(10,4490) (30,1637) (50,995) (100,524) (150,343) (200,315) (300,519) (400,422) (500,359) (600,319) (700,259) (800,255)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,817) (30,759) (50,906) (100,952) (150,1121) (200,1173) (300,1485) (400,2261) (500,1994) (600,2282) (700,2569) (800,4463)};
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 5GB]{Hasil percobaan partisi Spark dan Hadoop 5GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+
+%100000000000000000GBBBBBBBBBBBBBBBBB
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates {(50,7236) (100,2805) (200,1718) (300,1494) (400,1207) (500,984) (700,780) (900,652) (1100,568) (1300,524) (1500,504)};
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates {(50,7254) (100,2373) (200,1736) (300,1477) (400,1160) (500,923) (700,774) (900,645) (1100,563) (1300,522) (1500,459)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,1260) (30,1446) (50,1481) (100,1631) (200,2127) (300,2583) (400,3721) (500,3573) (700,5014) (900,5529) (1100,7254) (1300,8989) (1500,9499)};
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 10GB]{Hasil percobaan partisi Spark dan Hadoop 10GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+
+
+%1111111111555555555555GBBBBBBBBBBBBBBBBB
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates { (100,9294) (200,4847) (300,3761) (500,2024) (700,1696) (900,1372) (1200,1114) (1500,918) (1800,863) (2100,783) (2400,738)};
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates {(100,9034) (200,5239) (300,3263) (500,2175) (700,1645) (900,1276) (1200,1136) (1500,970) (1800,834) (2100,773) (2400,739)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,2133) (30,2177) (50,2234) (100,2474) (200,3306) (300,4655) (400,4775) (500,6644) (700,8203) (900,8482)};
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 15GB]{Hasil percobaan partisi Spark dan Hadoop 15GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+%2222222222222200000000000000000GBBBBBBBBBBBBBBBBB
+
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates { (200,8386) (400,4342) (600,2841) (1000,2065) (1400,1598) (1800,1372) (2200,1228) (2600,1133) (3000,1010)};
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates {(200,8866) (400,4553) (600,3021) (1000,2084) (1400,1471) (1800,1298) (2200,1165) (2600,1081) (3000,1031)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,2763) (30,2811) (50,3007) (100,3261) (200,4360) (400,6249) (700,10476) (1000,13839)};
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 20GB]{Hasil percobaan partisi Spark dan Hadoop 20GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
