@@ -99,7 +99,7 @@ Implementasi rancangan tampilan antarmuka pada perangkat lunak ini menggunakan h
 
 \end{enumerate}
 
-\section{Pengujian Perangkat Lunak}
+\section{Pengujian Fungsional Perangkat Lunak}
 
 Perangkat lunak yang disusun oleh penulis telah diuji untuk membuktikan kebenaran dari perangkat lunak. Program akan dieksekusi dan kemudian diamati apakah hasil sesuai dengan yang diinginkan. Perangkat lunak akan diberikan data dengan ukuran yang kecil berserta \textit{parameter} yang sudah ditentukan. 
 
@@ -200,7 +200,7 @@ Hasil dari percobaan ketiga adalah sebagai berikut:
 
 Berdasarkan hasil ketiga percobaan yang didapat, maka dapat disimpulkan bahwa perangkat lunak sudah dapat melakukan proses reduksi data menggunakan algoritma \textit{Agglomerative Clustering} berdasarkan metode yang dipilih dengan benar. Pola yang dihasilkan oleh perangkat lunak sudah sesuai dengan apa yang diharapakan.
 
-\section{Perbandingan Performa Perangkat Lunak}
+\section{Hasil Eksperimen Perangkat Lunak}
 
 Pada bagian ini akan diuji performa perangkat lunak Spark dan Hadoop. Kedua perangkat lunak akan dibandingkan hasil eksekusi waktunya. Karena perangkat lunak hadoop tidak dapat menghitung standard deviasi, maka perangkat lunak Hadoop akan dibandingkan dengan perangkat lunak Spark yang tidak menghitung standard deviasi dan yang menghitung standard deviasi. Data yang digunakan pada percobaan merupakan data yang dihasilkan secara acak dengan ukuran yang berbeda-beda. Data-data tersebut memiliki dua atribut bilangan pecahan yang dipisahkan dengan tanda koma. Jumlah objek pada setiap ukuran data dapat dilihat pada Tabel ~\ref{tab:exdata}.\\
 
@@ -246,377 +246,40 @@ Berikut adalah spesifikasi perangkat keras yang digunakan:
 \end{itemize}
 
 
-Pada percobaan pertama akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 1 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dengan jumlah objek maksimum adalah 30, dan jumlah partisi adalah 10. UKuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
 
-\begin{table}[H] 
-	\centering 
-	\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
-	\label{tab:spark10}
-	\begin{tabular}{|p{1.5cm}|p{1cm}|p{4cm}|p{4cm}|p{3cm}|}
-\hline
-Ukuran Data & Jumlah Partisi & Waktu Ekseuksi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
-\hline
-1 GB & 10 & 113 detik & 118 detik & 183 detik\\
-\hline
-2 GB & 10 & 165 detik & 195 detik & 252 detik\\
-\hline
-3 GB & 10 & 209 detik & 214 detik & 318 detik\\
-\hline
-5 GB & 10 & 327 detik & 343 detik & 505 detik\\
-\hline
-10 GB & 10 & 570 detik & 578 detik & 953 detik\\
-\hline
-15 GB & 10 & 863 detik & 874 detik & 1434 detik\\
-\hline
-20 GB & 10 & 1131 detik & 1111 detik & 1830 detik\\
-\hline
 
-\hline
-	\end{tabular} 
-\end{table}
 
-\def\scl{1}
-% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
-\def\leg{} 
-\def\std{none}
-\def\ymin{}
-\def\ymax{}
 
-\begin{minipage}[c]{0.9\textwidth}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
-		
-		\addlegendentry{Spark tanpa SD}
-		\addplot+[smooth][color=green] coordinates {(1,113) (2,165) (3,209) (5,327) (10,570) (15,863) (20,1131)};
-		\addlegendentry{Spark SD}
-		\addplot+[smooth][color=red] coordinates {(1,118) (2,195) (3,214) (5,343) (10,578) (15,874) (20,1111) };
-		\addlegendentry{Hadoop}
-		\addplot+[smooth][color=blue] coordinates {(1,183) (2,252) (3,318) (5,505) (10,953) (15,1434) (20,1830)};
-
-		\leg
-		\end{axis}
-		\end{tikzpicture}
-		\caption[Hasil percobaan pertama]{Hasil percobaan pertama}
-		\label{fig:percobaan1}
-	\end{figure}
-\end{minipage}\\
-
-
-
-
-
-
-Pada percobaan kedua akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 3 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dengan jumlah objek maksimum adalah 30, dan jumlah partisi adalah 30. UKuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
-
-\begin{table}[H] 
-	\centering 
-	\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
-	\label{tab:spark10}
-	\begin{tabular}{|p{1.5cm}|p{1cm}|p{4cm}|p{4cm}|p{3cm}|}
-\hline
-Ukuran Data & Jumlah Partisi & Waktu Ekseuksi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
-\hline
-1 GB & 30 & 83 detik & 77 detik & 85 detik\\
-\hline
-2 GB & 30 & 109 detik & 118 detik & 135 detik\\
-\hline
-3 GB & 30 & 123 detik & 150 detik & 162 detik\\
-\hline
-5 GB & 30 & 199 detik & 218 detik & 257 detik\\
-\hline
-10 GB & 30 & 327 detik & 332 detik & 459 detik\\
-\hline
-15 GB & 30 & 485 detik & 501 detik & 671 detik\\
-\hline
-20 GB & 30 & 623 detik & 677 detik & 867 detik\\
-\hline
-
-\hline
-	\end{tabular} 
-\end{table}
-
-\def\scl{1}
-% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
-\def\leg{} 
-\def\std{none}
-\def\ymin{}
-\def\ymax{}
-
-\begin{minipage}[c]{0.9\textwidth}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
-		
-		\addlegendentry{Spark tanpa SD}
-		\addplot+[smooth][color=green] coordinates {(1,83) (2,109) (3,123) (5,199) (10,327) (15,485) (20,623)};
-		\addlegendentry{Spark SD}
-		\addplot+[smooth][color=red] coordinates {(1,77) (2,118) (3,150) (5,218) (10,332) (15,501) (20,677) };
-		\addlegendentry{Hadoop}
-		\addplot+[smooth][color=blue] coordinates {(1,85) (2,135) (3,162) (5,257) (10,459) (15,571) (20,867)};
-
-		\leg
-		\end{axis}
-		\end{tikzpicture}
-		\caption[Hasil percobaan kedua]{Hasil percobaan kedua}
-		\label{fig:percobaan2}
-	\end{figure}
-\end{minipage}\\
-
-
-Pada percobaan ketiga akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 5 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dengan jumlah objek maksimum adalah 30, dan jumlah partisi adalah 30. UKuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
-
-\begin{table}[H] 
-	\centering 
-	\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
-	\label{tab:spark10}
-	\begin{tabular}{|p{1.5cm}|p{1cm}|p{4cm}|p{4cm}|p{3cm}|}
-\hline
-Ukuran Data & Jumlah Partisi & Waktu Ekseuksi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
-\hline
-1 GB & 50 & 59 detik & 62 detik & 96 detik\\
-\hline
-2 GB & 50 & 114 detik & 116 detik & 156 detik\\
-\hline
-3 GB & 50 & 126 detik & 140 detik & 177 detik\\
-\hline
-5 GB & 50 & 220 detik & 216 detik & 294 detik\\
-\hline
-10 GB & 50 & 336 detik & 345 detik & 490 detik\\
-\hline
-15 GB & 50 & 491 detik & 534 detik & 732 detik\\
-\hline
-20 GB & 50 & 651 detik & 670 detik & 976 detik\\
-\hline
-
-\hline
-	\end{tabular} 
-\end{table}
-
-\def\scl{1}
-% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
-\def\leg{} 
-\def\std{none}
-\def\ymin{}
-\def\ymax{}
-
-\begin{minipage}[c]{0.9\textwidth}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
-		
-		\addlegendentry{Spark tanpa SD}
-		\addplot+[smooth][color=green] coordinates {(1,58) (2,114) (3,126) (5,220) (10,336) (15,491) (20,651)};
-		\addlegendentry{Spark SD}
-		\addplot+[smooth][color=red] coordinates {(1,62) (2,116) (3,140) (5,216) (10,345) (15,534) (20,670) };
-		\addlegendentry{Hadoop}
-		\addplot+[smooth][color=blue] coordinates {(1,96) (2,156) (3,177) (5,294) (10,490) (15,732) (20,976)};
-
-		\leg
-		\end{axis}
-		\end{tikzpicture}
-		\caption[Hasil percobaan kedua]{Hasil percobaan kedua}
-		\label{fig:percobaan2}
-	\end{figure}
-\end{minipage}\\
-
-
-
-
-
-
-
-
-
-
-
-Pada percobaan pertama akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 1 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dan jumlah objek maksimum adalah 30. Ukuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark11}) berikut adalah hasil dari eksperimen:
-
-\begin{table}[H] 
-\centering 
-\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
-\label{tab:spark11}
-\begin{tabular}{|p{1.5cm}|p{1cm}|p{1cm}|p{4cm}|p{3cm}|p{3cm}|}
-\hline
-Ukuran Data & Jumlah Partisi Spark & Jumlah Partisi Hadoop & Waktu Eksekusi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
-\hline
-1 GB & 100 & 10 & 63 detik & 74 detik & 183 detik \\
-\hline
-2 GB & 200 & 10 & 92 detik & 97 detik & 252 detik \\
-\hline
-3 GB & 300 & 10 & 204 detik & 176 detik & 318 detik \\
-\hline
-5 GB & 700 & 10 & 277 detik & 310 detik & 505 detik \\
-\hline
-10 GB & 1400 & 10 & 484 detik & 494 detik & 953 detik \\
-\hline
-15 GB & 2100 & 10 & 746 detik & 747 detik & 1434 detik\\
-\hline
-20 GB & 2800 & 10 & 976 detik & 980 detik & 1830 detik\\
-\hline
-
-	\end{tabular} 
-\end{table}
-
-\def\scl{1}
-% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
-\def\leg{} 
-\def\std{none}
-\def\ymin{}
-\def\ymax{}
-
-\begin{minipage}[c]{0.9\textwidth}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
-		
-		\addlegendentry{Spark tanpa SD}
-		\addplot+[smooth][color=green] coordinates {(1,63) (2,92) (3,204) (5,277) (10,484) (15,746) (20,976)};
-		\addlegendentry{Spark SD}
-		\addplot+[smooth][color=red] coordinates {(1,74) (2,97) (3,176) (5,310) (10,494) (15,747) (20,980) };
-		\addlegendentry{Hadoop}
-		\addplot+[smooth][color=blue] coordinates {(1,183) (2,252) (3,318) (5,505) (10,953) (15,1434) (20,1830)};
-
-		\leg
-		\end{axis}
-		\end{tikzpicture}
-		\caption[Hasil percobaan pertama]{Hasil percobaan pertama}
-		\label{fig:percobaan1}
-	\end{figure}
-\end{minipage}\\
-
-
-
-
-Pada percobaan kedua akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 3 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dengan jumlah objek maksimum adalah 30, dan jumlah partisi adalah 30. UKuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
-
-\begin{table}[H] 
-	\centering 
-	\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
-	\label{tab:spark10}
-	\begin{tabular}{|p{1.5cm}|p{1cm}|p{1cm}|p{4cm}|p{3cm}|p{3cm}|}
-\hline
-Ukuran Data & Jumlah Partisi Spark & Jumlah Partisi Hadoop & Waktu Eksekusi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
-\hline
-1 GB & 100 & 10 & 47 detik & 45 detik & 85 detik\\
-\hline
-2 GB & 200 & 10 & 62 detik & 61 detik & 135 detik\\
-\hline
-3 GB & 300 & 10 & 113 detik & 114 detik & 162 detik\\
-\hline
-5 GB & 700 & 10 & 149 detik & 161 detik & 257 detik\\
-\hline
-10 GB & 1400 & 10 & 238 detik & 243 detik & 459 detik\\
-\hline
-15 GB & 2100 & 10 & 361 detik & 369 detik & 671 detik\\
-\hline
-20 GB & 2800 & 10 & 466 detik & 478 detik & 867 detik\\
-\hline
-
-\hline
-	\end{tabular} 
-\end{table}
-
-\def\scl{1}
-% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
-\def\leg{} 
-\def\std{none}
-\def\ymin{}
-\def\ymax{}
-
-\begin{minipage}[c]{0.9\textwidth}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
-		
-		\addlegendentry{Spark tanpa SD}
-		\addplot+[smooth][color=green] coordinates {(1,47) (2,62) (3,113) (5,149) (10,238) (15,361) (20,466)};
-		\addlegendentry{Spark SD}
-		\addplot+[smooth][color=red] coordinates {(1,45) (2,61) (3,114) (5,161) (10,243) (15,369) (20,478) };
-		\addlegendentry{Hadoop}
-		\addplot+[smooth][color=blue] coordinates {(1,85) (2,135) (3,162) (5,257) (10,459) (15,571) (20,867)};
-
-		\leg
-		\end{axis}
-		\end{tikzpicture}
-		\caption[Hasil percobaan kedua]{Hasil percobaan kedua}
-		\label{fig:percobaan2}
-	\end{figure}
-\end{minipage}\\
-
-
-
-
-
-
-
-
-Pada percobaan ketiga akan digunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer sebagai \textit{worker} untuk memproses data-data yang berukuran berbeda. Setiap worker menggunakan 5 core. Metode yang digunakan adalah metode \textit{single-linkage}, dengan nilai \textit{cut-off distance} 0.8, dengan jumlah objek maksimum adalah 30, dan jumlah partisi adalah 30. UKuran block yang digunakan pada HDFS adalah 32MB. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
-
-\begin{table}[H] 
-	\centering 
-	\caption{Tabel hasil percobaan perbandingan Hadoop dan Spark}
-	\label{tab:spark10}
-	\begin{tabular}{|p{1.5cm}|p{1cm}|p{1cm}|p{4cm}|p{3cm}|p{3cm}|}
-\hline
-Ukuran Data & Jumlah Partisi Spark & Jumlah Partisi Hadoop & Waktu Ekseuksi Spark (tanpa standard deviasi) & Waktu Eksekusi Spark & Waktu Eksekusi Hadoop  \\
-\hline
-1 GB & 100 & 50 & 50 detik & 50 detik & 96 detik\\
-\hline
-2 GB & 200 & 50 & 67 detik & 68 detik & 156 detik\\
-\hline
-3 GB & 300 & 50 & 99 detik & 95 detik & 177 detik\\
-\hline
-5 GB & 500 & 50 & 119 detik & 129 detik & 294 detik\\
-\hline
-10 GB & 700 & 50 & 190 detik & 195 detik & 490 detik\\
-\hline
-15 GB & 1400 & 50 & 285 detik & 278 detik & 732 detik\\
-\hline
-20 GB & 2100 & 50 & 374 detik & 369 detik & 976 detik\\
-\hline
-
-\hline
-	\end{tabular} 
-\end{table}
-
-\def\scl{1}
-% \def\leg{\legend{Switching,Homotopic,Buffer*Length,Length}}
-\def\leg{} 
-\def\std{none}
-\def\ymin{}
-\def\ymax{}
-
-\begin{minipage}[c]{0.9\textwidth}
-	\begin{figure}[H]
-		\centering
-		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Ukuran Data (GB),ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=1},legend pos = outer north east]
-		
-		\addlegendentry{Spark tanpa SD}
-		\addplot+[smooth][color=green] coordinates {(1,50) (2,67) (3,99) (5,119) (10,190) (15,285) (20,374)};
-		\addlegendentry{Spark SD}
-		\addplot+[smooth][color=red] coordinates {(1,50) (2,68) (3,95) (5,129) (10,195) (15,278) (20,369) };
-		\addlegendentry{Hadoop}
-		\addplot+[smooth][color=blue] coordinates {(1,96) (2,156) (3,177) (5,294) (10,490) (15,732) (20,976)};
-
-		\leg
-		\end{axis}
-		\end{tikzpicture}
-		\caption[Hasil percobaan kedua]{Hasil percobaan kedua}
-		\label{fig:percobaan2}
-	\end{figure}
-\end{minipage}\\
-
-
-
-
+\section{Percobaan Dampak Partisi pada Performa Perangkat Lunak Spark dan Hadoop} 
 %1111111111GBBBBBBBBBBBBBBBBB
+
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark1}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Grafik Percobaan Spark}
+	\label{tab:spark1}
+	\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{2cm}|{2cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Hadoop\\ 
+\hline
+1 GB & 10 & 319 detik & 304 detik & 214 detik & 0.54 GB & 0.67 GB& 0.57 GB\\
+\hline
+1 GB & 30 & 131 detik & 124 detik & 216 detik & 0.54 GB & 0.67 GB & 0.57 GB\\
+\hline
+1 GB & 50 & 101 detik & 89 detik & 230 detik & 0.54 GB & 0.67 GB & 0.57 GB\\
+\hline
+1 GB & 100 & 62 detik & 63 detik & 303 detik & 0.54 GB & 0.67 GB & 0.57 GB\\
+\hline
+1 GB & 150 & 56 detik & 56 detik & 313 detik & 0.54 GB & 0.67 GB & 0.57 GB\\
+\hline
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
 
 
 \def\scl{1}
@@ -649,6 +312,38 @@ Ukuran Data & Jumlah Partisi Spark & Jumlah Partisi Hadoop & Waktu Ekseuksi Spar
 
 
 %222222222222222222222GBBBBBBBBBBBBBBBBB
+
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan perbandingan Spark}
+	\label{tab:spark10}
+	\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{2cm}|{2cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Hadoop\\ 
+\hline
+2 GB & 10 & 929 detik & 958 detik & 365 detik & 0.96 GB & 1.2 GB & 1 GB\\
+\hline
+2 GB & 30 & 350 detik & 317 detik & 355 detik & 0.96 GB & 1.2 GB & 1 GB\\
+\hline
+2 GB & 50 & 205 detik & 217 detik & 428 detik & 0.96 GB & 1.2 GB & 1 GB\\
+\hline
+2 GB & 100 & 126 detik & 134 detik & 446 detik & 0.96 GB & 1.2 GB & 1 GB\\
+\hline
+2 GB & 150 & 110 detik & 109 detik & 489 detik & 0.96 GB & 1.2 GB & 1 GB\\
+\hline
+2 GB & 200 & 98 detik & 99 detik & 545 detik & 0.96 GB & 1.2 GB & 1 GB\\
+\hline
+2 GB & 250 & 83 detik & 86 detik & 589 detik & 0.96 GB & 1.2 GB & 1 GB\\
+\hline
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
 
 \def\scl{1}
 
@@ -685,6 +380,46 @@ Ukuran Data & Jumlah Partisi Spark & Jumlah Partisi Hadoop & Waktu Ekseuksi Spar
 
 
 %333333333333333333GBBBBBBBBBBBBBBBBB
+
+
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan perbandingan Spark}
+	\label{tab:spark10}
+	\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{2cm}|{2cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Hadoop\\ 
+\hline
+3 GB & 10 & 1446 detik & 1376 detik & 455 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 30 & 516 detik & 491 detik & 445 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 50 & 315 detik & 298 detik & 501 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 100 & 188 detik & 183 detik & 532 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 150 & 144 detik & 146 detik & 639 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 200 & 135 detik & 144 detik & 720 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 250 & 211 detik & 191 detik & 761 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 300 & 182 detik & 176 detik & 822 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 350 & 163 detik & 169 detik & 903 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+3 GB & 400 & 137 detik & 158 detik & 1012 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+\hline
+
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
 
 \def\scl{1}
 
