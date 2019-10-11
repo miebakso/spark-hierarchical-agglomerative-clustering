@@ -253,25 +253,25 @@ Berikut adalah spesifikasi perangkat keras yang digunakan:
 \section{Percobaan Dampak Partisi pada Performa Perangkat Lunak Spark dan Hadoop} 
 %1111111111GBBBBBBBBBBBBBBBBB
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark1}) berikut adalah hasil dari eksperimen:
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 1 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark1}) berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
-	\caption{Grafik Percobaan Spark}
+	\caption{Percobaan Jumlah Partisi Hadoop dan Spark dengan Ukuran Data 10 GB}
 	\label{tab:spark1}
-	\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{2cm}|{2cm}|}
+	\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{2cm}|p{2cm}|p{2cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Hadoop\\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
 \hline
-1 GB & 10 & 319 detik & 304 detik & 214 detik & 0.54 GB & 0.67 GB& 0.57 GB\\
+1 GB & 10 & 319 & 304 & 214 & 0.54 & 0.67 & 0.57 \\
 \hline
-1 GB & 30 & 131 detik & 124 detik & 216 detik & 0.54 GB & 0.67 GB & 0.57 GB\\
+1 GB & 30 & 131 & 124 & 216 & 0.54 & 0.67 & 0.57 \\
 \hline
-1 GB & 50 & 101 detik & 89 detik & 230 detik & 0.54 GB & 0.67 GB & 0.57 GB\\
+1 GB & 50 & 101 & 89 & 230 & 0.54 & 0.67 & 0.57 \\
 \hline
-1 GB & 100 & 62 detik & 63 detik & 303 detik & 0.54 GB & 0.67 GB & 0.57 GB\\
+1 GB & 100 & 62 & 63 & 303 & 0.54 & 0.67 & 0.57 \\
 \hline
-1 GB & 150 & 56 detik & 56 detik & 313 detik & 0.54 GB & 0.67 GB & 0.57 GB\\
+1 GB & 150 & 56 & 56 & 313 & 0.54 & 0.67 & 0.57 \\
 \hline
 
 \hline
@@ -306,36 +306,36 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi
 		\end{axis}
 		\end{tikzpicture}
 		\caption[Hasil percobaan partisi Spark dan Hadoop 1GB]{Hasil percobaan partisi Spark dan Hadoop 1GB}
-		\label{fig:percobaan2}
+		\label{fig:percobaan1}
 	\end{figure}
 \end{minipage}\\
 
 
 %222222222222222222222GBBBBBBBBBBBBBBBBB
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 2 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark2}) berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
-	\caption{Percobaan perbandingan Spark}
-	\label{tab:spark10}
-	\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{2cm}|{2cm}|}
+	\caption{Percobaan Jumlah Partisi Hadoop dan Spark dengan Ukuran Data 2 GB}
+	\label{tab:spark2}
+	\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{2cm}|p{2cm}| p{2cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Hadoop\\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
 \hline
-2 GB & 10 & 929 detik & 958 detik & 365 detik & 0.96 GB & 1.2 GB & 1 GB\\
+2 GB & 10 & 929  & 958  & 365  & 0.96 & 1.2 & 1 \\
 \hline
-2 GB & 30 & 350 detik & 317 detik & 355 detik & 0.96 GB & 1.2 GB & 1 GB\\
+2 GB & 30 & 350  & 317  & 355  & 0.96 & 1.2 & 1 \\
 \hline
-2 GB & 50 & 205 detik & 217 detik & 428 detik & 0.96 GB & 1.2 GB & 1 GB\\
+2 GB & 50 & 205  & 217  & 428  & 0.96 & 1.2 & 1 \\
 \hline
-2 GB & 100 & 126 detik & 134 detik & 446 detik & 0.96 GB & 1.2 GB & 1 GB\\
+2 GB & 100 & 126  & 134  & 446  & 0.96 & 1.2 & 1 \\
 \hline
-2 GB & 150 & 110 detik & 109 detik & 489 detik & 0.96 GB & 1.2 GB & 1 GB\\
+2 GB & 150 & 110  & 109  & 489  & 0.96 & 1.2 & 1 \\
 \hline
-2 GB & 200 & 98 detik & 99 detik & 545 detik & 0.96 GB & 1.2 GB & 1 GB\\
+2 GB & 200 & 98  & 99  & 545  & 0.96 & 1.2 & 1 \\
 \hline
-2 GB & 250 & 83 detik & 86 detik & 589 detik & 0.96 GB & 1.2 GB & 1 GB\\
+2 GB & 250 & 83  & 86  & 589  & 0.96 & 1.2 & 1 \\
 \hline
 
 \hline
@@ -382,35 +382,35 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi
 %333333333333333333GBBBBBBBBBBBBBBBBB
 
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 3 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark3}) berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
-	\caption{Percobaan perbandingan Spark}
-	\label{tab:spark10}
-	\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{3cm}|p{3cm}|p{3cm}|p{2cm}|{2cm}|}
+	\caption{Percobaan Jumlah Partisi Hadoop dan Spark dengan Ukuran Data 3 GB}
+	\label{tab:spark3}
+	\begin{tabular}{|p{1cm}|p{1cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Hadoop\\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
 \hline
-3 GB & 10 & 1446 detik & 1376 detik & 455 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 10 & 1446 & 1376 & 455 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 30 & 516 detik & 491 detik & 445 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 30 & 516 & 491 & 445 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 50 & 315 detik & 298 detik & 501 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 50 & 315 & 298 & 501 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 100 & 188 detik & 183 detik & 532 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 100 & 188 & 183 & 532 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 150 & 144 detik & 146 detik & 639 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 150 & 144 & 146 & 639 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 200 & 135 detik & 144 detik & 720 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 200 & 135 & 144 & 720 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 250 & 211 detik & 191 detik & 761 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 250 & 211 & 191 & 761 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 300 & 182 detik & 176 detik & 822 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 300 & 182 & 176 & 822 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 350 & 163 detik & 169 detik & 903 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 350 & 163 & 169 & 903 & 1.2 & 1.5 & 1.2 \\
 \hline
-3 GB & 400 & 137 detik & 158 detik & 1012 detik & 1.2 GB & 1.5 GB & 1.2 GB\\
+3 & 400 & 137 & 158 & 1012 & 1.2 & 1.5 & 1.2 \\
 \hline
 
 
@@ -448,13 +448,57 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi
 		\end{axis}
 		\end{tikzpicture}
 		\caption[Hasil percobaan partisi Spark dan Hadoop 3GB]{Hasil percobaan partisi Spark dan Hadoop 3GB}
-		\label{fig:percobaan2}
+		\label{fig:percobaan3}
 	\end{figure}
 \end{minipage}\\
 
 
 
 %555555555555GBBBBBBBBBBBBBBBBB
+
+
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 5 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark5}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dan Spark dengan Ukuran Data 5 GB}
+	\label{tab:spark5}
+	\begin{tabular}{|p{1cm}|p{1cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
+\hline
+5  & 10 & 4490 & 4457 & 817 & 2.1 & 2.6 & 2.2\\
+\hline
+5  & 30 & 1637 & 2002 & 759 & 2.1 & 2.6 & 2.2\\
+\hline
+5  & 50 & 995 & 891 & 906 & 2.1 & 2.6 & 2.2 \
+\hline
+5  & 100 & 524 & 590 & 952 & 2.1 & 2.6 & 2.2 \
+\hline
+5  & 150 & 343 & 431 & 1121 & 2.1 & 2.6 & 2.2\\
+\hline
+5  & 200 & 315 & 288 & 1173 & 2.1 & 2.6 & 2.2\\
+\hline
+5  & 300 & 519 & 526 & 1485 & 2.1 & 2.6 & 2.2\\
+\hline
+5  & 400 & 422 & 399 & 2261 & 2.1 & 2.6 & 2.2 \\
+\hline
+5  & 500 & 359 & 370 & 1994 & 2.1 & 2.6 & 2.2\\
+\hline
+5  & 600 & 319 & 326 & 2282 & 2.1 & 2.6 & 2.2\\
+\hline
+5  & 700 & 259 & 306 & 2569 & 2.1 & 2.6 & 2.2\\
+\hline
+5  & 800 & 255 & 256 & 4463 & 2.1 & 2.6 & 2.2\\
+\hline
+
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
 
 
 \def\scl{1}
@@ -492,6 +536,93 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi
 
 
 %100000000000000000GBBBBBBBBBBBBBBBBB
+
+
+
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark6} dan Tabel~\ref{tab:spark7} berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 10 GB}
+	\label{tab:spark6}
+	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+\hline
+10 & 50 & 7254 & 7236 & 3.7 & 4.6 \\
+\hline
+10 & 100 & 237 & 2805 &  3.7 & 4.6 \\
+\hline
+10 & 200 & 1736 & 1718 & 3.7 & 4.6 \\
+\hline
+10 & 300 & 1477 & 1494 & 3.7 & 4.6 \\
+\hline
+10 & 400 & 1160 & 1207 & 3.7 & 4.6 \\
+\hline
+10 & 500 & 923 & 984 &  3.7 & 4.6 \\
+\hline
+10 & 600 & 774 & 780 & 3.7 & 4.6 \\
+\hline
+10 & 700 & 645 & 652 & 3.7 & 4.6 \\
+\hline
+10 & 900 & 563 & 568 & 3.7 & 4.6 \\
+\hline
+10 & 1100 & 522 & 524 & 3.7 & 4.6 \\
+\hline
+10 & 1300 & 359 & 504 & 3.7 & 4.6 \\
+\hline
+10 & 1500 & 255 & 256 & 3.7 & 4.6 \\
+\hline
+
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 10 GB}
+	\label{tab:spark7}
+	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Hadoop (GB)\\
+\hline
+10 & 10  & 3.9 \\
+\hline
+10 & 30  & 3.9 \\
+\hline
+10 & 50  & 3.9 \\
+\hline
+10 & 100  & 3.9 \\
+\hline
+10 & 200  & 3.9 \\
+\hline
+10 & 300  & 3.9 \\
+\hline
+10 & 400  & 3.9 \\
+\hline
+10 & 500  & 3.9 \\
+\hline
+10 & 700  & 3.9 \\
+\hline
+10 & 900  & 3.9 \\
+\hline
+10 & 1100  & 3.9 \\
+\hline
+10 & 1300  & 3.9 \\
+\hline
+10 & 1500  & 3.9 \\
+\hline
+
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
 
 
 \def\scl{1}
@@ -532,6 +663,82 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi
 %1111111111555555555555GBBBBBBBBBBBBBBBBB
 
 
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 15 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark7} dan Tabel (~\ref{tab:spark8}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 15}
+	\label{tab:spark7}
+	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+Ukuran Data ) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (GB) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa Standard Deviasi ) & Hasil Reduksi Spark )  \\ 
+\hline
+15 & 100 & 9034  & 9294  &  5.8 & 7.3 \\
+\hline
+15 & 200 & 5239  & 4847  & 5.8 & 7.3 \\
+\hline
+15 & 300 & 3263  & 3761  & 5.8 & 7.3 \\
+\hline
+15 & 500 & 2175  & 2024  &  5.8 & 7.3 \\
+\hline
+15 & 700 & 1645  & 1696  & 5.8 & 7.3 \\
+\hline
+15 & 900 & 1276  & 1372  & 5.8 & 7.3 \\
+\hline
+15 & 1200 & 1136  & 1114  & 5.8 & 7.3 \\
+\hline
+15 & 1500 & 970  & 918  & 5.8 & 7.3 \\
+\hline
+15 & 1800 & 834  & 863  & 5.8 & 7.3 \\
+\hline
+15 & 2100 & 773  & 783  & 5.8 & 7.3 \\
+\hline
+15 & 2400 & 739  & 738  & 5.8 & 7.3 \\
+\hline
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 15 GB}
+	\label{tab:spark8}
+	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduksi Hadoop (GB)\\
+\hline
+15 & 10 & 2133  & 3.9 \\
+\hline
+15 & 30 & 2177  & 3.9 \\
+\hline
+15 & 50 & 2234  & 3.9 \\
+\hline
+15 & 100 & 2474  & 3.9 \\
+\hline
+15 & 200 & 3306  & 3.9 \\
+\hline
+15 & 300 & 4655  & 3.9 \\
+\hline
+15 & 400 & 4775  & 3.9 \\
+\hline
+15 & 500 & 6644  & 3.9 \\
+\hline
+15 & 700 & 8203  & 3.9 \\
+\hline
+15 & 900 & 8482  & 3.9 \\
+\hline
+
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
 \def\scl{1}
 
 \def\leg{} 
@@ -568,6 +775,74 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi
 %2222222222222200000000000000000GBBBBBBBBBBBBBBBBB
 
 
+Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 20 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark9} dan Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 20}
+	\label{tab:spark9}
+	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+\hline
+20 & 200 & 8866  & 8386  & 7.7 & 9.6 \\
+\hline
+20 & 400 & 4553  & 4342  & 7.7 & 9.6 \\
+\hline
+20 & 600 & 3021  & 2841  &  7.7 & 9.6 \\
+\hline
+20 & 1000 & 2084  & 2065  & 7.7 & 9.6 \\
+\hline
+20 & 1400 & 1471  & 1598  & 7.7 & 9.6 \\
+\hline
+20 & 1800 & 1298  & 1372  & 7.7 & 9.6 \\
+\hline
+20 & 2200 & 1165  & 1228  & 7.7 & 9.6 \\
+\hline
+20 & 2600 & 1081  & 1133  & 7.7 & 9.6 \\
+\hline
+20 & 3000 & 1031  & 1010  & 7.7 & 9.6 \\
+\hline
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 20 GB}
+	\label{tab:spark10}
+	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduksi Hadoop (GB)\\
+\hline
+20 & 10 & 2763  & 8.1 \\
+\hline
+20 & 30 & 2811  & 8.1 \\
+\hline
+20 & 50 & 3007  & 8.1  \\
+\hline
+20 & 100 & 3261  & 8.1 \\
+\hline
+20 & 200 & 4360  & 8.1 \\
+\hline
+20 & 400 & 6249  & 8.1 \\
+\hline
+20 & 700 & 10476  & 8.1 \\
+\hline
+20 & 1000 & 13839  & 8.1 \\
+\hline
+
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
 
 \def\scl{1}
 
@@ -598,3 +873,240 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi
 		\label{fig:percobaan2}
 	\end{figure}
 \end{minipage}\\
+
+
+
+
+%%%%%%%%%%%%%%%%MAX OBJ 50
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MAX OBJ 50 15 GB
+
+
+Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 15 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel (~\ref{tab:spark11} dan Tabel (~\ref{tab:spark12}) berikut adalah hasil dari eksperimen:
+
+
+
+
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 15 GB}
+	\label{tab:spark10}
+	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduksi Hadoop (GB)\\
+\hline
+15 & 10 & 4273  & 4.2 \\
+\hline
+15 & 30 & 4319  & 4.2 \\
+\hline
+15 & 50 & 4464  & 4.2  \\
+\hline
+
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,2763) (30,2811) (50,3007) };
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 20GB]{Hasil percobaan partisi Spark dan Hadoop 20GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 20}
+	\label{tab:spark9}
+	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+\hline
+20 & 1200 & 1135  & 1043  & 4.2 & 5.2 \\
+\hline
+20 & 1500 & 911  & 961  & 4.2 & 5.2 \\
+\hline
+20 & 1800 & 883  & 884  &  4.2 & 5.2 \\
+\hline
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates { (1400,1135) (1800,911) (2200,883)};
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates { (1400,1043) (1800,961) (2200,884)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,2763) (30,2811) (50,3007) };
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 20GB]{Hasil percobaan partisi Spark dan Hadoop 20GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%% MAX OBJ 50 20GB
+
+
+Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop dengan nilai objek maksimum pada sebuah dendrogram adalah 50. Berdasarkan percobaan sebelumnya akan digunakan jumlah partisi yang optimal untuk keduanya. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 20 GB. Metode yang dingunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel (~\ref{tab:spark11} dan Tabel (~\ref{tab:spark12}) berikut adalah hasil dari eksperimen:
+
+
+
+
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 20 GB}
+	\label{tab:spark10}
+	\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|p{4cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduksi Hadoop (GB)\\
+\hline
+20 & 10 & 5462  & 5.6 \\
+\hline
+20 & 30 & 5771  & 5.6 \\
+\hline
+20 & 50 & 6840  & 5.6  \\
+\hline
+
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,2763) (30,2811) (50,3007) };
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 20GB]{Hasil percobaan partisi Spark dan Hadoop 20GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+
+
+
+
+\begin{table}[H] 
+	\centering 
+	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 20}
+	\label{tab:spark9}
+	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+\hline
+Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa Standard Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa Standard Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+\hline
+20 & 1400 & 1135  & 1043  & 5.6 & 6.9 \\
+\hline
+20 & 1800 & 911  & 961  & 5.6 & 6.9 \\
+\hline
+20 & 2200 & 883  & 884  &  5.6 & 6.9 \\
+\hline
+
+\hline
+
+	\end{tabular} 
+\end{table}
+
+
+\def\scl{1}
+
+\def\leg{} 
+\def\std{none}
+\def\ymin{}
+\def\ymax{}
+
+\begin{minipage}[c]{0.9\textwidth}
+	\begin{figure}[H]
+		\centering
+		\begin{tikzpicture}[scale=\scl]
+		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		
+		\addlegendentry{Spark tanpa Standard Deviasi}
+		\addplot+[smooth][color=green] coordinates { (1400,1135) (1800,911) (2200,883)};
+		\addlegendentry{Spark dengan Standard Deviasi}
+		\addplot+[smooth][color=red] coordinates { (1400,1043) (1800,961) (2200,884)};
+		\addlegendentry{Hadoop}
+		\addplot+[smooth][color=blue] coordinates {(10,2763) (30,2811) (50,3007) };
+
+		
+
+		\leg
+		\end{axis}
+		\end{tikzpicture}
+		\caption[Hasil percobaan partisi Spark dan Hadoop 20GB]{Hasil percobaan partisi Spark dan Hadoop 20GB}
+		\label{fig:percobaan2}
+	\end{figure}
+\end{minipage}\\
+

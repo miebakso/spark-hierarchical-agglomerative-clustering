@@ -343,29 +343,29 @@ hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 
 
 
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=17 -DfirstServe=100 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test100
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=12.5 -DfirstServe=100 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test100
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=17 -DfirstServe=100 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test101
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=12.5 -DfirstServe=100 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test101
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=17 -DfirstServe=100 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test102
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=12.5 -DfirstServe=100 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test102
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=17 -DfirstServe=100 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test100
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=12.5 -DfirstServe=100 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test100
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=17 -DfirstServe=100 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test101
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=12.5 -DfirstServe=100 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test101
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=17 -DfirstServe=100 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test102
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=12.5 -DfirstServe=100 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test102
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=17 -DfirstServe=100 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test100
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=12.5 -DfirstServe=100 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test100
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=17 -DfirstServe=100 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test101
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=12.5 -DfirstServe=100 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test101
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=17 -DfirstServe=100 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test102
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=12.5 -DfirstServe=100 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test102
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=17 -DfirstServe=100 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test100
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=12.5 -DfirstServe=100 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test100
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=17 -DfirstServe=100 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test101
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=12.5 -DfirstServe=100 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test101
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=17 -DfirstServe=100 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test102
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=12.5 -DfirstServe=100 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test102
 
 
 
