@@ -436,30 +436,64 @@ hadoop fs -rm -r /spark-output/spark/20GB/*
 
 
 
+30 OBJ 50 CORE HADOOP
 
-
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test100
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test100
 
 hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test101
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test1000
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test102
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test1010
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test103
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test1000
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test104
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test1010
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test105
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test1000
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test106
 
-hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test1010
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/2
 
 
 
-hadoop fs -rm -r /spark-output/spark/5GB/*
-hadoop fs -rm -r /spark-output/spark/10GB/*
-hadoop fs -rm -r /spark-output/spark/15GB/*
-hadoop fs -rm -r /spark-output/spark/20GB/*
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test10
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test102
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test104
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test106
+
+
+
+50 OBJ 10 CORE
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=50 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test100
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=50 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test101
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=50 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test102
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=50 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test103
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=50 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test104
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=50 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test105
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=50 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test106
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=50 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test107
+
+
+
+
+
+
+
+hadoop fs -rm -r /spark-output/hadoop/5GB/*
+hadoop fs -rm -r /spark-output/hadoop/10GB/*
+hadoop fs -rm -r /spark-output/hadoop/15GB/*
+hadoop fs -rm -r /spark-output/hadoop/20GB/*
 
 
 
