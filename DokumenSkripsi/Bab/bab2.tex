@@ -220,7 +220,16 @@ Karena nilai 3.61 lebih kecil dari 4.47, maka nilai 3.61 diambil sebagai hasil. 
 
 \end{enumerate}
 
-Setelah \textit{dendrogram} terbentuk, dendrogram perlu dipotong berdasarkan nilai \textit{cut-off distance} yang ditentukan. Nilai \textit{cut-off distance} menentukan banyaknya \textit{cluster} yang dihasilkan ketika memotong dendrogram. Semakin tinggi nilai \textit{cut-off distance}, semakin dikit \textit{cluster} yang dihasilkan dan sebaliknya (GAMBAR X). Dari setiap \textit{cluster} yang hidasilkan dari perpotongan, perlu dicari pola dari setiap cluster. Pola ini akan merepresentasikan \textit{cluster} tersebut. Setiap pola memiliki nilai minimum, maksimum, rata-rata dan standard deviasi untuk setiap attribut yang dimiliki cluster tersebut. Pola akan menggambarkan karakterisik \textit{cluster}. Pola ini akan disimpan untuk menggantikan data mentahnya.
+Setelah \textit{dendrogram} terbentuk, dendrogram perlu dipotong berdasarkan nilai \textit{cut-off distance} yang ditentukan. Nilai \textit{cut-off distance} menentukan banyaknya \textit{cluster} yang dihasilkan ketika memotong dendrogram. Semakin tinggi nilai \textit{cut-off distance}, semakin dikit \textit{cluster} yang dihasilkan dan sebaliknya. Berdasarkan Gambar ~\ref{fig:hasild}, dapat dilihat bahwa nilai \textit{cut-off distance} yang lebih tinggi menghasilkan \textit{cluster-cluster} yang lebih sedikit. Sedangkan, nilai \textit{cut-off distance} yang lebih rendah menghasilkan \textit{cluster-cluster} yang lebih banyak. Perpotongan akan berdampak kepada hasil akhir ukuran data yang dihasilkan. 
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.6]{codis}  
+    \caption[Perpotongan \textit{dendrogram} ]{Perpotongan \textit{dendrogram}} 
+    \label{fig:codis} 
+\end{figure}
+
+Dari setiap \textit{cluster} yang hidasilkan dari perpotongan, perlu dicari nilai minimum, maksimum, rata-rata, dan standar deviasi dari setiap atribut. Nilai-nilai ini dapat disebut pola. Pola ini akan merepresentasikan dan menggambarkan karakteristik \textit{cluster} tersebut. Pola ini akan disimpan sebagai hasil akhir untuk menggantikan data mentahnya. 
 
 \section{Hadoop}
 
