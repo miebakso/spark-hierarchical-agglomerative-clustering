@@ -1,0 +1,655 @@
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test1 10 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test2 30 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test3 50 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test4 100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test5 150 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test6 200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test7 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test8 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test9 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test10 600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test11 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test110 800 30 0 0.8
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test12 10 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test13 30 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test14 50 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test15 100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test16 150 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test17 200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test18 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test19 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test20 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test21 600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test22 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test23 800 30 0 0.8
+
+
+hadoop fs -rm -r /spark-output/spark/5GB/*
+
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test20
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test21
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test22
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test23
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=150 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test24
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test25
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=300 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test26
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=400 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test27
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=500 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test28
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=600 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test29
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=700 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test30
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=800 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test31
+
+
+hadoop fs -rm -r /spark-output/hadoop/5GB/*
+
+
+
+
+
+
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test1 50 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test2 100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test3 200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test4 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test5 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test6 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test8 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test10 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test12 1100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test14 1300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test16 1500 30 0 0.8
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test17 50 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test18 100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test19 200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test20 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test21 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test22 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test24 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test26 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test28 1100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test30 1300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test32 1500 30 0 0.8
+
+
+hadoop fs -rm -r /spark-output/spark/10GB/*
+
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test1
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test3
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test4
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test5
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test7
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=300 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test8
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=400 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test9
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=500 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test10
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=700 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test12
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=900 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test13
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=1100 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test14
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=1300 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test15
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=1500 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test16
+
+
+hadoop fs -rm -r /spark-output/hadoop/10GB/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test1 100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test2 200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test3 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test4 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test5 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test6 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test8 1200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test10 1500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test12 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test14 2100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test16 2400 30 0 0.8
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test17 100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test18 200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test19 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test20 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test21 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test22 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test24 1200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test26 1500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test28 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test30 2100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test32 2400 30 0 0.8
+
+
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test1
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test2
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test3
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test4
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test5
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test7
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=300 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test8
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=400 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test9
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=500 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test10
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=700 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test12
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=900 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test13
+
+
+hadoop fs -rm -r /spark-output/hadoop/15GB/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test1 200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test2 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test3 600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test4 1000 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test5 1400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test6 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test8 2200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test10 2600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test12 3000 30 0 0.8
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test21 200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test22 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test23 600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test24 1000 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test25 1400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test26 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test27 2200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test28 2600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test29 3000 30 0 0.8
+
+
+hadoop fs -rm -r /spark-output/spark/20GB/*
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test1
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=20 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test2
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test3
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test4
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test5
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test7
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=400 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test8
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=700 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test9
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=1000 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test10
+
+
+hadoop fs -rm -r /spark-output/hadoop/20GB/*
+
+
+
+
+====================================== TEST ULANG
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test7 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test8 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test9 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test10 600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test11 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test18 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test19 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test20 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test21 600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test22 700 30 0 0.8
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test22
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test23
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/5GB/input.txt /spark-output/hadoop/5GB/test25
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test6 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test8 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test10 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test12 1100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test14 1300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test21 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test22 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test24 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test26 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test28 1100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test30 1300 30 0 0.8
+
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test1
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test3
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test4
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test5
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/10GB/input.txt /spark-output/hadoop/10GB/test7
+
+
+
+
+
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test6 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test8 1200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test10 1500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test12 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test14 2100 30 0 0.8
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test22 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test24 1200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test26 1500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test28 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test30 2100 30 0 0.8
+
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test1
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test3
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test4
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test5
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/15GB/input.txt /spark-output/hadoop/15GB/test7
+
+
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test4 1000 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test5 1400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test6 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test8 2200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test10 2600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test24 1000 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test25 1400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test26 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test27 2200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 3 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test28 2600 30 0 0.8
+
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=10 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test1
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=30 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test3
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=50 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test4
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=100 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test5
+
+hadoop jar /home/hduser/Desktop/Spark/dtr.jar MapReduceClustering -Dattribute=2 -Dlinkage=0  -Dpartition=200 -Ddistance=21 -DfirstServe=30 /spark-input/20GB/input.txt /spark-output/hadoop/20GB/test7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+hadoop fs -rm -r /spark-output/spark/5GB/*
+hadoop fs -rm -r /spark-output/spark/10GB/*
+hadoop fs -rm -r /spark-output/spark/15GB/*
+hadoop fs -rm -r /spark-output/spark/20GB/*
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test7 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test8 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test9 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test10 600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test11 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test18 300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test19 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test20 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test21 600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/5GB/input.txt /spark-output/spark/5GB/test22 700 30 0 0.8
+
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test6 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test8 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test10 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test12 1100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test14 1300 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test21 400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test22 500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test24 700 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test26 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test28 1100 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/10GB/input.txt /spark-output/spark/10GB/test30 1300 30 0 0.8
+
+
+
+
+
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test6 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test8 1200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test10 1500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test12 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test14 2100 30 0 0.8
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test22 900 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test24 1200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test26 1500 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test28 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/15GB/input.txt /spark-output/spark/15GB/test30 2100 30 0 0.8
+
+
+
+
+
+
+
+
+
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test4 1000 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test5 1400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test6 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test8 2200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/nosd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test10 2600 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test24 1000 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test25 1400 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test26 1800 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test27 2200 30 0 0.8
+
+./bin/spark-submit --class main.scala.Main --num-executors 10 --executor-cores 5 --executor-memory 4G --master yarn --deploy-mode cluster --driver-memory 1G /home/hduser/Desktop/Spark/sd.jar /spark-input/20GB/input.txt /spark-output/spark/20GB/test28 2600 30 0 0.8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

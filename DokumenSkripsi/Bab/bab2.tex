@@ -78,7 +78,7 @@ Berikut adalah penjelasan mengenai metode \textit{single linkage}, \textit{compl
 
 \begin{itemize}
 
-\item \textit{Single linkage}: metode ini mencari jarak minimum dari perbandingan setiap anggota antara dua buah \textit{cluster}. Bila ada dua buah \textit{cluster} A dan \textit{cluster} B, maka setiap anggota pada \textit{cluster} A akan dihitung jaraknya kepada setiap anggota pada \textit{cluster} B. Kemudian jarak minimum antara anggota akan diambil sebagai hasilnya. Untuk menghitung jarak antara anggota dapat digunakan \textit{euclidean distance}, \textit{manhattan distance}, atau ruang metrik lainya. Ruang metrik yang digunakan disesuaikan dengan kebutuhan dan atribut dari data. Contoh \textit{single linkage} dapat dilihat pada Gambar ~\ref{fig:single}.
+\item \textit{Single linkage}: metode ini mencari jarak minimum dari perbandingan setiap anggota antara dua buah \textit{cluster}. Bila ada dua buah \textit{cluster} A dan \textit{cluster} B, maka setiap anggota pada \textit{cluster} A akan dihitung jaraknya kepada setiap anggota pada \textit{cluster} B. Kemudian jarak minimum antara anggota akan diambil sebagai hasilnya. Untuk menghitung jarak antara anggota dapat digunakan \textit{euclidean distance}, \textit{manhattan distance}, atau ruang metrik lainya. Ruang metrik yang digunakan disesuaikan dengan kebutuhan dan atribut dari data. Contoh \textit{single linkage} dapat dilihat pada Gambar ~\ref{fig:single}. 
 
 \begin{figure}[H]
     \centering  
@@ -103,7 +103,7 @@ dengan $a$ dan $b$ merupakan anggota dari \textit{cluster} A dan B.\\
     \label{fig:complete} 
 \end{figure}
 
-Berikut adalah rumus untuk \textit{single linkage}:
+Berikut adalah rumus untuk \textit{complete linkage}:
 
 $$
 max\{ d(a,b): a \in A, b \in B\}, 
@@ -224,12 +224,62 @@ Setelah \textit{dendrogram} terbentuk, dendrogram perlu dipotong berdasarkan nil
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.6]{codis}  
+    \includegraphics[scale=0.5]{codis}  
     \caption[Perpotongan \textit{dendrogram} ]{Perpotongan \textit{dendrogram}} 
     \label{fig:codis} 
 \end{figure}
 
-Dari setiap \textit{cluster} yang hidasilkan dari perpotongan, perlu dicari nilai minimum, maksimum, rata-rata, dan standar deviasi dari setiap atribut. Nilai-nilai ini dapat disebut pola. Pola ini akan merepresentasikan dan menggambarkan karakteristik \textit{cluster} tersebut. Pola ini akan disimpan sebagai hasil akhir untuk menggantikan data mentahnya. 
+Dari setiap \textit{cluster} yang didasilkan dari perpotongan, perlu dicari jumlah anggota pada \textit{cluster}, nilai minimum, maksimum, rata-rata, dan standar deviasi dari setiap atribut. Nilai-nilai ini dapat disebut pola. Pola ini akan merepresentasikan dan menggambarkan karakteristik \textit{cluster} tersebut. Pola ini akan disimpan sebagai hasil akhir untuk menggantikan data mentahnya. Sebagai contoh diberikan sebuah \textit{cluster} A yang memiliki 4 anggota pada clusternya, setiap anggota memiliki 2 nilai atribut yang berbeda. Data untuk \textit{cluster} A dapat dilihat pada Tabel  ~\ref{tab:cont1}. Data pada tabel ini akan digunakan untuk mencari pola untuk \textit{cluster} A.
+
+
+\begin{table}[H]
+    \centering 
+    \caption{Tabel Contoh Data Cluster}
+    \label{tab:cont1}
+\begin{tabular}{|p{2cm}|p{2.2cm}|p{2.5cm}|}
+\hline
+\multicolumn{3}{|l|}{Cluster A}  \\
+\hline
+No & atribut 1 & atribut 2     \\
+\hline
+1  & 2         & 1             \\
+\hline
+2  & 4         & 5             \\
+\hline
+3  & 5         & 10            \\
+\hline
+4  & 6         & 7            \\
+\hline
+\end{tabular}
+\end{table}
+
+Hasil pola dari \textit{cluster} A dapat dilihat pada Tabel ~\ref{tab:cont2}.
+
+
+
+\begin{table}[H]
+\centering 
+    \caption{Tabel Hasil Pola Cluster A}
+    \label{tab:cont2}
+\begin{tabular}{|p{5cm}|p{2.5cm}|p{2.5cm}|}
+\hline
+jumlah anggota pada cluster & \multicolumn{2}{l|}{4}  \\
+\hline
+                            & atribut 1 & atribut 2  \\
+\hline
+nilai minimum               & 2         & 1          \\
+\hline
+nilai maksimum              & 6         & 10          \\
+\hline
+nilai rata-rata             & 4.25      & 5.75        \\
+\hline
+standar deviasi             & 1.479        & 3.269 \\   
+\hline     
+\end{tabular}
+\end{table}
+
+
+
 
 \section{Hadoop}
 
@@ -448,6 +498,8 @@ Ada tiga cara untuk menginstal Spark berdasarkan (Gambar ~\ref{fig:sparkins}) di
 
 \end{itemize}
 
+\subsection{Arsitektur Spark}
+
 \subsection{Resilient Distributed Datasets (RDD)}
 
 Resilient Distributed Datasets (RDD) adalah struktur data dasar Spark. RDD adalah koleksi benda-benda yang didistribusikan secara permanen. Setiap dataset dalam RDD dibagi menjadi beberapa partisi yang dapat dikomputasi pada node yang berbeda pada \textit{cluster} ~\cite{holdenkarau:07:ls}. RDD dapat berisi jenis objek Python, Java, atau Scala, termasuk kelas yang ditentukan pengguna. Spark memanfaatkan konsep RDD untuk mencapai operasi MapReduce yang lebih cepat dan efisien. ~\cite{holdenkarau:07:ls}\\
@@ -634,6 +686,8 @@ Berikut adalah Tabel~\ref{tab:actions} berisi daftar \textit{actions} yang umum 
 \bottomrule
 	\end{tabular} 
 \end{table}
+
+
 
 \section{Scala}
 
