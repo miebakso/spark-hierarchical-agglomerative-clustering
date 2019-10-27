@@ -294,7 +294,7 @@ Hadoop dikembangkan oleh Doug Cutting dan Mike Cafarella pada tahun 2005 yang sa
 
 \item {\it Distributed computing}: Data disimpan secara terdistribusi pada \textit{Hadoop Distributed File System} (HDFS) dan data diproses secara paralel pada \textit{node-node} di {\it cluster}.
 
-\item {\it Fast}: Hadoop sangat cocok untuk melakukan {\it batch processing} bervolume tinggi karena mampu melakukannya secara paralel.
+\item {\it Fast}: Hadoop sangat cocok untuk melakukan {\it batch processing} bervolume besar karena mampu melakukannya secara paralel.
 
 \item {\it Fault Tolerance}: Hadoop melakukan duplikasi data di beberapa \textit{node} yang berbeda. Ketika sebuah node gagal memproses data, \textit{node} yang memiliki duplikat data dapat menggantikannya untuk memproses data tersebut.
 
@@ -436,7 +436,7 @@ Apache spark adalah sebuah {\it cluster computing platform} dirancang untuk kece
 
 Pada sisi {\it general-purpose}, Spark dirancang untuk mencakup berbagai beban kerja yang sebelumnya diperlukan sistem terdistribusi terpisah, termasuk aplikasi \textit{batch}, {\it iterative algorithms}, {\it interactive query}, dan \textit{streaming}. Dengan mendukung beban kerja tersebut di mesin yang sama, Spark membuat pekerjaan lebih mudah dan murah untuk menggabungkan pemrosesan yang berbeda jenis. Dengan begitu, Spark mengurangi beban dalam merawat \textit{tools} yang terpisah.\\
 
-Spark di desain agar sangat mudah diakses dengan memberikan API sederhana untuk Python, Java, Scala, dan SQL~\cite{holdenkarau:07:ls}. Spark dengan mudah berintegrasi dengan tools {\it Big Data} lainnya, terutama Hadoop. Spark bisa berjalan pada Hadoop {\it cluster} dan mengakses sumber data Hadoop mana saja.\\
+Spark dirancang agar sangat mudah diakses dengan memberikan API sederhana untuk Python, Java, Scala, dan SQL~\cite{holdenkarau:07:ls}. Spark dengan mudah berintegrasi dengan tools {\it Big Data} lainnya, terutama Hadoop. Spark bisa berjalan pada Hadoop {\it cluster} dan mengakses sumber data Hadoop mana saja.\\
 
 \subsection{Komponen Spark}
 
@@ -486,7 +486,7 @@ cluster manager} pada diri Spark sendiri yang disebut \textit{Standalone Schedul
     \label{fig:sparkins} 
 \end{figure}
 
-Ada tiga cara untuk menginstal Spark berdasarkan (Gambar ~\ref{fig:sparkins}) diatas, ketiga cara tersebut akan dijelaskan dibawah:
+Ada tiga cara untuk menginstal Spark berdasarkan Gambar ~\ref{fig:sparkins} diatas, ketiga cara tersebut akan dijelaskan dibawah:
 
 \begin{itemize}
 
@@ -498,7 +498,54 @@ Ada tiga cara untuk menginstal Spark berdasarkan (Gambar ~\ref{fig:sparkins}) di
 
 \end{itemize}
 
+
+
+
+
+
+
+
+
 \subsection{Arsitektur Spark}
+
+Pada bagian ini akan dijelaskan arsitektur Spark. Spark menggunakan arsitektur \textit{master} dan \textit{slave}. Sebuah Spark \textit{cluster} memiliki satu \textit{master} dan banyak \textit{slave} atau bisa disebut sebagai \textit{worker}. Spark memiliki beberapa komponen peting dalam arsitekturnya seperti \textit{Driver Program}, \textit{Spark Context}, \textit{Cluster Manager},  . Gambar ~\ref{fig:sparkarc} menggambarkan komponen-komponen arsitektur Spark.
+
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.6]{sparkarc}  
+    \caption[Arsitektur Spark]{Arsitektur Spark} 
+    \label{fig:sparkarc} 
+\end{figure}
+
+Berikut adalah penjelasasn dari komponen-komponen Gambar Gambar ~\ref{fig:sparkarc}:
+
+\begin{itemize} 
+
+\item \textbf{Driver Program}\\
+\textit{Driver program} yang berjalan pada \textit{master node} bertugas menjalankan fungsi main() dari aplikasi dan tempat dimana \textit{Spark Context} dibuat. Kode program akan diterjemahkan menjadi \textit{tasks} dan dijadwalkan kepada \textit{executors} untuk dikerjakan. \textit{Driver program} akan berkomunikasi dengan \item \textbf{Cluster Manager} untuk mengatur sumber daya pada \textit{cluster}.\\
+
+\item \textbf{Spark Context}\\
+\textit{Spark Context} menghubungkan pengguna dengan \textit{cluster}. \textit{Spark Context} dapat terhubung dengan beberapa cluster manager seperti YARN, MESOS, dan \textit{Spark standalone cluster manager}. \textit{Spark Context} dapat digunakan untuk membuat \textit{Resilient Distributed Datasets} (RDD), \textit{accumulators}, dan \textit{broadcast variable}. 
+
+\item \textbf{Cluster Manager}\\
+\textit{Cluster Manager} berfungsi mengatur sumber daya pada sebuah \textit{cluster}. Spark dapat berjalan pada berbagai macam \texit{cluster manager} seperti Apache Mesos, Hadoop YARN, dan \textit{Spark's stand alone}. \textit{Cluster manager} akan berusaha mendapatkan sumber daya pada \texit{cluster} dan mealokasikannya kepada \textit{Spark job} yang sedang berjalan.
+
+\item \textbf{Executors}\\
+\textit{Executors} adalah proses-proses yang berjalan pada \textit{worker node} bertanggung jawab untuk mengerjakan \textit{tasks} yang diberikan. \textit{Executors} dibuat ketika aplikasi dijalankan dan akan tetap ada selama aplikasi itu berjalan.
+
+\item \textbf{Tasks}\\
+\textit{Task} adalah sebuah satuan kerja pada Spark. \textit{Task} berisi perintah. Perintah tersebut merupakan fungsi yang diserialisasi. \textit{Task} akan dikirimkan oleh \textit{driver program} kepada \texit{executor}. Kemudian, \textit{executor} akan medeserialisai perintah tersebut dan mengerjakannya. Biasanya \textit{task} akan dibuat untuk setiap partisi. Partisi merupakan potongan data yang terdistribusi pada \textit{cluster}.
+
+https://www.dezyre.com/article/apache-spark-architecture-explained-in-detail/338
+
+\end{itemize}
+
+
+
+
+
+
 
 \subsection{Resilient Distributed Datasets (RDD)}
 
