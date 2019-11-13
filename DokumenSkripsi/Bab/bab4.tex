@@ -151,7 +151,7 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
 \item Pertama-tama aplikasi akan dijalankan pada \textit{driver program}. Kemudian \it{Spark Context} akan dibuat dan operasi-operasi pada aplikasi diubah menjadi \it{task-task}. \it{Task-task} tersebut akan dibagikan dan dijadwalkan kepada \it{worker} oleh \it{driver program}. 
 
 
-\item Kemudian, \it{worker} akan membaca partisi HDFS yang ditentukan oleh \it{driver program}. Worker akan mengubah file-file tersebut menjadi RDD bertipe String seperti pada Gambar ~\ref{fig:rddpartition}.
+\item Kemudian, \it{worker} akan membaca partisi HDFS yang ditentukan oleh \it{driver program}. \it{Worker} akan membaca \it{blocks} tersebut sebagai RDD bertipe String seperti pada Gambar ~\ref{fig:rddpartition}. 
 
 \begin{figure}[H]
     \centering  
@@ -160,7 +160,7 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
     \label{fig:rddpartition} 
 \end{figure}
 
-\item Selanjutnya, partisi yang mengandung RDD bertipe \it{String} akan di-\it{parsing}. Objek dalam RDD bertipe \it{String} akan diubah menjadi objek \it{Node} seperti pada Gambar~\ref{fig:mapperspark}. Dari tahap ini akan dihasilkan RDD berisi objek-objek \it{Node}. Worker akan memproses setiap partisi sampai seperti pada Gambar~\ref{fig:workerprocess}.
+\item Selanjutnya, setiap objek pada RDD bertipe \it{String} akan diolah menjadi objek \it{Node}. Objek \it{Node} akan dipasangkan dengan sebuah \it{key}. \it{Key} merupakan bilangan acak antara 1 sampai $n$. Bilangan $n$ adalah jumlah partisi yang ditentukan oleh pengguna. Akan dihasilkan RDD baru berisi pasangan <\it{key},\it{value}> seperti pada Gambar~\ref{fig:mapperspark}. \it{Worker} akan memproses satu partisi dan melanjutkannya ketika selesai dengan partisi yang sedang diproses seperti pada Gambar~\ref{fig:workerprocess}.
 
 \begin{figure}[H]
     \centering  
@@ -176,17 +176,27 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
     \label{fig:workerprocess} 
 \end{figure}
 
-\item Hasil dari tahap \textit{map} akan dilanjutkan kepada \textit{reducer}. Pada tahap ini \textit{reducer} akan memanggil metode \textit{agglomerative clustering} untuk mereduksi keluaran dari \textit{mapper} seperti pada Gambar \ref{fig:reducespark}. Pada tahap \textit{reducer}, akan dibangun \textit{dendrogram} menggunakan algoritma HAC. \textit{Dendrogram} akan dipotong untuk menghasilkan \textit{clusters}. Setiap cluster akan dicari polanya, pola ini akan dikembalikan sebagai hasilnya.
+
+\item Setelah itu, akan terjadi pengelompokkan berdasarkan \it{key} yang sama. AKan terjadi perpindahan data dari satu \it{worker} kepada \it{worker} lainya. Objek \it{Node} dengan \it{key} yang sama akan berada pada memori \it{worker} yang sama seperti pada Gambar~\ref{fig:rddsort}.
+
+\begin{figure}[H]
+    \centering  
+    \includegraphics[scale=0.5]{rddsort}  
+    \caption[Pengelompokkan \it{Node} berdasarkan \it{key}]{Pengelompokkan \it{Node} berdasarkan \it{key}} 
+    \label{fig:rddsort} 
+\end{figure}
+
+\item Setelah data dikelompokan berdasarkan \it{key}, objek \it{Node} akan dimasukan kepada sebuah \it{list} sampai batas objek maksimum yang ditentukan oleh pengguna. Selanjutnya metode \textit{agglomerative clustering} akan dipanggil seperti pada Gambar \ref{fig:reducespark}. Metode ini akan membangun sebuah \textit{dendrogram} menggunakan algoritma HAC. \textit{Dendrogram} akan dipotong untuk menghasilkan \textit{clusters}. Setiap cluster akan dicari polanya, pola ini akan dikembalikan sebagai hasilnya. Langkah ini akan diulangi sampai seluruh objek pada partisi telah diproses.
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{reducespark}  
-    \caption[Proses reduksi pada \textit{reducer} dan kelas \textit{Pattern}]{Proses reduksi pada \textit{reducer} dan kelas \textit{Pattern}} 
+    \caption[Proses reduksi dan kelas \textit{Pattern}]{Proses reduksi dan kelas \textit{Pattern}} 
     \label{fig:reducespark} 
 \end{figure}
 
 
-\item Terakhir, pola dari hasil \textit{reduce} akan disimpan pada HDFS. Bila semua partisi sudah diproses, perangkat lunak akan berhenti. Bila masih ada partisi yang tersisa, langkah 3, 4 dan 5 akan diulang kembali sampai semua partisi telah diproses.
+\item Terakhir, pola akan disimpan pada HDFS seperti pada Gambar \ref{fig:savehdfs}. Bila semua partisi sudah diproses, perangkat lunak akan berhenti. Bila masih ada partisi yang tersisa, ulangi langkah sebelumnya sampai seluruh partisi telah diproses.
 
 \begin{figure}[H]
     \centering  
@@ -207,20 +217,22 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 	\SetKwInOut{Input}{Masukan}
 	\SetKwInOut{Output}{Keluaran}
 	\SetKwInOut{Desc}{Deskripsi}
-	\Input{dataset ($D$) bertipe RDD[String]}
-	\Output{$DN$ = dataset baru bertipe RDD[Node]}
-	\Desc{Melakukan \textit{parsing} untuk setiap elemen pada RDD $D$ dan mengembalikan RDD baru bertipe Node  }
+	\Input{dataset ($A$) bertipe RDD[String], jumlah partisi ($n$)}
+	\Output{$DN$ = dataset baru bertipe RDD[<key,Node>]}
+	\Desc{Melakukan \textit{parsing} dan memasangkan key untuk setiap elemen pada RDD $A$. Mengembalikan RDD baru bertipe <key,Node>  }
 	\SetKwHangingKw{DN}{\textbf{\textit{DN}} $\leftarrow$}
+	\SetKwHangingKw{randomKey}{\textbf{\textit{randomKey}} $\leftarrow$}
 	\SetKwHangingKw{node}{\textbf{\textit{node}} $\leftarrow$}
 	\SetKwHangingKw{split}{\textbf{\textit{split}} $\leftarrow$}
 	\BlankLine
 	\Begin{
-		\DN{RDD bertipe Node yang kosong}
-		\ForEach{line pada \textbf{\textit{D}}}{
+		\DN{RDD bertipe <key,Node> yang kosong}
+		\ForEach{line pada \textbf{\textit{A}}}{
 			\node{node baru}
 			\split{split \textit{line} berdasarkan delimeter "," dan konversi menjadi double}
 			node.setData(\textbf{\textit{split}})\;
-			\DN{\textbf{\textit{DN}} join \textbf{\textit{node}}}
+			\randomKey{hasilkan bilangan acak}
+			\DN{\textbf{\textit{DN}} join <\textbf{\textit{randomKey}},\textbf{\textit{node}}>}
 		}
 		return \textbf{\textit{DN}}
 	}
@@ -236,7 +248,7 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
 	\SetKwInOut{Input}{Masukan}
 	\SetKwInOut{Desc}{Deskripsi}
-	\Input{($DN$) RDD[Node] hasil dari mapper, jumlah objek maksimum ($MX$), tipe metode yang dipakai ($distType$) $\epsilon$ \{\textit{single}, \textit{complete}, \textit{centroid}\}, dan \textit{cut-off distance} ($co$) }
+	\Input{($DN$) RDD[<key,Node>] hasil dari mapper, jumlah objek maksimum ($MX$), tipe metode yang dipakai ($distType$) $\epsilon$ \{\textit{single}, \textit{complete}, \textit{centroid}\}, dan \textit{cut-off distance} ($co$) }
 	\Desc{Membuat \textit{dendrogram} dari hasil \textit{map} sesuai dengan batasan yang diberikan, membatasi jumlah objek yang akan diolah menjadi \textit{dendrogram} berdasarkan \textit{MX}, memotong dendrogram bersadarkan nilai $co$, mendapatkan pola \textit{pt} dari potongan \textit{cluster}, menyimpan pola-pola pada HDFS}
 	\SetKwHangingKw{isP}{\textbf{\textit{isProcessed}} $\leftarrow$}
 	\SetKwHangingKw{objL}{\textbf{\textit{objectList}} $\leftarrow$}
@@ -247,9 +259,9 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 	\BlankLine
 	\Begin{
 		\textit{broadcast} nilai $MX$, $distType$, dan $co$ \;
-		\objL{[] array Node kosong}
+		\objL{[] array kosong bertipe Node}
 		\rdp{RDD bertipe Pattern untuk mengumpulkan pola hasil reduksi}
-		\ForEach{elemen in \textbf{DN}} {
+		\ForEach{elemen in \textbf{DN.value}} {
 			\objL{objectList join \textit{elemen}}
 			\isP{false}
 			\If{count(objectList) == \textit{MX}}{
@@ -322,15 +334,18 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 		\Input{$dendrogram$, \textit{cut-off distance} $co$}
 		\Output{pola-pola dari seluruh potongan cluster}	
 		\Desc{Memotong \textit{dendrogram} menjadi beberapa \textit{clusters} berdasarkan nilai $co$, mendapatkan pola dari setiap \textit{cluster}}
+		\SetKwHangingKw{bfs}{\textbf{\textit{bfs}} $\leftarrow$}
+  		\SetKwHangingKw{clusters}{\textbf{\textit{clusters}} $\leftarrow$}
 		\SetKwHangingKw{dist}{\textbf{\textit{dist}} $\leftarrow$}
 		\SetKwHangingKw{node}{\textbf{\textit{node}} $\leftarrow$}
 		\SetKwHangingKw{le}{\textbf{\textit{left}} $\leftarrow$}
 		\SetKwHangingKw{ri}{\textbf{\textit{right}} $\leftarrow$}
 		\SetKwHangingKw{pat}{\textbf{\textit{p}} $\leftarrow$}
+		
 		\BlankLine
   		\Begin{	
-        	bfs[] \\ array kosong bertipe Node\;
-        	clusters[] \\ array kosong untuk menyimpan hasil potongan dari dendrogram\;
+  			\bfs{[] array kosong bertipe Node}
+        	\clusters{[] array kosong untuk menyimpan hasil potongan dari dendrogram}
         	bfs.add($dendrogram$)\;
         	\dist{$co$ * $dendrogram$.distance}
         	\While{bfs tidak kosong}{
@@ -359,9 +374,9 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 	
 \end{algorithm}
  
-Algoritma \textit{Map} ~\ref{alg:map} ini bertujuan untuk melakukan \textit{parsing} terhadap masukan yang diberikan. Masukan yang masuk berupa RDD[String] akan di-\textit{parsing} menjad RDD[Node]. Pertama, elemen pada RDD[String] yang berupa \textit{String} akan di pecah berdasarkan \textit{delimeter} "," dan di konversi menjadi bilangan pecahan. Hasilnya merupakan \textit{array} bertipe \textit{double} yang menjadi atribut objek \textit{Node}. Objek \textit{Node} kemudian akan tambahkan kepada RDD[Node]. RDD[Node] akan dikembalikan sebagai hasil untuk tahap \textit{reduce}.\\
+Algoritma \textit{Map} ~\ref{alg:map} ini bertujuan untuk melakukan \textit{parsing} terhadap masukan yang diberikan. Masukan yang diberikan berupa RDD[String]. Setiap elemen pada RDD[String] akan di-\textit{parsing} menjad objek \it{Node} dan dipasangkan dengan \it{key} yaitu bilangan acak antara 1 sampai n. Bilangan n merupakan jumlah partisi yang diberikan oleg pengguna. Pertama, elemen pada RDD[String] yang berupa \textit{String} akan di pecah berdasarkan \textit{delimeter} "," dan di konversi menjadi bilangan pecahan. Hasilnya merupakan \textit{array} bertipe \textit{double} yang menjadi atribut objek \textit{Node}. Kemudian akan diberikan bilangan acak antara 1 sampai n. Bilangan tersebut akan dipasangkan kepada objek \it{Node}. Pasangan <\it{key},\textit{Node}> kemudian akan tambahkan kepada RDD[<\it{key},\it{Node}>]. RDD[<\it{key},\it{Node}>] dikembalikan sebagai hasil dan menjadi masukan untuk tahap \textit{reduce}.\\
 
-Algoritma \textit{Reduce} ~\ref{alg:reduce} bertujuan untuk membangun dendrogram dan mengembalikan pola-pola bertipe RDD[Pattern] sebagai hasilnya. Pertama-tama nilai $MX$, $distType$, $co$ akan di \textit{broadcast} agar setiap \textit{worker} memiliki nilai tersebut. \textit{Variable} \textit{objectList} dibuat untuk menampung \textit{Node-Node} yang akan dibangun menjadi \textit{dendrogram}. \textit{Node} pada RDD[Node] akan ditambahkan kepada \textit{objectList} sampai batas jumlah \textit{Node} pada objectList sama dengan nilai $MX$. Kemudian, fungsi \textit{generate\_dendrogram(objectList, distType)} akan dipanggil untuk membangun dendrogram. Hasil dari fungsi tersebut yaitu sebuah \textit{dendrogram} dijadikan masukan untuk fungsi \textit{compute\_pattern(dendrogram,co)}. Fungsi ini untuk memotong dendrogram menjadi \textit{clusters} dan mencari pola dari setiap \textit{cluster}. Pola atau \textit{Pattern} akan ditambahkan kepada \textit{variable pattern} (RDD[Pattern]) yang akan dikembalikan sebagi hasil. \textit{variable isProcessed} pada baris 16 untuk memastikan bahwa setiap elemen pada \textit{objectList} sudah di proses. \\
+Algoritma \textit{Reduce} ~\ref{alg:reduce} bertujuan untuk membangun dendrogram dan mengembalikan pola-pola bertipe RDD[Pattern] sebagai hasilnya. Pertama-tama nilai $MX$, $distType$, $co$ akan di \textit{broadcast} agar setiap \textit{worker} memiliki nilai tersebut. \textit{Variable} \textit{objectList} dibuat untuk menampung \textit{Nodes} yang akan dibangun menjadi \textit{dendrogram}. \textit{Node} pada RDD[<\it{key},\it{Node}] akan ditambahkan kepada objectList sampai batas jumlah \textit{Node} pada objectList sama dengan nilai $MX$. Kemudian, fungsi \textit{generate\_dendrogram(objectList, distType)} akan dipanggil untuk membangun \it{dendrogram}. Hasil dari fungsi tersebut yaitu sebuah \textit{dendrogram} dijadikan masukan untuk fungsi \textit{compute\_pattern(dendrogram,co)}. Fungsi ini untuk memotong \it{dendrogram} menjadi \textit{clusters} dan mencari pola dari setiap \textit{cluster}. Pola atau \textit{Pattern} akan ditambahkan kepada \textit{variable pattern} (RDD[\it{Pattern}]) yang akan dikembalikan sebagi hasil. \textit{Variable isProcessed} pada baris 16 untuk memastikan bahwa setiap elemen pada \textit{objectList} sudah di proses. \\
 
 
 Fungsi \textit{generate}\_\textit{dendrogram} pada algoritma ~\ref{alg:reduce} digunakan untuk membangun \textit{dendrogram}. Fungsi ini akan menerima \textit{objectList} sebagai masukan. Pertama-tama \textit{array} distanceMatrix harus diinisialisasi dan dihitung jarak antara objeknya menggunakan \textit{distType} yang ditentukan. Kemudian, \textit{array} \textit{dendrogram} diisi dengan objek-objek pada \textit{objectList}. Untuk membangun dendrogram, gabungkan objek yang memiliki nilai terkecil pada \textit{distanceMatrix} seperti pada Gambar ~\ref{fig:hac}. Setelah menggabungkan dua buah objek, objek pada dendrogram akan berkurang 1 dan \textit{distranceMatrix} harus dihitung ulang berdasarkan \textit{distType}.
@@ -516,7 +531,7 @@ Kelas \textit{DataReducer} dirancang untuk memproses data. Proses reduksi secara
 
 \item \textit{loadData}: \textit{method} untuk memuat data berdasarkan \textit{input path} yang diberikan.
 
-\item \textit{mapData}: \textit{method} untuk mengubah baris-baris attribut bertipe \textit{String} menjadi objek Node. \textit{Method} ini akan mengembalikan RDD bertipe Node.  
+\item \textit{mapData}: \textit{method} untuk mengubah baris-baris attribut bertipe \textit{String} menjadi objek \it{Node}. Setiap \it{Node} akan dipasangkan dengan \it{key} yaitu sebuah bilangan acak. \textit{Method} ini akan mengembalikan RDD bertipe <\it{key},\it{Node}>.  
 
 \item  \textit{reduceData}: \textit{method} untuk mereduksi data menggunakan \textit{agglomerative clustering}. Method ini akan mengembalikan pola-pola dari setiap \textit{clusters}.\\
 

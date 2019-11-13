@@ -257,7 +257,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 
 \begin{table}[H] 
 	\centering 
-	\caption{Percobaan Jumlah Partisi Hadoop dan Spark dengan Ukuran Data 10 GB}
+	\caption{Percobaan Jumlah Partisi Hadoop dan Spark dengan Ukuran Data 1 GB}
 	\label{tab:spark1}
 	\begin{tabular}{|p{1.1cm}|p{1.1cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2cm}|p{1.5cm}|p{1.5cm}|}
 \hline
@@ -296,7 +296,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates {(10,319) (30,131) (50,101) (100,62) (150,56) };
+		\addplot+[smooth][color=black,mark=triangle] coordinates {(10,319) (30,131) (50,101) (100,62) (150,56) };
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates {(10,304) (30,124) (50,89) (100,63) (150,56)};
 		\addlegendentry{Hadoop}
@@ -305,7 +305,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Partisi Spark dan Hadoop 1GB]{Hasil Percobaan Partisi Spark dan Hadoop 1GB}
+		\caption[Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 1GB, jumlah objek maksimum 30, dan total 10 core]{dengan ukuran data 1GB, jumlah objek maksimum 30, dan total 10 core}
 		\label{fig:percobaan1}
 	\end{figure}
 \end{minipage}\\
@@ -361,7 +361,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates {(10,929) (30,350) (50,205) (100,126) (150,110) (200,98) (250,83)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates {(10,929) (30,350) (50,205) (100,126) (150,110) (200,98) (250,83)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates {
 		(10,958) (30,317) (50,217) (100,134) (150,109) (200,99) (250,86)};
@@ -373,7 +373,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Partisi Spark dan Hadoop 2GB]{Hasil Percobaan Partisi Spark dan Hadoop 2GB}
+		\caption[Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 2GB, jumlah objek maksimum 30, dan total 10 core]{Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 2GB, jumlah objek maksimum 30, dan total 10 core}
 		\label{fig:percobaan2}
 	\end{figure}
 \end{minipage}\\
@@ -441,7 +441,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates {(10,1446) (30,516) (50,315) (100,188) (150,144) (200,135) (250,211) (300,182) (350,163) (400,137)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates {(10,1446) (30,516) (50,315) (100,188) (150,144) (200,135) (250,211) (300,182) (350,163) (400,137)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates {
 		(10,1376) (30,491) (50,298) (100,183) (150,146) (200,144) (250,191) (300,176) (350,169) (400,158)};
@@ -453,7 +453,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Partisi Spark dan Hadoop 3GB]{Hasil Percobaan Partisi Spark dan Hadoop 3GB}
+		\caption[Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 3GB, Objek Maksimum 30, dan Total 10 Core]{Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 3GB, Objek Maksimum 30, dan Total 10 Core}
 		\label{fig:percobaan3}
 	\end{figure}
 \end{minipage}\\
@@ -523,7 +523,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates {(10,4457) (30,2002) (50,891) (100,590) (150,431) (200,288) (300,526) (400,399) (500,370) (600,326) (700,306) (800,256)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates {(10,4457) (30,2002) (50,891) (100,590) (150,431) (200,288) (300,526) (400,399) (500,370) (600,326) (700,306) (800,256)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates {(10,4490) (30,1637) (50,995) (100,524) (150,343) (200,315) (300,519) (400,422) (500,359) (600,319) (700,259) (800,255)};
 		\addlegendentry{Hadoop}
@@ -534,7 +534,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Partisi Spark dan Hadoop 5GB]{Hasil Percobaan Partisi Spark dan Hadoop 5GB}
+		\caption[Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 5GB, Objek Maksimum 30, dan Total 10 Core]{Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 5GB, Objek Maksimum 30, dan Total 10 Core}
 		\label{fig:percobaan4}
 	\end{figure}
 \end{minipage}\\
@@ -551,7 +551,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 
 \begin{table}[H] 
 	\centering 
-	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 10 GB}
+	\caption{Percobaan Jumlah Partisi Spark dengan Ukuran Data 10 GB}
 	\label{tab:spark6}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
@@ -647,7 +647,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (Detik) & Hasil Reduk
 		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates {(50,7236) (100,2805) (200,1718) (300,1494) (400,1207) (500,984) (700,780) (900,652) (1100,568) (1300,524) (1500,504)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates {(50,7236) (100,2805) (200,1718) (300,1494) (400,1207) (500,984) (700,780) (900,652) (1100,568) (1300,524) (1500,504)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates {(50,7254) (100,2373) (200,1736) (300,1477) (400,1160) (500,923) (700,774) (900,645) (1100,563) (1300,522) (1500,459)};
 		\addlegendentry{Hadoop}
@@ -658,7 +658,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (Detik) & Hasil Reduk
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Partisi Spark dan Hadoop 10GB]{Hasil Percobaan Partisi Spark dan Hadoop 10GB}
+		\caption[Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 10GB, Objek Maksimum 30, dan Total 10 Core]{Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 10GB, Objek Maksimum 30, dan Total 10 Core}
 		\label{fig:percobaan5}
 	\end{figure}
 \end{minipage}\\
@@ -675,7 +675,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 
 \begin{table}[H] 
 	\centering 
-	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 15}
+	\caption{Percobaan Jumlah Partisi Spark dengan Ukuran Data 15 GB}
 	\label{tab:spark7}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
@@ -761,7 +761,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (100,9294) (200,4847) (300,3761) (500,2024) (700,1696) (900,1372) (1200,1114) (1500,918) (1800,863) (2100,783) (2400,738)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (100,9294) (200,4847) (300,3761) (500,2024) (700,1696) (900,1372) (1200,1114) (1500,918) (1800,863) (2100,783) (2400,738)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates {(100,9034) (200,5239) (300,3263) (500,2175) (700,1645) (900,1276) (1200,1136) (1500,970) (1800,834) (2100,773) (2400,739)};
 		\addlegendentry{Hadoop}
@@ -772,7 +772,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Partisi Spark dan Hadoop 15GB]{Hasil Percobaan Partisi Spark dan Hadoop 15GB}
+		\caption[Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 15GB, Objek Maksimum 30, dan Total 10 Core]{Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 15GB, Objek Maksimum 30, dan Total 10 Core}
 		\label{fig:percobaan6}
 	\end{figure}
 \end{minipage}\\
@@ -787,7 +787,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 
 \begin{table}[H] 
 	\centering 
-	\caption{Percobaan Jumlah Partisi Hadoop dengan Ukuran Data 20}
+	\caption{Percobaan Jumlah Partisi Spark dengan Ukuran Data 20 GB}
 	\label{tab:spark9}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
@@ -866,7 +866,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (s), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (200,8386) (400,4342) (600,2841) (1000,2065) (1400,1598) (1800,1372) (2200,1228) (2600,1133) (3000,1010)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (200,8386) (400,4342) (600,2841) (1000,2065) (1400,1598) (1800,1372) (2200,1228) (2600,1133) (3000,1010)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates {(200,8866) (400,4553) (600,3021) (1000,2084) (1400,1471) (1800,1298) (2200,1165) (2600,1081) (3000,1031)};
 		\addlegendentry{Hadoop}
@@ -877,7 +877,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Partisi Spark dan Hadoop 20GB]{Hasil Percobaan Partisi Spark dan Hadoop 20GB}
+		\caption[Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 20GB, Objek Maksimum 30, dan Total 10 Core]{Hasil Percobaan Partisi Spark dan Hadoop dengan ukuran data 20GB, Objek Maksimum 30, dan Total 10 Core}
 		\label{fig:percobaan7}
 	\end{figure}
 \end{minipage}\\
@@ -966,29 +966,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (300,394) (400,368) (500,342) (600,331) (700,323)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (300,394) (400,368) (500,342) (600,331) (700,323)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (300,433) (400,381) (500,364) (600,353) (700,320)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,1546) (30,1571) (50,1654) (100,1721) (200,2076) };
-		\addplot+[dotted][color=blue] coordinates {(200,2076) (700,2076) };
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan ukuran data 5GB, Objek Maksimum 50, dan Total 10 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB, Objek Maksimum 50, dan Total 10 Core}
 		\label{fig:percobaan9}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan9}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\  
+Berdasarkan hasil grafik (~\ref{fig:percobaan9}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MAX OBJ 50 10 GB
 
@@ -1064,29 +1063,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (500,740) (700,653) (900,582) (1100,625) (1300,557)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (500,740) (700,653) (900,582) (1100,625) (1300,557)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (500,741) (700,664) (900,565) (1100,540) (1300,561)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,2740) (30,2821) (50,2897) (100,3130) (200,3571) };
-		\addplot+[dotted][color=blue] coordinates { (200,3571) (1300,3571) };
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB, Objek Maksimum 50, dan Total 10 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB, Objek Maksimum 50, dan Total 10 Core}
 		\label{fig:percobaan10}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan10}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\
+Berdasarkan hasil grafik (~\ref{fig:percobaan10}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\
 
 
 
@@ -1164,29 +1162,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (900,1072) (1200,962) (1500,929) (1800,888) (2100,801)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (900,1072) (1200,962) (1500,929) (1800,888) (2100,801)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (900,1123) (1200,935) (1500,887) (1800,900) (2100,854)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,4273) (30,4319) (50,4479) (100,4674) (200,5412) };
-		\addplot+[dotted][color=blue] coordinates {(200,5412)(2100,5412) };
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB, Objek Maksimum 50, dan Total 10 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB, Objek Maksimum 50, dan Total 10 Core}
 		\label{fig:percobaan11}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan11}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\
+Berdasarkan hasil grafik (~\ref{fig:percobaan11}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%% MAX OBJ 50 20GB
@@ -1263,29 +1260,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (1000,1447) (1400,1327) (1800,1314) (2000,1167) (2600,1216)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (1000,1447) (1400,1327) (1800,1314) (2000,1167) (2600,1216)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (1000,1546) (1400,1242) (1800,1278) (2000,1246) (2600,1220)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,5462) (30,5771) (50,5914) (100,6240) (200,7508) };
-		\addplot+[dotted][color=blue] coordinates { (200,7508) (2600,7508)};
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB, Objek Maksimum 50, dan Total 10 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB, Objek Maksimum 50, dan Total 10 Core}
 		\label{fig:percobaan12}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan12}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan12}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 
@@ -1373,29 +1369,29 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (menit), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (menit), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (300,6.9) (400,6.8) (500,6.7) (600,6.5) (700,6.4)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (300,6.9) (400,6.8) (500,6.7) (600,6.5) (700,6.4)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (300,7.5) (400,7.0) (500,6.7) (600,6.8) (700,6.3)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,101) (30,103) (50,106)};
-		\addplot+[dotted][color=blue] coordinates {(50,106) (700,106)};
+
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB, Objek Maksimum 100, dan Toal 10 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB, Objek Maksimum 100, dan Toal 10 Core}
 		\label{fig:percobaan91}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan91}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan91}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAX OBJ 100 10 GB
 
@@ -1467,29 +1463,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (menit), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (menit), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (500,12.5) (700,11.5) (900,12.2) (1100,11.5) (1300,10.6)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (500,12.5) (700,11.5) (900,12.2) (1100,11.5) (1300,10.6)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (500,12.4) (700,12.0) (900,11.6) (1100,11.0) (1300,11.2)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,181) (30,182) (50,184)  };
-		\addplot+[dotted][color=blue] coordinates {(50,184) (1300,184)  };
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB, Objek Maksimum 100, dan Toal 10 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB, Objek Maksimum 100, dan Toal 10 Core}
 		\label{fig:percobaan101}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan101}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan101}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
 
 
 
@@ -1563,29 +1558,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (menit), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (menit), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (900,18.0) (1200,18.5) (1500,17.3) (1800,17.4) (2100,17.3)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (900,18.0) (1200,18.5) (1500,17.3) (1800,17.4) (2100,17.3)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (900,18.6) (1200,18.4) (1500,16.3) (1800,17.6) (2100,17.7)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,270) (30,266) (50,275) };
-		\addplot+[dotted][color=blue] coordinates { (50,275) (2100,275) };
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB, Objek Maksimum 100, dan Toal 10 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB, Objek Maksimum 100, dan Toal 10 Core}
 		\label{fig:percobaan111}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan111}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan111}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%  MAX OBJ 100 20GB
@@ -1658,29 +1652,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (menit), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (menit), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (1000,24.7) (1400,24.3) (1800,24.0) (2000,24.2) (2600,23.8)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (1000,24.7) (1400,24.3) (1800,24.0) (2000,24.2) (2600,23.8)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (1000,25.7) (1400,23.5) (1800,23.4) (2000,23.2) (2600,23.7)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,350) (30,358) (50,365)};
-		\addplot+[dotted][color=blue] coordinates { (50,365) (2600,365)};
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB, Objek Maksimum 100, dan Toal 10 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB, Objek Maksimum 100, dan Toal 10 Core}
 		\label{fig:percobaan121}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan121}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan121}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 
@@ -1769,28 +1762,27 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (300,281) (400,252) (500,241) (600,244) (700,229)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (300,281) (400,252) (500,241) (600,244) (700,229)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (300,294) (400,263) (500,232) (600,231) (700,220)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,337) (30,461) (50,530) (100,612) (200,830) };
-		\addplot+[dotted][color=blue] coordinates {(200,830) (700,830)};
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB, Objek Maksimum 30, dan Total 30 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB, Objek Maksimum 30, dan Total 30 Core}
 		\label{fig:percobaan911}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan911}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan911}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CORE 30 10 GB
 
@@ -1866,28 +1858,27 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (500,421) (700,395) (900,383) (1100,361) (1300,343)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (500,421) (700,395) (900,383) (1100,361) (1300,343)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (500,404) (700,389) (900,392) (1100,359) (1300,343)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,621) (30,854) (50,937) (100,1076) (200,1385) };
-		\addplot+[dotted][color=blue] coordinates { (200,1385) (1300,1385)};
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB, Objek Maksimum 30, dan Total 30 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB, Objek Maksimum 30, dan Total 30 Core}
 		\label{fig:percobaan1011}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan1011}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan1011}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
 
 
 
@@ -1965,29 +1956,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (900,601) (1200,562) (1500,515) (1800,472) (2100,442)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (900,601) (1200,562) (1500,515) (1800,472) (2100,442)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (900,596) (1200,569) (1500,527) (1800,483) (2100,435)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,981) (30,1286) (50,1631) (100,1661) (200,2125) };
-		\addplot+[dotted][color=blue] coordinates { (200,2125) (2100,2125)};
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB, Objek Maksimum 30, dan Total 30 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 15 GB, Objek Maksimum 30, dan Total 30 Core}
 		\label{fig:percobaan1111}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan1111}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan1111}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%  CORE 30 20GB
@@ -2064,28 +2054,27 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (1000,780) (1400,723) (1800,613) (2000,553) (2600,530)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (1000,780) (1400,723) (1800,613) (2000,553) (2600,530)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (1000,782) (1400,720) (1800,631) (2000,557) (2600,535)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,1662) (30,1936) (50,2539) (100,3153) (200,4145) };
-		\addplot+[dotted][color=blue] coordinates { (200,4145) (2600,4145)};
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB, Objek Maksimum 30, dan Total 30 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB, Objek Maksimum 30, dan Total 30 Core}
 		\label{fig:percobaan1211}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan1211}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan1211}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 
@@ -2177,28 +2166,27 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (300,238) (400,207) (500,189) (600,185) (700,177)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (300,238) (400,207) (500,189) (600,185) (700,177)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (300,246) (400,217) (500,195) (600,182) (700,178)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,206) (30,234) (50,252) (100,270) (200,305) };
-		\addplot+[dotted][color=blue] coordinates {(200,305) (700,305) };
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB, Objek Maksimum 30, dan Total 50 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 5 GB, Objek Maksimum 30, dan Total 50 Core}
 		\label{fig:percobaan9115}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan9115}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan9115}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CORE 50 10 GB
 
@@ -2274,28 +2262,27 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (500,304) (700,278) (900,251) (1100,228) (1300,205)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (500,304) (700,278) (900,251) (1100,228) (1300,205)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (500,312) (700,296) (900,261) (1100,226) (1300,197)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,331) (30,350) (50,384) (100,428) (200,453) };
-		\addplot+[dotted][color=blue] coordinates { (200,453) (1300,453)};
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB, Objek Maksimum 30, dan Total 50 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 10 GB, Objek Maksimum 30, dan Total 50 Core}
 		\label{fig:percobaan10115}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan10115}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan10115}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
 
 
 
@@ -2373,15 +2360,14 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (900,571) (1200,507) (1500,439) (1800,392) (2100,331)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (900,571) (1200,507) (1500,439) (1800,392) (2100,331)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (900,543) (1200,525) (1500,460) (1800,412) (2100,315)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,556) (30,613) (50,685) (100,732) (200,779) };
-		\addplot+[dotted][color=blue] coordinates {(200,779) (2100,779)};
 		
 
 		\leg
@@ -2394,7 +2380,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan11115}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik (~\ref{fig:percobaan11115}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%  CORE 50 20GB
@@ -2471,28 +2457,28 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\begin{figure}[H]
 		\centering
 		\begin{tikzpicture}[scale=\scl]
-		\begin{axis}[\ymin,\ymax,xlabel= Nomor percobaan,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
+		\begin{axis}[\ymin,\ymax,xlabel= Jumlah Partisi,ylabel= waktu (detik), xticklabel style={/pgf/number format/.cd, fixed,fixed zerofill, precision=0},legend pos = outer north east]
 		
 		\addlegendentry{Spark tanpa standar Deviasi}
-		\addplot+[smooth][color=green] coordinates { (1000,601) (1400,516) (1800,436) (2000,395) (2600,301)};
+		\addplot+[smooth][color=black,mark=triangle] coordinates { (1000,601) (1400,516) (1800,436) (2000,395) (2600,301)};
 		\addlegendentry{Spark dengan standar Deviasi}
 		\addplot+[smooth][color=red] coordinates { (1000,596) (1400,524) (1800,452) (2000,407) (2600,310)};
 		\addlegendentry{Hadoop}
 		\addplot+[smooth][color=blue] coordinates {(10,715) (30,827) (50,1134) (100,1274) (200,1421) };
-		\addplot+[dotted][color=blue] coordinates {(200,1421) (2600,1421)};
+		
 
 		
 
 		\leg
 		\end{axis}
 		\end{tikzpicture}
-		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB}
+		\caption[Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB, Objek Maksimum 30, dan Total 50 Core]{Hasil Percobaan Jumlah Partisi Spark dan Hadoop dengan Ukuran Data 20 GB, Objek Maksimum 30, dan Total 50 Core}
 		\label{fig:percobaan12115}
 	\end{figure}
 \end{minipage}\\
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan12115}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas garis biru titk-titik sesuai pola peningkatan waktu eksekusi Hadoop terhadap jumlah partisi. Garis biru titik-titik merupakan waktu eksekusi Hadoop dengan jumlah partisi 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. 
+Berdasarkan hasil grafik (~\ref{fig:percobaan12115}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. 
 
 
