@@ -1,0 +1,72 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5b6b2bfbb5f47bb83bf80b6862f881fe",
+    "packages": [
+        {
+            "name": "simpleenergy/php-webhdfs",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xaviered/php-WebHDFS.git",
+                "reference": "b6c293f625af972422845293e4a6c660e75152cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/xaviered/php-WebHDFS/zipball/b6c293f625af972422845293e4a6c660e75152cb",
+                "reference": "b6c293f625af972422845293e4a6c660e75152cb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "org\\apache\\hadoop\\": "src/",
+                    "org\\apache\\hadoop\\tools": "app/models/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Lagemann",
+                    "email": "sebastian@iqu.com"
+                },
+                {
+                    "name": "tranch-xiao",
+                    "homepage": "https://github.com/tranch-xiao"
+                },
+                {
+                    "name": "dshap",
+                    "homepage": "https://github.com/dshap"
+                },
+                {
+                    "name": "jacobko",
+                    "homepage": "https://github.com/jacobko"
+                },
+                {
+                    "name": "yosshi",
+                    "homepage": "https://github.com/yosshi"
+                }
+            ],
+            "description": "PHP WebHDFS, forked from https://github.com/simpleenergy/php-WebHDFS",
+            "time": "2018-10-15T19:00:37+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

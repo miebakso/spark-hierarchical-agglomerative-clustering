@@ -139,7 +139,7 @@ Selain itu, perangkat lunak harus dapat menghasilkan pola seperti berikut:
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.4]{flowc}  
+    \includegraphics[scale=0.38]{flowc}  
     \caption[Diagram alur perangkat lunak]{Diagram alur perangkat lunak} 
     \label{fig:flowc} 
 \end{figure}
@@ -148,10 +148,10 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
 
 \begin{enumerate}
 
-\item Pertama-tama aplikasi akan dijalankan pada \textit{driver program}. Kemudian \it{Spark Context} akan dibuat dan operasi-operasi pada aplikasi diubah menjadi \it{task-task}. \it{Task-task} tersebut akan dibagikan dan dijadwalkan kepada \it{worker} oleh \it{driver program}. 
+\item Pertama-tama aplikasi akan dijalankan pada \textit{driver program}. Kemudian \textit{Spark Context} akan dibuat dan operasi-operasi pada aplikasi diubah menjadi \textit{task-task}. \textit{Task-task} tersebut akan dibagikan dan dijadwalkan kepada \textit{worker} oleh \textit{driver program}. 
 
 
-\item Kemudian, \it{worker} akan membaca partisi HDFS yang ditentukan oleh \it{driver program}. \it{Worker} akan membaca \it{blocks} tersebut sebagai RDD bertipe String seperti pada Gambar ~\ref{fig:rddpartition}. 
+\item Kemudian, \textit{worker} akan membaca partisi HDFS yang ditentukan oleh \textit{driver program}. \textit{Worker} akan membaca \textit{blocks} tersebut sebagai RDD bertipe String seperti pada Gambar ~\ref{fig:rddpartition}. 
 
 \begin{figure}[H]
     \centering  
@@ -160,7 +160,7 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
     \label{fig:rddpartition} 
 \end{figure}
 
-\item Selanjutnya, setiap objek pada RDD bertipe \it{String} akan diolah menjadi objek \it{Node}. Objek \it{Node} akan dipasangkan dengan sebuah \it{key}. \it{Key} merupakan bilangan acak antara 1 sampai $n$. Bilangan $n$ adalah jumlah partisi yang ditentukan oleh pengguna. Akan dihasilkan RDD baru berisi pasangan <\it{key},\it{value}> seperti pada Gambar~\ref{fig:mapperspark}. \it{Worker} akan memproses satu partisi dan melanjutkannya ketika selesai dengan partisi yang sedang diproses seperti pada Gambar~\ref{fig:workerprocess}.
+\item Selanjutnya, setiap objek pada RDD bertipe \textit{String} akan diolah menjadi objek \textit{Node}. Objek \textit{Node} akan dipasangkan dengan sebuah \textit{key}. \textit{Key} merupakan bilangan acak antara 1 sampai $n$. Bilangan $n$ adalah jumlah partisi yang ditentukan oleh pengguna. Akan dihasilkan RDD baru berisi pasangan <\textit{key},\textit{value}> seperti pada Gambar~\ref{fig:mapperspark}. \textit{Worker} akan memproses satu partisi dan melanjutkannya ketika selesai dengan partisi yang sedang diproses seperti pada Gambar~\ref{fig:workerprocess}.
 
 \begin{figure}[H]
     \centering  
@@ -177,16 +177,16 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
 \end{figure}
 
 
-\item Setelah itu, akan terjadi pengelompokkan berdasarkan \it{key} yang sama. AKan terjadi perpindahan data dari satu \it{worker} kepada \it{worker} lainya. Objek \it{Node} dengan \it{key} yang sama akan berada pada memori \it{worker} yang sama seperti pada Gambar~\ref{fig:rddsort}.
+\item Setelah itu, akan terjadi pengelompokkan berdasarkan \textit{key} yang sama. AKan terjadi perpindahan data dari satu \textit{worker} kepada \textit{worker} lainya. Objek \textit{Node} dengan \textit{key} yang sama akan berada pada memori \textit{worker} yang sama seperti pada Gambar~\ref{fig:rddsort}.
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{rddsort}  
-    \caption[Pengelompokkan \it{Node} berdasarkan \it{key}]{Pengelompokkan \it{Node} berdasarkan \it{key}} 
+    \caption[Pengelompokkan \textit{Node} berdasarkan \textit{key}]{Pengelompokkan \textit{Node} berdasarkan \textit{key}} 
     \label{fig:rddsort} 
 \end{figure}
 
-\item Setelah data dikelompokan berdasarkan \it{key}, objek \it{Node} akan dimasukan kepada sebuah \it{list} sampai batas objek maksimum yang ditentukan oleh pengguna. Selanjutnya metode \textit{agglomerative clustering} akan dipanggil seperti pada Gambar \ref{fig:reducespark}. Metode ini akan membangun sebuah \textit{dendrogram} menggunakan algoritma HAC. \textit{Dendrogram} akan dipotong untuk menghasilkan \textit{clusters}. Setiap cluster akan dicari polanya, pola ini akan dikembalikan sebagai hasilnya. Langkah ini akan diulangi sampai seluruh objek pada partisi telah diproses.
+\item Setelah data dikelompokan berdasarkan \textit{key}, objek \textit{Node} akan dimasukan kepada sebuah \textit{list} sampai batas objek maksimum yang ditentukan oleh pengguna. Selanjutnya metode \textit{agglomerative clustering} akan dipanggil seperti pada Gambar \ref{fig:reducespark}. Metode ini akan membangun sebuah \textit{dendrogram} menggunakan algoritma HAC. \textit{Dendrogram} akan dipotong untuk menghasilkan \textit{clusters}. Setiap cluster akan dicari polanya, pola ini akan dikembalikan sebagai hasilnya. Langkah ini akan diulangi sampai seluruh objek pada partisi telah diproses.
 
 \begin{figure}[H]
     \centering  
@@ -231,7 +231,7 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 			\node{node baru}
 			\split{split \textit{line} berdasarkan delimeter "," dan konversi menjadi double}
 			node.setData(\textbf{\textit{split}})\;
-			\randomKey{hasilkan bilangan acak}
+			\randomKey{hasilkan bilangan acak antara 1 sampai dengan $n$}
 			\DN{\textbf{\textit{DN}} join <\textbf{\textit{randomKey}},\textbf{\textit{node}}>}
 		}
 		return \textbf{\textit{DN}}
@@ -241,9 +241,9 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 	
 \end{algorithm}
 
-\clearpage
 
-\begin{algorithm}[H]
+
+\begin{algorithm}[ht]
 	\label{alg:reduce}
 	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
 	\SetKwInOut{Input}{Masukan}
@@ -262,19 +262,19 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 		\objL{[] array kosong bertipe Node}
 		\rdp{RDD bertipe Pattern untuk mengumpulkan pola hasil reduksi}
 		\ForEach{elemen in \textbf{DN.value}} {
-			\objL{objectList join \textit{elemen}}
+			\objL{\textbf{\textit{objectList}} join \textit{elemen}}
 			\isP{false}
-			\If{count(objectList) == \textit{MX}}{
-				\dendo{generate\_dendrogram(\textbf{\textit{\textbf{objectList}, $distType$}})}
-				\pt{compute\_pattern(dendrogram,$co$)}
+			\If{count(\textbf{\textit{objectList}}) == \textit{MX}}{
+				\dendo{\textit{generate\_dendrogram(\textbf{objectList}, \textbf{distType}})}
+				\pt{\textit{compute\_pattern(\textbf{dendrogram},\textbf{co})}}
 				\rdp{\textbf{\textit{pattern}} join \textit{\textbf{pt}}}
 				\isP{true}
 				kosongkan \textbf{\textit{objectList}}\;
 			}
 		}
 		\If{isProcessed == false}{
-			\dendo{\textit{generate\_dendrogram}(\textbf{\textit{\textbf{objectList}, $distType$}})}
-			\pt{\textit{compute\_pattern}(dendrogram,$co$)}
+			\dendo{\textit{generate\_dendrogram}(\textbf{\textit{\textbf{objectList}, distType}})}
+			\pt{\textit{compute\_pattern}(\textbf{dendrogram},\textbf{co})}
 			\rdp{\textbf{\textit{pattern}} join \textit{\textbf{pt}}}
 
 		}
@@ -288,10 +288,12 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 	
 \end{algorithm}
 
-\clearpage
+
+
+
 
 \RestyleAlgo{boxed}
-\begin{algorithm}[H]
+\begin{algorithm}[ht]
 	\label{alg:hac}
 	\SetKwFunction{FMain}{generate\_dendrogram}
   	\SetKwProg{Fn}{Function}{:}{}
@@ -303,21 +305,177 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 		\Input{list objek-objek $objectList$, tipe metode $distType$}
 		\Output{dendrogram}
 		\Desc{Membangun \textit{dendrogram} dari list objek sesuai dengan nilai $distType$ yang diberikan }
+		\SetKwHangingKw{dism}{\textbf{\textit{distanceMatrix}} $\leftarrow$}
+		\SetKwHangingKw{nlc}{\textbf{\textit{nodeListCluster}} $\leftarrow$}
+		\SetKwHangingKw{dendo}{\textbf{\textit{dendrogram}} $\leftarrow$}
+		\SetKwHangingKw{i}{\textbf{\textit{i}} $\leftarrow$}
+		\SetKwHangingKw{j}{\textbf{\textit{j}} $\leftarrow$}
+		\SetKwHangingKw{x}{\textbf{\textit{x}} $\leftarrow$}
+		\SetKwHangingKw{y}{\textbf{\textit{y}} $\leftarrow$}
+		\SetKwHangingKw{temp}{\textbf{\textit{temp}} $\leftarrow$}
+		\SetKwHangingKw{res}{\textbf{\textit{result}} $\leftarrow$}
+		\SetKwBlock{Beg}{begin}{end}
+		\BlankLine
+  		\Beg{
+  			\dism{[][] array double untuk merepresentasikan jarak antara cluster} 
+  			\nlc{[] array bertipe List<Node> merepresentasikan cluster} 
+  			\dendo{[] array bertipe node untuk merepresentasikan dendrogram cluster}
+			\i{0}
+			\ForEach{node in \textbf{objectList}}{
+				\textbf{\textit{nodeListCluster[i]}} $\leftarrow$  \textbf{\textit{nodeListCluster[i]}} join node\;
+				\dendo{\textbf{\textit{dendrogram}} join node}
+				\i{\textbf{\textit{i}} + 1}
+			}
+			\i{1} 
+			\j{0}
+			\For{i < distanceMatrix.length}{
+				\For{j < i}{
+					\textbf{\textit{distanceMatrix[i][j]}} $\leftarrow$ findMinDist(nodeListCluster[i],nodeListCluster[j],distType)\;
+					\j{\textbf{\textit{j}} + 1}
+				}
+				\i{\textbf{\textit{i}} + 1}
+			}
+			\While{dendrogram.length != 1}{
+				\i{1}
+				\j{0}
+				\x{0}
+				\y{0}
+				\temp{0}
+				\res{Double.MaxValue}
+				\For{i < distanceMatrix.length}{
+					\For{j < i}{
+						\temp{\textbf{\textit{distanceMatrix[i][j]}} }
+						\If{temp < result}{
+							\res{temp}
+							\x{ \textbf{\textit{i}} }
+							\y{ \textbf{\textit{j}} } 
+						}
+						\j{\textbf{\textit{j}} + 1}
+					}
+					\i{\textbf{\textit{i}} + 1}
+				}
+				\textbf{\textit{nodeListCluster[y]}} $\leftarrow$ \textbf{\textit{nodeListCluster[y]}} join \textbf{\textit{nodeListCluster[x]}}\;
+        		\textbf{\textit{nodeListCluster}}.remove(x)\;
+        		\textbf{\textit{newNode}} $\leftarrow$ merupakan Node baru\;
+        		\textbf{\textit{newNode}}.setDistance(\textbf{\textit{distanceMatrix[x][y]}})\;
+        		\textbf{\textit{newNode}}.setLeftNode(\textbf{\textit{dendrogram[y]}})\;
+        		\textbf{\textit{newNode}}.setRightNode(\textbf{\textit{dendrogram[x]}})\;
+        		\textbf{\textit{dendrogram[y]}} $\leftarrow$ \textbf{\textit{newNode}}\;
+        		\textbf{\textit{dendrogram}}.remove(x)\;
+        		recalculateMatrix(distanceMatrix, nodeListCluster,x,y)\;
+			}
+			return \textbf{\textit{dendrogram[0]}}
+  		}
+    	
+ 		
+ 	}
+	
+\end{algorithm}
+
+\clearpage
+
+
+
+
+
+\RestyleAlgo{boxed}
+\begin{algorithm}[H]
+	\label{alg:fmd}
+	\SetKwFunction{FMain}{findMinDist}
+  	\SetKwProg{Fn}{Function}{:}{}
+	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
+	\Fn{\FMain{$listA$, $listB$, $distType$}}{
+		\SetKwInOut{Input}{Masukan}
+		\SetKwInOut{Output}{Keluaran}
+		\SetKwInOut{Desc}{Deskripsi}
+		\Input{list objek Node $listA$, list objek Node $listB$, tipe metode $distType$}
+		\Output{nilai double}
+		\Desc{Mencari jarak antara cluster A dan B berdasarkan tipe jarak yang digunakan}
+		\SetKwHangingKw{res}{\textbf{\textit{result}} $\leftarrow$}
+		\SetKwHangingKw{min}{\textbf{\textit{min}} $\leftarrow$}
+		\SetKwHangingKw{max}{\textbf{\textit{max}} $\leftarrow$}
+		\SetKwHangingKw{centA}{\textbf{\textit{centroidA}} $\leftarrow$}
+		\SetKwHangingKw{centB}{\textbf{\textit{centroidB}} $\leftarrow$}
 		\BlankLine
   		\Begin{	
-        	distanceMatrix[][]\;
-			dendrogram[]\;
-			inisialisasi distranceMatrix dan dendrogram\;
-			\While{dendrogram.length != 1}{
-				gabungkan objek terdekat berdasarkan nilai pada distanceMatrix\;
-				perbarui dendrogram\;
-				hitung kembali distanceMatrix berdasarkan $distType$\;
-			}
-			return dendrogram[0]
+        	\uIf{$distType$ adalah Single Lingkage}{
+        		\min{Double.MaxValue}
+        		\res{ 0 }
+        		\ForEach{nodeA in \textbf{listA}}{
+        			\ForEach{nodeB in \textbf{listB}}{
+        				\res{Cari jarak euclidean antara nodeA dan nodeB} 
+        				\If{ \textbf{\textit{result}} < \textbf{\textit{min}} }{
+        				 	\min{ \textbf{\textit{result}} }
+        				}
+        			}
+        		}
+        	}
+        	\uElseIf{$distType$ adalah Complete Lingkage}{
+        		\max{Double.MinValue}
+        		\res{ 0 }
+        		\ForEach{nodeA in \textbf{listA}}{
+        			\ForEach{nodeB in \textbf{listB}}{
+        				\res{Cari jarak euclidean antara nodeA dan nodeB dengan eu} 
+        				\If{ \textbf{\textit{result}} < \textbf{\textit{max}} }{
+        					\max{ \textbf{\textit{result}} }
+        				}
+        			}
+        		}
+        	}
+        	\Else{
+        		\centA{cari centroid dari \textbf{listA}}
+        		\centB{cari centroid dari \textbf{listB}}
+        		\res{Cari jarak euclidean antara \textbf{\textit{centroidA}} dan \textbf{\textit{centroidB}} }
+        	}
+        	return \textbf{\textit{result}}
  		}
  	}
 	
 \end{algorithm}
+
+
+
+
+
+
+\clearpage
+
+\RestyleAlgo{boxed}
+\begin{algorithm}[H]
+	\label{alg:rcl}
+	\SetKwFunction{FMain}{recalculateMatrix}
+  	\SetKwProg{Fn}{Function}{:}{}
+	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
+	\Fn{\FMain{$distanceMatrix$, $nodeListCluster$, $x$, $y$}}{
+		\SetKwInOut{Input}{Masukan}
+		\SetKwInOut{Output}{Keluaran}
+		\SetKwInOut{Desc}{Deskripsi}
+		\Input{jarak antara cluster $distanceMatrix$, array berisi lisT Node $nodeListCLuster$, index $x$, index $y$}
+		\Desc{Melakukan kalkulasi ulang natara clusters dan cluster baru}
+		\SetKwHangingKw{i}{\textbf{\textit{i}} $\leftarrow$}
+		\SetKwHangingKw{dism}{\textbf{\textit{distanceMatrix}} $\leftarrow$}
+		\BlankLine
+  		\Begin{	
+  			distanceMatrix.remove(x)\;
+  			\i{\textbf{\textit{i}} +1}
+  			\For{i < distanceMatrix.length}{
+            	\textbf{\textit{distanceMatrix[i]}}.remove(x)
+	        }
+	        \i{\textbf{\textit{y}} +1}
+	        \For{i < distanceMatrix.length}{
+	            \dism{findMinDist(nodeListCluster[i], nodeListCluster[y])}
+			}
+ 		}
+ 	}
+	
+\end{algorithm}
+
+
+
+
+
+
+
 
 \clearpage
 
@@ -374,9 +532,9 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 	
 \end{algorithm}
  
-Algoritma \textit{Map} ~\ref{alg:map} ini bertujuan untuk melakukan \textit{parsing} terhadap masukan yang diberikan. Masukan yang diberikan berupa RDD[String]. Setiap elemen pada RDD[String] akan di-\textit{parsing} menjad objek \it{Node} dan dipasangkan dengan \it{key} yaitu bilangan acak antara 1 sampai n. Bilangan n merupakan jumlah partisi yang diberikan oleg pengguna. Pertama, elemen pada RDD[String] yang berupa \textit{String} akan di pecah berdasarkan \textit{delimeter} "," dan di konversi menjadi bilangan pecahan. Hasilnya merupakan \textit{array} bertipe \textit{double} yang menjadi atribut objek \textit{Node}. Kemudian akan diberikan bilangan acak antara 1 sampai n. Bilangan tersebut akan dipasangkan kepada objek \it{Node}. Pasangan <\it{key},\textit{Node}> kemudian akan tambahkan kepada RDD[<\it{key},\it{Node}>]. RDD[<\it{key},\it{Node}>] dikembalikan sebagai hasil dan menjadi masukan untuk tahap \textit{reduce}.\\
+Algoritma \textit{Map} ~\ref{alg:map} ini bertujuan untuk melakukan \textit{parsing} terhadap masukan yang diberikan. Masukan yang diberikan berupa RDD[String]. Setiap elemen pada RDD[String] akan di-\textit{parsing} menjad objek \textit{Node} dan dipasangkan dengan \textit{key} yaitu bilangan acak antara 1 sampai n. Bilangan n merupakan jumlah partisi yang diberikan oleg pengguna. Pertama, elemen pada RDD[String] yang berupa \textit{String} akan di pecah berdasarkan \textit{delimeter} "," dan di konversi menjadi bilangan pecahan. Hasilnya merupakan \textit{array} bertipe \textit{double} yang menjadi atribut objek \textit{Node}. Kemudian akan diberikan bilangan acak antara 1 sampai n. Bilangan tersebut akan dipasangkan kepada objek \textit{Node}. Pasangan <\textit{key},\textit{Node}> kemudian akan tambahkan kepada RDD[<\textit{key},\textit{Node}>]. RDD[<\textit{key},\textit{Node}>] dikembalikan sebagai hasil dan menjadi masukan untuk tahap \textit{reduce}.\\
 
-Algoritma \textit{Reduce} ~\ref{alg:reduce} bertujuan untuk membangun dendrogram dan mengembalikan pola-pola bertipe RDD[Pattern] sebagai hasilnya. Pertama-tama nilai $MX$, $distType$, $co$ akan di \textit{broadcast} agar setiap \textit{worker} memiliki nilai tersebut. \textit{Variable} \textit{objectList} dibuat untuk menampung \textit{Nodes} yang akan dibangun menjadi \textit{dendrogram}. \textit{Node} pada RDD[<\it{key},\it{Node}] akan ditambahkan kepada objectList sampai batas jumlah \textit{Node} pada objectList sama dengan nilai $MX$. Kemudian, fungsi \textit{generate\_dendrogram(objectList, distType)} akan dipanggil untuk membangun \it{dendrogram}. Hasil dari fungsi tersebut yaitu sebuah \textit{dendrogram} dijadikan masukan untuk fungsi \textit{compute\_pattern(dendrogram,co)}. Fungsi ini untuk memotong \it{dendrogram} menjadi \textit{clusters} dan mencari pola dari setiap \textit{cluster}. Pola atau \textit{Pattern} akan ditambahkan kepada \textit{variable pattern} (RDD[\it{Pattern}]) yang akan dikembalikan sebagi hasil. \textit{Variable isProcessed} pada baris 16 untuk memastikan bahwa setiap elemen pada \textit{objectList} sudah di proses. \\
+Algoritma \textit{Reduce} ~\ref{alg:reduce} bertujuan untuk membangun dendrogram dan mengembalikan pola-pola bertipe RDD[Pattern] sebagai hasilnya. Pertama-tama nilai $MX$, $distType$, $co$ akan di \textit{broadcast} agar setiap \textit{worker} memiliki nilai tersebut. \textit{Variable} \textit{objectList} dibuat untuk menampung \textit{Nodes} yang akan dibangun menjadi \textit{dendrogram}. \textit{Node} pada RDD[<\textit{key},\textit{Node}] akan ditambahkan kepada objectList sampai batas jumlah \textit{Node} pada objectList sama dengan nilai $MX$. Kemudian, fungsi \textit{generate\_dendrogram(objectList, distType)} akan dipanggil untuk membangun \textit{dendrogram}. Hasil dari fungsi tersebut yaitu sebuah \textit{dendrogram} dijadikan masukan untuk fungsi \textit{compute\_pattern(dendrogram,co)}. Fungsi ini untuk memotong \textit{dendrogram} menjadi \textit{clusters} dan mencari pola dari setiap \textit{cluster}. Pola atau \textit{Pattern} akan ditambahkan kepada \textit{variable pattern} (RDD[\textit{Pattern}]) yang akan dikembalikan sebagi hasil. \textit{Variable isProcessed} pada baris 16 untuk memastikan bahwa setiap elemen pada \textit{objectList} sudah di proses. \\
 
 
 Fungsi \textit{generate}\_\textit{dendrogram} pada algoritma ~\ref{alg:reduce} digunakan untuk membangun \textit{dendrogram}. Fungsi ini akan menerima \textit{objectList} sebagai masukan. Pertama-tama \textit{array} distanceMatrix harus diinisialisasi dan dihitung jarak antara objeknya menggunakan \textit{distType} yang ditentukan. Kemudian, \textit{array} \textit{dendrogram} diisi dengan objek-objek pada \textit{objectList}. Untuk membangun dendrogram, gabungkan objek yang memiliki nilai terkecil pada \textit{distanceMatrix} seperti pada Gambar ~\ref{fig:hac}. Setelah menggabungkan dua buah objek, objek pada dendrogram akan berkurang 1 dan \textit{distranceMatrix} harus dihitung ulang berdasarkan \textit{distType}.
@@ -387,6 +545,10 @@ Fungsi \textit{generate}\_\textit{dendrogram} pada algoritma ~\ref{alg:reduce} d
     \caption[Contoh perhitungan matriks dan pembentukan dendrogram]{Contoh perhitungan matriks dan pembentukan dendrogram} 
     \label{fig:hac}
 \end{figure}
+
+Fungsi \textit{findMinDist} pada algoritma ~\ref{alg:reduce} digunakan untuk mencari jarak antara \textit{cluster} berdasarkan \textit{distType} yang dipilih. Setiap anggota pada \textit{cluster} akan dibandingkan dengan anggota di \textit{cluster} lainnya. Berdasarkan \textit{distType} maka akan dicari nilai minimum, maksimum, atau jarak antara \textit{centroid}-nya.\\
+
+Fungsi \textit{recalculateMatrix} pada algoritma ~\ref{alg:reduce} digunakan menghitung ulang jarak antara \textit{cluster} baru dengan \textit{cluster} lainnya. \\
 
 Fungsi \textit{compute}\_\textit{pattern} pada algoritma ~\ref{alg:reduce} digunakan untuk mendapatkan pola dari \textit{cluster}. Fungsi ini menerima hasil \textit{dendrogram} dari fungsi \textit{generate}\_\textit{dendrogram}, berserta nilai \textit{cut-off distance} sebagai masukannya. Pertama-tama \textit{dendrogram} yang diwakili dengan struktur \textit{tree} akan ditelusuri di setiap tingkatnya. Jarak pada setiap tingkat akan di cek. Bila jarak sudah kurang dari jarak hasil perkalian $co$ dengan tinggi \textit{dendrogram}, maka \textit{dendrogram} akan dipotong untuk menghasilkan potongan \textit{clusters}. Setelah itu, pola dari setiap cluster akan dicari. Pola didapatkan dengan mencari nilai minimum, maksimum, rata-rata dan standard deviasi dari setiap attribute pada \textit{cluster}. Pola akan dikembalikan sebagai hasil.
 
@@ -520,7 +682,7 @@ Berikut adalah penjelasan dari ketiga kelas pada Gambar ~\ref{fig:maindiagram}:
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.5]{datareducer}  
+    \includegraphics[scale=0.4]{datareducer}  
     \caption[Kelas DataReducer]{Kelas DataReducer} 
     \label{fig:datareducer} 
 \end{figure}
@@ -531,7 +693,7 @@ Kelas \textit{DataReducer} dirancang untuk memproses data. Proses reduksi secara
 
 \item \textit{loadData}: \textit{method} untuk memuat data berdasarkan \textit{input path} yang diberikan.
 
-\item \textit{mapData}: \textit{method} untuk mengubah baris-baris attribut bertipe \textit{String} menjadi objek \it{Node}. Setiap \it{Node} akan dipasangkan dengan \it{key} yaitu sebuah bilangan acak. \textit{Method} ini akan mengembalikan RDD bertipe <\it{key},\it{Node}>.  
+\item \textit{mapData}: \textit{method} untuk mengubah baris-baris attribut bertipe \textit{String} menjadi objek \textit{Node}. Setiap \textit{Node} akan dipasangkan dengan \textit{key} yaitu sebuah bilangan acak. \textit{Method} ini akan mengembalikan RDD bertipe <\textit{key},\textit{Node}>.  
 
 \item  \textit{reduceData}: \textit{method} untuk mereduksi data menggunakan \textit{agglomerative clustering}. Method ini akan mengembalikan pola-pola dari setiap \textit{clusters}.\\
 
@@ -656,16 +818,16 @@ Kelas \textit{Node} digunakan untuk membentuk pohon yang merepresentasikan \text
 
 \subsection{Rancangan Antarmuka}
 
-Antarmuka dirancang untuk mempermudah pengguna dalam menjalankan program dan mengambil hasil data yang telah direduksi. Ada dua buah menu utama yang dapat dipilih oleh pengguna, menu \textit{Submit} dan \textit{Data}. Menu \textit{Submit} digunakan untuk menjalankan aplikasi dan menu \textit{Data} digunakan untuk mengunduh data hasil reduksi. Berikut adalah penjelasan rancangan antaramuka:
+Antarmuka dirancang untuk mempermudah pengguna dalam menjalankan program dan mengambil hasil data yang telah direduksi. Ada dua buah menu utama yang dapat dipilih oleh pengguna, menu Jalankan Program dan Lihat Pola. Menu Jalankan Program digunakan untuk menjalankan aplikasi dan menu Lihat Pola digunakan untuk mengunduh dan melihat hasil reduksi. Berikut adalah penjelasan rancangan antaramuka:
 
 \begin{enumerate}
 
-\item Perancangan halaman \textit{Submit} untuk mempermudah penggunan menjalankan aplikasi. Pada halaman ini, disediakan \textit{form} bereserta \textit{input parameter} yang dibutuhkan untuk menjalankan aplikasi. Gambar rancangan antarmuka dapat dilihat pada Gambar ~\ref{fig:antarmuka1}
+\item Perancangan halaman Jalankan Program untuk mempermudah penggunan menjalankan aplikasi. Pada halaman ini, disediakan \textit{form} bereserta \textit{input} yang dibutuhkan untuk menjalankan aplikasi. Gambar rancangan antarmuka dapat dilihat pada Gambar ~\ref{fig:antarmuka1}
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.42]{antarmuka1}  
-    \caption[Recangan antaramuka menu \textit{submit}]{Rancangan antaramuka menu \textit{submit}} 
+    \caption[Rancangan antaramuka menu Jalankan Program]{Rancangan antaramuka menu Jalankan Program} 
     \label{fig:antarmuka1} 
 \end{figure}
 
@@ -692,14 +854,6 @@ Berdasarkan Gambar ~\ref{fig:antarmuka1}, berikut adalah penjelasan \textit{inpu
 
 \end{itemize} 
 
-Setelah pengguna menekan tombol \textit{submit} pada \textit{form}, pengguna akan dipindakan ke halaman baru seperti pada Gambar ~\ref{fig:antarmukaresult}. Selain itu, halaman \textit{Hadoop web UI} akan terbuka di tab baru seperti pada Gambar ~\ref{fig:hadoopweb}.
-
-\begin{figure}[H]
-    \centering  
-    \includegraphics[scale=0.42]{antarmukaresult}  
-    \caption[Rancangan antaramuka \textit{result}]{Rancangan antaramuka halaman \textit{result}} 
-    \label{fig:antarmukaresult} 
-\end{figure}
 
 \begin{figure}[H]
     \centering  
@@ -709,26 +863,26 @@ Setelah pengguna menekan tombol \textit{submit} pada \textit{form}, pengguna aka
 \end{figure}
 
 
-\item Perancangan halaman antarmuka menu \textit{Data} (Gambar ~\ref{fig:antarmuka2}) digunakan untuk membuka diretori dimana data disimpan pada HDFS. Ketika pengguna memasukan direktori, pengguna akan dipindahkan ke dalaman baru (Gambar ~\ref{fig:antarmuka3}) dan sebuah halaman (Gambar ~\ref{fig:hdfsweb}) akan dibuka untuk menampilkan data yang bisa diunduh. Ketika pengguna menetkan salah satu nama file pada halaman \textit{list} (\ref{fig:antarmuka3}), pengguna dapat melihat isi dari data yang ada dari file tersebut di halaman (\ref{fig:antarmuka4}).  
+\item Perancangan halaman antarmuka menu Lihat Pola (Gambar ~\ref{fig:antarmuka2}) digunakan untuk membuka diretori dimana data disimpan pada HDFS. Ketika pengguna memasukan direktori, pengguna akan dipindahkan ke dalaman baru (Gambar ~\ref{fig:antarmuka3}) dan sebuah halaman (Gambar ~\ref{fig:hdfsweb}) akan dibuka untuk menampilkan data yang bisa diunduh. Ketika pengguna menekan salah satu nama partisi pada halaman berikutnya (\ref{fig:antarmuka3}), pengguna dapat melihat pola-pola dari partisi tersebut di halaman (\ref{fig:antarmuka4}).  
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.42]{antarmuka2}  
-    \caption[Rancangan antarmuka menu \textit{Data}]{Rancangan antarmuka menu \textit{Data}} 
+    \caption[Rancangan antarmuka menu Lihat Pola]{Rancangan antarmuka menu Lihat Pola} 
     \label{fig:antarmuka2} 
 \end{figure}
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.42]{antarmuka3}  
-    \caption[Rancangan antarmuka halaman \textit{list}]{Rancangan antarmuka halaman \textit{list}} 
+    \caption[Rancangan antarmuka halaman partisi]{Rancangan antarmuka halaman partisi} 
     \label{fig:antarmuka3} 
 \end{figure}
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.42]{antarmuka4}  
-    \caption[Rancangan antarmuka halaman data]{Rancangan antarmuka halaman data} 
+    \caption[Rancangan antarmuka halaman pola]{Rancangan antarmuka halaman pola} 
     \label{fig:antarmuka4} 
 \end{figure}
 

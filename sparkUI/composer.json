@@ -1,0 +1,5 @@
+{
+    "require": {
+        "simpleenergy/php-webhdfs": "^1.0"
+    }
+}

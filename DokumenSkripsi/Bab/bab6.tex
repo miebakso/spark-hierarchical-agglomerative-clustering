@@ -10,11 +10,11 @@ Kesimpulan yang dapat ditarik dari awal penelitian ini sampai selesai adalah seb
 
 \item Pada penelitian ini, telah dipelajari algoritma  {\it Hierarchical Agglomerative Clustering}.
 
-\item Pada penelitian ini, telah diimplementasikan algoritma {\it Hierarchical Agglomerative Clustering} pada lingkungan Spark.
+\item Pada penelitian ini, telah diimplementasikan algoritma {\it Hierarchical Agglomerative Clustering} pada lingkungan Spark dengan menggunakan \textit{transformation} dan \textit{actions}. Fungsi \textit{map()}, \textit{groupByKey()}, \textit{flatMap()} dapat digunakan untuk menggantikan fungsi \textit{map()} dan \textit{reduce()} pada MapReduce.
 
-\item Pada penelitian ini, telah dilakukan eksperimen perbandingan performa antara perangkat lunak Spark dan Hadoop. Dari hasil pengujian dapat disimpulkan bahwa pernagkat lunak Spark memiliki performa yang lebih baik asalkan diatur dan dikonfigurasi dengan benar. Waktu eksekusi Spark lebih cepat dibanding Hadoop karena Spark menyimpan data pada memori, sebaliknya Hadoop banyak melakukan proses I/O kepada disk yang membuat Hadoop lambat.
+\item Pada penelitian ini, telah dilakukan eksperimen perbandingan performa antara perangkat lunak Spark dan Hadoop. Dari hasil pengujian dapat disimpulkan bahwa pernagkat lunak Spark memiliki performa yang lebih baik asalkan diatur dan dikonfigurasi dengan benar. Waktu eksekusi Spark lebih cepat dibanding Hadoop karena Spark menyimpan data pada memori, sebaliknya Hadoop banyak melakukan proses I/O kepada disk yang membuat Hadoop lambat. Proses \textit{shuffling} dan \textit{sorting} menghambat dan meningkatkan waktu eksekusi Hadoop ketika jumlah partisi ditinkatkan. Waktu eksekusi Hadoop akan meningkatnya seiring meningkatnya jumlah partisi. Sebaliknya, waktu eksekusi Spark menurun ketika jumlah partisi ditingkatkan. Dengan meningkatkan jumlah partisi pada Spark, data akan lebih terdistribusi. Hal ini akan mengurangi waktu yang dibutuhkan untuk mengirim data dari satu komputer ke komputer lain dan mengurangi waktu komunikasi. 
 
-\item Pada penelitian ini, telah dibangun perangkat lunak untuk melihat hasil reduksi data.
+\item Pada penelitian ini, telah dibangun perangkat lunak untuk melihat hasil reduksi data dan menjalankan proses reduksi data. 
 
 \end{itemize}
 
