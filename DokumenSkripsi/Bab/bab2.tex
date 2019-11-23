@@ -2,36 +2,36 @@
 \chapter{Landasan Teori}
 \label{chap:teori}
 
-\section{Big Data}
+\section{\textit{Big Data}}
 \label{sec:big data}
 
-{\it Big data} adalah istilah yang menggambarkan kumpulan data dalam jumlah yang sangat besar, baik data yang terstruktur maupun data yang tidak terstruktur. Kumpulan data tersebut menyimpan informasi yang bisa dianalisis dan diproses untuk memberikan wawasan kepada organisasi atau perusahaan. Data-data tersebut berasal dari satu atau lebih sumber  dengan kecepatan yang tinggi dan \textit{format} yang berbeda-beda. Karena ukuran dan keberagaman data, {\it big data} menjadi sulit untuk ditangani atau diproses jika hanya menggunakan manajemen basis data atau aplikasi pemrosesan data tradisional~\cite{ishwarappa:01:bgintro}.\\
+\textit{Big data} adalah istilah yang menggambarkan kumpulan data dalam jumlah yang sangat besar, baik data yang terstruktur maupun data yang tidak terstruktur. Kumpulan data tersebut menyimpan informasi yang bisa dianalisis dan diproses untuk memberikan wawasan kepada organisasi atau perusahaan. Data-data tersebut berasal dari satu atau lebih sumber  dengan kecepatan yang tinggi dan \textit{format} yang berbeda-beda. Karena ukurannya dan keberagaman data, \textit{big data} menjadi sulit untuk ditangani atau diproses jika hanya menggunakan manajemen basis data atau aplikasi pemrosesan data tradisional~\cite{ishwarappa:01:bgintro}.\\
 
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.4]{bigdata}  
-    \caption[Karakteristik {\it big data} ]{Karakteristik {\it big data}} 
+    \caption[Karakteristik \textit{big data} ]{Karakteristik \textit{big data}} 
     \label{fig:bigdata} 
 \end{figure}
 
-Berdasarkan gambar diatas (Gambar ~\ref{fig:bigdata}), \textit{big data} memiliki lima karakteristik di antaranya ~\cite{ishwarappa:01:bgintro}:
+Berdasarkan Gambar ~\ref{fig:bigdata}, \textit{big data} memiliki lima karakteristik di antaranya ~\cite{ishwarappa:01:bgintro}:
 
 \begin{enumerate}
 
-\item {\it Volume}: {\it big data} memiliki jumlah data yang sangat besar sehingga dalam proses pengolahan data dibutuhkan suatu penyimpanan yang besar dan dibutuhkan analisis yang lebih spesifik.
+\item \textit{Volume}: \textit{big data} memiliki jumlah data yang sangat besar sehingga dalam proses pengolahan data dibutuhkan suatu penyimpanan yang besar dan dibutuhkan analisis yang lebih spesifik.
 
-\item {\it Velocity}: {\it big data} memiliki aliran data yang sangat cepat. Data baru dihasilkan dengan kecepatan yang tinggi dari satu atau lebih sumber. 
+\item \textit{Velocity}: \textit{big data} memiliki aliran data yang sangat cepat. Data baru dihasilkan dengan kecepatan yang tinggi dari satu atau lebih sumber. 
 
-\item {\it Variety}: {\it big data} memiliki bentuk format data yang beragam baik terstruktur ataupun tidak terstruktur dan bergantung pada banyaknya sumber data. Data dapat berupa gambar, video dan tipe data lainnya.
+\item \textit{Variety}: \textit{big data} memiliki bentuk format data yang beragam, baik terstruktur ataupun tidak terstruktur dan bergantung pada banyaknya sumber data. Data dapat berupa gambar, video dan tipe data lainnya.
 
-\item {\it Veracity}: {\it big data} mungkin mengandung data yang tidak akurat atau rusak. Kualitas  data dalam {\it big data} bisa berbeda-beda tergantung pada sumber. Analisis {\it big data} akan sangat dipengaruhi dengan keakuratan data.
+\item \textit{Veracity}: \textit{big data} dapat mengandung data yang tidak akurat atau rusak. Kualitas  data dalam \textit{big data} bisa berbeda-beda bergantung pada sumber. Analisis \textit{big data} akan sangat dipengaruhi dengan keakuratan data.
 
-\item {\it Value}: {\it big data} harus memiliki \textit{value}. Tidak ada gunanya bila kita memiliki akses terhadap {\it big data}, tetapi data-data tersebut tidak memiliki nilai apapun. Data yang tidak memiliki nilai adalah data yang tidak berguna dan memakan biaya untuk disimpan.
+\item \textit{Value}: \textit{big data} harus memiliki \textit{value}. Tidak ada gunanya bila kita memiliki akses terhadap \textit{big data}, tetapi data-data tersebut tidak memiliki nilai apapun. Data yang tidak memiliki nilai adalah data yang tidak berguna dan memakan biaya untuk disimpan.
 
 \end{enumerate}
 
-{\it Big data} sangat bermanfaat ketika diterapkan di berbagai macam bidang seperti bisnis, kesehatan, pemerintahan, pertanian dan lainya. Ketika organisasi mampu menggabungkan jumlah data besar yang dimilikinya dengan analisis bertenaga tinggi, organisasi dapat menyelesaikan tantangan dan masalah yang berhubungan dengan bisnis seperti:
+\textit{Big data} sangat bermanfaat ketika diterapkan di berbagai macam bidang seperti bisnis, kesehatan, pemerintahan, pertanian dan lainya. Ketika organisasi mampu menggabungkan jumlah data besar yang dimilikinya dengan analisis bertenaga tinggi, organisasi dapat menyelesaikan tantangan dan masalah yang berhubungan dengan bisnis seperti:
 
 \begin{enumerate}
 
@@ -47,7 +47,7 @@ Berdasarkan gambar diatas (Gambar ~\ref{fig:bigdata}), \textit{big data} memilik
 
 \section{Algoritma Hierarchical Clustering}
 
-\textit{Hierarchical Clustering Algorithm} (HCA) adalah metode analisis kelompok yang berusaha untuk membangun sebuah hirarki dengan mengelompokan data. Dengan mengelompokan data-data tersebut, data pada kelompok yang sama memiliki kemiripan yang tinggi dan data pada kelompok yang berbeda memiliki kemiripan yang rendah~\cite{veronica:02:bdhca}. Dalam reduksi data, \textit{cluster} yang merepresentasikan data-data pada \textit{cluster} tersebut akan digunakan untuk mengganti data-data mentah~\cite{veronica:02:bdhca}. Seberapa efektif cara ini tergantung dengan sifat data yang ditangani. Data-data yang bisa dikelompokan ke dalam \textit{cluster} yang berbeda akan sangat cocok dengan cara ini~\cite{veronica:02:bdhca}. Pada dasarnya HCA dibagi menjadi dua jenis yaitu \textit{agglomerative} (\textit{bottom-up}) dan \textit{devisive} (\textit{top-down})~\cite{veronica:02:bdhca}. Pendekatan \textit{agglomerative} berusaha membentuk sebuah hierarki dengan menggabungkan \textit{cluster}. Setiap objek akan dimasukan kepada \textit{cluster} tersendiri. Sebaliknya, pendekatan \textit{devisive} akan berusaha memecah \textit{cluster} untuk membentuk sebuah hierarki. Setiap objek berada pada satu \textit{cluster} pada awalnya dan akan dipecah kepada \textit{cluster} yang berbeda.\\
+\textit{Hierarchical Clustering Algorithm} (HCA) adalah metode analisis kelompok yang berusaha untuk membangun sebuah hierarki dengan mengelompokkan data. Dengan mengelompokkan data-data tersebut, data pada kelompok yang sama memiliki kemiripan yang tinggi dan data pada kelompok yang berbeda memiliki kemiripan yang rendah~\cite{veronica:02:bdhca}. Dalam reduksi data, \textit{cluster} yang merepresentasikan data-data pada \textit{cluster} tersebut akan digunakan untuk mengganti data-data mentah~\cite{veronica:02:bdhca}. Seberapa efektif cara ini bergantung pada sifat data yang ditangani. Data-data yang bisa dikelompokkan ke dalam \textit{cluster} yang berbeda akan sangat cocok dengan cara ini~\cite{veronica:02:bdhca}. Pada dasarnya HCA dibagi menjadi dua jenis, yaitu \textit{agglomerative} (\textit{bottom-up}) dan \textit{devisive} (\textit{top-down})~\cite{veronica:02:bdhca}. Pendekatan \textit{agglomerative} berusaha membentuk sebuah hierarki dengan menggabungkan \textit{cluster}. Setiap objek akan dimasukkan kepada \textit{cluster} tersendiri. Sebaliknya, pendekatan \textit{devisive} akan berusaha memecah \textit{cluster} untuk membentuk sebuah hierarki. Setiap objek berada pada satu \textit{cluster} pada awalnya dan akan dipecah kepada \textit{cluster} yang berbeda.\\
 
 \begin{figure}[H]
     \centering  
@@ -63,13 +63,13 @@ Berdasarkan gambar diatas (Gambar ~\ref{fig:bigdata}), \textit{big data} memilik
     \label{fig:matrix2} 
 \end{figure}
 
-Pada \textit{Hierarchical Agglomerative Clustering}, awalnya setiap objek akan dimasukkan kepada \textit{cluster} tersendiri. Matriks jarak digunakan untuk merepresentasikan jarak antara \textit{cluster}. Kemudian, dua buah \textit{cluster} yang memiliki similaritas tertinggi akan digabungkan menjadi satu \textit{cluster}. Similaritas antara cluster dapat dihitung dengan tiga metode yaitu \textit{single linkage}, \textit{complete linkage}, dan \textit{centroid linkage}~\cite{anil:03:afcd}. Pada Gambar ~\ref{fig:matrix1}, \textit{cluster} A dan  \textit{cluster} B akan digabung menjadi satu karena jarak antara keduanya adalah terkecil dibanding dengan yang lainnya. Gambar ~\ref{fig:matrix2} adalah hasil dari penggabungan \textit{cluster} A dan \textit{cluster} B dan matriks jarak harus dihitung kembali untuk mencari jarak baru antara \textit{cluster} baru dengan \textit{cluster} lainya. Penggabungan \textit{cluster} akan diulangi sampai tersisa satu \textit{cluster}. \textit{Hierarchical Agglomerative Clustering} akan hanya membutuhkan maksimal $n$ iterasi. Hasil dari penggabungan \textit{cluster} adalah sebuah hierarki. \textit{Dendrogram} sangat umum digunakan untuk menggambarkan proses \textit{Hierarchical Agglomerative Clustering}. Contoh \textit{dendrogram} dapat dilihat pada Gambar ~\ref{fig:dendo}.\\
+Pada \textit{Hierarchical Agglomerative Clustering}, awalnya setiap objek akan dimasukkan kepada \textit{cluster} tersendiri. Matriks jarak digunakan untuk merepresentasikan jarak antara \textit{cluster}. Kemudian, dua buah \textit{cluster} yang memiliki jarak terdekat akan digabungkan menjadi satu \textit{cluster}. Jarak antara cluster dapat dihitung dengan tiga metode, yaitu \textit{single linkage}, \textit{complete linkage}, dan \textit{centroid linkage}~\cite{anil:03:afcd}. Pada Gambar ~\ref{fig:matrix1}, \textit{cluster} A dan  \textit{cluster} B akan digabung menjadi satu karena jarak antara keduanya adalah terkecil dibanding dengan yang lainnya. Gambar ~\ref{fig:matrix2} adalah hasil dari penggabungan \textit{cluster} A dan \textit{cluster} B. Kemudian, matriks jarak perlu dihitung kembali untuk mencari jarak baru antara \textit{cluster} baru dengan \textit{cluster} lainya. Penggabungan \textit{cluster} akan diulangi sampai tersisa satu \textit{cluster}. \textit{Hierarchical Agglomerative Clustering} akan hanya membutuhkan maksimal $n$ iterasi. Hasil dari penggabungan \textit{cluster} adalah sebuah hierarki. \textit{Dendrogram} sangat umum digunakan untuk menggambarkan proses \textit{Hierarchical Agglomerative Clustering}. Contoh \textit{dendrogram} dapat dilihat pada Gambar ~\ref{fig:dendo}.\\
 
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.45]{dendo}  
-    \caption[{\it dendrogram} ]{{\it dendrogram}} 
+    \caption[\textit{dendrogram} ]{\textit{dendrogram}} 
     \label{fig:dendo} 
 \end{figure}
 
@@ -78,58 +78,70 @@ Berikut adalah penjelasan mengenai metode \textit{single linkage}, \textit{compl
 
 \begin{itemize}
 
-\item \textit{Single linkage}: metode ini mencari jarak minimum dari perbandingan setiap anggota antara dua buah \textit{cluster}. Bila ada dua buah \textit{cluster} A dan \textit{cluster} B, maka setiap anggota pada \textit{cluster} A akan dihitung jaraknya kepada setiap anggota pada \textit{cluster} B. Kemudian jarak minimum antara anggota akan diambil sebagai hasilnya. Untuk menghitung jarak antara anggota dapat digunakan \textit{euclidean distance}, \textit{manhattan distance}, atau ruang metrik lainya. Ruang metrik yang digunakan disesuaikan dengan kebutuhan dan atribut dari data. Contoh \textit{single linkage} dapat dilihat pada Gambar ~\ref{fig:single}. 
+\item \textit{Single linkage}: metode ini mencari jarak minimum dari perbandingan setiap anggota antara dua buah \textit{cluster}. Bila terdapat \textit{cluster} A dan \textit{cluster} B, maka setiap anggota pada \textit{cluster} A akan dihitung jaraknya kepada setiap anggota pada \textit{cluster} B. Kemudian jarak minimum antara anggota akan diambil sebagai hasilnya. Untuk menghitung jarak antara anggota dapat digunakan \textit{euclidean distance}, \textit{manhattan distance}, atau ruang metrik lainnya. Ruang metrik yang digunakan disesuaikan dengan kebutuhan dan atribut dari data. Contoh \textit{single linkage} dapat dilihat pada Gambar ~\ref{fig:single}. 
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.45]{single}  
-    \caption[Metode {\it single linkage} ]{Metode {\it single linkage}} 
+    \caption[Metode \textit{single linkage} ]{Metode \textit{single linkage}} 
     \label{fig:single} 
 \end{figure}
 
-Berikut adalah rumus untuk \textit{single linkage}:
+Rumus~\ref{eq:eq1} adalah rumus untuk \textit{single linkage}:
 
-$$
+\begin{equation} \label{eq:eq1}
 min\{ d(a,b): a \in A, b \in B\}, 
-$$
+\end{equation}
+
 dengan $a$ dan $b$ merupakan anggota dari \textit{cluster} A dan B.\\
 
-\item \textit{Complete linkage}: metode ini adalah kebalikan dari metode \textit{single linkage}. Bila ada dua buah \textit{cluster} A dan B, maka setiap anggota pada \textit{cluster} A akan dihitung jaraknya kepada setiap anggota pada \textit{cluster} B. Kemudian jarak maksimum antara anggota akan diambil sebagai hasilnya. Contoh  \textit{complete linkage} dapat dilihat pada Gambar ~\ref{fig:complete}.
+\item \textit{Complete linkage}: metode ini adalah kebalikan dari metode \textit{single linkage}. Bila terdapat \textit{cluster} A dan B, maka setiap anggota pada \textit{cluster} A akan dihitung jaraknya kepada setiap anggota pada \textit{cluster} B. Kemudian jarak maksimum antara anggota akan diambil sebagai hasilnya. Contoh  \textit{complete linkage} dapat dilihat pada Gambar ~\ref{fig:complete}.
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.45]{complete}  
-    \caption[Metode {\it complete linkage} ]{Metode {\it complete linkage}} 
+    \caption[Metode \textit{complete linkage} ]{Metode \textit{complete linkage}} 
     \label{fig:complete} 
 \end{figure}
 
-Berikut adalah rumus untuk \textit{complete linkage}:
+Rumus~\ref{eq:eq2} adalah rumus untuk \textit{complete linkage}:
 
-$$
-max\{ d(a,b): a \in A, b \in B\}, 
-$$
+\begin{equation} \label{eq:eq2}
+max\{ d(a,b): a \in A, b \in B\},
+\end{equation}
+
 dengan $a$ dan $b$ merupakan anggota dari \textit{cluster} $A$ dan $B$.\\
 
 
-\item \textit{Centroid linkage}: metode ini menghitung jarak antara \textit{centroid} dari dua buah \textit{cluster}.  \textit{Centroid} sebuah cluster didapatkan dengan menghitung rata-rata dari setiap atribut dari anggota pada \textit{cluster}. Contoh  \textit{centroid linkage} dapat dilihat pada Gambar ~\ref{fig:centroid}. 
+\item \textit{Centroid linkage}: metode ini menghitung jarak antara \textit{centroid} dari dua buah \textit{cluster}.  \textit{Centroid} merupakan titik tengah dari sebuah \textit{cluster}. \textit{Centroid} sebuah \textit{cluster} didapatkan dengan menghitung rata-rata dari setiap atribut dari anggota pada \textit{cluster}. Contoh  \textit{centroid linkage} dapat dilihat pada Gambar~\ref{fig:centroid}. 
 
 \begin{figure}[H]
     \centering  
     \includegraphics[scale=0.5]{centroid}  
-    \caption[Metode {\it centroid linkage} ]{Metode {\it centroid linkage}} 
+    \caption[Metode \textit{centroid linkage} ]{Metode \textit{centroid linkage}} 
     \label{fig:centroid} 
 \end{figure}
 
-Berikut adalah rumus untuk \textit{centroid linkage}:
+Rumus~\ref{eq:eq3} adalah rumus untuk \textit{centroid linkage}:
 
-$$
+\begin{equation} \label{eq:eq3}
 \| c_{a} - c_{b} \|, 
-$$
+\end{equation}
+
 dengan $c_{a}$ dan $c_{b}$ merupakan \textit{centroid} dari \textit{cluster} $A$ dan $B$.\\
 
 
 \end{itemize}
-\
+
+
+
+
+
+
+
+
+%%%%%PINDAHKAN KE BAB 4!!!!!
+
 \begin{table}[H] 
 	\centering 
 	\caption{Tabel Data Koordinat}
@@ -151,13 +163,13 @@ D & 8 & 10 \\
 	\end{tabular} 
 \end{table}
 
-Sebagai contoh, diberikan data yang memiliki atribut berupa koordinat $x$ dan $y$. Data dapat dilihat pada Tabel~\ref{tab:data}. Data tersebut akan diolah dengan algoritma \textit{Hierarchical Agglomerative Clustering} menggunakan metode \textit{single linkage} dan \textit{euclidean distance} untuk menghitung jaraknya. Berikut adalah langkah-langkah penyelesaiannya.
+Sebagai contoh, diberikan data yang memiliki atribut berupa koordinat $x$ dan $y$. Data dapat dilihat pada Tabel~\ref{tab:data}. Data tersebut akan diolah dengan algoritma \textit{Hierarchical Agglomerative Clustering} menggunakan metode \textit{single linkage} dan \textit{euclidean distance} untuk menghitung jaraknya antara anggotanya. Berikut adalah langkah-langkah penyelesaiannya.
 
 
 
 \begin{enumerate}
 
-\item Pertama, hitung matriks jarak antara \textit{cluster}. Karena setiap \textit{cluster} hanya memiliki satu anggota pada awalnya, similaritas antara \textit{cluster} dapat langsung dihitung  menggunakan \textit{euclidean distance}. Matriks jarak yang hasilkan bisa dilihat pada Gambar ~\ref{fig:step1}.
+\item Pertama, hitung matriks jarak antara \textit{cluster}. Karena setiap \textit{cluster} hanya memiliki satu anggota pada awalnya, Jarak antara \textit{cluster} dapat langsung dihitung  menggunakan \textit{euclidean distance}. Matriks jarak yang hasilkan bisa dilihat pada Gambar~\ref{fig:step1}.
 
 \begin{figure}[H]
     \centering  
@@ -166,19 +178,24 @@ Sebagai contoh, diberikan data yang memiliki atribut berupa koordinat $x$ dan $y
     \label{fig:step1} 
 \end{figure}
 
-Jarak antara \textit{cluster} A dan \textit{cluster} B dapat dihitung dengan cara seperti berikut:
+Jarak antara \textit{cluster} A dan \textit{cluster} B dapat dihitung dengan cara berikut:
 
 
-\begin{align}
+
+
+
+\begin{equation}
+\begin{split}
 d & = \sqrt{(x_{1} - x_{2})^2+(y_{1} - y_{2})^2} \\
 & = \sqrt{(2 - 2)^2+(2 - 3)^2} \\
 & = \sqrt{0 + 1} \\
 & = \sqrt{1} \\
 & = 1 
-\end{align}\\
+\end{split}
+\end{equation}
 
 
-\item Selanjutnya, gabungkan dua \textit{cluster} yang memiliki similaritas tertinggi. Pada contoh ini,  \textit{cluster} A yang dibandingkan terhadap \textit{cluster} B memiliki nilai terkecil yaitu $1$. Similaritas antara kedua \textit{cluster} adalah yang tertinggi. Hasil dari penggabungan kedua cluster dapat dilihat pada Gambar ~\ref{fig:step2}.
+\item Selanjutnya, gabungkan dua \textit{cluster} yang memiliki jarak terdekat. Pada contoh ini,  \textit{cluster} A yang dibandingkan terhadap \textit{cluster} B memiliki nilai terkecil yaitu $1$. Jarak antara kedua \textit{cluster} adalah yang terdekat. Hasil dari penggabungan kedua cluster dapat dilihat pada Gambar~\ref{fig:step2}.
 
 \begin{figure}[H]
     \centering  
@@ -187,20 +204,25 @@ d & = \sqrt{(x_{1} - x_{2})^2+(y_{1} - y_{2})^2} \\
     \label{fig:step2} 
 \end{figure}
 
-\item Setelah itu, matriks jarak harus dikalkulasi kembali untuk mencari similaritas antara \textit{cluster} barunya yaitu (A,B) dengan yang lainya. Untuk mengkalkulasi ulang antara \textit{cluster} baru dengan \textit{cluster} lainnya, digunakan metode \textit{single linkage}. Pada tahap ini setiap anggota dari cluster (A,B) akan dihitung jaraknya terhadap \textit{cluster} C dan \textit{cluster} D. Nilai minimum akan diambil sebagai hasil perbandingannya karena metode yang digunakan adalah \textit{single linkage}. Berikut adalah contoh perhitungan antara \textit{cluster} (A,B) dengan \textit{cluster} C menggunakan metode \textit{single linkage}.
+\item Setelah itu, matriks jarak harus dihitung ulang untuk mencari jarak antara \textit{cluster} barunya, yaitu (A,B) dengan yang lainya. Untuk menghitung ulang antara \textit{cluster} baru dengan \textit{cluster} lainnya, digunakan metode \textit{single linkage}. Pada tahap ini setiap anggota dari cluster (A,B) akan dihitung jaraknya terhadap \textit{cluster} C dan \textit{cluster} D. Nilai minimum akan diambil sebagai hasil perbandingannya karena metode yang digunakan adalah \textit{single linkage}. Berikut adalah contoh perhitungan antara \textit{cluster} (A,B) dengan \textit{cluster} C menggunakan metode \textit{single linkage}.
 
 
-\begin{align} 
+\begin{equation} 
+\begin{split}
 d(A,C) & = \sqrt{(2 - 2)^2+(4 - 6)^2} \\
 & = 4.47 
-\end{align}
-\begin{align} 
+\end{split}
+\end{equation}
+
+\begin{equation} 
+\begin{split}
 d(B,C) & = \sqrt{(2 - 3)^2+(4 - 6)^2} \\
 & = 3.61 
-\end{align}\\
+\end{split}
+\end{equation}
 
 
-Karena nilai 3.61 lebih kecil dari 4.47, maka nilai 3.61 diambil sebagai hasil. Contoh hasil dapat dilihat pada Gambar ~\ref{fig:step3}. 
+Berdasarkan perhitungan di atas, nilai 3.61 diambil sebagai hasil karena nilai tersebut lebih kecil dibandingkan 4.47. Contoh hasil dapat dilihat pada Gambar~\ref{fig:step3}. 
 
 \begin{figure}[H]
     \centering  
@@ -209,7 +231,7 @@ Karena nilai 3.61 lebih kecil dari 4.47, maka nilai 3.61 diambil sebagai hasil. 
     \label{fig:step3} 
 \end{figure}
 
-\item Ulangi langkah 2 dan 3 sampai satu \textit{cluster} yang tersisa. Hasil akhir dalam bentuk \textit{dendrogram} dapat dilihat pada Gambar ~\ref{fig:hasild}.
+\item Ulangi langkah 2 dan 3 sampai satu \textit{cluster} yang tersisa. Hasil akhir dalam bentuk \textit{dendrogram} dapat dilihat pada Gambar~\ref{fig:hasild}.
 
 \begin{figure}[H]
     \centering  
@@ -220,7 +242,7 @@ Karena nilai 3.61 lebih kecil dari 4.47, maka nilai 3.61 diambil sebagai hasil. 
 
 \end{enumerate}
 
-Setelah \textit{dendrogram} terbentuk, dendrogram perlu dipotong berdasarkan nilai \textit{cut-off distance} yang ditentukan. Nilai \textit{cut-off distance} menentukan banyaknya \textit{cluster} yang dihasilkan ketika memotong dendrogram. Semakin tinggi nilai \textit{cut-off distance}, semakin dikit \textit{cluster} yang dihasilkan dan sebaliknya. Berdasarkan Gambar ~\ref{fig:hasild}, dapat dilihat bahwa nilai \textit{cut-off distance} yang lebih tinggi menghasilkan \textit{cluster-cluster} yang lebih sedikit. Sedangkan, nilai \textit{cut-off distance} yang lebih rendah menghasilkan \textit{cluster-cluster} yang lebih banyak. Perpotongan akan berdampak kepada hasil akhir ukuran data yang dihasilkan. 
+Setelah \textit{dendrogram} terbentuk, \textit{dendrogram} perlu dipotong berdasarkan nilai \textit{cut-off distance} yang ditentukan. Nilai \textit{cut-off distance} menentukan banyaknya \textit{cluster} yang dihasilkan ketika memotong \textit{dendrogram}. Semakin tinggi nilai \textit{cut-off distance}, semakin sedikit \textit{cluster} yang dihasilkan dan sebaliknya. Berdasarkan Gambar~\ref{fig:hasild}, dapat dilihat bahwa nilai \textit{cut-off distance} yang lebih tinggi menghasilkan \textit{cluster-cluster} yang lebih sedikit. Sedangkan, nilai \textit{cut-off distance} yang lebih rendah menghasilkan \textit{cluster-cluster} yang lebih banyak. Perpotongan akan berdampak kepada hasil akhir ukuran data yang dihasilkan. 
 
 \begin{figure}[H]
     \centering  
@@ -229,12 +251,12 @@ Setelah \textit{dendrogram} terbentuk, dendrogram perlu dipotong berdasarkan nil
     \label{fig:codis} 
 \end{figure}
 
-Dari setiap \textit{cluster} yang didasilkan dari perpotongan, perlu dicari jumlah anggota pada \textit{cluster}, nilai minimum, maksimum, rata-rata, dan standar deviasi dari setiap atribut. Nilai-nilai ini dapat disebut pola. Pola ini akan merepresentasikan dan menggambarkan karakteristik \textit{cluster} tersebut. Pola ini akan disimpan sebagai hasil akhir untuk menggantikan data mentahnya. Sebagai contoh diberikan sebuah \textit{cluster} A yang memiliki 4 anggota pada clusternya, setiap anggota memiliki 2 nilai atribut yang berbeda. Data untuk \textit{cluster} A dapat dilihat pada Tabel  ~\ref{tab:cont1}. Data pada tabel ini akan digunakan untuk mencari pola untuk \textit{cluster} A.
+Dari setiap \textit{cluster} yang dihasilkan dari perpotongan, perlu dicari jumlah anggota pada \textit{cluster}, nilai minimum, maksimum, rata-rata, dan standar deviasi dari setiap atribut. Nilai-nilai tersebut dapat disebut sebagai pola. Pola ini akan merepresentasikan dan menggambarkan karakteristik \textit{cluster} tersebut. Pola ini akan disimpan sebagai hasil akhir untuk menggantikan data aslinya. Sebagai contoh diberikan sebuah \textit{cluster} A yang memiliki 4 anggota pada \textit{cluster}-nya. Setiap anggota memiliki 2 nilai atribut yang berbeda. Data untuk \textit{cluster} A dapat dilihat pada Tabel~\ref{tab:cont1}. Data pada tabel ini akan digunakan untuk mencari pola untuk \textit{cluster} A.
 
 
 \begin{table}[H]
     \centering 
-    \caption{Tabel Contoh Data Cluster}
+    \caption{Tabel Contoh Data \textit{Cluster}}
     \label{tab:cont1}
 \begin{tabular}{|p{2cm}|p{2.2cm}|p{2.5cm}|}
 \hline
@@ -253,7 +275,7 @@ No & atribut 1 & atribut 2     \\
 \end{tabular}
 \end{table}
 
-Hasil pola dari \textit{cluster} A dapat dilihat pada Tabel ~\ref{tab:cont2}.
+Hasil pola dari \textit{cluster} A dapat dilihat pada Tabel~\ref{tab:cont2}.
 
 
 
@@ -283,35 +305,33 @@ standar deviasi             & 1.479        & 3.269 \\
 
 \section{Hadoop}
 
-\subsection{Penjelasan Hadoop}
-
-Hadoop dikembangkan oleh Doug Cutting dan Mike Cafarella pada tahun 2005 yang saat itu bekerja di Yahoo. Nama Hadoop diberikan berdasarkan mainan 'Gajah' anak dari Doug Cutting. Hadoop adalah sebuah \textit{framework} atau platform \textit{open source} berbasis Java. Hadoop memiliki kemampuan untuk penyimpanan dan memproses data dengan skala yang besar secara terdistribusi pada {\it cluster}. {\it Cluster} tersebut terdiri dari perangkat keras komoditas ~\cite{alexholmes:04:hip}. Hadoop menggunakan teknologi Google MapReduce dan Google File System (GFS) sebagai fondasinya ~\cite{tomwhite:05:htdg}. Beberapa karakteristik yang dimiliki Hadoop adalah sebagai berikut:
+Hadoop dikembangkan oleh Doug Cutting dan Mike Cafarella pada tahun 2005 yang saat itu bekerja di Yahoo. Nama Hadoop diberikan berdasarkan mainan 'Gajah' anak dari Doug Cutting. Hadoop adalah sebuah \textit{framework} atau platform \textit{open source} berbasis Java. Hadoop memiliki kemampuan untuk menyimpan dan memproses data dengan skala yang besar secara terdistribusi pada \textit{cluster}. \textit{Cluster} tersebut terdiri atas perangkat keras komoditas~\cite{alexholmes:04:hip}. Hadoop menggunakan teknologi Google MapReduce dan  \textit{Google File System} (GFS) sebagai fondasinya~\cite{tomwhite:05:htdg}. Beberapa karakteristik yang dimiliki Hadoop adalah sebagai berikut:
 
 
 \begin{enumerate}
 
-\item {\it Open Source}: Hadoop merupakan proyek {\it open source} dan kodenya bisa dimodifikasi sesuai kebutuhan. 
+\item \textit{Open Source}: Hadoop merupakan proyek \textit{open source} dan kodenya bisa dimodifikasi sesuai kebutuhan. 
 
-\item {\it Distributed computing}: Data disimpan secara terdistribusi pada \textit{Hadoop Distributed File System} (HDFS) dan data diproses secara paralel pada \textit{node-node} di {\it cluster}.
+\item \textit{Distributed Computing}: Data disimpan secara terdistribusi pada \textit{Hadoop Distributed File System} (HDFS) dan data dapat diproses secara paralel pada \textit{node-node} di \textit{cluster}.
 
-\item {\it Fast}: Hadoop sangat cocok untuk melakukan {\it batch processing} bervolume besar karena mampu melakukannya secara paralel.
+\item \textit{Fast}: Hadoop sangat cocok untuk melakukan \textit{batch processing} bervolume besar karena mampu melakukannya secara paralel.
 
-\item {\it Fault Tolerance}: Hadoop melakukan duplikasi data di beberapa \textit{node} yang berbeda. Ketika sebuah node gagal memproses data, \textit{node} yang memiliki duplikat data dapat menggantikannya untuk memproses data tersebut.
+\item \textit{Fault Tolerance}: Hadoop melakukan duplikasi data di beberapa \textit{node} yang berbeda. Ketika sebuah node gagal memproses data, \textit{node} yang memiliki duplikat data dapat menggantikannya untuk memproses data tersebut.
 
-\item {\it Reliability}: Kegagalan mesin bukan masalah bagi Hadoop karena adanya duplikasi data.
+\item \textit{Reliability}: Kegagalan mesin bukan masalah bagi Hadoop karena adanya duplikasi data.
 
 
-\item {\it High availability}: Data dapat diambil dari sumber yang lain meskipun kegagalan mesin karena adanya duplikasi data.
+\item \textit{High Availability}: Data dapat diambil dari sumber yang lain meskipun kegagalan mesin karena adanya duplikasi data.
 
-\item {\it Scalability}: Hadoop dapat menambahkan node yang lebih banyak ke dalam {\it cluster} dengan mudah.
+\item \textit{Scalability}: Hadoop dapat menambahkan node yang lebih banyak ke dalam \textit{cluster} dengan mudah.
 
-\item {\it Flexibility}: Hadoop dapat menangani data terstruktur maupun data tidak terstruktur. 
+\item \textit{Flexibility}: Hadoop dapat menangani data terstruktur maupun data tidak terstruktur. 
 
-\item {\it Economic and cost effective}: Hadoop tidak mahal karena berjalan pada {\it cluster} yang terdiri dari perangkat keras komoditas.
+\item \textit{Economic And Cost Effective}: Hadoop tidak mahal karena berjalan pada \textit{cluster} yang terdiri atas perangkat keras komoditas.
 
-\item {\it Easy to use}: Hadoop mempermudah pengguna dalam merancang program paralel. Hadoop sudah menangani hal-hal terkait komputasi terdistribusi.
+\item \textit{Easy To Use}: Hadoop mempermudah pengguna dalam merancang program paralel. Hadoop sudah menangani pembagian dan penugasan kerjaan secara paralel.
 
-\item {\it Data locality}: Algoritma MapReduce akan didekatkan kepada {\it cluster} dan tidak sebaliknya. Ukuran data yang besar lebih sulit untuk dipindahkan dibanding ukuran algoritma yang kecil.
+\item \textit{Data Locality}: Algoritma MapReduce akan didekatkan kepada \textit{cluster} dan tidak sebaliknya. Ukuran data yang besar lebih sulit untuk dipindahkan dibanding ukuran algoritma yang kecil.
 
 
 \end{enumerate}
@@ -323,24 +343,24 @@ Hadoop dikembangkan oleh Doug Cutting dan Mike Cafarella pada tahun 2005 yang sa
     \label{fig:hmodule} 
 \end{figure}
 
-Berdasarkan gambar diatas (Gambar ~\ref{fig:hmodule}), {\it framework} Apache Hadoop terdiri dari beberapa modul . Modul-modul tersebut membentuk dan membantu untuk memproses data yang berskala besar. Modul-modul tesebut diantaranya adalah ~\cite{tomwhite:05:htdg}:
+Berdasarkan Gambar~\ref{fig:hmodule}, \textit{framework} Apache Hadoop terdiri dari beberapa modul. Modul-modul tersebut membentuk dan membantu pemrosesan data berskala besar. Modul-modul tersebut di antaranya adalah~\cite{tomwhite:05:htdg}:
 
 \begin{enumerate}
-\item \textit{Hadoop Common}, module ini terdiri dari {\it library} dan {\it tools} yang dibutuhkan module Hadoop lainnya.
+\item \textit{Hadoop Common}: modul ini terdiri atas \textit{library} dan \textit{tools} yang dibutuhkan module Hadoop lainnya.
 
-\item \textit{Hadoop Distributed File System} (HDFS), sebuah sistem-file terdistribusi milik Hadoop untuk penyimpanan data.
+\item \textit{Hadoop Distributed File System} (HDFS): sebuah file sistem terdistribusi milik Hadoop untuk penyimpanan data.
 
-\item \textit{Hadoop YARN}, {\it resource-management platform} yang bertanggung jawab untuk mengatur sumber daya pada {\it cluster}.
+\item \textit{Hadoop YARN}: \textit{resource-management platform} yang bertanggung jawab untuk mengatur sumber daya pada \textit{cluster}.
 
-\item MapReduce, sebuah model pemrograman untuk pemrosesan skala besar.
+\item MapReduce: sebuah model pemrograman untuk pemrosesan skala besar.
 
 \end{enumerate}
 
 \subsection{Hadoop Distributed File System (HDFS)}
 
-Hadoop Distributed File System (HDFS) adalah sistem file terdistribusi yang dirancang untuk berjalan pada perangkat keras komoditas~\cite{tomwhite:05:htdg}. HDFS berbeda dari sistem file terdistribusi lainnya  karena sifat {\it fault tolerance} yang tinggi dan dirancang untuk digunakan pada perangkat keras biasa. HDFS menyediakan akses \textit{throughput} yang tinggi ke data aplikasi dan cocok untuk aplikasi yang memiliki \textit{data set} yang besar. HDFS awalnya dibangun sebagai infrastruktur untuk proyek mesin pencari web Apache Nutch.\\
+Hadoop Distributed File System (HDFS) adalah sistem file terdistribusi yang dirancang untuk berjalan pada perangkat keras komoditas~\cite{tomwhite:05:htdg}. HDFS berbeda dari file sistem terdistribusi lainnya  karena sifat \textit{fault tolerance} yang tinggi dan dirancang untuk digunakan pada perangkat keras biasa. HDFS menyediakan akses \textit{throughput} yang tinggi dan cocok untuk \textit{data set} yang besar. HDFS awalnya dibangun sebagai infrastruktur untuk proyek mesin pencari web Apache Nutch.\\
 
-Kegagalan perangkat keras sudah biasa terjadi. HDFS mungkin terdiri dari ratusan atau ribuan mesin server, masing-masing menyimpan bagian data dari file sistem. Faktanya, ada sejumlah besar komponen dan setiap komponen memiliki probabilitas kegagalan. Hal ini  menandakan bahwa beberapa komponen HDFS selalu tidak berfungsi. Oleh karena itu, deteksi kesalahan dan pemulihan otomatis yang cepat dari sistem adalah tujuan arsitektur inti dari HDFS.\\
+Kegagalan perangkat keras sudah biasa terjadi. HDFS mungkin terdiri atas ratusan atau ribuan mesin server, masing-masing menyimpan bagian data dari file sistem. Faktanya, ada sejumlah besar komponen dan setiap komponen memiliki probabilitas kegagalan. Hal ini  menandakan bahwa terdapat beberapa komponen HDFS selalu tidak berfungsi. Oleh karena itu, deteksi kesalahan dan pemulihan otomatis yang cepat dari sistem adalah tujuan arsitektur inti dari HDFS.\\
 
 \begin{figure}[H]
     \centering  
@@ -349,28 +369,28 @@ Kegagalan perangkat keras sudah biasa terjadi. HDFS mungkin terdiri dari ratusan
     \label{fig:hdfshadoop} 
 \end{figure}
 
-Hadoop meimplementasikan arsitektur {\it Master Slave} pada komponen primernya yaitu HDFS dan MapReduce ~\cite{tomwhite:05:htdg}. Bedasarkan  (Gambar ~\ref{fig:hdfshadoop}), \textit{master} \textit{node} atau disebut NameNode bertugas untuk mengatur operasi-operasi seperti membuka, menutup, dan menamakan kembali file atau direktori pada sistem file. Selain itu, NameNode meregulasi akses pengguna terhadap file dan mengatur block mana yang akan diolah oleh DataNode ~\cite{tomwhite:05:htdg}. NameNode membuat semua keputusan terkait replikasi blok. NameNode secara berkala menerima \textit{heart beat} dan \textit{block report} dari masing-masing DataNode di {\it cluster}. \textit{Heartbeat} mengimplikasikan bahwa DataNode berfungsi dengan benar.\\
+Hadoop meimplementasikan arsitektur \textit{Master Slave} pada komponen primernya yaitu HDFS dan MapReduce ~\cite{tomwhite:05:htdg}. Berdasarkan  (Gambar ~\ref{fig:hdfshadoop}), \textit{master} \textit{node} atau disebut NameNode bertugas untuk mengatur operasi-operasi seperti membuka, menutup, dan menamakan kembali file atau direktori pada sistem file. Selain itu, NameNode meregulasi akses pengguna terhadap file dan mengatur blok mana yang akan diolah oleh DataNode ~\cite{tomwhite:05:htdg}. NameNode membuat semua keputusan terkait replikasi blok. NameNode secara berkala menerima \textit{heartbeat} dan \textit{block report} dari masing-masing DataNode di \textit{cluster}. \textit{Heartbeat} mengimplikasikan bahwa DataNode berfungsi dengan benar.\\
 	
-{\it Slave node} atau dapat disebut DataNode merupakan pekerja dari HDFS \cite{tomwhite:05:htdg}. DataNode bertanggungjawab untuk menjalankan perintah membaca dan menulis untuk sistem file Hadoop. NameNode bisa membuat, menghapus, dan mereplikasi block ketika diberi instruksi dari {\it master node}. DataNode menyimpan dan mengambil blok ketika diperintahkan oleh NameNode. Selain itu, DataNode melaporkan daftar blok-blok yang disimpan kepada NameNode secara rutin.\\ 
+\textit{Slave node} atau dapat disebut DataNode merupakan pekerja dari HDFS \cite{tomwhite:05:htdg}. DataNode bertanggung jawab untuk menjalankan perintah membaca dan menulis untuk file sistem Hadoop. NameNode dapat membuat, menghapus, dan mereplikasi blok ketika diberi instruksi dari \textit{master node}. DataNode menyimpan dan mengambil blok ketika diperintahkan oleh NameNode. Selain itu, DataNode melaporkan daftar blok-blok yang disimpan kepada NameNode secara rutin.\\ 
 
-HDFS dirancang untuk menyimpan file yang berukuran sangat besar di seluruh mesin dalam {\it cluster} yang besar \cite{tomwhite:05:htdg}. HDFS menyimpan setiap file sebagai blok yang berurutan. semua blok dalam file kecuali blok terakhir memiliki ukuran yang sama. Bisa dilihat pada (Gambar ~\ref{fig:hdfshadoop}) bahwa blok-blok file direplikasi untuk memiliki {\it fault tolerance} yang tinggi. Ukuran blok dan banyaknya replika dapat dikonfigurasi untuk setiap file. Faktor replikasi dapat ditentukan pada waktu pembuatan file dan dapat diubah nantinya.\\
+HDFS dirancang untuk menyimpan file yang berukuran sangat besar di seluruh mesin dalam \textit{cluster} yang besar \cite{tomwhite:05:htdg}. HDFS menyimpan setiap file sebagai blok yang berurutan. Semua blok dalam file kecuali blok terakhir memiliki ukuran yang sama. Bisa dilihat pada Gambar~\ref{fig:hdfshadoop} bahwa blok-blok file direplikasi untuk memiliki \textit{fault tolerance} yang tinggi. Ukuran blok dan banyaknya replika dapat dikonfigurasi untuk setiap file. Faktor replikasi dapat ditentukan pada waktu pembuatan file dan dapat diubah nantinya.\\
 
-Berikut adalah perintah-perintah dasar yang dapat digunakan untuk HDFS ~\cite{chucklam:06:hia}:
+Berikut adalah perintah-perintah dasar yang dapat digunakan untuk HDFS~\cite{chucklam:06:hia}:
 
 \begin{itemize}
-\item Command untuk membuat direktori HDFS untuk penyimpanan file.
+\item Perintah untuk membuat direktori HDFS untuk penyimpanan file.
 
 \begin{verbatim}
 $ hadoop fs -mkdir <dir-path>
 \end{verbatim}
  
-\item Command untuk melihat daftar konten direktori dari path yang diberikan.
+\item Perintah untuk melihat daftar konten direktori dari \textit{path} yang diberikan.
 
 \begin{verbatim}
 $ hadoop fs -ls 
 \end{verbatim}
 
-\item Command untuk memasukan file atau direktori lokal kepada file sistem destinasi di dalam HDFS.
+\item Perintah untuk memasukkan file atau direktori lokal kepada file sistem destinasi di dalam HDFS.
 
 \begin{verbatim}
 $ hadoop fs -put <localSrc> <dest> 
@@ -379,9 +399,9 @@ $ hadoop fs -put <localSrc> <dest>
 \end{itemize}
 
 
-\subsection{MapReduce}
+\subsection{MapReduce}~\cite{tomwhite:05:htdg}
 
-MapReduce adalah sebuah model pemrograman untuk memproses data berukuran besar secara terdistribusi dan paralel dalam \textit{cluster} yang terdiri atas banyak komputer. Dalam memproses data, secara garis besar MapReduce dapat dibagi dalam dua proses yaitu proses \textit{map} dan proses \textit{reduce} ~\cite{tomwhite:05:htdg}. Setiap fase memiliki pasangan \textit{key-value} sebagai \textit{input} dan \textit{output} ~\cite{tomwhite:05:htdg}. Kedua jenis proses ini didistribusikan atau dibagi-bagikan ke setiap komputer dalam suatu cluster dan berjalan secara paralel tanpa saling bergantung satu sama yang lainnya. Proses \textit{map} bertugas untuk mengumpulkan informasi dari potongan-potongan data yang terdistribusi dalam tiap komputer dalam cluster. Hasilnya diserahkan kepada proses \textit{reduce} untuk diproses lebih lanjut. Hasil proses \textit{reduce} merupakan hasil akhir.\\
+MapReduce adalah sebuah model pemrograman untuk memproses data berukuran besar secara terdistribusi dan paralel dalam \textit{cluster} yang terdiri atas banyak komputer. Dalam memproses data, secara garis besar MapReduce dapat dibagi dalam dua proses, yaitu proses \textit{map} dan proses \textit{reduce}. Setiap fase memiliki pasangan \textit{key-value} sebagai \textit{input} dan \textit{output}. Kedua jenis proses ini didistribusikan ke setiap komputer dalam suatu \textit{cluster} dan berjalan secara paralel tanpa saling bergantung satu sama yang lainnya. Proses \textit{map} bertugas untuk mengumpulkan informasi dari potongan-potongan data yang terdistribusi dalam tiap komputer dalam cluster. Hasilnya diserahkan kepada proses \textit{reduce} untuk diproses lebih lanjut. Hasil proses \textit{reduce} merupakan hasil akhir.\\
 
 \begin{figure}[H]
     \centering  
@@ -390,7 +410,7 @@ MapReduce adalah sebuah model pemrograman untuk memproses data berukuran besar s
     \label{fig:mapreducehadoop} 
 \end{figure}
 
-Dapat dilihat pada (Gambar ~\ref{fig:mapreducehadoop}) yaitu arsitektur MapReduce. Pada arsitektur ini, {\it master node} disebut JobTracker dan {\it slave node} disebut TaskTracker. JobTracker adalah jembatan antara pengguna dan fungsi \textit{map} maupun \textit{reduce}. Ketika sebuah pekerjaan \textit{map} atau \textit{reduce} diterima oleh JobTracker, pekerjaan tersebut akan dimasukkan ke dalam antrian. Pekerjaan dalam antrian akan dikerjakan sesuai urutan masuk pekerjaan tersebut. Kemudian, pekerjaan akan ditugaskan kepada TaskTracker oleh JobTracker~\cite{tomwhite:05:htdg}. TaskTracker akan mengeksekusi pekerjaan yang diberikan oleh JobTracker dan mengembalikan laporan kemajuan kepada JobTracker~\cite{tomwhite:05:htdg}.   
+Gambaran arsitektur MapReduce dapat dilihat pada Gambar~\ref{fig:mapreducehadoop} yaitu arsitektur MapReduce. Pada arsitektur ini, \textit{master node} disebut JobTracker dan \textit{slave node} disebut TaskTracker. JobTracker adalah jembatan antara pengguna dan fungsi \textit{map} maupun \textit{reduce}. Ketika sebuah pekerjaan \textit{map} atau \textit{reduce} diterima oleh JobTracker, pekerjaan tersebut akan dimasukkan ke dalam antrian. Pekerjaan dalam antrian akan dikerjakan sesuai urutan masuk pekerjaan tersebut. Kemudian, pekerjaan akan ditugaskan kepada TaskTracker oleh JobTracker. TaskTracker akan mengeksekusi pekerjaan yang diberikan oleh JobTracker dan mengembalikan laporan kemajuan kepada JobTracker.   
 
 
 \begin{figure}[H]
@@ -400,17 +420,17 @@ Dapat dilihat pada (Gambar ~\ref{fig:mapreducehadoop}) yaitu arsitektur MapReduc
     \label{fig:mpstep} 
 \end{figure}
 
-Bedasarkan (Gambar ~\ref{fig:mpstep}), berikut adalah langkah-langkah proses awal  sampai akhir dari MapReduce:
+Berdasarkan Gambar~\ref{fig:mpstep}, berikut adalah langkah-langkah proses  MapReduce:
 
 \begin{enumerate}
-\item \textit{Input} dibagi menjadi {\it input split} yang berukuran sama. Setiap \textit{input splits} akan dibuatkan \textit{map task}.
+\item \textit{Input} dibagi menjadi \textit{input split} yang berukuran sama. Setiap \textit{input splits} akan dibuatkan \textit{map task}.
 
 \item Pada fase \textit{map}, data pada setiap \textit{split} akan dihitung berapa banyak kemunculan kata tersebut dan dijadikan pasangan <\textit{word}, \textit{frequency}> sebagai \textit{output}.
 
-\item Setelah fase \textit{mapping} adalah fase \textit{shuffling}. Tahap ini akan mengirim \textit{output} dari fase \textit{map} kepada \textit{reducer}. Hasil dari fase \textit{map} akan dikelompokan berdasarkan \textit{key} dan dibagi di antara \textit{reducer}. Dalam contoh ini, kata-kata yang sama disatukan bersama dengan frekuensi masing-masing.
+\item Fase selanjutnya adalah fase \textit{shuffling}. Tahap ini akan mengirim \textit{output} dari fase \textit{map} kepada \textit{reducer}. Hasil dari fase \textit{map} akan dikelompokan berdasarkan \textit{key} dan dibagi di antara \textit{reducer}. Dalam contoh ini, kata-kata yang sama disatukan bersama dengan frekuensi masing-masing.
 
 
-\item Terakhir adalah fase \textit{reduce} dimana \textit{output} dari \textit{shuffling} akan dikumpulkan. Nilai-nilai dari fase \textit{shuffling} akan digabungkan menjadi sebuah \textit{output}. \textit{Output} akan disimpan pada HDFS.
+\item Terakhir adalah fase \textit{reduce} di mana \textit{output} dari \textit{shuffling} akan dikumpulkan. Nilai-nilai dari fase \textit{shuffling} akan digabungkan menjadi sebuah \textit{output}. \textit{Output} akan disimpan pada HDFS.
 
 \end{enumerate}
 
@@ -425,24 +445,24 @@ Apache YARN (\textit{Yet Another Resource Negotiator}) adalah pengatur sumber da
     \label{fig:yarn} 
 \end{figure}
 
-Berikut adalah Gambar ~\ref{fig:yarn} yang mengabarkan langkah-langkah proses ketika menjalankan aplikasi pada YARN. Untuk menjalankan aplikasi pada YARN, \textit{client} akan meminta \textit{Resource Manager} untuk menjalankan proses aplikasi \textit{master} (langkah 1). Kemudian, \textit{Resource Manager} akan mencari \textit{Node Manager} yang bisa menjalankan aplikasi \textit{master} dalam sebuah \textit{container} (langkah 2 dan 3). Ketika aplikasi \textit{master} sudah berjalan, aplikasi \textit{master} bisa melakukan komputasi pada \textit{container} dan mengembalikan hasil kepada \textit{client}. Selain itu, aplikasi \textit{master} bisa saja meminta sumber daya tambahan (langkah 4) dan menggunakan sumber daya tersebut untuk komputasi terdistribusi (langkah 5 dan 6).\\
+Berikut adalah Gambar~\ref{fig:yarn} yang menggambarkan langkah-langkah proses ketika menjalankan aplikasi pada YARN. Untuk menjalankan aplikasi pada YARN, \textit{client} akan meminta \textit{Resource Manager} untuk menjalankan proses aplikasi \textit{master} (langkah 1). Kemudian, \textit{Resource Manager} akan mencari \textit{Node Manager} yang bisa menjalankan aplikasi \textit{master} dalam sebuah \textit{container} (langkah 2 dan 3). Ketika aplikasi \textit{master} sudah berjalan, aplikasi \textit{master} bisa melakukan komputasi pada \textit{container} dan mengembalikan hasil kepada \textit{client}. Selain itu, aplikasi \textit{master} dapat juga meminta sumber daya tambahan (langkah 4) dan menggunakan sumber daya tersebut untuk komputasi terdistribusi (langkah 5 dan 6).\\
 
-\section{Spark}
+\section{Spark}~\cite{holdenkarau:07:ls}
 
-\subsection{Pembahasan Umum Spark}
-
-Apache spark adalah sebuah {\it cluster computing platform} dirancang untuk kecepatan dan {\it general-purpose}~\cite{holdenkarau:07:ls}. Spark dirancang berdasarkan model MapReduce yang populer untuk memberikan dukungan yang efisien kepada banyak tipe komputasi, termasuk {\it interactive query}, dan {\it stream processing} ~\cite{holdenkarau:07:ls}. Kecepatan merupakan kunci dalam memproses data set yang besar, perbedaan waktu dalam eksplorasi data bisa dari beberapa menit sampai beberapa jam tergantung pada kecepatan. Salah satu fitur utama Spark yang ditawarkan adalah kemampuannya untuk melakukan {\it in memory computations}~\cite{holdenkarau:07:ls}. Selain itu, sistem Spark lebih efisien daripada MapReduce dalam menjalankan aplikasi yang rumit pada disk.\\
+Apache Spark adalah sebuah \textit{cluster computing platform} yang dirancang untuk kecepatan dan \textit{general-purpose}. Spark dirancang berdasarkan model MapReduce yang populer untuk memberikan dukungan yang efisien kepada banyak tipe komputasi, termasuk \textit{interactive query} dan \textit{stream processing}. Kecepatan merupakan kunci dalam melakukan eksplorasi data. Rentang waktu dalam eksplorasi dapat dimulai dari beberapa menit sampai beberapa jam. Salah satu fitur utama Spark yang ditawarkan adalah kemampuannya untuk melakukan \textit{in memory computations}. Selain itu, sistem Spark lebih efisien daripada MapReduce dalam menjalankan aplikasi yang rumit pada \textit{disk}.\\
 
 
-Pada sisi {\it general-purpose}, Spark dirancang untuk mencakup berbagai beban kerja yang sebelumnya diperlukan sistem terdistribusi terpisah, termasuk aplikasi \textit{batch}, {\it iterative algorithms}, {\it interactive query}, dan \textit{streaming}. Dengan mendukung beban kerja tersebut di mesin yang sama, Spark membuat pekerjaan lebih mudah dan murah untuk menggabungkan pemrosesan yang berbeda jenis. Dengan begitu, Spark mengurangi beban dalam merawat \textit{tools} yang terpisah.\\
+Pada sisi \textit{general-purpose}, Spark dirancang untuk mencakup berbagai beban kerja yang sebelumnya diperlukan sistem terdistribusi terpisah, termasuk aplikasi \textit{batch}, \textit{iterative algorithms}, \textit{interactive query}, dan \textit{streaming}. Dengan mendukung beban kerja tersebut di mesin yang sama, Spark membuat pekerjaan lebih mudah dan murah untuk menggabungkan pemrosesan yang berbeda jenis. Dengan begitu, Spark mengurangi beban dalam merawat \textit{tools} yang terpisah.\\
 
-Spark dirancang agar sangat mudah diakses dengan memberikan API sederhana untuk Python, Java, Scala, dan SQL~\cite{holdenkarau:07:ls}. Spark dengan mudah berintegrasi dengan tools {\it Big Data} lainnya, terutama Hadoop. Spark bisa berjalan pada Hadoop {\it cluster} dan mengakses sumber data Hadoop mana saja.\\
-
-\subsection{Komponen Spark}
+Spark dirancang untuk memudahkan pengaksesan dengan memberikan API sederhana untuk Python, Java, Scala, dan SQL. Spark dengan mudah berintegrasi dengan tools \textit{Big Data} lainnya, terutama Hadoop. Spark bisa berjalan pada Hadoop \textit{cluster} dan mengakses sumber data Hadoop manapun.\\
 
 
 
-Spark memiliki beberapa komponen yang terintegrasi dengan erat. Sebagai {\it core}, Spark adalah "mesin komputasi" yang bertanggung jawab untuk penjadwalan, distribusi, dan pemantauan aplikasi yang terdiri dari banyak task-task komputasi tersebar di banyak pekerja, mesin, atau {\it cluster}~\cite{holdenkarau:07:ls}. Karena {\it core engine} dari Spark sangat cepat dan dirancang untuk tujuan umum, Spark menjalankan banyak komponen di level yang lebih tinggi untuk menangani berbagai macam pekerjaan khusus seperti SQL atau {\it machine learning}~\cite{holdenkarau:07:ls}. Komponen-komponen ini dirancang untuk saling beroperasi dengan erat, Spark membiarkan pengguna untuk menggabungkan komponen seperti {\it library} dalam suatu proyek perangkat lunak.\\
+
+
+\subsection{Komponen Spark}~\cite{holdenkarau:07:ls}
+
+Spark memiliki beberapa komponen yang terintegrasi dengan erat. Sebagai \textit{core}, Spark adalah "mesin komputasi" yang bertanggung jawab untuk penjadwalan, distribusi, dan pemantauan aplikasi yang terdiri atas banyak \textit{task} komputasi tersebar di banyak pekerja, mesin, atau \textit{cluster}. Karena \textit{core engine} dari Spark sangat cepat dan dirancang untuk tujuan umum, Spark menjalankan banyak komponen di level yang lebih tinggi untuk menangani berbagai macam pekerjaan khusus seperti SQL atau \textit{machine learning}. Komponen-komponen ini dirancang untuk saling beroperasi dengan erat. Spark mengizinkan pengguna untuk menggabungkan komponen seperti \textit{library} dalam suatu proyek perangkat lunak.\\
 
 \begin{figure}[H]
     \centering  
@@ -451,26 +471,25 @@ Spark memiliki beberapa komponen yang terintegrasi dengan erat. Sebagai {\it cor
     \label{fig:sparkcomponent} 
 \end{figure}
 
-Bedasarkan (Gambar ~\ref{fig:sparkcomponent}), Spark memiliki beberapa komponen sebagai berikut:
+Bedasarkan Gambar ~\ref{fig:sparkcomponent}, Spark memiliki beberapa komponen sebagai berikut:
 
 \begin{itemize}
 
 \item Spark Core:
 Spark Core berisi fungsi-fungsi dasar Spark, termasuk komponen untuk tugas penjadwalan, manajemen memori, pemulihan kesalahan, berinteraksi dengan sistem penyimpanan,
-dan banyak lagi ~\cite{holdenkarau:07:ls}. Spark Core memiliki banyak API \textit{resilient distributed datasets}(RDD), yang merupakan abstraksi pemrograman utama Spark ~\cite{holdenkarau:07:ls}. RDD mewakili suatu koleksi \textit{item} yang didistribusikan di banyak node komputasi yang dapat dimanipulasi
-secara paralel~\cite{holdenkarau:07:ls}. Spark Core menyediakan banyak API untuk membangun dan memanipulasi ini
-koleksi. 
+dan banyak lagi. Spark Core memiliki banyak API \textit{resilient distributed datasets}(RDD), yang merupakan abstraksi pemrograman utama Spark. RDD mewakili suatu koleksi objek-objek yang didistribusikan di banyak node komputasi yang dapat dimanipulasi
+secara paralel. Spark Core menyediakan banyak API untuk membangun dan memanipulasi RDD.
 
-\item Spark SQL: Spark SQL adalah sebuah modul untuk bekerja dengan data yang terstruktur module ~\cite{holdenkarau:07:ls}. Modul ini memungkinkan melakukan kueri pada data terstrukut melalui SQL serta varian Apache Hive dari SQL disebut Hive Query Language (HQL) dan mendukung banyak sumber data, termasuk tabel Hive, Parket, dan JSON. Selain menyediakan antarmuka SQL untuk Spark, Spark SQL memungkinkan \textit{developer} untuk memadukan kueri SQL dengan manipulasi data terprogram yang didukung oleh RDD pada Python, Java, dan Scala, semua dalam satu aplikasi, sehingga menggabungkan SQL dengan analitik yang rumit. Integrasi ketat dengan lingkungan komputasi yang kaya disediakan oleh Spark membuat Spark SQL tidak seperti gudang data \textit{open source} lainnya.
+\item Spark SQL: Spark SQL adalah sebuah modul untuk mengerjakan data yang terstruktur. Modul ini memungkinkan melakukan \textit{query} pada data terstruktur melalui SQL serta varian Apache Hive dari SQL yang disebut Hive Query Language (HQL) dan mendukung banyak sumber data, termasuk tabel Hive, Parket, dan JSON. Selain menyediakan antarmuka SQL untuk Spark, Spark SQL memungkinkan \textit{developer} untuk memadukan kueri SQL dengan fungsi-fungsi pada RDD. 
 
-\item Spark Streaming: Spark Streaming adalah komponen Spark yang memungkinkan pemrosesan data dari \textit{live streaming} ~\cite{holdenkarau:07:ls}. Contoh \textit{data steam} termasuk file log yang dihasilkan oleh server web produksi, atau antrian pesan yang berisi pembaruan status yang diposting oleh pengguna layanan web. Spark Streaming menyediakan API yang mirip dengan  Spark Core's RDD API untuk memanipulasi aliran data. Hal ini membuat \textit{developer} mudah mempelajari proyek dan berpindah antar aplikasi yang memanipulasi data yang disimpan dalam memori, pada disk, atau tiba dalam \textit{real time}. Di balik API-nya, Spark Streaming dirancang untuk menyediakan tingkat toleransi kesalahan, throughput, dan skalabilitas yang sama seperti Spark Core.
+\item Spark Streaming: Spark Streaming adalah komponen Spark yang memungkinkan pemrosesan data dari \textit{live streaming}. Contoh \textit{data stream} termasuk file log yang dihasilkan oleh server web produksi, atau antrian pesan yang berisi pembaruan status yang diunggah oleh pengguna layanan web. Spark Streaming menyediakan API yang mirip dengan  Spark Core's RDD API untuk memanipulasi aliran data. Hal ini membuat \textit{developer} mudah mempelajari proyek dan berpindah antar aplikasi yang memanipulasi data yang disimpan dalam memori, pada \textit{disk}, atau yang tiba dalam \textit{real time}. Di balik API-nya, Spark Streaming dirancang untuk menyediakan tingkat toleransi kesalahan, \textit{throughput}, dan skalabilitas yang sama seperti Spark Core.
 
-\item MLlib: Spark hadir dengan \textit{library} yang berisi fungsi pembelajaran mesin secara umum (ML), \textit{library} ini disebut MLlib. MLlib menyediakan beberapa jenis algoritma pembelajaran mesin, termasuk klasifikasi, regresi, pengelompokan, dan penyaringan kolaboratif, serta pendukung
-fungsionalitas seperti \textit{model evaluation} dan \textit{data import} ~\cite{holdenkarau:07:ls}. MLlib juga menyediakan
+\item MLlib: Spark hadir dengan \textit{library} yang berisi fungsi pembelajaran mesin (ML) secara umum, \textit{library} ini disebut MLlib. MLlib menyediakan beberapa jenis algoritma pembelajaran mesin, termasuk klasifikasi, regresi, pengelompokan, dan penyaringan kolaboratif, serta pendukung
+fungsionalitas seperti \textit{model evaluation} dan \textit{data import}. MLlib juga menyediakan
 beberapa \textit{lower-level} ML \textit{primitives}, termasuk \textit{generic gradient descent optimization
 algorithm}.
 
-\item GraphX: GraphX adalah sebuah \textit{library} untuk memanipulasi grafik dan melakukan \textit{graph-parallel computations} ~\cite{holdenkarau:07:ls}. Seperti Spark Streaming dan Spark SQL, GraphX ​​memperluas API Spark RDD, memungkinkan kita untuk membuat \textit{directed graph} dengan \textit{arbitrary properties} yang melekat pada setiap \textit{vertex} dan \textit{edge}. GraphX ​​juga menyediakan berbagai operator untuk memanipulasi grafik dan memiliki library yang penuh dengan \textit{graph algorithms} yang umum seperti PageRank dan \textit{triangle counting}.
+\item GraphX: GraphX adalah sebuah \textit{library} untuk memanipulasi grafik dan melakukan \textit{graph-parallel computations}. Seperti Spark Streaming dan Spark SQL, GraphX memperluas API Spark RDD, memungkinkan pengguna untuk membuat \textit{directed graph} dengan \textit{arbitrary properties} yang melekat pada setiap \textit{vertex} dan \textit{edge}. GraphX juga menyediakan berbagai operator untuk memanipulasi grafik dan memiliki \textit{library} yang penuh dengan \textit{graph algorithms} yang umum seperti PageRank dan \textit{triangle counting}.
 
 \item Cluster Managers: Spark dirancang untuk dapat ditambah secara efisien dari satu hingga ribuan node komputasi. Untuk mencapai hal ini dan memaksimalkan fleksibilitas, Spark dapat menjalankan lebih dari satu variasi manajer \textit{cluster} seperti Hadoop YARN, Apache Mesos, \textit{simple
 cluster manager} pada diri Spark sendiri yang disebut \textit{Standalone Scheduler}.\\
@@ -486,15 +505,15 @@ cluster manager} pada diri Spark sendiri yang disebut \textit{Standalone Schedul
     \label{fig:sparkins} 
 \end{figure}
 
-Ada tiga cara untuk menginstal Spark berdasarkan Gambar ~\ref{fig:sparkins} diatas, ketiga cara tersebut akan dijelaskan dibawah:
+Berdasarkan Gambar~\ref{fig:sparkins} terdapat tiga cara untuk menginstal Spark. Ketiga cara tersebut antara lain:
 
 \begin{itemize}
 
-\item \textit{Standalone}: Spark \textit{standalone} berarti Spark menempati tempat di atas HDFS (Hadoop Distributed File System) dan ruang dialokasikan untuk HDFS, secara eksplisit. Spark dan MapReduce akan berjalan berdampingan untuk mencakup semua pekerjaan percikan di cluster ~\cite{holdenkarau:07:ls}.
+\item \textit{Standalone}: Spark \textit{standalone} berarti Spark menempati tempat di atas HDFS (Hadoop Distributed File System) dan ruang dialokasikan untuk HDFS, secara eksplisit. Spark dan MapReduce akan berjalan berdampingan untuk mencakup semua pekerjaan di \textit{cluster}.
 
-\item Hadoop Yarn: Spark berjalan pada Yarn tanpa perlu pra-instalasi atau akses root ~\cite{holdenkarau:07:ls}. Cara ini membantu mengintegrasikan Spark ke dalam ekosistem Hadoop atau Hadoop stack. Cara ini memungkinkan komponen lain untuk berjalan di atas tumpukan.
+\item Hadoop YARN: Spark berjalan pada YARN tanpa perlu pra-instalasi atau akses root. Cara ini membantu mengintegrasikan Spark ke dalam ekosistem Hadoop. Cara ini memungkinkan komponen lain untuk berjalan di atas tumpukan.
 
-\item Spark pada MapReduce: Spark pada MapReduce digunakan untuk menjalankan job-job pada spark selain untuk \textit{standalone deployment} ~\cite{holdenkarau:07:ls}. Dengan adanya SIMR, pengguna dapat memulai Spark dan menggunakan \textit{Spark Shell} tanpa akses administratif.\\
+\item Spark pada MapReduce: Spark pada MapReduce digunakan untuk menjalankan pekerjaan-pekerjaan pada spark selain untuk \textit{standalone deployment}. Pengguna dapat memulai Spark dan menggunakan \textit{Spark Shell} tanpa akses administratif.\\
 
 \end{itemize}
 
@@ -508,36 +527,35 @@ Ada tiga cara untuk menginstal Spark berdasarkan Gambar ~\ref{fig:sparkins} diat
 
 \subsection{Arsitektur Spark}
 
-Pada bagian ini akan dijelaskan arsitektur Spark. Spark menggunakan arsitektur \textit{master} dan \textit{slave}. Sebuah Spark \textit{cluster} memiliki satu \textit{master} dan banyak \textit{slave} atau bisa disebut sebagai \textit{worker}. Spark memiliki beberapa komponen peting dalam arsitekturnya seperti \textit{Driver Program}, \textit{Spark Context}, \textit{Cluster Manager},  . Gambar ~\ref{fig:sparkarc} menggambarkan komponen-komponen arsitektur Spark.
+Spark menggunakan arsitektur \textit{master} dan \textit{slave}. Sebuah Spark \textit{cluster} memiliki satu \textit{master} dan banyak \textit{slave} atau bisa disebut sebagai \textit{worker}. Spark memiliki beberapa komponen penting dalam arsitekturnya seperti \textit{Driver Program}, \textit{Spark Context}, \textit{Cluster Manager}. Gambar~\ref{fig:sparkarc} menggambarkan komponen-komponen arsitektur Spark.
 
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.6]{sparkarc}  
+    \includegraphics[scale=0.5]{sparkarc}  
     \caption[Arsitektur Spark]{Arsitektur Spark} 
     \label{fig:sparkarc} 
 \end{figure}
 
-Berikut adalah penjelasasn dari komponen-komponen Gambar Gambar ~\ref{fig:sparkarc}:
+Berikut adalah penjelasasn dari komponen-komponen Gambar Gambar~\ref{fig:sparkarc}:
 
 \begin{itemize} 
 
-\item \textbf{Driver Program}\\
-\textit{Driver program} yang berjalan pada \textit{master node} bertugas menjalankan fungsi main() dari aplikasi dan tempat dimana \textit{Spark Context} dibuat. Kode program akan diterjemahkan menjadi \textit{tasks} dan dijadwalkan kepada \textit{executors} untuk dikerjakan. \textit{Driver program} akan berkomunikasi dengan \item \textbf{Cluster Manager} untuk mengatur sumber daya pada \textit{cluster}.\\
+\item \textbf{\textit{Driver Program}}\\
+\textit{Driver program} yang berjalan pada \textit{master node} bertugas menjalankan fungsi main() dari aplikasi dan tempat di mana \textit{Spark Context} dibuat. Kode program akan diterjemahkan menjadi \textit{tasks} dan dijadwalkan kepada \textit{executors} untuk dikerjakan. \textit{Driver program} akan berkomunikasi dengan \textit{cluster manager} untuk mengatur sumber daya pada \textit{cluster}.\\
 
-\item \textbf{Spark Context}\\
-\textit{Spark Context} menghubungkan pengguna dengan \textit{cluster}. \textit{Spark Context} dapat terhubung dengan beberapa cluster manager seperti YARN, MESOS, dan \textit{Spark standalone cluster manager}. \textit{Spark Context} dapat digunakan untuk membuat \textit{Resilient Distributed Datasets} (RDD), \textit{accumulators}, dan \textit{broadcast variable}. 
+\item \textbf{\textit{Spark Context}}\\
+\textit{Spark Context} menghubungkan pengguna dengan \textit{cluster}. \textit{Spark Context} dapat terhubung dengan beberapa \textit{cluster manager} seperti YARN, MESOS, dan \textit{Spark standalone cluster manager}. \textit{Spark Context} dapat digunakan untuk membuat \textit{Resilient Distributed Datasets} (RDD), \textit{accumulators}, dan \textit{broadcast variable}. 
 
-\item \textbf{Cluster Manager}\\
-\textit{Cluster Manager} berfungsi mengatur sumber daya pada sebuah \textit{cluster}. Spark dapat berjalan pada berbagai macam \textit{cluster manager} seperti Apache Mesos, Hadoop YARN, dan \textit{Spark's stand alone}. \textit{Cluster manager} akan berusaha mendapatkan sumber daya pada \textit{cluster} dan mealokasikannya kepada \textit{Spark job} yang sedang berjalan.
+\item \textbf{\textit{Cluster Manager}}\\
+\textit{Cluster Manager} berfungsi mengatur sumber daya pada sebuah \textit{cluster}. Spark dapat berjalan pada berbagai macam \textit{cluster manager} seperti Apache Mesos, Hadoop YARN, dan \textit{Spark's stand alone}. \textit{Cluster manager} akan berusaha mendapatkan sumber daya pada \textit{cluster} dan mealokasikannya kepada Spark \textit{job} yang sedang berjalan.
 
-\item \textbf{Executors}\\
-\textit{Executors} adalah proses-proses yang berjalan pada \textit{worker node} bertanggung jawab untuk mengerjakan \textit{tasks} yang diberikan. \textit{Executors} dibuat ketika aplikasi dijalankan dan akan tetap ada selama aplikasi itu berjalan.
+\item \textbf{\textit{Executors}}\\
+\textit{Executors} adalah proses-proses yang berjalan pada \textit{worker node} dan bertanggung jawab untuk mengerjakan \textit{tasks} yang diberikan. \textit{Executors} dibuat ketika aplikasi dijalankan dan akan tetap ada selama aplikasi masih berjalan.
 
-\item \textbf{Tasks}\\
-\textit{Task} adalah sebuah satuan kerja pada Spark. \textit{Task} berisi perintah. Perintah tersebut merupakan fungsi yang diserialisasi. \textit{Task} akan dikirimkan oleh \textit{driver program} kepada \textit{executor}. Kemudian, \textit{executor} akan medeserialisai perintah tersebut dan mengerjakannya. Biasanya \textit{task} akan dibuat untuk setiap partisi. Partisi merupakan potongan data yang terdistribusi pada \textit{cluster}.
+\item \textbf{\textit{Tasks}}\\
+\textit{Task} adalah sebuah satuan kerja pada Spark. \textit{Task} berisi perintah-perintah. Perintah tersebut merupakan fungsi yang diserialisasi. \textit{Task} akan dikirimkan oleh \textit{driver program} kepada \textit{executor}. Kemudian, \textit{executor} akan medeserialisai perintah tersebut dan mengerjakannya. Pada umumnya \textit{task} akan dibuat untuk setiap partisi. Partisi merupakan potongan data yang terdistribusi pada \textit{cluster}.
 
-https://www.dezyre.com/article/apache-spark-architecture-explained-in-detail/338
 
 \end{itemize}
 
@@ -547,18 +565,18 @@ https://www.dezyre.com/article/apache-spark-architecture-explained-in-detail/338
 
 
 
-\subsection{Resilient Distributed Datasets (RDD)}
+\subsection{\textit{Resilient Distributed Datasets} (RDD)}
 
-Resilient Distributed Datasets (RDD) adalah struktur data dasar Spark. RDD adalah koleksi benda-benda yang didistribusikan secara permanen. Setiap dataset dalam RDD dibagi menjadi beberapa partisi yang dapat dikomputasi pada node yang berbeda pada \textit{cluster} ~\cite{holdenkarau:07:ls}. RDD dapat berisi jenis objek Python, Java, atau Scala, termasuk kelas yang ditentukan pengguna. Spark memanfaatkan konsep RDD untuk mencapai operasi MapReduce yang lebih cepat dan efisien. ~\cite{holdenkarau:07:ls}\\
+\textit{Resilient Distributed Datasets} (RDD) adalah struktur data dasar pada Spark yang berisi koleksi benda-benda yang didistribusikan secara permanen. Setiap dataset dalam RDD dibagi menjadi beberapa partisi yang dapat dikomputasi pada node yang berbeda pada \textit{cluster}~\cite{holdenkarau:07:ls}. RDD dapat berisi jenis objek Python, Java, atau Scala, termasuk kelas yang ditentukan pengguna. Spark memanfaatkan konsep RDD untuk mencapai operasi MapReduce yang lebih cepat dan efisien~\cite{holdenkarau:07:ls}.
 
-Secara umum, RDD adalah kumpulan \textit{read-only, partitioned collection} dari \textit{records}. RDD dapat dibuat melalui operasi deterministik dari data pada penyimpanan yang stabil atau RDD lainnya ~\cite{holdenkarau:07:ls}. RDD adalah kumpulan elemen \textit{fault tolerance} yang dapat dioperasikan secara paralel.\\
+Secara umum, RDD merupakan kumpulan \textit{read-only, partitioned collection} dari \textit{records}. RDD dapat dibuat melalui operasi deterministik dari data pada penyimpanan yang stabil atau RDD lainnya~\cite{holdenkarau:07:ls}. Elemen pada RDD memiliki sifat \textit{fault tolerance} dan dapat dioperasikan secara paralel.
 
 
-\textit{Data sharing} pada MapReduce lebih lambat dibanding RDD  karena replikasi, serialisasi, dan disk IO. Sebagian besar aplikasi Hadoop menghabiskan lebih dari 90 persen waktunya untuk melakukan operasi \textit{read-write} kepada HDFS.\\
+\textit{Data sharing} pada MapReduce lebih lambat dibanding RDD  karena replikasi, serialisasi, dan disk IO. Sebagian besar aplikasi Hadoop menghabiskan lebih dari 90 persen waktunya untuk melakukan operasi \textit{read-write} kepada HDFS.
 
-Untuk menangani masalah tersebut, dibangun \textit{framework} khusus disebut Apache Spark. Ide utama dari Spark adalah RDD, Spark mendukung \textit{in-memory computation}. Spark menyimpan status memori sebagai objek di seluruh pekerjaan dan objek dapat dibagi di antara \textit{jobs}. \textit{Data sharing} dalam memori lebih cepat 10 hingga 100 kali lipat dibanding \textit{network} atau \textit{disk}.\\
+Untuk menangani masalah tersebut, dibangun \textit{framework} khusus yang disebut Apache Spark. Ide utama dari Spark adalah RDD, Spark juga mendukung \textit{in-memory computation}. Spark menyimpan status memori sebagai objek di seluruh pekerjaan dan objek dapat dibagi di antara \textit{jobs}. \textit{Data sharing} dalam memori lebih cepat 10 hingga 100 kali lipat dibanding \textit{network} atau \textit{disk}.
 
-Berikut adalah sifat-sifat dari RDD :
+Berikut adalah sifat-sifat dari RDD~\cite{holdenkarau:07:ls}:
 \begin{itemize}
 
 \item \textit{In Memory}: Data pada RDD disimpan pada memori sebesar mungkin dan selama mungkin.
@@ -567,47 +585,43 @@ Berikut adalah sifat-sifat dari RDD :
 
 \item \textit{Typed}: RDD memiliki tipe data seperti RDD[Long], RDD[String] dan tipe data lainnya.
 
-\item \textit{Lazy evaluation}: Data didalam RDD tidak akan tersedia atau berubah sampai sebuah perintah \textit{action} telah dieksekusi.
+\item \textit{Lazy evaluation}: Data di dalam RDD tidak akan tersedia atau berubah sampai sebuah perintah \textit{action} telah dieksekusi.
 
-\item \textit{Immutable}: RDD yang telah dibuat tidak dapat berubah. Meskipun demikian, RDD
-dapat ditransformasi menjadi sebuah RDD baru dengan melakukan perintah \textit{transformation}
-pada RDD.
+\item \textit{Immutable}: RDD yang telah dibuat tidak dapat berubah. Meskipun demikian, RDD dapat ditransformasi menjadi sebuah RDD baru dengan melakukan perintah \textit{transformation} pada RDD.
 
 \item \textit{Parallel}: RDD dapat dioperasikan secara paralel.
 
-\item \textit{Cacheable}: Pengguna dapat memilih RDD mana yang akan dipakai kembali dan memilih tempat penyimpanan yaitu memori atau disk. Dengan begitu, data dapat diakses lebih cepat untuk permintaan selanjutnya.\\
+\item \textit{Cacheable}: Pengguna dapat memilih RDD mana yang akan dipakai kembali dan memilih tempat penyimpanannya, yaitu memori atau \textit{disk}. Dengan begitu, data dapat diakses lebih cepat untuk permintaan selanjutnya.\\
 
 \end{itemize}
 
-Ada dua cara untuk membuat sebuah RDD. Cara pertama adalah dengan memuat dataset eksternal~\cite{holdenkarau:07:ls}. Sedangkan cara alternatif adalah dengan mendistribusikan sebuah koleksi objek seperti \textit{list} atau \textit{set}~\cite{holdenkarau:07:ls}. Ketika sebuah RDD telah dibuat, ada dua tipe operasi yaitu \textit{transformations} dan \textit{actions} yang bisa dilakukan RDD. \textit{Transformations} membuat RDD baru dari RDD sebelumnya~\cite{holdenkarau:07:ls}. Berbeda dengan \textit{transformations}, \textit{actions} mengembalikan nilai hasil komputasi berdasarkan RDD~\cite{holdenkarau:07:ls}. Hasil dari \textit{actions} akan dikembalikan kepada \textit{driver program} atau disimpan pada penyimpanan eksternal seperti HDFS. \\
+Terdapat dua cara untuk membuat sebuah RDD. Cara pertama adalah dengan memuat dataset eksternal, sedangkan cara alternatif adalah dengan mendistribusikan sebuah koleksi objek seperti \textit{list} atau \textit{set}~\cite{holdenkarau:07:ls}. Terdapat dua tipe operasi yang dapat dilakukan RDD, yaitu \textit{transformations} dan \textit{actions}. \textit{Transformations} membuat RDD baru dari RDD sebelumnya~\cite{holdenkarau:07:ls}. Berbeda dengan \textit{transformations}, \textit{actions} mengembalikan nilai hasil komputasi berdasarkan RDD~\cite{holdenkarau:07:ls}. Hasil dari \textit{actions} akan dikembalikan kepada \textit{driver program} atau disimpan pada penyimpanan eksternal seperti HDFS.\\
 
 Berikut adalah contoh pembuatan RDD dari sumber eksternal dan koleksi objek:
 \begin{itemize}
 
 \item
 \begin{verbatim}
-Contoh pembuatan RDD dari sumber eksternal.
-val lines = sc.textFile("/path/to/README.md")
+val lines = sc.textFile("/path/to/README.md") \\ sumber eksternal
 \end{verbatim}
 
 \item
 \begin{verbatim}
-Contoh pembuatan RDD dari koleksi objek.
-val lines = sc.parallelize(["a", "b", "c", "d", "e"])\\
+val lines = sc.parallelize(["a", "b", "c", "d", "e"]) \\ array 
 \end{verbatim}
 
 \end{itemize}
 
 
-\textit{Transformations} pada RDD adalah sebuah operasi yang menerima RDD sebagai masukan dan mengembalikan satu atau lebih RDD baru. RDD masukan tidak berubah karena sifat RDD adalah \textit{immutable} yang berarti tidak bisa diubah ketika dibuat. \textit{Transformations} bersifat \textit{lazy}, \textit{transformation} tidak langsung dieksekusi, Spark akan mencatat \textit{transfomartion} apa saja yang dilakukan pada RDD awal. \textit{Transformations} akan dieksekusi ketika sebuah \textit{actions} dipanggil.\\
+\textit{Transformations} pada RDD adalah sebuah operasi yang menerima RDD sebagai masukan dan mengembalikan satu atau lebih RDD baru. RDD masukan tidak berubah karena sifat RDD adalah \textit{immutable} yang berarti tidak bisa diubah ketika dibuat. \textit{Transformations} bersifat \textit{lazy} dan tidak langsung dieksekusi, Spark akan mencatat \textit{transfomartion} apa saja yang dilakukan pada RDD sejak awal. \textit{Transformations} akan dieksekusi ketika sebuah \textit{actions} dipanggil.\\
 
-Berikut adalah contoh \textit{filter} \textit{transformation} di Scala. \textit{Filter} digunakan untuk menyaring elemen-elemen yang sesuai dengan kriteria yang ditentukan. Pada kasus ini, filter akan mengambilkan baris-baris yang memiliki kata \textit{error}.
+Berikut adalah contoh \textit{filter} \textit{transformation} di Scala. \textit{Filter} digunakan untuk menyaring elemen-elemen yang sesuai dengan kriteria yang ditentukan. Pada kasus ini, filter akan mengambil baris-baris yang memiliki kata \textit{error}.
 \begin{verbatim}
 val inputRDD = sc.textFile("log.txt") 
 val errorsRDD = inputRDD.filter(line => line.contains("error"))
 \end{verbatim}
 
-Berikut adalah Tabel~\ref{tab:trans} berisi daftar \textit{transformations} yang umum pada Spark:
+Tabel~\ref{tab:trans} berisi daftar \textit{transformations} yang umum pada Spark:
 
 \begin{table}[H] 
 	\centering 
@@ -657,12 +671,6 @@ Berikut adalah Tabel~\ref{tab:trans} berisi daftar \textit{transformations} yang
 \textbf{join}(otherDataset, [numPartitions]) & Mengembalikan gabungan RDD berupa \textit{pairs}  (K, V) dan (K, W) menjadi \textit{pairs} (K, (V,W)).\\
 
 \hline
-\textbf{cogroup}(otherDataset, [numPartitions]) & Mengembalikan RDD berupa \textit{tuples}  (K, (Iterable<V>, Iterable<W>)) dari \textit{pairs} (K, V) dan (K, W).\\
-
-\hline
-\textbf{cartesian}(otherDataset) & Mengembalikan RDD berupa \textit{paris}  (T, U) dari \textit{dataset} T dan U.\\
-
-\hline
 
 
 \bottomrule
@@ -673,12 +681,12 @@ Berikut adalah Tabel~\ref{tab:trans} berisi daftar \textit{transformations} yang
 Berikut adalah contoh operasi \textit{action} pada RDD. Pada contoh ini, fungsi \textit{reduceByKey} digunakan untuk menghitung jumlah kata yang ada.
 
 \begin{verbatim}
-val lines = sc.textFile("data.txt") 
-val pairs = lines.map(s => (s, 1))
-val counts = pairs.reduceByKey((a, b) => a + b)
+    val lines = sc.textFile("data.txt") 
+    val pairs = lines.map(s => (s, 1))
+    val counts = pairs.reduceByKey((a, b) => a + b)
 \end{verbatim}
 
-\textit{Actions} merupakan operasi yang mengembalikan sebuah nilai kepada \textit{driver program} atau tempat penyimpanan eksternal. Untuk mengembalikan sebuah nilai, kita bisa menggunakan take(), count(), collect(), dan \textit{actions} lainya. Operasi take() digunakan untuk mengambil sebagian kecil elemen pada RDD. Ketika menggunakan collect(), memori pada satu komputer harus cukup untuk menampung seluruh \textit{data set} ~\cite{holdenkarau:07:ls}. Operasi tersebut sebaiknya digunakan pada \textit{data set} yang berukuran kecil. \textit{Data set} yang berukuran besar dapat disimpan pada tempat penyimpanan eksternal. Setiap kali sebuah \textit{actions} dipanggil, seluruh RDD akan dikomputasi dari akarnya. Untuk mencapai efisiensi yang lebih tinggi, bisa dilakukan \textit{persist} terhadap \textit{intermediate results}. \\
+\textit{Actions} merupakan operasi yang mengembalikan sebuah nilai kepada \textit{driver program} atau tempat penyimpanan eksternal. Untuk mengembalikan sebuah nilai, dapat digunakan fungsi-fungsi seperti take(), count(), collect(), dan \textit{actions} lainya. Operasi take() digunakan untuk mengambil sebagian kecil elemen pada RDD. Ketika menggunakan collect(), memori pada satu komputer harus cukup untuk menampung seluruh \textit{data set} ~\cite{holdenkarau:07:ls}. Operasi tersebut sebaiknya digunakan pada \textit{data set} yang berukuran kecil. \textit{Data set} yang berukuran besar dapat disimpan pada tempat penyimpanan eksternal. Setiap kali sebuah \textit{actions} dipanggil, seluruh RDD akan dikomputasi dari akarnya. Untuk mencapai efisiensi yang lebih tinggi, dapat dilakukan \textit{persist} terhadap \textit{intermediate results}. \\
 
 Berikut adalah Tabel~\ref{tab:actions} berisi daftar \textit{actions} yang umum pada Spark:
 
@@ -792,7 +800,7 @@ val z: Char = 'a' // Char merupakan tipe dari variable z
 
 \subsection{Blocks}
 
-Block digunakan untuk menggabungkan \textit{expressions}. Berikut adalah contoh \textit{block}:
+Block digunakan untuk menggabungkan \textit{expressions}. Berikut adalah contoh blok:
 
 \begin{verbatim}
 println({

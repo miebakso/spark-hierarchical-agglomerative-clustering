@@ -202,7 +202,7 @@
 % Petunjuk: hilangkan tanda << & >>, dan isi sesuai dengan data anda
 %=============================================================================
 \namanpm{Matthew Ariel}{2015730010}
-\tanggal{27}{10}{2018}
+\tanggal{25}{11}{2019}
 \pembimbing{\VSM}{}    
 \penguji{<<penguji 1>>}{<<penguji 2>>} 
 %=============================================================================
@@ -234,23 +234,28 @@
 % - langsung mulai setelah '{' awal, jangan mulai menulis di baris bawahnya
 %=============================================================================
 \abstrakINA{
-\textit{Big data} perlu direduksi untuk menghemat tempat penyimpanan. Algoritma \textit{Hierarchical Agglomerative Clustering} dapat digunakan untuk mereduksi data. Dengan bantuan sistem terdistribusi seperti Hadoop, proses reduksi data dapat dilakukan secara paralel dan lebih cepat. Sayangnya, teknologi Hadoop masih dapat dikatakan 'terlalu lambat' dalam melakukan proses reduksi data karena hasil sementara dari setiap tahap akan disimpan di disk sampai dibutuhkan kembali di tahap selanjutnya.\\
+{\it Big data} adalah istilah yang menggambarkan kumpulan data dalam jumlah yang sangat besar, baik data yang terstruktur maupun data yang tidak terstruktur. Kumpulan data tersebut menyimpan informasi yang bisa dianalisis dan diproses untuk memberikan wawasan kepada organisasi atau perusahaan. {\it Big data} dapat mencapai \textit{petabyte} dan menghabiskan banyak tempat penyimpanan.\\
 
-Untuk mempercepat proses reduksi data, Hadoop dapat digantikan dengan Spark. Spark adalah sistem terdistribusi, mirip seperti Hadoop. Tetapi, yang membedakan antara Hadoop dengan Spark adalah pada cara penyimpanan sementara saat melakukan proses reduksi data. Hadoop menggunakan disk sebagai tempat penyimpanan sementaranya, sedangkan Spark menggunakan memori sebagai tempat penyimpanan sementaranya. Pembacaan dan penulisan akan lebih cepat saat menggunakan memori dibandingkan dengan menggunakan disk, sehingga Spark akan lebih cepat dibandingkan dengan Hadoop.\\
+\textit{Big data} perlu direduksi untuk menghemat tempat penyimpanan. Algoritma \textit{Hierarchical Agglomerative Clustering} dapat digunakan untuk mereduksi data. Dengan bantuan sistem terdistribusi seperti Hadoop, proses reduksi data dapat dilakukan secara paralel dan lebih cepat. Sayangnya, teknologi Hadoop masih dapat dikatakan 'terlalu lambat' dalam melakukan proses reduksi data karena hasil sementara dari setiap tahap akan disimpan di \textit{disk} sampai dibutuhkan kembali di tahap selanjutnya.\\
 
-Perangkat lunak dibuat untuk mengimplementasi algoritma \textit{Hierarchical Agglomerative Clustering} dalam Spark. Pengujian juga dilakukan dengan membandingkan waktu eksekusi algoritma \textit{Hierarchical Agglomerative Clustering} saat diimplementasikan pada Hadoop dan saat diimplementasikan pada Spark. Waktu eksekusi dicatat untuk ukuran data yang berbeda-beda.\\
+Untuk mempercepat proses reduksi data, Hadoop dapat digantikan dengan Spark. Spark adalah sistem terdistribusi, mirip seperti Hadoop. Tetapi, yang membedakan antara Hadoop dengan Spark adalah pada cara penyimpanan sementara saat melakukan proses reduksi data. Hadoop menggunakan \textit{disk} sebagai tempat penyimpanan sementaranya, sedangkan Spark menggunakan memori sebagai tempat penyimpanan sementaranya. Pembacaan dan penulisan akan lebih cepat saat menggunakan memori dibandingkan dengan menggunakan \textit{disk}, sehingga Spark akan lebih cepat dibandingkan dengan Hadoop.\\
 
-Berdasarkan hasil pengujian, Spark memiliki waktu eksekusi yang lebih cepat dibandingkan dengan Hadoop. Spark memiliki waktu eksekusi yang lebih cepat dibandingkan dengan Hadoop karena data disimpan dan dibaca pada memori.
+Perangkat lunak dibuat untuk mengimplementasikan algoritma \textit{Hierarchical Agglomerative Clustering} dalam Spark. Pengujian juga dilakukan dengan membandingkan waktu eksekusi algoritma \textit{Hierarchical Agglomerative Clustering} saat diimplementasikan pada Hadoop dan saat diimplementasikan pada Spark. Waktu eksekusi dicatat untuk ukuran data 1GB, 2GB, 3GB, 5GB, 10GB, 15GB, dan 20GB.\\
+
+Berdasarkan hasil pengujian, Spark memiliki waktu eksekusi yang lebih cepat dibandingkan dengan Hadoop pada jumlah partisi yang besar. Waktu eksekusi Spark menurun ketika jumlah partisi ditingkatkan, sedangkan waktu eksekusi Hadoop menurun ketika jumlah partisi ditingkatkan. Waktu eksekusi terbaik Spark masih lebih cepat dibandung waktu eksekusi terbaik Hadoop.\\
+
 }
 
 \abstrakENG{
-Big data need to be reduce to save storage space. The Hierarchical Agglomerative Clustering algorithm can be used to reduce data. With the help of distributed systems such as Hadoop, reduction process can be done in parallel with less execution time. Unfortunately, Hadoop technology can still be said to be 'too slow' in the process of data reduction because temporary results from each stage will be stored on the disk until it is needed again at a later stage.\\
+Big data is a term that describes the large volume of data, both structured and unstructured. The data set stores informationcan be analyzed and processed to provide insight to organization or company. Big data can reach up to petabytes and takes a lot of storage spaces.\\
 
-To speed up the data reduction process, Hadoop can be replaced with Spark. Spark is a distributed system, similar to Hadoop. However, what distinguishes Hadoop from Spark is the way to temporarily store data in reduction processes. Hadoop uses the disk as its temporary storage, while Spark uses memory as its temporary storage. Reading and writing process will be faster when using memory than using disks, Spark will be faster than Hadoop.\\
+Big data need to be reduce to save storage space. The Hierarchical Agglomerative Clustering algorithm can be used to reduce data. With the help of distributed systems such as Hadoop, reduction process can be done in parallel with less execution time. Unfortunately, Hadoop can still be said to be 'too slow' in the process of data reduction because temporary results from each stage will be stored on the disk until it is needed again at a later stage.\\
 
-The Hierarchical Agglomerative Clustering algorithm is implemented in the software. Experiment were done by comparing the execution time of the  Hierarchical Agglomerative Clustering algorithm when implemented on Hadoop and on Spark. The execution time is recorded for different data sizes.\\
+To speed up the data reduction process, Hadoop can be replaced with Spark. Spark is a distributed system, similar to Hadoop. However, what distinguishes Hadoop from Spark is the way Spark temporarily store data. Hadoop uses disk as its temporary storage, while Spark uses memory as its temporary storage. Readi and write process will be faster when using memory than using disks, Spark will be faster than Hadoop.\\
 
-Based on the experiment, Spark has a faster execution time compared to Hadoop. Spark has a faster execution time compared to Hadoop because data is stored and read from memory.\\
+The Hierarchical Agglomerative Clustering algorithm is implemented in the software. Experiment were done by comparing the execution time of the  Hierarchical Agglomerative Clustering algorithm when implemented on Hadoop and Spark. The execution time is recorded for 1GB, 2GB, 3GB, 5GB, 10GB, 15GB, dan 20GB of data.\\
+
+Based on the experiment, Spark has a faster execution time compared to Hadoop on a large number of partitions. Spark execution time decreases when the number of partitions is increased, whereas Hadoop execution time decreases when the number of partitions is increased. Spark best executiron time is still much better than Hadoop best execution time.\\
 } 
 %=============================================================================
 
@@ -264,9 +269,9 @@ Based on the experiment, Spark has a faster execution time compared to Hadoop. S
 % Petunjuk: hilangkan tanda << & >>, dan isi sesuai dengan data anda.
 %=============================================================================
 \kunciINA{
-Reduksi Data, \textit{Hierarchical Agglomerative Clustering}, 
-Spark}
-\kunciENG{Data Reduction, \textit{Hierarchical Agglomerative Clustering}, Spark}
+\textit{Big Data}, Reduksi Data, \textit{Hierarchical Agglomerative Clustering}, 
+Spark, Hadoop}
+\kunciENG{Big Data, Data Reduction, Hierarchical Agglomerative Clustering, Spark, Hadoop}
 %=============================================================================
 
 %_____________________________________________________________________________
