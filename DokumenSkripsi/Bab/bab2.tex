@@ -747,21 +747,20 @@ Berikut adalah Tabel~\ref{tab:actions} berisi daftar \textit{actions} yang umum 
 \section{Scala}
 
 
-Scala adalah sebuah bahasa pemrograman yang diciptakan oleh Martin Odersky yaitu seorang Profesor di Ecole Polytechnique Federale de Lausanne, sebuah kampus di Lausanne, Swiss. Kata Scala sendiri merupakan kependekan dari "Scalable Language". Karena Scala berjalan diatas Java Virtual Machine (JVM), Scala memiliki performa yang relatif cepat dan juga memungkinkan untuk menggabungkan kode di Scala dengan di Java. Termasuk library, framework dan tool yang ada di Java, bisa gunakan di Scala. Scala menggabungkan konsep Object Oriented Programming (OOP) yang dikenal di Java dengan konsep Functional Programming (FP). Adanya konsep FP inilah yang menjadikan Scala sangat ekspresif, nyaman dan menyenangkan untuk digunakan. \\
+Scala adalah sebuah bahasa pemrograman yang diciptakan oleh Martin Odersky, yaitu seorang Profesor di Ecole Polytechnique Federale de Lausanne, sebuah kampus di Lausanne, Swiss. Kata Scala sendiri merupakan singakatan dari "Scalable Language". Karena Scala berjalan di atas \textit{Java Virtual Machine} (JVM), Scala memiliki performa yang relatif cepat dan juga memungkinkan untuk menggabungkan kode di Scala dengan di Java. library, framework dan tool yang ada di Java dapat gunakan pada Scala. Scala menggabungkan konsep \textit{Object Oriented Programming} (OOP) yang dikenal di Java dengan konsep \textit{Functional Programming} (FP). Adanya konsep FP inilah yang menjadikan Scala sangat ekspresif, nyaman dan menyenangkan untuk digunakan. \\
 
-Perintah scalac digunakan untuk mengkompilasi program Scala dan akan menghasilkan beberapa file kelas di direktori saat ini. Salah satunya akan disebut file .class. Ini adalah bytecode yang akan berjalan di Java Virtual Machine (JVM) dengan menggunakan perintah scala. \\
+Perintah scalac digunakan untuk mengkompilasi program Scala dan akan menghasilkan beberapa file kelas di direktori saat ini. Salah satunya akan disebut file .class. Ini adalah \textit{bytecode} yang akan berjalan di JVM dengan menggunakan perintah scala. \\
 
-\subsection{Expressions}
+\subsection{\textit{Expressions}}
 
-suatu \textit{expressions} adalah pernyataan atau argumen yang dapat dikomputasi.
+\textit{Expressions} adalah pernyataan atau argumen yang dapat dikomputasi.
 
 \begin{verbatim}
 1 + 1
 2 + 2 
 \end{verbatim}
 
-
-\textit{Ekspressions} dapat dikembalikan dengan perintah println.
+\textit{Expressions} dapat dikembalikan dengan perintah \textit{println}.
 
 \begin{verbatim}
 println(1)
@@ -771,11 +770,11 @@ println("Hi!") // Hi!
 \end{verbatim}
 
 
-\textit{Ekspressions} atau pernyataan seperti diatas dapat disimpan dalam sebuah \textit{variable}. Ada dua jenis \textit{variable} di Scala yaitu val dan var. Setelah val diinisialisasi, val tidak dapat diisi kembali artinya isi dari val tidak dapat diubah.
+\textit{Expressions} atau pernyataan seperti di atas dapat disimpan dalam sebuah \textit{variable}. Terdapat dua jenis \textit{variable} di Scala yaitu \textit{val} dan \textit{var}. Setelah \textit{val} diinisialisasi, \textit{val} tidak dapat diisi kembali yang berarti nilai dari \textit{val} tidak dapat diubah.
 
 \begin{verbatim}
 val x = 2 + 5
-val x = 10 //tidak akan di compile 
+val x = 10 //tidak akan di-compile 
 val y = 7
 val coba:Int = 200 
 \end{verbatim}
@@ -790,7 +789,7 @@ x = 7
 println(x) // 7 
 \end{verbatim}
 
-Secara eksplisit kita bisa menyatakan tipe dari sebuah var atau val dengan cara:
+Secara eksplisit, \textit{developer} dapat menyatakan tipe dari sebuah \textit{var} atau \textit{val} dengan cara:
 
 \begin{verbatim}
 var x: Int = 1 + 1 // Int merupakan tipe dari variable x
@@ -798,9 +797,9 @@ val y: Long = 987654321 // Long merupakan tipe dari variable y
 val z: Char = 'a' // Char merupakan tipe dari variable z
 \end{verbatim}
 
-\subsection{Blocks}
+\subsection{\textit{Blocks}}
 
-Block digunakan untuk menggabungkan \textit{expressions}. Berikut adalah contoh blok:
+\textit{Block} digunakan untuk menggabungkan \textit{expressions}. Berikut adalah contoh \textit{blok}:
 
 \begin{verbatim}
 println({
@@ -809,9 +808,9 @@ println({
 }) // 3 
 \end{verbatim}
 
-\subsection{Loop dan Conditional}
+\subsection{\textit{Loop} dan \textit{Conditional}}
 
-loop adalah struktur pengulangan yang memungkinkan untuk menulis secara efisien suatu loop yang perlu dieksekusi sejumlah kali. Ada berbagai bentuk loop dalam Scala yang dijelaskan di bawah ini: 
+\textit{loop} merupakan struktur pengulangan yang memungkinkan menulis suatu \textit{loop} yang perlu dieksekusi sekian kali secara efisien. Terdapat berbagai bentuk \textit{loop} dalam Scala yang dijelaskan di bawah ini: 
 
 \begin{verbatim}
 for( var x <- Range ){
@@ -825,7 +824,7 @@ while (x < 10) {
 }
 \end{verbatim}
 
-Percabangan adalah pengujian sebuah kondisi. Jika kondisi yang diuji tersebut terpenuhi, maka program akan menjalankan pernyataan-pernyataan tertentu. Jika kondisi yang diuji salah, program akan menjalankan pernyataan yang lain. Berikut adalah contoh percabangan dalam bahasa Scala:
+\textit{COnditional} atau percabangan adalah pengujian sebuah kondisi. Jika kondisi yang diuji tersebut terpenuhi, maka program akan menjalankan pernyataan-pernyataan tertentu. Jika kondisi yang diuji salah, program akan menjalankan pernyataan yang lain. Berikut adalah contoh percabangan dalam bahasa Scala:
 
 \begin{verbatim}
 if( x < 20 ){
@@ -854,10 +853,10 @@ if( x == 1 ){
 
 \subsection{Functions}
 
-\textit{Functions} adalah \textit{expression} yang mempunyai atau menerima parameter. Sebuah function yang tidak memiliki nama disebut \textit{anonymous function}. Berikut adalah contoh \textit{anonymous function} dan \textit{function} biasa. Sebuah \textit{function} dapat memiliki lebih dari satu parameter.
+\textit{Functions} adalah \textit{expression} yang mempunyai atau menerima parameter. Sebuah \textit{function} yang tidak memiliki nama disebut \textit{anonymous function}. Berikut adalah contoh \textit{anonymous function} dan \textit{function} biasa. Sebuah \textit{function} dapat memiliki lebih dari satu parameter.
 
 \begin{verbatim}
-(x: Int) = > x + 1 // Anonymous function 
+(x: Int) => x + 1 // Anonymous function 
 
 val addOne = (x: Int) => x + 1 // function biasa 
 println(addOne(2)) // 3 
@@ -866,19 +865,19 @@ val add = (x: Int, y: Int) => x + y
 println(add(1, 2)) // 3 
 \end{verbatim}
 
-Pada sisi sebelah kiri tanda => adalah parameter-parameter sebuah \textit{function}, pada sisi  sebelah kanan merupakan expresi-expresi yang melibatkan parameter tersebut. \\
+Pada sisi sebelah kiri tanda "=>"" adalah parameter-parameter sebuah \textit{function}, sementara pada sisi  sebelah kanan merupakan ekspresi-ekspresi yang melibatkan parameter tersebut. \\
 
 
 \subsection{Methods}
 
-\textit{Method} sangat mirip dengan \textit{function}, tetapi \textit{method} memiliki beberapa perbedaan. Method harus di definisikan dengan kata kunci def, diikuti dengan nama \textit{method}, parameter-parameter dari \textit{method} tersebut, tipe kembalian \textit{method}, dan isi dari \textit{method} tersebut. 
+\textit{Method} sangat mirip dengan \textit{function}, tetapi \textit{method} memiliki beberapa perbedaan. Method harus didefinisikan dengan kata kunci \textit{def}, diikuti dengan nama \textit{method}, parameter-parameter dari \textit{method} tersebut, tipe kembalian \textit{method}, dan isi dari \textit{method} tersebut. 
 
 \begin{verbatim}
 def add(x: Int, y: Int): Int = x + y 
 println(add(1, 2)) // 3 
 \end{verbatim}
 
-Method bisa mempunyai lebih dari satu parameter. 
+\textit{Method} dapat mempunyai lebih dari satu parameter. 
 
 \begin{verbatim}
 def addThenMultiply(x: Int, y: Int)(multiplier: Int): Int = (x + y) * multiplier 
@@ -886,14 +885,14 @@ println(addThenMultiply(1, 2)(3)) // 9
 \end{verbatim}
 
 
-Method dapt tidak memiliki parameter.
+\textit{Method} dapat tidak memiliki parameter.
 
 \begin{verbatim}
 def name: String = System.getProperty("user.name")
 println("Hello, " + name + "!")
 \end{verbatim}
 
-Method berbeda dengan functions bisa memiliki \textit{multi-line expressions}
+\textit{Method} berbeda dengan \textit{functions} dapat memiliki \textit{multi-line expressions}
 
 \begin{verbatim}
 def getSquareString(input: Double): String = {
@@ -902,11 +901,11 @@ def getSquareString(input: Double): String = {
 }
 \end{verbatim}
 
-Expresi terakhir dari method menjadi nilai yang akan dikembalikan. Scala mempunyai \textit{keyword} return, tetapi sangat jarang digunakan.
+\textit{Expression} terakhir dari \textit{method} menjadi nilai yang akan dikembalikan. Scala mempunyai \textit{keyword} return, tetapi sangat jarang digunakan.
 
 \subsection{Class dan Object}
 
-\textit{Class} pada Scala didefinisikan dengan kata kunci \textit{class} diikuti dengan namanya dan terakhir adalah \textit{constructor} parameter.
+\textit{Class} pada Scala didefinisikan dengan kata kunci \textit{class} yang diikuti dengan namanya dan terakhir adalah \textit{constructor} parameter.
 
 \begin{verbatim}
 
@@ -920,13 +919,13 @@ class Greeter(prefix: String, suffix: String) {
 
 
 
-Berikut adalah cara mendeklarasi objek pada Scala
+Berikut adalah cara mendeklarasi sebuah objek pada Scala
 \begin{verbatim}
 val greeter = new Greeter("Hello, ", "!")
 greeter.greet("Scala developer")
 \end{verbatim}
 
-Objek dapat dianggap sebagai sesuatu instansi yang tunggal pada class itu sendiri. Untuk mendefinisikan objek, digunakan kata kunci \textit{Object}. 
+Objek dapat dianggap sebagai suatu instansi tunggal pada kelas itu sendiri. Kata kunci \textit{object} dapat digunakan untuk mendefinisikan sebuah objek.
 
 \begin{verbatim}
 object IdFactory {
@@ -945,9 +944,7 @@ println(newerId) // 2
 
 \end{verbatim}
 
-\textit{Main method} adalah sebuah pintu masuk dari sebuah program. \textit{Java Virtual Machine} membutuhkan sebuah \textit{main method} yang dinamakan \textit{main} dan menerima satu \textit{argument}, sebuah \textit{array} bertipe \textit{string}.\\
-
-Menggunakan \textit{object}, kita bisa mendefinisikan sebuah \textit{main method} seperti berikut: 
+\textit{Main method} adalah pintu masuk dari sebuah program. JVM membutuhkan sebuah \textit{main method} yang dinamakan \textit{main} dan menerima satu \textit{argument}, yaitu sebuah \textit{array} bertipe \textit{string}. Menggunakan \textit{object}, \textit{developer} dapat mendefinisikan sebuah \textit{main method} seperti berikut: 
 
 \begin{verbatim}
 object Main {
@@ -959,7 +956,7 @@ object Main {
 
 \subsection{Higher Order Function}
 
-Pada bahasa Scala ada yang disebut sebagai \textit{Higher Order Function}. \textit{Higher Order Function} merupakan sebuah fungsi yang menerima fungsi lainya sebagai \textit{parameter} dan mengembalikan sebuah fungsi sebagai hasilnya. Berikut adalah contoh-contoh \textit{Higher Order Function}:
+Pada bahasa Scala, terdapat sebuah fungsi yang disebut sebagai \textit{Higher Order Function}. \textit{higher order function} merupakan sebuah fungsi yang menerima fungsi lainya sebagai \textit{parameter} dan mengembalikan sebuah fungsi sebagai hasilnya. Berikut adalah contoh-contoh \textit{higher order function}:
 
 \begin{verbatim}
 
@@ -969,14 +966,14 @@ val newSalaries = salaries.map(doubleSalary) // List(40000, 140000, 80000)
 
 \end{verbatim}
 
-Kita bisa mempersingkat kode dengan sebuah fungsi \textit{anonymous} dan langsung dimasukan pada \textit{parameter}
+Kode program dapat dipersingkat dengan menggunakan fungsi \textit{anonymous} dan langsung dimasukkan pada \textit{parameter}.
 
 \begin{verbatim}
 val salaries = Seq(20000, 70000, 40000)
 val newSalaries = salaries.map(x => x * 2) // List(40000, 140000, 80000)
 \end{verbatim}
 
-Kita juga dapat memasukan \textit{method} pada \textit{parameter} \textit{higher order function}, \textit{compiler} Scala akan mengubah sebuah \textit{method} menjadi fungsi.
+\textit{Developer} juga dapat memasukkan \textit{method} pada \textit{parameter} \textit{higher order function}, \textit{compiler} Scala akan mengubah sebuah \textit{method} menjadi fungsi.
 
 
 \begin{verbatim}
@@ -984,12 +981,12 @@ case class WeeklyWeatherForecast(temperatures: Seq[Double]) {
 
     private def convertCtoF(temp: Double) = temp * 1.8 + 32 
 
-    def forecastInFahrenheit: Seq[Double] = temperatures.map(convertCtoF) } 
+    def forecastInFahrenheit: Seq[Double] = temperatures.map(convertCtoF) 
 }
 \end{verbatim}
 
 
-Salah satu alasan untuk menggunakan \textit{higher order function} adalah untuk mengurangi kode yang berlebihan. Katakanlah ada beberapa metode yang dapat menaikkan gaji seseorang dengan berbagai faktor. Tanpa membuat \textit{higher order function}, kode akan terlihat seperti berikut:
+Salah satu alasan untuk menggunakan \textit{higher order function} adalah untuk mengurangi kode yang berlebihan. Misalkan terdapat beberapa metode yang dapat menaikkan gaji seseorang dengan berbagai faktor. Tanpa membuat \textit{higher order function}, kode akan terlihat seperti berikut:
 
 \begin{verbatim}
 
@@ -1006,7 +1003,7 @@ object SalaryRaiser {
 }
 \end{verbatim}
 
-Perhatikan bahwa masing-masing dari ketiga method hanya berbeda pada faktor perkalian. Untuk menyederhanakan, kita dapat mengeluarkan kode yang redundan menjadi \textit{higher order function} seperti:
+Perhatikan bahwa masing-masing dari ketiga \textit{method} hanya berbeda pada faktor perkalian. Untuk menyederhanakan kode tersebut, \textit{developer} dapat mengeluarkan kode yang redundan menjadi \textit{higher order function} seperti:
 
 \begin{verbatim}
 object SalaryRaiser {

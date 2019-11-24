@@ -1,20 +1,20 @@
 \chapter{Analisis dan Perancangan}
 \label{chap:Analisis dan Perancangan}
 
-Pada bab ini, penulis akan menjelaskan apa saja yang dilakukan dalam pengembangan \textit{Agglomerative Hierarchical Clustering} untuk Spark. Pengembangan dilakukan untuk mencapai tujuan yaitu mendapatkan pola dari dataset yang diolah. Pola yang ingin didapatkan meliputi perhitungan rata-rata, nilai maksimum, nilai minimum dan nilai standar deviasi dari setiap atribut yang ada pada data. Selain itu, perlu didapatkan juga jumlah anggota pada setiap \textit{cluster} yang dihasilkan dari algoritma \textit{Hierarchical Agglomerative Clustering}.
+Pada bab ini, akan dijelaskan hal-hal yang dilakukan dalam pengembangan \textit{Agglomerative Hierarchical Clustering} untuk Spark. Pengembangan dilakukan untuk mencapai tujuan yaitu mendapatkan pola dari dataset yang diolah. Pola yang ingin didapatkan meliputi perhitungan rata-rata, nilai maksimum, nilai minimum dan nilai standar deviasi dari setiap atribut yang ada pada data. Selain itu, perlu didapatkan juga jumlah anggota pada setiap \textit{cluster} yang dihasilkan dari algoritma \textit{Hierarchical Agglomerative Clustering}.
 
 
 \section{Analisis Masalah}
 
-Pada bagian ini akan dijelaskan masalah dari penelitian ini, analisis algoritma \textit{Hierarchical Agglomerative Clustering} dan analisis masukan. 
+Bagian ini menjelaskan masalah dari penelitian ini, analisis algoritma \textit{Hierarchical Agglomerative Clustering} dan analisis masukan. 
 
 \subsection{Identifikasi Masalah}
 
 Dalam bidang \textit{big data}, volume data yang sangat besar harus disimpan dalam tempat penyimpanan yang sangat besar. Volume data \textit{big data} dapat mencapai \textit{peta bytes}. Volume yang terlalu besar akan meningkatkan biaya dan menghabiskan tempat penyimpanan data. Volume data perlu direduksi agar menghemat tempat dan biaya.\\ 
 
-Teknologi Hadoop MapReduce dan algoritma \textit{Agglomerative Hierarchical Clustering} dapat digabungkan sebagai solusi untuk mereduksi data. Algoritma \textit{Agglomerative} dapat mereduksi data dengan mengambil pola-pola dari \textit{clusters} yang dibentuk. Sistem terdistribusi Hadoop membantu dalam proses membagikan dan memecah tugas agar dapat dikerjakan secara paralel.  Dengan begitu, proses reduksi data dengan algoritma \textit{Agglomerative} akan lebih cepat. \\
+Hadoop MapReduce dan algoritma \textit{Agglomerative Hierarchical Clustering} dapat digabungkan sebagai solusi untuk mereduksi data. Algoritma \textit{Agglomerative} dapat mereduksi data dengan mengambil pola-pola dari \textit{clusters} yang dibentuk. Sistem terdistribusi Hadoop membantu dalam proses membagikan dan memecah tugas agar dapat dikerjakan secara paralel.  Dengan begitu, proses reduksi data dengan algoritma \textit{Agglomerative} menjadi lebih cepat. \\
 
-Tetapi teknologi Hadoop masih terlalu lambat dalam mereduksi data. Hal ini disebabkan karena Hadoop banyak melakukan penulisan dan pembacaan kepada disk. Proses \textit{disk} I/O pada Hadoop sangat tinggi dan menyebabkan algoritma \textit{Agglomerative} berjalan sangat lambat pada Hadoop. Pada setiap tahap Hadoop akan menuliskan hasilnya kepada \textit{disk} dan akan dibaca kembali oleh tahap selanjutnya dari \textit{disk} seperti pada Gambar  ~\ref{fig:mapreducediagram}.\\
+Tetapi Hadoop masih terlalu lambat dalam mereduksi data. Hal ini disebabkan karena Hadoop banyak melakukan penulisan dan pembacaan kepada disk. Proses \textit{disk} I/O pada Hadoop sangat tinggi dan menyebabkan algoritma \textit{Agglomerative} berjalan sangat lambat pada Hadoop. Pada setiap tahap, Hadoop akan menuliskan hasilnya kepada \textit{disk} dan akan dibaca kembali oleh tahap selanjutnya dari \textit{disk} seperti pada Gambar~\ref{fig:mapreducediagram}.\\
 
 \begin{figure}[H]
     \centering  
@@ -24,7 +24,7 @@ Tetapi teknologi Hadoop masih terlalu lambat dalam mereduksi data. Hal ini diseb
 \end{figure}
 
 
-Solusinya adalah menggabungkan teknologi terdistribusi lainnya dengan  algoritma \textit{Agglomerative} untuk mereduksi data. Spark, sistem terdistribusi yang menyimpan data pada memori dapat menggantikan Hadoop MapReduce. Kecepatan memori lebih cepat dibanding disk merupakan salah satu faktor mengapa Spark akan memproses data dengan kecepatan yang lebih tinggi.  Pembacaan han penulisan akan dilakukan kepada memori. Gambar ~\ref{fig:memorydiagram} adalah contoh ilustrasi tahap proses data di Spark. 
+Solusinya adalah menggabungkan sistem terdistribusi lainnya dengan  algoritma \textit{Agglomerative} untuk mereduksi data. Spark yang dapat menyimpan data pada memori dapat menggantikan Hadoop MapReduce. Kecepatan memori lebih cepat dibanding \textit{disk} merupakan salah satu faktor mengapa Spark akan memproses data dengan kecepatan yang lebih tinggi.  Pembacaan dan penulisan akan dilakukan kepada memori. Gambar~\ref{fig:memorydiagram} adalah contoh ilustrasi tahap proses data di Spark. 
 	
 \begin{figure}[H]
     \centering  
@@ -34,9 +34,9 @@ Solusinya adalah menggabungkan teknologi terdistribusi lainnya dengan  algoritma
 \end{figure}
 
  
-\subsection{Analisis Hierarchical Agglomerative Clustering MapReduce}
+\subsection{Analisis \textit{Hierarchical Agglomerative Clustering} MapReduce}
 
-Sebelum melakukan perancangan, penulis terlebih dahulu mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pada Hadoop. Algoritma \textit{Hierarchical Agglomerative Clustering}  pada MapReduce dibagi menjadi dua bagian. Bagian pertama terkait tahap \textit{map} dan bagian kedua terkait tahap \textit{reduce}. Tahap map bertujuan untuk membagi rata data menjadi beberapa partisi agar setiap \textit{reducer} mendapatkan pekerjaan yang hampir rata dengan \textit{reducer} yang lainya. Tahap \textit{map} akan dijelaskan dengan \textit{pseudocode} berikut ini \ref{alg:mapper}:\\
+Sebelum melakukan perancangan, penulis terlebih dahulu mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pada Hadoop. Algoritma \textit{Hierarchical Agglomerative Clustering}  pada MapReduce dibagi menjadi dua bagian. Bagian pertama terkait tahap \textit{map} dan bagian kedua terkait tahap \textit{reduce}. Tahap \textit{map} bertujuan untuk membagi rata data menjadi beberapa partisi agar setiap \textit{reducer} mendapatkan pekerjaan yang hampir rata dengan \textit{reducer} yang lainya. Tahap \textit{map} akan dijelaskan pada \textit{pseudocode} berikut ini \ref{alg:mapper}:\\
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
@@ -105,7 +105,7 @@ Tahap \textit{reduce} bertujuan untuk mereduksi data. Pada tahap ini dendrogram 
 
 \subsection{Analisis Masukan dan Keluaran}
 
-Dalam melakukan perancangan perlu diketahui dulu kebutuhan perangkat lunak. Perangkat lunak yang dirancang harus dapat menangani \textit{input} yang diberikan seperti contoh dibawah. Setiap baris mewakili sebuah objek beserta atributnya. Atribut dipisahkan dengan tanda koma. Setiap atribut merupakan bilangan desimal. Setiap objek dapat memiliki lebih dari satu atribut.
+Dalam melakukan perancangan perlu diketahui terlebih dahulu kebutuhan perangkat lunak. Perangkat lunak yang dirancang harus dapat menangani masukkan yang diberikan seperti contoh di bawah. Setiap baris mewakili sebuah objek beserta atributnya. Atribut dipisahkan dengan tanda koma. Setiap atribut merupakan bilangan desimal. Setiap objek dapat memiliki lebih dari satu atribut.
 
 \begin{verbatim}
 97.92268076905681,95.67804892782392
@@ -144,7 +144,7 @@ Selain itu, perangkat lunak harus dapat menghasilkan pola seperti berikut:
     \label{fig:flowc} 
 \end{figure}
 
-Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur perangkat lunak. Berikut adalah penjelasan alur perangkat lunak:
+Diagram alur pada Gambar ~\ref{fig:flowc} digunakan untuk menjelaskan alur perangkat lunak. Berikut adalah penjelasan alur perangkat lunak:
 
 \begin{enumerate}
 
@@ -177,7 +177,7 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
 \end{figure}
 
 
-\item Setelah itu, akan terjadi pengelompokkan berdasarkan \textit{key} yang sama. AKan terjadi perpindahan data dari satu \textit{worker} kepada \textit{worker} lainya. Objek \textit{Node} dengan \textit{key} yang sama akan berada pada memori \textit{worker} yang sama seperti pada Gambar~\ref{fig:rddsort}.
+\item Setelah itu, akan terjadi pengelompokkan berdasarkan \textit{key} yang sama. Akan terjadi perpindahan data dari satu \textit{worker} kepada \textit{worker} lainya. Objek \textit{Node} dengan \textit{key} yang sama akan berada pada memori \textit{worker} yang sama seperti pada Gambar~\ref{fig:rddsort}.
 
 \begin{figure}[H]
     \centering  
@@ -186,7 +186,7 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
     \label{fig:rddsort} 
 \end{figure}
 
-\item Setelah data dikelompokan berdasarkan \textit{key}, objek \textit{Node} akan dimasukan kepada sebuah \textit{list} sampai batas objek maksimum yang ditentukan oleh pengguna. Selanjutnya metode \textit{agglomerative clustering} akan dipanggil seperti pada Gambar \ref{fig:reducespark}. Metode ini akan membangun sebuah \textit{dendrogram} menggunakan algoritma HAC. \textit{Dendrogram} akan dipotong untuk menghasilkan \textit{clusters}. Setiap cluster akan dicari polanya, pola ini akan dikembalikan sebagai hasilnya. Langkah ini akan diulangi sampai seluruh objek pada partisi telah diproses.
+\item Setelah data dikelompokkan berdasarkan \textit{key}, objek \textit{Node} akan dimasukkan kepada sebuah \textit{list} sampai batas objek maksimum yang ditentukan oleh pengguna. Selanjutnya metode \textit{agglomerative clustering} akan dipanggil seperti pada Gambar \ref{fig:reducespark}. Metode ini akan membangun sebuah \textit{dendrogram} menggunakan algoritma HAC. \textit{Dendrogram} akan dipotong untuk menghasilkan \textit{cluster}-\textit{cluster}. Setiap \textit{cluster} akan dicari polanya. Pola akan dikembalikan sebagai hasilnya. Langkah ini akan diulangi sampai seluruh objek pada partisi telah diproses.
 
 \begin{figure}[H]
     \centering  
@@ -207,7 +207,7 @@ Diagram alur diatas (Gambar ~\ref{fig:flowc}) digunakan untuk menjelaskan alur p
 
 \end{enumerate}
 
-\subsection{Analisis Hierarchical Agglomerative Clustering untuk Spark}
+\subsection{Analisis \textit{Hierarchical Agglomerative Clustering} pada Spark}
 
 Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pada MapReduce, \textit{format} masukan yang harus diproses dan keluaran yang harus dihasilkan, berikut adalah penjelasan \textit{pseudocode} algoritma \textit{map} dan \textit{reduce} untuk Spark:\\
 
@@ -532,12 +532,12 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 	
 \end{algorithm}
  
-Algoritma \textit{Map} ~\ref{alg:map} ini bertujuan untuk melakukan \textit{parsing} terhadap masukan yang diberikan. Masukan yang diberikan berupa RDD[String]. Setiap elemen pada RDD[String] akan di-\textit{parsing} menjad objek \textit{Node} dan dipasangkan dengan \textit{key} yaitu bilangan acak antara 1 sampai n. Bilangan n merupakan jumlah partisi yang diberikan oleg pengguna. Pertama, elemen pada RDD[String] yang berupa \textit{String} akan di pecah berdasarkan \textit{delimeter} "," dan di konversi menjadi bilangan pecahan. Hasilnya merupakan \textit{array} bertipe \textit{double} yang menjadi atribut objek \textit{Node}. Kemudian akan diberikan bilangan acak antara 1 sampai n. Bilangan tersebut akan dipasangkan kepada objek \textit{Node}. Pasangan <\textit{key},\textit{Node}> kemudian akan tambahkan kepada RDD[<\textit{key},\textit{Node}>]. RDD[<\textit{key},\textit{Node}>] dikembalikan sebagai hasil dan menjadi masukan untuk tahap \textit{reduce}.\\
+Algoritma \textit{Map} ~\ref{alg:map} ini bertujuan untuk melakukan \textit{parsing} terhadap masukan yang diberikan. Masukan yang diberikan berupa RDD[String]. Setiap elemen pada RDD[String] akan di-\textit{parsing} menjadi objek \textit{Node} dan dipasangkan dengan \textit{key}, yaitu bilangan acak antara 1 sampai n. Bilangan n merupakan jumlah partisi yang diberikan oleh pengguna. Pertama, elemen pada RDD[String] yang berupa \textit{String} akan dipecah berdasarkan \textit{delimeter} "," dan dikonversi menjadi bilangan pecahan. Hasilnya merupakan \textit{array} bertipe \textit{double} yang menjadi atribut objek \textit{Node}. Kemudian akan diberikan bilangan acak antara 1 sampai n. Bilangan tersebut akan dipasangkan kepada objek \textit{Node}. Pasangan <\textit{key},\textit{Node}> kemudian akan tambahkan kepada RDD[<\textit{key},\textit{Node}>]. RDD[<\textit{key},\textit{Node}>] dikembalikan sebagai hasil dan menjadi masukan untuk tahap \textit{reduce}.\\
 
-Algoritma \textit{Reduce} ~\ref{alg:reduce} bertujuan untuk membangun dendrogram dan mengembalikan pola-pola bertipe RDD[Pattern] sebagai hasilnya. Pertama-tama nilai $MX$, $distType$, $co$ akan di \textit{broadcast} agar setiap \textit{worker} memiliki nilai tersebut. \textit{Variable} \textit{objectList} dibuat untuk menampung \textit{Nodes} yang akan dibangun menjadi \textit{dendrogram}. \textit{Node} pada RDD[<\textit{key},\textit{Node}] akan ditambahkan kepada objectList sampai batas jumlah \textit{Node} pada objectList sama dengan nilai $MX$. Kemudian, fungsi \textit{generate\_dendrogram(objectList, distType)} akan dipanggil untuk membangun \textit{dendrogram}. Hasil dari fungsi tersebut yaitu sebuah \textit{dendrogram} dijadikan masukan untuk fungsi \textit{compute\_pattern(dendrogram,co)}. Fungsi ini untuk memotong \textit{dendrogram} menjadi \textit{clusters} dan mencari pola dari setiap \textit{cluster}. Pola atau \textit{Pattern} akan ditambahkan kepada \textit{variable pattern} (RDD[\textit{Pattern}]) yang akan dikembalikan sebagi hasil. \textit{Variable isProcessed} pada baris 16 untuk memastikan bahwa setiap elemen pada \textit{objectList} sudah di proses. \\
+Algoritma~\ref{alg:reduce} mengenai reduce bertujuan untuk membangun \textit{dendrogram} dan mengembalikan pola-pola bertipe RDD[Pattern] sebagai hasilnya. Pertama-tama nilai $MX$, $distType$, $co$ akan di-\textit{broadcast} agar setiap \textit{worker} memiliki nilai tersebut. \textit{Variable} \textit{objectList} dibuat untuk menampung \textit{Nodes} yang akan dibangun menjadi \textit{dendrogram}. \textit{Node} pada RDD[<\textit{key},\textit{Node}] akan ditambahkan kepada objectList sampai batas jumlah \textit{Node} pada objectList sama dengan nilai $MX$. Kemudian, fungsi \textit{generate\_dendrogram(objectList, distType)} akan dipanggil untuk membangun \textit{dendrogram}. Hasil dari fungsi tersebut yaitu sebuah \textit{dendrogram} yang dijadikan sebagai masukan untuk fungsi \textit{compute\_pattern(dendrogram,co)}. Fungsi ini memotong \textit{dendrogram} menjadi \textit{cluster}-\textit{cluster} dan mencari pola dari setiap \textit{cluster}. Pola atau \textit{Pattern} akan ditambahkan kepada \textit{variable pattern} (RDD[\textit{Pattern}]) yang akan dikembalikan sebagi hasil. \textit{Variable isProcessed} pada baris 16 untuk memastikan bahwa setiap elemen pada \textit{objectList} sudah diproses. \\
 
 
-Fungsi \textit{generate}\_\textit{dendrogram} pada algoritma ~\ref{alg:reduce} digunakan untuk membangun \textit{dendrogram}. Fungsi ini akan menerima \textit{objectList} sebagai masukan. Pertama-tama \textit{array} distanceMatrix harus diinisialisasi dan dihitung jarak antara objeknya menggunakan \textit{distType} yang ditentukan. Kemudian, \textit{array} \textit{dendrogram} diisi dengan objek-objek pada \textit{objectList}. Untuk membangun dendrogram, gabungkan objek yang memiliki nilai terkecil pada \textit{distanceMatrix} seperti pada Gambar ~\ref{fig:hac}. Setelah menggabungkan dua buah objek, objek pada dendrogram akan berkurang 1 dan \textit{distranceMatrix} harus dihitung ulang berdasarkan \textit{distType}.
+Fungsi \textit{generate}\_\textit{dendrogram} pada Algoritma~\ref{alg:reduce} digunakan untuk membangun \textit{dendrogram}. Fungsi ini akan menerima \textit{objectList} sebagai masukan. Pertama-tama \textit{array} distanceMatrix harus diinisialisasi dan dihitung jarak antara objeknya menggunakan \textit{distType} yang ditentukan. Kemudian, \textit{array} \textit{dendrogram} diisi dengan objek-objek pada \textit{objectList}. Untuk membangun \textit{dendrogram}, gabungkan objek yang memiliki nilai terkecil pada \textit{distanceMatrix} seperti pada Gambar ~\ref{fig:hac}. Setelah menggabungkan dua buah objek, objek pada \textit{dendrogram} akan berkurang satu dan \textit{distranceMatrix} harus dihitung ulang berdasarkan \textit{distType}.
 
 \begin{figure}[H]
     \centering  
@@ -546,11 +546,11 @@ Fungsi \textit{generate}\_\textit{dendrogram} pada algoritma ~\ref{alg:reduce} d
     \label{fig:hac}
 \end{figure}
 
-Fungsi \textit{findMinDist} pada algoritma ~\ref{alg:reduce} digunakan untuk mencari jarak antara \textit{cluster} berdasarkan \textit{distType} yang dipilih. Setiap anggota pada \textit{cluster} akan dibandingkan dengan anggota di \textit{cluster} lainnya. Berdasarkan \textit{distType} maka akan dicari nilai minimum, maksimum, atau jarak antara \textit{centroid}-nya.\\
+Fungsi \textit{findMinDist} pada Algoritma~\ref{alg:reduce} digunakan untuk mencari jarak antara \textit{cluster} berdasarkan \textit{distType} yang dipilih. Setiap anggota pada \textit{cluster} akan dibandingkan dengan anggota di \textit{cluster} lainnya. Berdasarkan \textit{distType} maka akan dicari nilai minimum, maksimum, atau jarak antara \textit{centroid}-nya.\\
 
-Fungsi \textit{recalculateMatrix} pada algoritma ~\ref{alg:reduce} digunakan menghitung ulang jarak antara \textit{cluster} baru dengan \textit{cluster} lainnya. \\
+Fungsi \textit{recalculateMatrix} pada Algoritma~\ref{alg:reduce} digunakan menghitung ulang jarak antara \textit{cluster} baru dengan \textit{cluster} lainnya. \textit{Cluster} baru akan dihitung jaraknya berdasarkan \textit{distType} yang dipilih. Bila \textit{distType} yang dipilih adalah \textit{Single Linkage} maka jarak minimum dari perbandingan anggota dari kedua \textit{cluster} akan diambil sebagai hasilnya.\\
 
-Fungsi \textit{compute}\_\textit{pattern} pada algoritma ~\ref{alg:reduce} digunakan untuk mendapatkan pola dari \textit{cluster}. Fungsi ini menerima hasil \textit{dendrogram} dari fungsi \textit{generate}\_\textit{dendrogram}, berserta nilai \textit{cut-off distance} sebagai masukannya. Pertama-tama \textit{dendrogram} yang diwakili dengan struktur \textit{tree} akan ditelusuri di setiap tingkatnya. Jarak pada setiap tingkat akan di cek. Bila jarak sudah kurang dari jarak hasil perkalian $co$ dengan tinggi \textit{dendrogram}, maka \textit{dendrogram} akan dipotong untuk menghasilkan potongan \textit{clusters}. Setelah itu, pola dari setiap cluster akan dicari. Pola didapatkan dengan mencari nilai minimum, maksimum, rata-rata dan standard deviasi dari setiap attribute pada \textit{cluster}. Pola akan dikembalikan sebagai hasil.
+Fungsi \textit{compute}\_\textit{pattern} pada Algoritma ~\ref{alg:reduce} digunakan untuk mendapatkan pola dari \textit{cluster}. Fungsi ini menerima hasil \textit{dendrogram} dari fungsi \textit{generate}\_\textit{dendrogram}, berserta nilai \textit{cut-off distance} sebagai masukannya. Pertama-tama \textit{dendrogram} yang diwakili dengan struktur \textit{tree} akan ditelusuri di setiap tingkatnya. Jarak pada setiap tingkat akan di cek. Bila jarak sudah kurang dari jarak hasil perkalian $co$ dengan tinggi \textit{dendrogram}, maka \textit{dendrogram} akan dipotong untuk menghasilkan potongan \textit{clusters}. Setelah itu, pola dari setiap cluster akan dicari. Pola didapatkan dengan mencari nilai minimum, maksimum, rata-rata dan standard deviasi dari setiap attribute pada \textit{cluster}. Pola akan dikembalikan sebagai hasil.
 
 \begin{figure}[H]
     \centering  
@@ -564,12 +564,12 @@ Fungsi \textit{compute}\_\textit{pattern} pada algoritma ~\ref{alg:reduce} digun
 
 \section{Perancangan Perangkat Lunak}
 
-Pada bagian ini, akan dijelaskan perancangan perangkat lunak.  Perancangan termasuk diagram \textit{use case}, skenario, diagram kelas, dan rancangan antarmuka. 
+Bagian ini menjelaskan perancangan perangkat lunak.  Perancangan termasuk diagram \textit{use case}, skenario, diagram kelas, dan rancangan antarmuka. 
 
 
-\subsection{Diagram Use Case dan Skenario}
+\subsection{Diagram \textit{Use Case} dan Skenario}
 
-Diagram \textit{use case} merupakan sebuah pemodelan untuk perilaku dari perangkat lunak yang akan dibuat. Diagram \textit{use case} digunakan untuk mengetahui fungsi apa saja yang ada dalam perangkat lunak. Fungsi-fungsi dari perangkat lunak akan dioperasikan oleh satu pengguna. Cara kerja dan perilaku dari perangkat lunak akan dijelaskan dalam bentuk diagram \textit{use case}. Diagram \textit{use case} dapat dilihat pada Gambar ~\ref{fig:usecase}.
+Diagram \textit{use case} merupakan sebuah pemodelan untuk perilaku dari perangkat lunak yang akan dibuat. Diagram \textit{use case} digunakan untuk mengetahui fungsi apa saja yang ada dalam perangkat lunak. Fungsi-fungsi dari perangkat lunak akan dioperasikan oleh satu pengguna. Cara kerja dan perilaku dari perangkat lunak dijelaskan dalam bentuk diagram \textit{use case} yang dapat dilihat pada Gambar ~\ref{fig:usecase}.
 
 \begin{figure}[H]
     \centering  
@@ -578,7 +578,7 @@ Diagram \textit{use case} merupakan sebuah pemodelan untuk perilaku dari perangk
     \label{fig:usecase} 
 \end{figure}
 
-Berdasarkan gambar diagram \textit{use case} diatas, berikut adalah skenario yang ada:
+Berdasarkan gambar diagram \textit{use case} di atas, berikut merupakan beberapa skenario yang dapat terbentuk:
 
 \begin{enumerate}
 
@@ -587,7 +587,7 @@ Berdasarkan gambar diagram \textit{use case} diatas, berikut adalah skenario yan
 \begin{itemize}
 \item Aktor: Pengguna
 
-\item Pre-kondisi: data yang akan diolah dimasukan kepada HDFS.
+\item Pre-kondisi: data yang akan diolah dimasukkan kepada HDFS.
 
 \item Pra-kondisi: hasil reduksi disimpan pada HDFS.
 
@@ -643,7 +643,7 @@ Berdasarkan gambar diagram \textit{use case} diatas, berikut adalah skenario yan
 
 \subsection{Diagram Kelas}
 
-Pada bagian ini akan dijelaskan diagram kelas dari perangkat lunak. Diagram kelas dapat dilihat pada Gambar ~\ref{fig:classdiagram}.
+Berdasarkan hasil analisis perangkat lunak, dapat dirancang sebuah diagram kelas yang dapat dilihat pada Gambar~\ref{fig:classdiagram}.
 
 \begin{figure}[H]
     \centering  
@@ -652,7 +652,7 @@ Pada bagian ini akan dijelaskan diagram kelas dari perangkat lunak. Diagram kela
     \label{fig:classdiagram} 
 \end{figure}
 
-Berdasarkan Gambar ~\ref{fig:classdiagram}, berikut ini adalah penjelasan kelas-kelas yang digunakan:
+Berikut merupakan penjelasan detil mengenai kelas-kelas yang terdapat pada diagram kelas di atas:
 
 \begin{itemize}
 
@@ -687,7 +687,7 @@ Berikut adalah penjelasan dari ketiga kelas pada Gambar ~\ref{fig:maindiagram}:
     \label{fig:datareducer} 
 \end{figure}
 
-Kelas \textit{DataReducer} dirancang untuk memproses data. Proses reduksi secara parallel dilakukan pada kelas ini. Proses pemuatan dan penyimpanan data dilakukan pada kelas ini. Berdasarkan Gambar ~\ref{fig:datareducer}, berikut adalah penjelasan dari \textit{methods} pada kelas DataReducer:
+Kelas \textit{DataReducer} dirancang untuk memproses data. Proses reduksi secara paralel dilakukan pada kelas ini. Proses pemuatan dan penyimpanan data dilakukan pada kelas ini. Berdasarkan Gambar ~\ref{fig:datareducer}, berikut adalah penjelasan dari \textit{methods} pada kelas DataReducer:
 
 \begin{itemize}
 
@@ -742,15 +742,15 @@ Kelas \textit{Dendrogram} dirancang untuk memproses data dan membangun \textit{d
     \label{fig:clusterdiagram} 
 \end{figure}
 
-Kelas \textit{Cluster} dirancang untuk mengolah \textit{cluster} untuk menghasilkan pola dengan memotong \textit{cluster}. Berdasarkan Gambar ~\ref{fig:clusterdiagram}, berikut adalah penjelasan \textit{methods} pada kelas \textit{Cluster}:
+Kelas \textit{Cluster} dirancang untuk mengolah \textit{cluster} dan menghasilkan pola dengan memotong \textit{cluster}. Berdasarkan Gambar ~\ref{fig:clusterdiagram}, berikut adalah penjelasan \textit{methods} pada kelas \textit{Cluster}:
 
 \begin{itemize}
 
-\item \textit{formClusterFromDendrogram}: method ini bertugas untuk memotong \textit{dendrogram} menjadi beberapa \textit{cluster}.
+\item \textit{formClusterFromDendrogram}: \textit{method} ini bertugas untuk memotong \textit{dendrogram} menjadi beberapa \textit{cluster}.
 
-\item \textit{computePattern}: method untuk mengolah potongan-potongan \textit{cluster} menjadi pola dengan memanggil \textit{method} processCluster.
+\item \textit{computePattern}: \textit{method} untuk mengolah potongan-potongan \textit{cluster} menjadi pola dengan memanggil \textit{method} processCluster.
 
-\item \textit{processCluster}: method untuk memproses \textit{cluster} dan membuat pola berdasarkan anggota-anggota pada \textit{cluster}.\\
+\item \textit{processCluster}: \textit{method} untuk memproses \textit{cluster} dan membuat pola berdasarkan anggota-anggota pada \textit{cluster}.\\
  
 \end{itemize}
 
@@ -790,7 +790,7 @@ Kelas \textit{Patern} dirancang untuk merepresentasikan pola pada \textit{cluste
     \label{fig:nodediagram} 
 \end{figure}
 
-Kelas \textit{Node} digunakan untuk membentuk pohon yang merepresentasikan \textit{dendrogram}. Selain itu kelas ini digunakan untuk merepresentasikan anggota pada \textit{cluster}.  Berdasarkan Gambar ~\ref{fig:nodediagram}, berikut adalah penjelasan \textit{methods} pada kelas \textit{Node}:
+Kelas \textit{Node} digunakan untuk membentuk pohon yang merepresentasikan \textit{dendrogram}. Selain itu, kelas ini digunakan untuk merepresentasikan anggota pada \textit{cluster}.  Berdasarkan Gambar ~\ref{fig:nodediagram}, berikut adalah penjelasan \textit{methods} pada kelas \textit{Node}:
 
 \begin{itemize}
 
@@ -818,11 +818,11 @@ Kelas \textit{Node} digunakan untuk membentuk pohon yang merepresentasikan \text
 
 \subsection{Rancangan Antarmuka}
 
-Antarmuka dirancang untuk mempermudah pengguna dalam menjalankan program dan mengambil hasil data yang telah direduksi. Ada dua buah menu utama yang dapat dipilih oleh pengguna, menu Jalankan Program dan Lihat Pola. Menu Jalankan Program digunakan untuk menjalankan aplikasi dan menu Lihat Pola digunakan untuk mengunduh dan melihat hasil reduksi. Berikut adalah penjelasan rancangan antaramuka:
+Antarmuka dirancang untuk mempermudah pengguna dalam menjalankan program dan mengambil hasil data yang telah direduksi. Terdapat dua buah menu utama yang dapat dipilih oleh pengguna, menu Jalankan Program dan Lihat Pola. Menu Jalankan Program digunakan untuk menjalankan aplikasi dan menu Lihat Pola digunakan untuk mengunduh dan melihat hasil reduksi. Berikut adalah penjelasan rancangan antaramuka:
 
 \begin{enumerate}
 
-\item Perancangan halaman Jalankan Program untuk mempermudah penggunan menjalankan aplikasi. Pada halaman ini, disediakan \textit{form} bereserta \textit{input} yang dibutuhkan untuk menjalankan aplikasi. Gambar rancangan antarmuka dapat dilihat pada Gambar ~\ref{fig:antarmuka1}
+\item Perancangan halaman Jalankan Program untuk mempermudah pengguna menjalankan aplikasi. Pada halaman ini, disediakan \textit{form} bereserta \textit{input} yang dibutuhkan untuk menjalankan aplikasi. Gambar rancangan antarmuka dapat dilihat pada Gambar ~\ref{fig:antarmuka1}
 
 \begin{figure}[H]
     \centering  
@@ -863,7 +863,7 @@ Berdasarkan Gambar ~\ref{fig:antarmuka1}, berikut adalah penjelasan \textit{inpu
 \end{figure}
 
 
-\item Perancangan halaman antarmuka menu Lihat Pola (Gambar ~\ref{fig:antarmuka2}) digunakan untuk membuka diretori dimana data disimpan pada HDFS. Ketika pengguna memasukan direktori, pengguna akan dipindahkan ke dalaman baru (Gambar ~\ref{fig:antarmuka3}) dan sebuah halaman (Gambar ~\ref{fig:hdfsweb}) akan dibuka untuk menampilkan data yang bisa diunduh. Ketika pengguna menekan salah satu nama partisi pada halaman berikutnya (\ref{fig:antarmuka3}), pengguna dapat melihat pola-pola dari partisi tersebut di halaman (\ref{fig:antarmuka4}).  
+\item Perancangan halaman antarmuka menu Lihat Pola (Gambar ~\ref{fig:antarmuka2}) digunakan untuk membuka diretori di mana data disimpan pada HDFS. Ketika pengguna memasukkan direktori, pengguna akan dipindahkan ke halaman baru (Gambar ~\ref{fig:antarmuka3}) dan sebuah halaman (Gambar ~\ref{fig:hdfsweb}) akan dibuka untuk menampilkan data yang dapat diunduh. Ketika pengguna menekan salah satu nama partisi pada halaman berikutnya (Gambar \ref{fig:antarmuka3}), pengguna dapat melihat pola-pola dari partisi tersebut di halaman (Gambar \ref{fig:antarmuka4}).  
 
 \begin{figure}[H]
     \centering  
