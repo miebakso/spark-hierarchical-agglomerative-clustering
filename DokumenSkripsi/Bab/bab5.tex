@@ -5,7 +5,7 @@
 
 \subsection{Lingkungan Perangkat Kerat}
 
-Perangkat keras yang digunakan dalam membangun perangkat lunak adalah sebuah PC dengan spesifikasi berikut:
+Perangkat keras yang digunakan dalam membangun perangkat lunak reduksi data adalah sebuah PC dengan spesifikasi berikut:
 
 \begin{itemize}
 \item \textit{Processor}: Intel i7 4790K @4.00 GHz
@@ -20,7 +20,7 @@ Perangkat keras yang digunakan dalam membangun perangkat lunak adalah sebuah PC 
 
 \subsection{Lingkungan Perangkat Lunak}
 
-Perangkat lunak yang digunakan untuk membangung perangkat lunak adalah sebagai berikut:
+linkungan perangkat lunak yang digunakan untuk membangun perangkat lunak adalah sebagai berikut:
 
 \begin{itemize}
 
@@ -47,9 +47,9 @@ Perangkat lunak yang digunakan untuk membangung perangkat lunak adalah sebagai b
 \end{itemize}
 
 
-\subsection{User Interface}
+\subsection{\textit{User Interface}}
 
-Implementasi rancangan tampilan antarmuka pada perangkat lunak ini menggunakan html,css, dan php. Berikut adalah tampilan setiap halaman:
+Implementasi rancangan tampilan antarmuka pada perangkat lunak ini menggunakan html, css, dan php. Berikut adalah tampilan setiap halaman:
 
 \begin{enumerate}
 \item Implementasi antarmuka untuk menu \textit{Submit} dapat dilihat pada Gambar ~\ref{fig:menusubmit}.
@@ -101,11 +101,11 @@ Implementasi rancangan tampilan antarmuka pada perangkat lunak ini menggunakan h
 
 \section{Pengujian Fungsional Perangkat Lunak}
 
-Perangkat lunak yang disusun oleh penulis telah diuji untuk membuktikan kebenaran dari perangkat lunak. Program akan dieksekusi dan kemudian diamati apakah hasil sesuai dengan yang diinginkan. Perangkat lunak akan diberikan data dengan ukuran yang kecil berserta \textit{parameter} yang sudah ditentukan. 
+Perangkat lunak yang dibangun telah diuji untuk membuktikan kebenaran dan fungsionalitas dari perangkat lunak. Program akan dieksekusi dan kemudian dianalisis apakah hasil yang diberikan sesuai dengan yang diinginkan. Pengujian dilakukan dengan menggunakan data berukuran kecil beserta parameter-parameter yang telah ditentukan terhadap perangkat lunak.
 
 \begin{itemize}
 
-\item Pada percobaan pertama, akan digunakan metode \textit{single linkage}, dengan jumlah partisi = 1, jumlah objek maksimum = 4, dan nilai \textit{cut-off distance} = 0.8. Berikut adalah data yang digunakan untuk pengujian:
+\item Pada percobaan pertama, digunakan metode \textit{single linkage} dengan jumlah partisi = 1, jumlah objek maksimum = 4, dan nilai \textit{cut-off distance} = 0.8. Berikut adalah data yang digunakan untuk pengujian:
 
 \begin{verbatim}
 4.0,5.0
@@ -135,7 +135,9 @@ Hasil dari percobaan pertama adalah sebagai berikut:
 0.0,0.0
 \end{verbatim}
 
-\item Pada percobaan kedua, akan digunakan metode \textit{complete linkage}, dengan jumlah partisi = 1, jumlah objek maksimum = 4, dan nilai \textit{cut-off distance} = 0.8. Berikut adalah data yang digunakan untuk pengujian:
+Perangkat lunak sudah dapat menghasilkan pola-pola dengan jumlah objek, nilai maksimum, minimum, rata-rata, dan standar deviasi. Nilai-nilai pada pola yang dihasilkan sudah akurat dengan apa yang diharapkan.
+
+\item Pada percobaan kedua, akan digunakan metode \textit{complete linkage} dengan jumlah partisi = 1, jumlah objek maksimum = 4, dan nilai \textit{cut-off distance} = 0.8. Berikut adalah data yang digunakan untuk pengujian:
 
 \begin{verbatim}
 4.0,5.0
@@ -165,7 +167,9 @@ Hasil dari percobaan kedua adalah sebagai berikut:
 0.0,0.0
 \end{verbatim}
 
-\item Pada percobaan ketiga, akan digunakan metode \textit{centroid linkage}, dengan jumlah partisi = 1, jumlah objek maksimum = 4, dan nilai \textit{cut-off distance} = 0.8. Berikut adalah data yang digunakan untuk pengujian:
+Perangkat lunak sudah dapat menghasilkan pola-pola dengan jumlah objek, nilai maksimum, minimum, rata-rata, dan standar deviasi. Nilai-nilai pada pola yang dihasilkan sudah akurat dengan apa yang diharapkan.
+
+\item Pada percobaan ketiga, akan digunakan metode \textit{centroid linkage} dengan jumlah partisi = 1, jumlah objek maksimum = 4, dan nilai \textit{cut-off distance} = 0.8. Berikut adalah data yang digunakan untuk pengujian:
 
 \begin{verbatim}
 4.0,5.0
@@ -176,6 +180,8 @@ Hasil dari percobaan kedua adalah sebagai berikut:
 \end{verbatim}
 
 Hasil dari percobaan ketiga adalah sebagai berikut:
+
+Perangkat lunak sudah dapat menghasilkan pola-pola dengan jumlah objek, nilai maksimum, minimum, rata-rata, dan standar deviasi. Nilai-nilai pada pola yang dihasilkan sudah akurat dengan apa yang diharapkan.
 
 \begin{verbatim}
 3
@@ -197,18 +203,17 @@ Hasil dari percobaan ketiga adalah sebagai berikut:
 
  
 \end{itemize}
-
-Berdasarkan hasil ketiga percobaan yang didapat, maka dapat disimpulkan bahwa perangkat lunak sudah dapat melakukan proses reduksi data menggunakan algoritma \textit{Agglomerative Clustering} berdasarkan metode yang dipilih dengan benar. Pola yang dihasilkan oleh perangkat lunak sudah sesuai dengan apa yang diharapakan.
+Berdasarkan ketiga hasil percobaan yang didapat, dapat disimpulkan bahwa perangkat lunak sudah dapat melakukan proses reduksi data menggunakan algoritma \textit{Agglomerative Clustering} berdasarkan metode yang dipilih dengan benar. Pola yang dihasilkan oleh perangkat lunak sudah dapat menghasilkan jumlah objek, nilai maksimum, minimum, rata-rata, dan standar deviasi.
 
 \section{Hasil Eksperimen Perangkat Lunak}
 
-Pada bagian ini akan diuji performa perangkat lunak Spark dan Hadoop. Kedua perangkat lunak akan dibandingkan hasil eksekusi waktunya. Karena perangkat lunak hadoop tidak dapat menghitung standar deviasi, maka perangkat lunak Hadoop akan dibandingkan dengan perangkat lunak Spark yang tidak menghitung standar deviasi dan yang menghitung standar deviasi. Data yang digunakan pada percobaan merupakan data yang dihasilkan secara acak dengan ukuran yang berbeda-beda. Data-data tersebut memiliki dua atribut bilangan pecahan yang dipisahkan dengan tanda koma. Jumlah objek pada setiap ukuran data dapat dilihat pada Tabel ~\ref{tab:exdata}.\\
+Selain menguji fungsionalitas perangkat lunak yang dibangun, diuji pula performa dari perangkat lunak Spark dan Hadoop. Kedua perangkat lunak kemudian dibandingkan hasil eksekusi waktunya. Karena perangkat lunak Hadoop tidak dapat menghitung standar deviasi, maka perangkat lunak Hadoop akan dibandingkan dengan perangkat lunak Spark yang tidak menghitung standar deviasi dan yang menghitung standar deviasi. Data yang digunakan pada percobaan merupakan data yang dihasilkan secara acak dengan ukuran yang berbeda-beda. Data-data tersebut memiliki dua atribut bilangan pecahan yang dipisahkan dengan tanda koma. Jumlah objek pada setiap ukuran data dapat dilihat pada Tabel ~\ref{tab:exdata}.\\
 
 \begin{table}[H] 
 	\centering 
 	\caption{Tabel data yang digunakan pada eksperimen}
 	\label{tab:exdata}
-	\begin{tabular}{|p{2cm}|p{2cm}|p{4cm}|}
+	\begin{tabular}{|p{2cm}|p{3cm}|p{4cm}|}
 \hline
 Ukuran Data & Jumlah Objek  & Jumlah Block\\
 \hline
@@ -250,10 +255,10 @@ Berikut adalah spesifikasi perangkat keras yang digunakan:
 
 
 
-\section{Percobaan Dampak Partisi pada Performa Perangkat Lunak Spark dan Hadoop} 
+
 %1111111111GBBBBBBBBBBBBBBBBB
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 1 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark1}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 1 GB. Metode yang digunakan adalah metode \textit{single linkage}dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark1} berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
@@ -261,7 +266,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 	\label{tab:spark1}
 	\begin{tabular}{|p{1.1cm}|p{1.1cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2cm}|p{1.5cm}|p{1.5cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
 \hline
 1 & 10 & 319 & 304 & 214 & 0.54 & 0.67 & 0.57 \\
 \hline
@@ -310,12 +315,12 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\end{figure}
 \end{minipage}\\
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan1}), dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesarkan. Waktu ekseuksi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop asalakan jumlah partisi diatur dengan benar.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan1}, dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesar. Waktu eksekusi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop selama jumlah partisi diatur dengan benar.\\
 
 
 %222222222222222222222GBBBBBBBBBBBBBBBBB
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 2 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark2}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 2 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark2} berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
@@ -323,7 +328,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 	\label{tab:spark2}
 	\begin{tabular}{|p{1.1cm}|p{1.1cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2cm}|p{1.5cm}|p{1.5cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
 \hline
 2 & 10 & 929  & 958  & 365  & 0.96 & 1.2 & 1 \\
 \hline
@@ -380,7 +385,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan2}), dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesarkan. Waktu ekseuksi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop asalakan jumlah partisi diatur dengan benar.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan2}, dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesar. Waktu eksekusi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop selama jumlah partisi diatur dengan benar.\\
 
 
 
@@ -388,7 +393,7 @@ Berdasarkan hasil grafik (~\ref{fig:percobaan2}), dapat dilihat bahwa waktu ekse
 %333333333333333333GBBBBBBBBBBBBBBBBB
 
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 3 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark3}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 3 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark3} berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
@@ -396,7 +401,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 	\label{tab:spark3}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
 \hline
 3 & 10 & 1446 & 1376 & 455 & 1.2 & 1.5 & 1.2 \\
 \hline
@@ -460,12 +465,12 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan3}), dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesarkan. Waktu ekseuksi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop asalakan jumlah partisi diatur dengan benar.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan3}, dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesar. Waktu eksekusi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop selama jumlah partisi diatur dengan benar.\\
 
 %555555555555GBBBBBBBBBBBBBBBBB
 
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 5 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark5}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 5 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark5} berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
@@ -473,7 +478,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 	\label{tab:spark5}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Waktu Eksekusi Hadoop (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  & Hasil Reduksi Hadoop (GB)\\ 
 \hline
 5  & 10 & 4490 & 4457 & 817 & 2.1 & 2.6 & 2.2\\
 \hline
@@ -539,7 +544,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 	\end{figure}
 \end{minipage}\\
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan4}), dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesarkan. Waktu ekseuksi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop asalakan jumlah partisi diatur dengan benar.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan4}, dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesar. Waktu eksekusi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop selama jumlah partisi diatur dengan benar.\\
 
 
 
@@ -547,7 +552,7 @@ Berdasarkan hasil grafik (~\ref{fig:percobaan4}), dapat dilihat bahwa waktu ekse
 
 
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark6} dan Tabel~\ref{tab:spark7} berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark6} dan Tabel~\ref{tab:spark7} berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
@@ -555,7 +560,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 	\label{tab:spark6}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (Detik) & Waktu Eksekusi Spark (Detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 10 & 50 & 7254 & 7236 & 3.7 & 4.6 \\
 \hline
@@ -663,7 +668,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (Detik) & Hasil Reduk
 	\end{figure}
 \end{minipage}\\
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan5}), dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesarkan. Waktu ekseuksi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop asalakan jumlah partisi diatur dengan benar.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan5}, dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesar. Waktu eksekusi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop selama jumlah partisi diatur dengan benar.\\
 
 
 
@@ -671,7 +676,7 @@ Berdasarkan hasil grafik (~\ref{fig:percobaan5}), dapat dilihat bahwa waktu ekse
 %1111111111555555555555GBBBBBBBBBBBBBBBBB
 
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 15 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark7} dan Tabel (~\ref{tab:spark8}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 15 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark7} dan Tabel~\ref{tab:spark8} berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
@@ -679,7 +684,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 	\label{tab:spark7}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data ) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (GB) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi ) & Hasil Reduksi Spark )  \\ 
+Ukuran Data ) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (GB) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi ) & Hasil Reduksi Spark )  \\ 
 \hline
 15 & 100 & 9034  & 9294  &  5.8 & 7.3 \\
 \hline
@@ -777,13 +782,13 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 	\end{figure}
 \end{minipage}\\
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan6}), dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesarkan. Waktu ekseuksi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop asalakan jumlah partisi diatur dengan benar.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan6}, dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesar. Waktu eksekusi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop selama jumlah partisi diatur dengan benar.\\
 
 
 %2222222222222200000000000000000GBBBBBBBBBBBBBBBBB
 
 
-Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini akan menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 20 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark9} dan Tabel (~\ref{tab:spark10}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang berbeda. Percobaan ini menggunakan 1 komputer sebagai komputer master dan 10 komputer lainya sebagai worker dengan setiap worker munggunakan 1 core. Ukuran data yang digunakan adalah 20 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark9} dan Tabel~\ref{tab:spark10} berikut adalah hasil dari eksperimen:
 
 \begin{table}[H] 
 	\centering 
@@ -791,7 +796,7 @@ Pada percobaan ini akan dilihat waktu ekseuksi Spark dan Hadoop berdasarkan juml
 	\label{tab:spark9}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 20 & 200 & 8866  & 8386  & 7.7 & 9.6 \\
 \hline
@@ -883,7 +888,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 \end{minipage}\\
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan7}), dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesarkan. Waktu ekseuksi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop asalakan jumlah partisi diatur dengan benar.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan7}, dapat dilihat bahwa waktu eksekusi Spark menurun dan waktu eksekusi Hadoop meningkat ketika jumlah partisi diperbesar. Waktu eksekusi Hadoop menaik secara konsisten ketika jumlah partisi diperbesar. Waktu eksekusi Spark menurun drastis pada awalnya ketika jumlah partisi ditingkatkan sampai titik tertentu dimana peningkatan jumlah partisi tidak memiliki dampak yang sangat drastis pada waktu eksekusi Spark. Tidak ada perbedaan yang jauh antara waktu eksekusi aplikasi Spark dengan standar deviasi maupun yang tidak. Aplikasi Spark memiliki waktu eksekusi yang lebih baik dibanding Hadoop pada jumlah partisi yang besar dan waktu eksekusi yang lebih buruk pada jumlah partisi yang kecil. Waktu eksekusi Spark pada partisi yang besar lebih cepat dibanding waktu eksekusi Hadoop terkecil. Aplikasi Spark lebih cepat dibanding Hadoop selama jumlah partisi diatur dengan benar.\\
 
 
 
@@ -893,7 +898,7 @@ Berdasarkan hasil grafik (~\ref{fig:percobaan7}), dapat dilihat bahwa waktu ekse
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MAX OBJ 50 5 GB
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 5 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel (~\ref{tab:spark11}) dan Tabel (~\ref{tab:spark12}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 5 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel~\ref{tab:spark11} dan Tabel~\ref{tab:spark12} berikut adalah hasil dari eksperimen:
 
 
 
@@ -935,7 +940,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 	\label{tab:spark12}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 5 & 300 & 394 &  433  & 1.5  & 1.9 \\
 \hline
@@ -987,12 +992,12 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan9}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\  
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan9}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MAX OBJ 50 10 GB
 
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel (~\ref{tab:spark13}) dan Tabel (~\ref{tab:spark14}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel~\ref{tab:spark13} dan Tabel~\ref{tab:spark14} berikut adalah hasil dari eksperimen:
 
 
 
@@ -1032,7 +1037,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 	\label{tab:spark14}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 10 & 500 &  740 &  741 & 2.7  & 3.3 \\
 \hline
@@ -1084,14 +1089,14 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan10}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan10}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%MAX OBJ 50 15 GB
 
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 15 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel (~\ref{tab:spark15}) dan Tabel (~\ref{tab:spark16}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 15 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel~\ref{tab:spark15} dan Tabel~\ref{tab:spark16} berikut adalah hasil dari eksperimen:
 
 
 
@@ -1131,7 +1136,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 	\label{tab:spark16}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 15 & 900 &  1072 &  1123 & 4.2  & 5.2 \\
 \hline
@@ -1183,13 +1188,13 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan11}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan11}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.\\
 
 
 %%%%%%%%%%%%%%%%%%%%%% MAX OBJ 50 20GB
 
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 20 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel (~\ref{tab:spark17}) dan Tabel (~\ref{tab:spark18}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 20 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 50. Tabel~\ref{tab:spark17} dan Tabel~\ref{tab:spark18} berikut adalah hasil dari eksperimen:
 
 
 
@@ -1229,7 +1234,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 	\label{tab:spark18}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 20 & 1000 & 1447 &  1546 & 5.6   & 6.9  \\
 \hline
@@ -1281,7 +1286,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan12}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan12}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 
@@ -1300,7 +1305,7 @@ Berdasarkan hasil grafik (~\ref{fig:percobaan12}), dapat dilihat waktu Hadoop te
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAX OBJ 100 5 GB
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 5 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 100. Tabel (~\ref{tab:spark111}) dan Tabel (~\ref{tab:spark121}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 5 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 100. Tabel~\ref{tab:spark111} dan Tabel~\ref{tab:spark121} berikut adalah hasil dari eksperimen:
 
 
 
@@ -1338,7 +1343,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (menit) & Hasil Reduk
 	\label{tab:spark121}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (menit) & Waktu Eksekusi Spark (menit) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (menit) & Waktu Eksekusi Spark (menit) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 5 & 300 & 6.9 &  7.5 & 1  & 1.2 \\
 \hline
@@ -1391,12 +1396,12 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan91}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan91}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAX OBJ 100 10 GB
 
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 100. Tabel (~\ref{tab:spark131}) dan Tabel (~\ref{tab:spark141}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 100. Tabel~\ref{tab:spark131} dan Tabel~\ref{tab:spark141} berikut adalah hasil dari eksperimen:
 
 
 
@@ -1432,7 +1437,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (menit) & Hasil Reduk
 	\label{tab:spark141}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (menit) & Waktu Eksekusi Spark (menit) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (menit) & Waktu Eksekusi Spark (menit) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 10 & 500 &  12.5  &  12.4  & 1.8  & 2.2  \\
 \hline
@@ -1484,14 +1489,14 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan101}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan101}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop.  \\
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MAX OBJ 100 15 GB
 
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 15 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 100. Tabel (~\ref{tab:spark151}) dan Tabel (~\ref{tab:spark161}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 15 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 100. Tabel~\ref{tab:spark151} dan Tabel~\ref{tab:spark161} berikut adalah hasil dari eksperimen:
 
 
 
@@ -1527,7 +1532,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (menit) & Hasil Reduk
 	\label{tab:spark161}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (menit) & Waktu Eksekusi Spark (menit) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (menit) & Waktu Eksekusi Spark (menit) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 15 & 900 &  18.0 &  18.6 & 2.8  & 3.4 \\
 \hline
@@ -1579,13 +1584,13 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan111}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan111}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%  MAX OBJ 100 20GB
 
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 20 GB. Metode yang digunakan adalah metode \textit{single linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 100. Tabel (~\ref{tab:spark171}) dan Tabel (~\ref{tab:spark181}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 20 GB. Metode yang digunakan adalah metode \textit{single linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 100. Tabel~\ref{tab:spark171} dan Tabel~\ref{tab:spark181} berikut adalah hasil dari eksperimen:
 
 
 
@@ -1621,7 +1626,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (menit) & Hasil Reduk
 	\label{tab:spark181}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (menit) & Waktu Eksekusi Spark (menit) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (menit) & Waktu Eksekusi Spark (menit) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 20 & 1000 & 24.7  &  25.7 & 3.7   & 4.5  \\
 \hline
@@ -1673,7 +1678,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan121}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan121}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 
@@ -1694,7 +1699,7 @@ Berdasarkan hasil grafik (~\ref{fig:percobaan121}), dapat dilihat waktu Hadoop t
 %%%%%%%%%%%%%%%%%%% COMPLETE LINKAGE
 
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{complete linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark571}) dan Tabel (~\ref{tab:spark581}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{complete linkage} dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark571} dan Tabel~\ref{tab:spark581} berikut adalah hasil dari eksperimen:
 
 
 \begin{table}[H] 
@@ -1730,7 +1735,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 	\label{tab:spark581}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 10 & 500 &  643  &  664  & 2.3  & 3.0  \\
 \hline
@@ -1781,7 +1786,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan521}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan521}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 
@@ -1790,7 +1795,7 @@ Berdasarkan hasil grafik (~\ref{fig:percobaan521}), dapat dilihat waktu Hadoop t
 
 
 
-Pada percobaan ini akan dilihat waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini akan menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{centroid linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel (~\ref{tab:spark671}) dan Tabel (~\ref{tab:spark681}) berikut adalah hasil dari eksperimen:
+Percobaan ini menguji waktu eksekusi Spark dan Hadoop berdasarkan jumlah partisi yang optimal. Percobaan ini menggunakan 1 komputer sebagai komputer \textit{master} dan 10 komputer lainya sebagai \textit{worker} dengan setiap \textit{worker} munggunakan 1 core. Ukuran data yang digunakan adalah 10 GB. Metode yang digunakan adalah metode \textit{centroid linkage}, dengan nilai \textit{cut-off distance} adalah 0,8 dan jumlah objek maksimum untuk setiap \textit{dendrogram} adalah 30. Tabel~\ref{tab:spark671} dan Tabel~\ref{tab:spark681} berikut adalah hasil dari eksperimen:
 
 
 \begin{table}[H] 
@@ -1826,7 +1831,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Eksekusi Hadoop (detik) & Hasil Reduk
 	\label{tab:spark681}
 	\begin{tabular}{|p{1cm}|p{1cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 \hline
-Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
+Ukuran Data (GB) & Jumlah Partisi &  Waktu eksekusi Spark Tanpa standar Deviasi (detik) & Waktu Eksekusi Spark (detik) & Hasil Reduksi Spark Tanpa standar Deviasi (GB) & Hasil Reduksi Spark (GB)  \\ 
 \hline
 10 & 500 & 589  &  604  & 2.8  & 3.7  \\
 \hline
@@ -1877,7 +1882,7 @@ Ukuran Data (GB) & Jumlah Partisi &  Waktu Ekseuksi Spark Tanpa standar Deviasi 
 
 
 
-Berdasarkan hasil grafik (~\ref{fig:percobaan621}), dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
+Berdasarkan hasil grafik pada Gambar~\ref{fig:percobaan621}, dapat dilihat waktu Hadoop terus meningkat seiring meningkatnya jumlah partisi. Jumlah partisi yang dicoba pada Hadoop hanya mencapai 200 karena waktu eksekusi yang sudah berbeda jauh dibanding Spark dan untuk partisi yang lebih besar pasti diatas waktu eksekusi Hadoop dengan jumlah partisi sama dengan 200. Spark memiliki waktu eksekusi yang jauh lebih cepat dibanding Hadoop. \\
 
 
 Berdasarkan eksperimen-eksperimen diatas, dapat disimpulkan bahwa Spark dapat bekerja lebih cepat dibanding Hadoop pada partisi yang besar. Sebaliknya, waktu eksekusi Hadoop meningkat ketika jumlah partisi ditingkatkan. Waktu eksekusi Hadoop terbaik dapat masih lebih tinggi dibanding waktu eksekusi terbaik Spark. Meningkatnya waktu eksekusi Hadoop disebabkan oleh \textit{shuffling} dan \textit{sorting}. Semakin tinggi jumlah partisi, semakin banyak yang di-\textit{shuffle} dan di-\textit{sorting}. Berbeda dengan Hadoop, waktu eksekusi Spark menurun ketika jumlah partisi ditingkatkan. Dengan meningkatkan jumlah partisi pada Spark, data akan lebih terdistribusi. Hal ini akan mengurangi waktu yang dibutuhkan untuk mengirim data dari satu komputer ke komputer lain dan mengurangi waktu komunikasi.

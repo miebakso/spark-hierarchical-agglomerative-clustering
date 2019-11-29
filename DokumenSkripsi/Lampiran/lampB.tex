@@ -87,6 +87,7 @@
 					$sub = substr($temp, strlen($_GET['part']));
 					//echo $sub;
 					//echo $_GET['part'];
+					$format = "%.3f";
 					$output = shell_exec('cd /home/miebakso/hadoop-2.7.3 && ./bin/hadoop fs -cat '.$_GET['path'].'/part-'.$sub.$_GET['part']);
 					$arr = explode("\n", $output);
 					$i = 1;
@@ -98,48 +99,55 @@
 							<div class="card-content black-text">
 							<table>
 								<thead>
-									<tr>
-										<th>Total Obj = '.$value.' </th>';
-										$x=1;
-										while($x<=$len){
-											echo '<th>attribute-'.$x.'</th>';
-											$x++;
-										}
+									<tr>'
+										
+							$file = fopen("collum.txt", "r") or die("Unable to open file!");
+							$attributes = fgets($file);
+							$attarr = explode(",", $attributes);
 
-							echo '
+							echo '<th colspan="'.count($attarr).'">Total Objek = '.$value.' </th>
 									</tr>
 								</thead>
 
-								<tbody>
-							';
+								<tbody>';
+
+							echo '<tr>
+									<td></td>';
+									$x=0;
+									while($x<=$len){
+										echo '<th>'.$attarr[0].'</th>';
+										$x++;
+									}
+							echo '</tr>';
+							
 							
 								
 						} else if($i==2){
 							$arr2 = explode(",", $value);
 							echo '<tr><td>Minimum</td>';
 							foreach ($arr2 as $val) {
-								echo '<td>'.$val.'</td>';		        
+								echo '<td>'.sprintf($format,$val).'</td>';		        
 							}
 							echo '</tr>';
 						} else if($i==3){
 							$arr2 = explode(",", $value);
-							echo '<tr><td>Maximum</td>';
+							echo '<tr><td>Maksimum</td>';
 							foreach ($arr2 as $val) {
-								echo '<td>'.$val.'</td>';		        
+								echo '<td>'.sprintf($format,$val).'</td>';		        
 							}
 							echo '</tr>';
 						} else if($i==4){
 							$arr2 = explode(",", $value);
-							echo '<tr><td>Average</td>';
+							echo '<tr><td>Rata-rata</td>';
 							foreach ($arr2 as $val) {
-								echo '<td>'.$val.'</td>';		        
+								echo '<td>'.sprintf($format,$val).'</td>';		        
 							}
 							echo '</tr>';
 						}else {
 							$arr2 = explode(",", $value);
-							echo '<tr><td>Stardard Deviation</td>';
+							echo '<tr><td>Standar Deviasi</td>';
 							foreach ($arr2 as $val) {
-								echo '<td>'.$val.'</td>';		        
+								echo '<td>'.sprintf($format,$val).'</td>';		        
 							}
 							echo '</tr>
 
@@ -168,14 +176,15 @@
 		});
 	});
 </script>
+
 \end{lstlisting}
 
 \begin{lstlisting}[language=PHP, caption=nav.php]
 <nav>
     <div class="nav-wrapper blue">
       	<ul id="nav-mobile" class="left hide-on-med-and-down">
-	        <li><a href="index.php" style="font-size: 40px;">Submit</a></li>
-	        <li><a href="view.php" style="font-size: 40px;">Patern</a></li>
+	        <li><a href="index.php" style="font-size: 30px;">Jalankan Program</a></li>
+	        <li><a href="view.php" style="font-size: 30px;">Lihat Pola</a></li>
       	</ul>
     </div>
 </nav>
