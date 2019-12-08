@@ -4,15 +4,23 @@ import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 
 class Cluster(dendrogram:Node, cutOffDistance:Double) extends Serializable {
     private val clusters:ListBuffer[Node] = new ListBuffer[Node]()
+    private var total:Double = 0
+    private var n:Int = 0
+    private var all:Double = 0
+    private var n2:Int = 0
 
     private def formClusterFromDendrogram(): Unit = {
         val bfs:ListBuffer[Node] = new ListBuffer[Node]
         bfs+=dendrogram
         val distance = cutOffDistance * dendrogram.getDistance()
+        total+=distance
+        n+=1
         while(bfs.length!=0){
             var node = bfs.remove(0)
             if(node.getDistance() <= distance){
                 clusters+=node
+                all+=node.getDistance()
+                n2+=1
             } else {
                 var left = node.getLeftNode()
                 var right = node.getRightNode()
@@ -26,16 +34,32 @@ class Cluster(dendrogram:Node, cutOffDistance:Double) extends Serializable {
         }
     }
 
-    def computePatern(): ListBuffer[Patern] = {
+    def getTotal(): Double ={
+        this.total
+    }
+
+    def getN():Int = {
+        this.n
+    }
+
+    def getN2():Int = {
+        this.n2
+    }
+
+    def getAll(): Double ={
+        this.all
+    }
+
+    def computePatern(): ListBuffer[Pattern] = {
         formClusterFromDendrogram()
-        val paterns:ListBuffer[Patern] = new ListBuffer[Patern]()
+        val paterns:ListBuffer[Pattern] = new ListBuffer[Pattern]()
         clusters.foreach( cluster => {
             paterns += processCluster(cluster)
         })
         paterns
     }
 
-    private def processCluster(cluster: Node): Patern ={
+    private def processCluster(cluster: Node): Pattern ={
         val bfs:ListBuffer[Node] = new ListBuffer[Node]()
         val min:ArrayBuffer[Double] = new ArrayBuffer[Double]()
         val max:ArrayBuffer[Double] = new ArrayBuffer[Double]()
@@ -120,8 +144,7 @@ class Cluster(dendrogram:Node, cutOffDistance:Double) extends Serializable {
             }
         })
 
-
-        new Patern(max.toArray,min.toArray,avg.toArray,SD.toArray,count)
+        new Pattern(max.toArray,min.toArray,avg.toArray,SD.toArray,count)
     }
 
 

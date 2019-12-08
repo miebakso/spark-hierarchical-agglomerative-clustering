@@ -1,24 +1,25 @@
 package main.scala
 
-import org.apache.spark.{SparkContext}
+import org.apache.spark.SparkContext
 import org.apache.spark.rdd.RDD
-import scala.collection.mutable.{ListBuffer}
+
+
+import scala.collection.mutable.ListBuffer
+import scala.util.Random
 
 
 class DataReducer(sc: SparkContext, numPar:Int, maxObj:Int, distanceType:Int, cutOffDistance:Double, inputPath: String, outputPath:String) extends Serializable {
 
     def reduceData():Unit = {
-        val data = mapData()
-        val repartitionData = data.repartition(numPar)
         val broadCastMaxObj = sc.broadcast(maxObj)
         val broadCastDistanceType = sc.broadcast(distanceType)
         val broadCastCutOffDist = sc.broadcast(cutOffDistance)
-        val results = repartitionData.mapPartitions(partitions => {
-            var paterns:ListBuffer[Patern] = new ListBuffer[Patern]()
+        val result = mapData.groupByKey(numPar).map(record => {
+            var paterns:ListBuffer[Pattern] = new ListBuffer[Pattern]()
             var i:Int = 0
             var isProcessed:Boolean = false
             var objectList:ListBuffer[Node] = new ListBuffer[Node]()
-            partitions.foreach(record => {
+            record._2.foreach(record => {
                 isProcessed = false
                 i+=1
                 objectList+=record
@@ -39,31 +40,39 @@ class DataReducer(sc: SparkContext, numPar:Int, maxObj:Int, distanceType:Int, cu
                 paterns = paterns ++ cluster.computePatern()
             }
             paterns.toIterator
-
         })
-        results.map(x => x.getObjCount()+"\n"
-            +x.getMinArr().mkString(",")+"\n"
-            +x.getMaxArr().mkString(",")+"\n"
-            +x.getAvgArr().mkString(",")+"\n"
-            +x.getSDArr().mkString(",")
-        ).saveAsTextFile(outputPath)
+
+        val parseResult = result.flatMap(patterns => {
+            patterns.map(pattern => pattern)
+        })
+
+        val finalResult = parseResult.map( pattern => { pattern.getObjCount()+"\n"+
+            pattern.getMinArr().mkString(",")+"\n"+
+            pattern.getMaxArr().mkString(",")+"\n"+
+            pattern.getAvgArr().mkString(",")+"\n"+
+            pattern.getSDArr().mkString(",")
+        }).saveAsTextFile(outputPath)
+
         broadCastMaxObj.destroy()
         broadCastDistanceType.destroy()
         broadCastCutOffDist.destroy()
         sc.stop()
-    }
 
+    }
 
     private def loadData():RDD[String] = {
         sc.textFile(inputPath)
     }
 
-    private def mapData():RDD[Node] = {
-        loadData().map(lines => {
+    private def mapData():RDD[(Int,Node)] = {
+        val broadCastNpar = sc.broadcast(numPar)
+        val result = loadData().map(lines => {
             val node = new Node()
             node.setData(lines.split(",").map(_.toDouble))
-            node
+            val key = Random.nextInt(broadCastNpar.value)
+            (key,node)
         })
+        result
     }
 
 

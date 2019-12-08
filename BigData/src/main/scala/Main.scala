@@ -6,11 +6,11 @@ object Main {
     def main(args: Array[String]): Unit ={
         var input:String = "file:///home/miebakso/Desktop/input.txt"
         var output:String = "file:///home/miebakso/Desktop/output"
-        var numPar = 20
-        var maxObj = 30
-        var distType = 0
-        var cutOffDist = 0.6
-        var master = "local[5]"
+        var numPar:Int = 60
+        var maxObj:Int = 50
+        var distType:Int = 0
+        var cutOffDist:Double = 0.6
+        var master:String = "local[6]"
         if(args.length > 0){
             master = "yarn-cluster"
             input = args(0)
@@ -24,11 +24,9 @@ object Main {
         val conf = new SparkConf()
         conf.setMaster(master)
         conf.setAppName("Reduce Data Spark")
-        conf.set("spark.executor.memory", "3g")
+        conf.set("spark.executor.memory", "10g")
         val sc = new SparkContext(conf)
-
-
-        val dataReducer = new DataReducer(sc,numPar, maxObj,distType, cutOffDist, input, output)
+        val dataReducer = new DataReducer(sc,numPar, maxObj, distType, cutOffDist, input, output)
         dataReducer.reduceData()
 
     }

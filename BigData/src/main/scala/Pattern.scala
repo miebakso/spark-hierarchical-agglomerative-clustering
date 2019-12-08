@@ -1,6 +1,6 @@
 package main.scala
 
-class Patern(max:Array[Double], min:Array[Double], avg:Array[Double], SD:Array[Double], objCount:Int) extends Serializable {
+class Pattern(max:Array[Double], min:Array[Double], avg:Array[Double], SD:Array[Double], objCount:Int) extends Serializable {
 
     def getMaxArr(): Array[Double] ={
         max
