@@ -38,7 +38,9 @@ Solusinya adalah menggabungkan sistem terdistribusi lainnya dengan  algoritma \t
 
 Sebelum melakukan perancangan, penulis terlebih dahulu mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pada Hadoop. Algoritma \textit{Hierarchical Agglomerative Clustering}  pada MapReduce dibagi menjadi dua bagian. Bagian pertama terkait tahap \textit{map} dan bagian kedua terkait tahap \textit{reduce}. Tahap \textit{map} bertujuan untuk membagi rata data menjadi beberapa partisi agar setiap \textit{reducer} mendapatkan pekerjaan yang hampir rata dengan \textit{reducer} yang lainya. Tahap \textit{map} akan dijelaskan pada \textit{pseudocode} berikut ini \ref{alg:mapper}:\\
 
+
 \begin{algorithm}[H]
+	\SetAlgorithmName{Algoritma}{}{}
 	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
 	\SetKwInOut{Input}{Masukan}
 	\SetKwInOut{Output}{Keluaran}
@@ -65,6 +67,7 @@ Tahap \textit{reduce} bertujuan untuk mereduksi data. Pada tahap ini dendrogram 
 
 \begin{algorithm}[H]
 	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
+	\SetAlgorithmName{Algoritma}{}{}
 	\SetKwInOut{Input}{Masukan}
 	\SetKwInOut{Output}{Keluaran}
 	\SetKwInOut{Desc}{Deskripsi}
@@ -212,6 +215,7 @@ Diagram alur pada Gambar ~\ref{fig:flowc} digunakan untuk menjelaskan alur peran
 Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pada MapReduce, \textit{format} masukan yang harus diproses dan keluaran yang harus dihasilkan, berikut adalah penjelasan \textit{pseudocode} algoritma \textit{map} dan \textit{reduce} untuk Spark:\\
 
 \begin{algorithm}[H]
+	\SetAlgorithmName{Algoritma}{}{}
 	\label{alg:map}
 	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
 	\SetKwInOut{Input}{Masukan}
@@ -244,6 +248,7 @@ Setelah mempelajari algoritma \textit{Hierarchical Agglomerative Clustering} pad
 
 
 \begin{algorithm}[ht]
+	\SetAlgorithmName{Algoritma}{}{}
 	\label{alg:reduce}
 	\DontPrintSemicolon\SetAlgoNoLine\LinesNumbered
 	\SetKwInOut{Input}{Masukan}

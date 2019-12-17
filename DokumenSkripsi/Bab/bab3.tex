@@ -9,7 +9,7 @@ Berikut adalah tahap-tahap untuk melakukan instalasi Apache Spark. Apache Spark 
 
 \begin{itemize}
 
-\item Pastikan bahwa Java telah diinstal dan versi java yang diinstall adalah setidaknya 8+ karena Spark berjalan pada versi minimal Java 8+. Berikut adalah command untuk memastikan java telah terinstall:
+\item Pastikan bahwa Java telah di-\textit{install} dan versi java yang di-\textit{install} adalah setidaknya 8+ karena Spark berjalan pada versi minimal Java 8+. Berikut adalah command untuk memastikan java telah di-\textit{install}:
 
 \begin{verbatim}
 $ java -version
@@ -17,7 +17,7 @@ Java(TM) SE Runtime Environment (build 1.8.0_112-b15)                           
 \end{verbatim}
 
 
-\item Pastikan bahwa Scala telah diinstal dengan versi minimal 2.11.x. Berikut adalah perintah untuk memastikan bahwa Scala telah terinstal dengan versi yang benar:
+\item Pastikan bahwa Scala telah di-\textit{install} dengan versi minimal 2.11.x. Berikut adalah perintah untuk memastikan bahwa Scala telah di-\textit{install} dengan versi yang benar:
 
 \begin{verbatim}
 $ scala -version
@@ -26,7 +26,7 @@ Scala code runner version 2.11.6 -- Copyright 2002-2013, LAMP/EPFL
 
 \end{itemize} 
 
-Bila Java dan Scala belum terinstal pada komputer, berikut adalah langkah-langkah instalasi Java dan Scala untuk kebutuhan Spark:
+Bila Java dan Scala belum di-\textit{install} pada komputer, berikut adalah langkah-langkah instalasi Java dan Scala untuk kebutuhan Spark:
 
 \begin{itemize}
 
@@ -34,7 +34,7 @@ Bila Java dan Scala belum terinstal pada komputer, berikut adalah langkah-langka
 
 \begin{verbatim}
 $ sudo apt-get update
-$ sudo apt-get install default-jdk
+$ sudo apt-get install openjdk-8-jdk
 \end{verbatim}
 
 \item Berikut adalah perintah-perintah untuk menginstal Scala menggunakan terminal pada sistem operasi Linux:
@@ -74,7 +74,7 @@ export PATH=$PATH:/home/user/spark-2.3.1-bin-hadoop2.7/bin
 source .bashrc
 \end{verbatim}
 
-\item Ketika Spark diinstal dengan benar, maka kita dapat menjalankan spark-shell seperti pada (Gambar~\ref{fig:sparkshell}). Berikut adalah perintah untuk menjalankan spark-shell:
+\item Ketika Spark di-\textit{install} dengan benar, maka kita dapat menjalankan spark-shell seperti pada (Gambar~\ref{fig:sparkshell}). Berikut adalah perintah untuk menjalankan spark-shell:
 
 \begin{verbatim}
 $ $SPARK_HOME/bin/spark-shell
@@ -176,26 +176,26 @@ $ sudo apt-get update
 $ sudo apt-get install default-jdk
 \end{verbatim}
 
-Pastikan versi Java yang diinstal dengan perintah berikut:
+Pastikan versi Java yang di-\textit{install} dengan perintah berikut:
 
 \begin{verbatim}
 $ java -version
 \end{verbatim}
 
-\item instal Scala pada setiap master dan slave, jangan lupa untuk memastikan versi Scala yang diinstal.
+\item instal Scala pada setiap master dan slave, jangan lupa untuk memastikan versi Scala yang di-\textit{install}.
 
 \begin{verbatim}
 $ sudo apt-get update
 $ sudo apt-get install scala
 \end{verbatim}
 
-Pastikan veri Scala yang diinstal dengan perintah berikut:
+Pastikan versi Scala yang di-\textit{install} dengan perintah berikut:
 
 \begin{verbatim}
 $ scala -version
 \end{verbatim}
 
-\item Setelah melakukan instalasi Scala dan Java, Instal Open SSH Server-Client pada \textit{master}. Berikut adalah perintah yang harus dijalankan:
+\item Setelah melakukan instalasi Scala dan Java, \textit{install} Open SSH Server-Client pada \textit{master}. Berikut adalah perintah yang harus dijalankan:
 
 \begin{verbatim}
 $ sudo apt-get install openssh-server openssh-client
@@ -272,11 +272,13 @@ Pada percobaan ini, kita akan mencoba mengumpulkan sebuah jar kepada spark-submi
 
 \begin{enumerate}
 
-\item Instal dan sudah melakukan konfigurasi untuk Scala, Java, dan Spark.
+\item \textit{Install} dan sudah melakukan konfigurasi untuk Scala, Java, dan Spark.
 
-\item Instal IntelliJ IDEA dari https://www.jetbrains.com/idea/.
+\item \textit{Install} IntelliJ IDEA dari https://www.jetbrains.com/idea/. IntelliJ IDEA adalah \textit{integrated development environment} untuk pengembangan perangkat lunak. Intellij dirancang oleh JetBrains untuk meningkatkan produktivitas developer. Intellij memiliki beberapa fitur seperti integrasi dengan GitHub, \textit{smart code completion}, \textit{intelligent refactorings}, dan lain-lain.
 
-\item Install sbt, berikut adalah langkah instalasi sbt:
+\item SBT merupakan \textit{ open-source build tool} untuk Scala dan Java. SBT sangat mirip dengan Maven dan Ant. SBT memiliki beberapa fitur seperti \textit{Dependency management}, \textit{incremental testing},  \textit{incremental compilation},  dan lain-lain.
+
+Berikut adalah langkah-langkah instalasi SBT:
 
 \begin{verbatim}
 $ echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
@@ -296,7 +298,7 @@ Setelah kebutuhan telah terpenuhi maka percobaan dapat dimulai. Berikut adalah l
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.5]{intelij}  
+    \includegraphics[scale=0.35]{intelij}  
     \caption[ItelliJ IDEA]{ItelliJ IDEA} 
     \label{fig:intelij} 
 \end{figure}
@@ -305,7 +307,7 @@ Setelah itu, pilih proyek Scala yang menggunakan sbt. Tekan tombol \textit{next}
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.5]{newproject}  
+    \includegraphics[scale=0.4]{newproject}  
     \caption[Proyek sbt]{Proyek sbt} 
     \label{fig:newproject} 
 \end{figure}
@@ -348,14 +350,25 @@ Hasil dari pembuatan proyek baru pada IntelliJ akan terlihat seperti pada Gambar
 \end{figure}
 
 
-Setelah itu, tambahkan kode berikut seperti pada Gambar\ref{fig:kodeword}.
+Setelah itu, tambahkan kode berikut seperti contoh \ref{code:wordcount}.
 
-\begin{figure}[H]
-    \centering  
-    \includegraphics[scale=0.5]{kodeword}  
-    \caption[Kode WordCount]{Kode WordCount} 
-    \label{fig:kodeword} 
-\end{figure}
+\begin{lstlisting}[language=Scala, caption=WordCount.scala, label={code:wordcount}]
+package main.scala
+import org.apache.spark.{SparkConf, SparkContext}
+object WordCount {
+    def main(args: Array[String]):Unit = {
+        val conf = new SparkConf()
+        conf.setMaster("local")
+        conf.setAppName("Test")
+        val sc = new SparkContext(conf)
+        val textFile = sc.textFile("/path/to/input.txt")
+        val counts = textFile.flatMap(line => line.split(" "))
+            .map(word => (word,1))
+            .reduceByKey(_+_)
+        counts.saveAsTextFile("/path/to/output.txt")
+    }
+}
+\end{lstlisting}
 
 \item Jalankan perintah 'sbt package' untuk meng-\textit{compile} kode menjadi \textit{executable} JAR seperti pada Gambar\ref{fig:jar}. Hasil keluaran dapat dilihat pada Gambar\ref{fig:sbtpackage}.
 

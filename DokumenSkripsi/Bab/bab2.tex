@@ -2,6 +2,8 @@
 \chapter{Landasan Teori}
 \label{chap:teori}
 
+Pada bagian ini akan dijelaskan teori-teori yang akan digunakan dalam penelitian ini, seperti \textit{big data}, algoritma \textit{Agglomerative Clustering}, \textit{Hadoop}, \textit{Spark} dan Scala.
+
 \section{\textit{Big Data}}
 \label{sec:big data}
 
@@ -139,8 +141,6 @@ dengan $c_{a}$ dan $c_{b}$ merupakan \textit{centroid} dari \textit{cluster} $A$
 
 
 
-
-%%%%%PINDAHKAN KE BAB 4!!!!!
 
 \begin{table}[H] 
 	\centering 
@@ -338,7 +338,7 @@ Hadoop dikembangkan oleh Doug Cutting dan Mike Cafarella pada tahun 2005 yang sa
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.4]{hmodule}  
+    \includegraphics[scale=0.6]{hmodule}  
     \caption[Modul-modul Hadoop ]{Modul-modul Hadoop} 
     \label{fig:hmodule} 
 \end{figure}
@@ -369,7 +369,7 @@ Kegagalan perangkat keras sudah biasa terjadi. HDFS mungkin terdiri atas ratusan
     \label{fig:hdfshadoop} 
 \end{figure}
 
-Hadoop meimplementasikan arsitektur \textit{Master Slave} pada komponen primernya yaitu HDFS dan MapReduce ~\cite{tomwhite:05:htdg}. Berdasarkan  (Gambar ~\ref{fig:hdfshadoop}), \textit{master} \textit{node} atau disebut NameNode bertugas untuk mengatur operasi-operasi seperti membuka, menutup, dan menamakan kembali file atau direktori pada sistem file. Selain itu, NameNode meregulasi akses pengguna terhadap file dan mengatur blok mana yang akan diolah oleh DataNode ~\cite{tomwhite:05:htdg}. NameNode membuat semua keputusan terkait replikasi blok. NameNode secara berkala menerima \textit{heartbeat} dan \textit{block report} dari masing-masing DataNode di \textit{cluster}. \textit{Heartbeat} mengimplikasikan bahwa DataNode berfungsi dengan benar.\\
+Hadoop meimplementasikan arsitektur \textit{Master Slave} pada komponen primernya yaitu HDFS dan MapReduce ~\cite{tomwhite:05:htdg}. Berdasarkan  (Gambar ~\ref{fig:hdfshadoop}), \textit{master} \textit{node} atau disebut NameNode bertugas untuk mengatur operasi-operasi seperti membuka, menutup, dan menamakan kembali file atau direktori pada sistem file. Selain itu, NameNode meregulasi akses pengguna terhadap file dan mengatur blok mana yang akan diolah oleh DataNode ~\cite{tomwhite:05:htdg}. NameNode membuat semua keputusan terkait replikasi blok. NameNode secara berkala menerima \textit{heartbeat} dan \textit{block report} dari masing-masing DataNode di \textit{cluster}. \textit{Heartbeat} merupakan sinyal yang dikirim secara rutin dari DataNode kepada NameNode untuk menandakan bahwa DataNode berfungsi dengan benar. \textit{Block report} adalah sebuah daftar yang menggandung semua \textit{block} data pada HDFS yang disimpan secara lokal.\\
 	
 \textit{Slave node} atau dapat disebut DataNode merupakan pekerja dari HDFS \cite{tomwhite:05:htdg}. DataNode bertanggung jawab untuk menjalankan perintah membaca dan menulis untuk file sistem Hadoop. NameNode dapat membuat, menghapus, dan mereplikasi blok ketika diberi instruksi dari \textit{master node}. DataNode menyimpan dan mengambil blok ketika diperintahkan oleh NameNode. Selain itu, DataNode melaporkan daftar blok-blok yang disimpan kepada NameNode secara rutin.\\ 
 
@@ -396,16 +396,23 @@ $ hadoop fs -ls
 $ hadoop fs -put <localSrc> <dest> 
 \end{verbatim}
 
+\item Perintah untuk menghapus file atau direktori pada HDFS.
+
+\begin{verbatim}
+$ hadoop fs -rm -r <dir-path> 
+\end{verbatim}
+
+
 \end{itemize}
 
 
-\subsection{MapReduce}~\cite{tomwhite:05:htdg}
+\subsection{MapReduce~\cite{tomwhite:05:htdg}}
 
 MapReduce adalah sebuah model pemrograman untuk memproses data berukuran besar secara terdistribusi dan paralel dalam \textit{cluster} yang terdiri atas banyak komputer. Dalam memproses data, secara garis besar MapReduce dapat dibagi dalam dua proses, yaitu proses \textit{map} dan proses \textit{reduce}. Setiap fase memiliki pasangan \textit{key-value} sebagai \textit{input} dan \textit{output}. Kedua jenis proses ini didistribusikan ke setiap komputer dalam suatu \textit{cluster} dan berjalan secara paralel tanpa saling bergantung satu sama yang lainnya. Proses \textit{map} bertugas untuk mengumpulkan informasi dari potongan-potongan data yang terdistribusi dalam tiap komputer dalam cluster. Hasilnya diserahkan kepada proses \textit{reduce} untuk diproses lebih lanjut. Hasil proses \textit{reduce} merupakan hasil akhir.\\
 
 \begin{figure}[H]
     \centering  
-    \includegraphics[scale=0.5]{mapreducehadoop}  
+    \includegraphics[scale=0.7]{mapreducehadoop}  
     \caption[Arsitektur MapReduce]{Arsitektur MapReduce} 
     \label{fig:mapreducehadoop} 
 \end{figure}
@@ -447,7 +454,17 @@ Apache YARN (\textit{Yet Another Resource Negotiator}) adalah pengatur sumber da
 
 Berikut adalah Gambar~\ref{fig:yarn} yang menggambarkan langkah-langkah proses ketika menjalankan aplikasi pada YARN. Untuk menjalankan aplikasi pada YARN, \textit{client} akan meminta \textit{Resource Manager} untuk menjalankan proses aplikasi \textit{master} (langkah 1). Kemudian, \textit{Resource Manager} akan mencari \textit{Node Manager} yang bisa menjalankan aplikasi \textit{master} dalam sebuah \textit{container} (langkah 2 dan 3). Ketika aplikasi \textit{master} sudah berjalan, aplikasi \textit{master} bisa melakukan komputasi pada \textit{container} dan mengembalikan hasil kepada \textit{client}. Selain itu, aplikasi \textit{master} dapat juga meminta sumber daya tambahan (langkah 4) dan menggunakan sumber daya tersebut untuk komputasi terdistribusi (langkah 5 dan 6).\\
 
-\section{Spark}~\cite{holdenkarau:07:ls}
+
+\subsection{Pembahasan Algoritma \textit{Agglomerative Clustering} pada Hadoop~\cite{veronica:02:bdhca}}
+
+Implementasi algoritma \textit{Agglomerative Clustering} sudah dilakukan pada Hadoop. Ide utama untuk mereduksi \textit{big data} adalah membagi \textit{big data} menjadi beberapa bagian kecil yang dapat dikerjakan secara paralel menggunakan operasi \textit{map} dan \textit{reduce} pada Hadoop. Pada tahap \textit{map}, data akan disiapkan agar mudah diolah untuk tahap selanjutnya, yaitu \textit{reduce}. Pada tahap \textit{reduce} data akan direduksi dengan membangun \textit{dendrogram} menggunakan algortima \textit{Agglomerative Clustering}, memotong \textit{dendrogram} untuk menghasilkan \textit{clusters}, dan mengkomputasi pola-pola dari \textit{clusters}. Pola-pola akan disimpan sebagai hasil akhir.\\
+
+Operasi \textit{map} bertugas untuk memasangkan setiap baris masukan dengan sebuah \textit{key}, yaitu bilangan bulat acak. \textit{Key} merupakan bilangan acak antara 1 sampai n. Nilai n merupakan jumlah partisi yang dimasukan oleh pengguna. Hasil keluaran dari tahap \textit{map} adalah sebuah pasangan <\textit{key},\textit{value}>. Fase \textit{map} bertujuan untuk membagi rata dan mengacak data untuk tahap selanjutnya. Keluaran dari tahap \textit{map} akan dikelompokan berdasarkan \textit{key}. Semua pasangan yang memiliki \textit{key} sama akan dikirimkan kepada Reducer yang sama dimana tahap \textit{reduce} terjadi.\\
+
+Pada tahap \textit{reduce} pasangan <\textit{key},\textit{value}> akan dimasukan kepada sebuah \textit{list}. Karena keterbatasan memori, data harus diolah bertahap dengan memasukan \textit{value} kepada \textit{list} sampai batas maksimum objek yang ditentukan pengguna. Dari \textit{list} tersebut, akan digunakan algoritma \textit{Agglomerative Clustering} untuk membangun \textit{dendrogram}. Kemudian, \textit{dendrogram} akan dipotong berdasarkan nilai \textit{cut-off distance} yang ditentukan pengguna. \textit{Cluster-cluster} akan dihasilkan dari perpotongan \textit{dendrogram}. Nilai \textit{cut-off distance} menentukan banyaknya \textit{cluster} yang dihasilkan. Semakin tinggi nilai \textit{cut-off distance}, semakin banyak \textit{cluster} yang dihasilkan dan sebaliknya. Setelah itu, pola akan dikomputasi dari \textit{cluster-cluster} dan disimpan pada HDFS. \textit{List} akan dikosongkan kembali untuk menambahkan objek-objek berikutnya. Ketika semua objek sudah diproses, maka program akan berhenti.
+
+
+\section{Spark~\cite{holdenkarau:07:ls}}
 
 Apache Spark adalah sebuah \textit{cluster computing platform} yang dirancang untuk kecepatan dan \textit{general-purpose}. Spark dirancang berdasarkan model MapReduce yang populer untuk memberikan dukungan yang efisien kepada banyak tipe komputasi, termasuk \textit{interactive query} dan \textit{stream processing}. Kecepatan merupakan kunci dalam melakukan eksplorasi data. Rentang waktu dalam eksplorasi dapat dimulai dari beberapa menit sampai beberapa jam. Salah satu fitur utama Spark yang ditawarkan adalah kemampuannya untuk melakukan \textit{in memory computations}. Selain itu, sistem Spark lebih efisien daripada MapReduce dalam menjalankan aplikasi yang rumit pada \textit{disk}.\\
 
@@ -460,7 +477,7 @@ Spark dirancang untuk memudahkan pengaksesan dengan memberikan API sederhana unt
 
 
 
-\subsection{Komponen Spark}~\cite{holdenkarau:07:ls}
+\subsection{Komponen Spark~\cite{holdenkarau:07:ls}}
 
 Spark memiliki beberapa komponen yang terintegrasi dengan erat. Sebagai \textit{core}, Spark adalah "mesin komputasi" yang bertanggung jawab untuk penjadwalan, distribusi, dan pemantauan aplikasi yang terdiri atas banyak \textit{task} komputasi tersebar di banyak pekerja, mesin, atau \textit{cluster}. Karena \textit{core engine} dari Spark sangat cepat dan dirancang untuk tujuan umum, Spark menjalankan banyak komponen di level yang lebih tinggi untuk menangani berbagai macam pekerjaan khusus seperti SQL atau \textit{machine learning}. Komponen-komponen ini dirancang untuk saling beroperasi dengan erat. Spark mengizinkan pengguna untuk menggabungkan komponen seperti \textit{library} dalam suatu proyek perangkat lunak.\\
 
@@ -537,7 +554,7 @@ Spark menggunakan arsitektur \textit{master} dan \textit{slave}. Sebuah Spark \t
     \label{fig:sparkarc} 
 \end{figure}
 
-Berikut adalah penjelasasn dari komponen-komponen Gambar Gambar~\ref{fig:sparkarc}:
+Berikut adalah penjelasan dari komponen-komponen Gambar Gambar~\ref{fig:sparkarc}:
 
 \begin{itemize} 
 
@@ -554,7 +571,7 @@ Berikut adalah penjelasasn dari komponen-komponen Gambar Gambar~\ref{fig:sparkar
 \textit{Executors} adalah proses-proses yang berjalan pada \textit{worker node} dan bertanggung jawab untuk mengerjakan \textit{tasks} yang diberikan. \textit{Executors} dibuat ketika aplikasi dijalankan dan akan tetap ada selama aplikasi masih berjalan.
 
 \item \textbf{\textit{Tasks}}\\
-\textit{Task} adalah sebuah satuan kerja pada Spark. \textit{Task} berisi perintah-perintah. Perintah tersebut merupakan fungsi yang diserialisasi. \textit{Task} akan dikirimkan oleh \textit{driver program} kepada \textit{executor}. Kemudian, \textit{executor} akan medeserialisai perintah tersebut dan mengerjakannya. Pada umumnya \textit{task} akan dibuat untuk setiap partisi. Partisi merupakan potongan data yang terdistribusi pada \textit{cluster}.
+\textit{Task} adalah sebuah satuan kerja pada Spark. \textit{Task} berisi perintah-perintah. Perintah tersebut merupakan fungsi yang diserialisasi. \textit{Task} akan dikirimkan oleh \textit{driver program} kepada \textit{executor}. Kemudian, \textit{executor} akan mendeserialisasikan perintah tersebut dan mengerjakannya. Pada umumnya \textit{task} akan dibuat untuk setiap partisi. Partisi merupakan potongan data yang terdistribusi pada \textit{cluster}.
 
 
 \end{itemize}
@@ -662,7 +679,7 @@ Tabel~\ref{tab:trans} berisi daftar \textit{transformations} yang umum pada Spar
 
 
 \hline
-\textbf{groupByKey}(func,[numPartitions]) & Mengembalikan RDD baru berupa \textit{pairs} (K, V) yang sudah diagregasi bedasarkan \textit{key} dan fungsi \textit{reduce} yang diberikan.\\
+\textbf{reduceByKey}(func,[numPartitions]) & Mengembalikan RDD baru berupa \textit{pairs} (K, V) yang sudah diagregasi bedasarkan \textit{key} dan fungsi \textit{reduce} yang diberikan.\\
 
 \hline
 \textbf{sortByKey}([ascending], [numPartitions]) & Mengembalikan RDD baru berupa \textit{pairs}  (K, V) yang terurut secara menaik atau menurun badsarkan parameter boolean yang diberikan.\\
@@ -824,7 +841,7 @@ while (x < 10) {
 }
 \end{verbatim}
 
-\textit{COnditional} atau percabangan adalah pengujian sebuah kondisi. Jika kondisi yang diuji tersebut terpenuhi, maka program akan menjalankan pernyataan-pernyataan tertentu. Jika kondisi yang diuji salah, program akan menjalankan pernyataan yang lain. Berikut adalah contoh percabangan dalam bahasa Scala:
+\textit{Conditional} atau percabangan adalah pengujian sebuah kondisi. Jika kondisi yang diuji tersebut terpenuhi, maka program akan menjalankan pernyataan-pernyataan tertentu. Jika kondisi yang diuji salah, program akan menjalankan pernyataan yang lain. Berikut adalah contoh percabangan dalam bahasa Scala:
 
 \begin{verbatim}
 if( x < 20 ){
@@ -973,7 +990,7 @@ val salaries = Seq(20000, 70000, 40000)
 val newSalaries = salaries.map(x => x * 2) // List(40000, 140000, 80000)
 \end{verbatim}
 
-\textit{Developer} juga dapat memasukkan \textit{method} pada \textit{parameter} \textit{higher order function}, \textit{compiler} Scala akan mengubah sebuah \textit{method} menjadi fungsi.
+\textit{Developer} juga dapat memasukkan \textit{method} pada \textit{parameter} \textit{higher order function}.
 
 
 \begin{verbatim}
@@ -986,7 +1003,7 @@ case class WeeklyWeatherForecast(temperatures: Seq[Double]) {
 \end{verbatim}
 
 
-Salah satu alasan untuk menggunakan \textit{higher order function} adalah untuk mengurangi kode yang berlebihan. Misalkan terdapat beberapa metode yang dapat menaikkan gaji seseorang dengan berbagai faktor. Tanpa membuat \textit{higher order function}, kode akan terlihat seperti berikut:
+Salah satu alasan untuk menggunakan \textit{higher order function} adalah untuk mengurangi kode yang redundan. Misalkan terdapat beberapa metode yang dapat menaikkan gaji seseorang dengan berbagai faktor. Tanpa membuat \textit{higher order function}, kode akan terlihat seperti berikut:
 
 \begin{verbatim}
 
@@ -1009,7 +1026,7 @@ Perhatikan bahwa masing-masing dari ketiga \textit{method} hanya berbeda pada fa
 object SalaryRaiser {
 
    private def promotion(salaries: List[Double], promoF: Double => Double): List[Double] =
-        salaries.map(promotionFunction)  
+        salaries.map(promoF)  
 
   	def smallPromotion(salaries: List[Double]): List[Double] =
         promotion(salaries, salary => salary * 1.1)

@@ -7,11 +7,13 @@
 
 {\it Big data} adalah sebuah istilah yang menggambarkan volume data yang besar, baik data yang terstruktur maupun data yang tidak terstruktur. Data-data tersebut memiliki potensi untuk digali menjadi informasi yang penting. Dalam bidang {\it big data} ada  beberapa tantangan seperti volume data yang besar, kecepatan aliran data yang masuk, dan variasi data dengan format yang berbeda. Tantangan tersebut membuat aplikasi pemrosesan data tradisional  tidak bisa memproses dan menganalisis {\it big data}. Muncul teknologi-teknologi seperti Hadoop dan Spark yang dirancang khusus untuk menangani {\it big data}. 
 
-{\it Big data} akan lebih mudah dianalisis dan diterapkan teknik-teknik {\it data-mining} ketika volume {\it big data} tersebut telah direduksi. Dengan mereduksi data, kita bisa menghemat biaya pengiriman data, {\it disk space}, dan jumlah data yang diproses. Hasil dari reduksi {\it big data} harus bisa mewakili data yang belum direduksi secara akurat. 
+{\it Big data} akan lebih mudah dianalisis dan diterapkan teknik-teknik {\it data-mining} ketika volume {\it big data} tersebut telah direduksi. Reduksi data adalah proses mengecilkan ukuran data dengan mengambil rangkuman dari sekelompok data. {\it Big data} akan dipecah menjadi beberapa bagian. Dari bagian tersebut akan diolah menggunakan algoritma {\it Hierarchical Agglomerative Clustering} untuk menghasilkan \textit{cluster-cluster}. Dari \textit{cluster-cluster} yang dihasilkan, akan diambil rangkuman yang bisa menggambarkan karakterisik setiap \textit{cluster}. Rangkuman yang menggambarkan karaketristik \textit{cluster} disebut sebagai pola. Pola mengandung jumlah total objek, nilai minimum, maksimum, nilai rata-rata, dan standar-deviasi dari setiap atribut pada \textit{cluster}. Nilai-nilai tersebut diambil karena dapat menggambarkan karakteristik \textit{cluster}. Dengan mereduksi data, kita bisa menghemat biaya pengiriman data, {\it disk space}, dan jumlah data yang diproses. Hasil dari reduksi {\it big data} harus bisa mewakili data yang belum direduksi secara akurat. 
 
-Salah satu cara mereduksi data adalah dengan menggunakan algoritma {\it Hierarchical Agglomerative Clustering}. Algoritma tersebut cocok untuk data yang tidak memiliki atribut yang terlalu banyak. Journal ilmiah berjudul {\it Big Data Reduction Technique using Parallel Hierarchical Agglomerative Clustering} menjabarkan algoritma {\it Hierarchical Agglomerative Clustering} berbasis MapReduce pada Hadoop~\cite{veronica:02:bdhca}. Penelitian tersebut membuktikan bahwa data yang direduksi dengan algoritma tersebut bisa mewakili data yang belum direduksi. Algoritma {\it Hierarchical Agglomerative Clustering} bekerja dengan mengubah setiap objek menjadi {\it sub-cluster}. Kemudian, {\it sub-cluster} akan digabung dengan {\it sub-cluster} lainya secara bertahap berdasarkan jarak antara {\it sub-cluster} sampai terbentuknya sebuah \textit{cluster}. {\it Cluster} tersebut akan menjadi akar dari hierarki.
+Algoritma {\it Hierarchical Agglomerative Clustering} membangun hirarki dari sekelompok data. Setiap objek akan ditempatkan kepada \textit{cluster}-nya  tersendiri pada awalnya. Kemudian, \textit{cluster} terdekat akan digabung menjadi satu \textit{cluster}. Penggabungan \textit{cluster} terdekat akan diulang sampai hanya satu \textit{cluster} yang tersisa. Proses pembangunan hierarki dapat digambarkan dengan \textit{dendrogram}. \textit{Dendrogram} akan dipotong untuk menghasilkan \textit{cluster-cluster}. Dari setiap \textit{cluster} hasil perpotongan, akan dicari polanya dan disimpan sebagai hasil akhir. 
 
-Meskipun hasil reduksi data dengan algoritma {\it Hierarchical Agglomerative Clustering} berbasis MapReduce pada Hadoop dapat mewakili data yang belum direduksi secara akurat, MapReduce pada Hadoop memiliki kekurangan. Hadoop tidak efisien dalam melakukan proses iterasi, {\it intermediate data} tidak dapat disimpan pada memori. Hadoop perlu melakukan penulisan dan pembacaan kepada \textit{disk} di antara setiap tahap Map dan Reduce.
+Untuk mempercepat proses reduksi, pekerjaan dapat dipecah dan dikerjakan secara paralel dengan bantuan Hadoop. Dengan bantuan Hadoop, proses reduksi data akan lebih cepat. Implementasi algoritma {\it Hierarchical Agglomerative Clustering} sudah dilakukan pada Hadoop~\cite{veronica:02:bdhca}. Hasil dari penelitian tersebut membuktikan bahwa algoritma {\it Hierarchical Agglomerative Clustering} sudah dapat mereduksi data dengan menyimpan pola hasil reduksi. Tetapi ada beberapa limitasi yang dimiliki Hadoop. 
+
+Walau Hadoop dapat melakukan proses reduksi secara paralel, waktu yang dibutuhkan Hadoop untuk melakukan reduksi data masih terlalu lambat. Hadoop banyak melakukan proses penulisan dan pembacaan kepada disk. Dari satu tahap ke tahap lainya, Hadoop akan menulis dan membaca hasil sementara kepada disk. Hadoop perlu digantikan dengan Spark untuk mencepat proses reduksi.
 
 Spark adalah {\it distributed cluster-computing framework} yang bisa menggantikan MapReduce beserta kekurangannya. {\it In-memory processing} pada Spark dapat mengalahkan kecepatan pemrosesan pada Hadoop MapReduce. Karena data disimpan pada RAM, kecepatan pemrosesan akan jauh lebih cepat. Spark membaca data yang akan direduksi dari RAM. Pembacaan data dari RAM akan lebih cepat dibanding disk.
 
@@ -29,9 +31,7 @@ Berdasarkan latar belakang di atas, dapat dibentuk rumusan masalah sebagai berik
 
 \item Bagaimana cara mengkustomisasi dan mengimplementasikan algoritma {\it Agglomerative Clustering} pada sistem tersebar Spark?
 
-\item Bagaimana mengukur kinerja hasil dari implementasi dari algoritma {\it Agglomerative Clustering} pada sistem tersebar Spark?
-
-\item Bagaimana cara mempresentasikan data yang telah direduksi?
+\item Bagaimana mengukur performa hasil dari implementasi algoritma {\it Agglomerative Clustering} pada sistem tersebar Spark?
 
 \end{enumerate}
 
@@ -46,9 +46,7 @@ Berdasarkan rumusan masalah di atas, tujuan dari penelitian adalah sebagai berik
 
 \item Mengkustomisasi dan mengimplementasikan algoritma {\it Hierarchical Agglomerative Clustering} pada lingkungan Spark.
 
-\item Melakukan eksperimen pada lingkungan sistem tersebar Spark untuk mengukur kinerja algoritma lingkungan Spark.
-
-\item Membuat modul program untuk menginterpretasikan data yang telah direduksi.
+\item Melakukan eksperimen pada Spark dan Hadoop untuk membandingkan waktu eksekusi kedua perangkat lunak.
 
 \end{enumerate}
 
@@ -59,13 +57,10 @@ Berdasarkan rumusan masalah di atas, tujuan dari penelitian adalah sebagai berik
 Batasan masalah pada skripsi ini adalah sebagai berikut:
 \begin{enumerate}
 
-\item Studi literatur Hadoop hanya dilakukan pada dasar dan file system Hadoop yaitu HDFS.
+\item Pola yang dikomputasi hanya sebatas jumlah objek, nilai minimum, maksimum, rata-rata dan standar deviasi.
 
-\item Studi literatur Apache Spark hanya mempelajari konsep dasar dari Apache Spark, \textit{Resilient Distributed Dataset} (RDD), dan implementasi algoritma \textit{Hierarchical Agglomerative Clustering} (HAC).
+\item Perangkat lunak yang dibuat hanya dapat menerima masukan yang sempurna.
 
-\item Metode reduksi data yang dibahas secara mendalam hanya metode {\it agglomerative clustering}.
-
-\item Algoritma {\it Hierarchical Agglomerative Clustering} diimplementasikan secara paralel pada sistem terdistribusi Spark.
 
 \end{enumerate}
 
